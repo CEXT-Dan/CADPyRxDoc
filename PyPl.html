@@ -42,14 +42,57 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyPl.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#Core">Core</a></li>
+            <li><a href="#CustomSizeResult">CustomSizeResult</a></li>
+            <li><a href="#DSDData">DSDData</a></li>
+            <li><a href="#DSDEntry">DSDEntry</a></li>
+            <li><a href="#DeviceType">DeviceType</a></li>
+            <li><a href="#MatchingPolicy">MatchingPolicy</a></li>
+            <li><a href="#PlObject">PlObject</a></li>
+            <li><a href="#PlotCancelStatus">PlotCancelStatus</a></li>
+            <li><a href="#PlotConfig">PlotConfig</a></li>
+            <li><a href="#PlotConfigInfo">PlotConfigInfo</a></li>
+            <li><a href="#PlotConfigManager">PlotConfigManager</a></li>
+            <li><a href="#PlotEngine">PlotEngine</a></li>
+            <li><a href="#PlotFactory">PlotFactory</a></li>
+            <li><a href="#PlotInfo">PlotInfo</a></li>
+            <li><a href="#PlotInfoValidator">PlotInfoValidator</a></li>
+            <li><a href="#PlotMSGIndex">PlotMSGIndex</a></li>
+            <li><a href="#PlotPageInfo">PlotPageInfo</a></li>
+            <li><a href="#PlotProgressDialog">PlotProgressDialog</a></li>
+            <li><a href="#PlotToFileCapability">PlotToFileCapability</a></li>
+            <li><a href="#PrecisionEntry">PrecisionEntry</a></li>
+            <li><a href="#ProcessPlotState">ProcessPlotState</a></li>
+            <li><a href="#RefreshCode">RefreshCode</a></li>
+            <li><a href="#SetupType">SetupType</a></li>
+            <li><a href="#SheetCancelStatus">SheetCancelStatus</a></li>
+            <li><a href="#SheetType">SheetType</a></li>
+            <li><a href="#StdConfigs">StdConfigs</a></li>
+            <li><a href="#StyTypes">StyTypes</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="Core">
         <details>
-            <summary>class Core</summary>
+            <summary>class Core <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -58,9 +101,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CustomSizeResult">
         <details>
-            <summary>class CustomSizeResult</summary>
+            <summary>class CustomSizeResult <span class="tag">Class</span></summary>
             <code>ePossible: ClassVar[Self]</code>
             <code>eMustCreatePC3: ClassVar[Self]</code>
             <code>eRotationRequired: ClassVar[Self]</code>
@@ -79,9 +122,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DSDData">
         <details>
-            <summary>class DSDData</summary>
+            <summary>class DSDData <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def categoryName(self) -&gt; str</code>
@@ -142,9 +185,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DSDEntry">
         <details>
-            <summary>class DSDEntry</summary>
+            <summary>class DSDEntry <span class="tag">Class</span></summary>
             <code>def NPS(self) -&gt; str</code>
             <code>def NPSSourceDWG(self) -&gt; str</code>
             <code>def __init__(self) -&gt; None</code>
@@ -169,9 +212,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DeviceType">
         <details>
-            <summary>class DeviceType</summary>
+            <summary>class DeviceType <span class="tag">Class</span></summary>
             <code>kSystemPrinter: ClassVar[Self]</code>
             <code>kPC3File: ClassVar[Self]</code>
             <code>kOneOffConfig: ClassVar[Self]</code>
@@ -179,9 +222,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MatchingPolicy">
         <details>
-            <summary>class MatchingPolicy</summary>
+            <summary>class MatchingPolicy <span class="tag">Class</span></summary>
             <code>kMatchDisabled: ClassVar[Self]</code>
             <code>kMatchEnabled: ClassVar[Self]</code>
             <code>kMatchEnabledCustom: ClassVar[Self]</code>
@@ -189,18 +232,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlObject">
         <details>
-            <summary>class PlObject</summary>
+            <summary>class PlObject <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotCancelStatus">
         <details>
-            <summary>class PlotCancelStatus</summary>
+            <summary>class PlotCancelStatus <span class="tag">Class</span></summary>
             <code>kPlotContinue: ClassVar[Self]</code>
             <code>kPlotCanceledByCaller: ClassVar[Self]</code>
             <code>kPlotCanceledByCancelAllButton: ClassVar[Self]</code>
@@ -208,9 +251,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotConfig">
         <details>
-            <summary>class PlotConfig</summary>
+            <summary>class PlotConfig <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -232,9 +275,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotConfigInfo">
         <details>
-            <summary>class PlotConfigInfo</summary>
+            <summary>class PlotConfigInfo <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -250,9 +293,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotConfigManager">
         <details>
-            <summary>class PlotConfigManager</summary>
+            <summary>class PlotConfigManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -265,9 +308,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotEngine">
         <details>
-            <summary>class PlotEngine</summary>
+            <summary>class PlotEngine <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def beginDocument(self, plotInfo: PyPl.PlotInfo, docName: str, plotToFile: bool, fileName: str) -&gt; None</code>
@@ -284,9 +327,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotFactory">
         <details>
-            <summary>class PlotFactory</summary>
+            <summary>class PlotFactory <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -296,9 +339,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotInfo">
         <details>
-            <summary>class PlotInfo</summary>
+            <summary>class PlotInfo <span class="tag">Class</span></summary>
             <code>def OrgFilePath(self) -&gt; str</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -321,9 +364,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotInfoValidator">
         <details>
-            <summary>class PlotInfoValidator</summary>
+            <summary>class PlotInfoValidator <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -356,9 +399,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotMSGIndex">
         <details>
-            <summary>class PlotMSGIndex</summary>
+            <summary>class PlotMSGIndex <span class="tag">Class</span></summary>
             <code>kDialogTitle: ClassVar[Self]</code>
             <code>kSheetName: ClassVar[Self]</code>
             <code>kSheetNameToolTip: ClassVar[Self]</code>
@@ -373,9 +416,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotPageInfo">
         <details>
-            <summary>class PlotPageInfo</summary>
+            <summary>class PlotPageInfo <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -388,9 +431,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotProgressDialog">
         <details>
-            <summary>class PlotProgressDialog</summary>
+            <summary>class PlotProgressDialog <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
             <code>def __init__(self, hwnd: int, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
@@ -427,18 +470,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotToFileCapability">
         <details>
-            <summary>class PlotToFileCapability</summary>
+            <summary>class PlotToFileCapability <span class="tag">Class</span></summary>
             <code>kNoPlotToFile: ClassVar[Self]</code>
             <code>kPlotToFileAllowed: ClassVar[Self]</code>
             <code>kMustPlotToFile: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PrecisionEntry">
         <details>
-            <summary>class PrecisionEntry</summary>
+            <summary>class PrecisionEntry <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -462,18 +505,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ProcessPlotState">
         <details>
-            <summary>class ProcessPlotState</summary>
+            <summary>class ProcessPlotState <span class="tag">Class</span></summary>
             <code>kNotPlotting: ClassVar[Self]</code>
             <code>kForegroundPlotting: ClassVar[Self]</code>
             <code>kBackgroundPlotting: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RefreshCode">
         <details>
-            <summary>class RefreshCode</summary>
+            <summary>class RefreshCode <span class="tag">Class</span></summary>
             <code>kAll: ClassVar[Self]</code>
             <code>kRefreshDevicesList: ClassVar[Self]</code>
             <code>kRefreshStyleList: ClassVar[Self]</code>
@@ -482,9 +525,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SetupType">
         <details>
-            <summary>class SetupType</summary>
+            <summary>class SetupType <span class="tag">Class</span></summary>
             <code>kOriginalPS: ClassVar[Self]</code>
             <code>kNPSSameDWG: ClassVar[Self]</code>
             <code>kNPSOtherDWG: ClassVar[Self]</code>
@@ -493,9 +536,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SheetCancelStatus">
         <details>
-            <summary>class SheetCancelStatus</summary>
+            <summary>class SheetCancelStatus <span class="tag">Class</span></summary>
             <code>kSheetContinue: ClassVar[Self]</code>
             <code>kSheetCanceledByCancelButton: ClassVar[Self]</code>
             <code>kSheetCanceledByCancelAllButton: ClassVar[Self]</code>
@@ -504,9 +547,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SheetType">
         <details>
-            <summary>class SheetType</summary>
+            <summary>class SheetType <span class="tag">Class</span></summary>
             <code>kSingleDWF: ClassVar[Self]</code>
             <code>kMultiDWF: ClassVar[Self]</code>
             <code>kOriginalDevice: ClassVar[Self]</code>
@@ -519,9 +562,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StdConfigs">
         <details>
-            <summary>class StdConfigs</summary>
+            <summary>class StdConfigs <span class="tag">Class</span></summary>
             <code>kNoneDevice: ClassVar[Self]</code>
             <code>kDefaultWindowsSysPrinter: ClassVar[Self]</code>
             <code>kDWF6ePlot: ClassVar[Self]</code>
@@ -541,9 +584,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StyTypes">
         <details>
-            <summary>class StyTypes</summary>
+            <summary>class StyTypes <span class="tag">Class</span></summary>
             <code>kUndefined: ClassVar[Self]</code>
             <code>kRegular: ClassVar[Self]</code>
             <code>kTranslation: ClassVar[Self]</code>

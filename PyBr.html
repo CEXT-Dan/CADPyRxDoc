@@ -42,14 +42,68 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyBr.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#Brep">Brep</a></li>
+            <li><a href="#Complex">Complex</a></li>
+            <li><a href="#ComplexShellTraverser">ComplexShellTraverser</a></li>
+            <li><a href="#ComplexTraverser">ComplexTraverser</a></li>
+            <li><a href="#Edge">Edge</a></li>
+            <li><a href="#EdgeLoopTraverser">EdgeLoopTraverser</a></li>
+            <li><a href="#EdgeTraverser">EdgeTraverser</a></li>
+            <li><a href="#Element">Element</a></li>
+            <li><a href="#Element2d">Element2d</a></li>
+            <li><a href="#Element2dNodeTraverser">Element2dNodeTraverser</a></li>
+            <li><a href="#Element2dShape">Element2dShape</a></li>
+            <li><a href="#Entity">Entity</a></li>
+            <li><a href="#ErrorStatus">ErrorStatus</a></li>
+            <li><a href="#Face">Face</a></li>
+            <li><a href="#FaceLoopTraverser">FaceLoopTraverser</a></li>
+            <li><a href="#FaceTraverser">FaceTraverser</a></li>
+            <li><a href="#Hit">Hit</a></li>
+            <li><a href="#Loop">Loop</a></li>
+            <li><a href="#LoopEdgeTraverser">LoopEdgeTraverser</a></li>
+            <li><a href="#LoopType">LoopType</a></li>
+            <li><a href="#LoopVertexTraverser">LoopVertexTraverser</a></li>
+            <li><a href="#MassProps">MassProps</a></li>
+            <li><a href="#Mesh">Mesh</a></li>
+            <li><a href="#Mesh2d">Mesh2d</a></li>
+            <li><a href="#Mesh2dElement2dTraverser">Mesh2dElement2dTraverser</a></li>
+            <li><a href="#MeshEntity">MeshEntity</a></li>
+            <li><a href="#Node">Node</a></li>
+            <li><a href="#Relation">Relation</a></li>
+            <li><a href="#Shell">Shell</a></li>
+            <li><a href="#ShellFaceTraverser">ShellFaceTraverser</a></li>
+            <li><a href="#ShellTraverser">ShellTraverser</a></li>
+            <li><a href="#ShellType">ShellType</a></li>
+            <li><a href="#Traverser">Traverser</a></li>
+            <li><a href="#ValidationLevel">ValidationLevel</a></li>
+            <li><a href="#Vertex">Vertex</a></li>
+            <li><a href="#VertexEdgeTraverser">VertexEdgeTraverser</a></li>
+            <li><a href="#VertexLoopTraverser">VertexLoopTraverser</a></li>
+            <li><a href="#VertexTraverser">VertexTraverser</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="Brep">
         <details>
-            <summary>class Brep</summary>
+            <summary>class Brep <span class="tag">Class</span></summary>
             <code>def __init__(self, entity: PyDb.Entity) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -60,9 +114,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Complex">
         <details>
-            <summary>class Complex</summary>
+            <summary>class Complex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -70,9 +124,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ComplexShellTraverser">
         <details>
-            <summary>class ComplexShellTraverser</summary>
+            <summary>class ComplexShellTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -86,9 +140,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ComplexTraverser">
         <details>
-            <summary>class ComplexTraverser</summary>
+            <summary>class ComplexTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -102,9 +156,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Edge">
         <details>
-            <summary>class Edge</summary>
+            <summary>class Edge <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -117,9 +171,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EdgeLoopTraverser">
         <details>
-            <summary>class EdgeLoopTraverser</summary>
+            <summary>class EdgeLoopTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -133,9 +187,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EdgeTraverser">
         <details>
-            <summary>class EdgeTraverser</summary>
+            <summary>class EdgeTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -149,9 +203,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Element">
         <details>
-            <summary>class Element</summary>
+            <summary>class Element <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -159,9 +213,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Element2d">
         <details>
-            <summary>class Element2d</summary>
+            <summary>class Element2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -170,9 +224,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Element2dNodeTraverser">
         <details>
-            <summary>class Element2dNodeTraverser</summary>
+            <summary>class Element2dNodeTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -187,9 +241,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Element2dShape">
         <details>
-            <summary>class Element2dShape</summary>
+            <summary>class Element2dShape <span class="tag">Class</span></summary>
             <code>kDefault: ClassVar[Self]</code>
             <code>kAllPolygons: ClassVar[Self]</code>
             <code>kAllQuadrilaterals: ClassVar[Self]</code>
@@ -197,9 +251,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Entity">
         <details>
-            <summary>class Entity</summary>
+            <summary>class Entity <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def brepChanged(self) -&gt; bool</code>
@@ -223,9 +277,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ErrorStatus">
         <details>
-            <summary>class ErrorStatus</summary>
+            <summary>class ErrorStatus <span class="tag">Class</span></summary>
             <code>eAmbiguousOutput: ClassVar[Self]</code>
             <code>eBrepChanged: ClassVar[Self]</code>
             <code>eDegenerateTopology: ClassVar[Self]</code>
@@ -250,9 +304,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Face">
         <details>
-            <summary>class Face</summary>
+            <summary>class Face <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -266,9 +320,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FaceLoopTraverser">
         <details>
-            <summary>class FaceLoopTraverser</summary>
+            <summary>class FaceLoopTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -282,9 +336,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FaceTraverser">
         <details>
-            <summary>class FaceTraverser</summary>
+            <summary>class FaceTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -298,9 +352,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Hit">
         <details>
-            <summary>class Hit</summary>
+            <summary>class Hit <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def brepChanged(self) -&gt; bool</code>
@@ -317,9 +371,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Loop">
         <details>
-            <summary>class Loop</summary>
+            <summary>class Loop <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -329,9 +383,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LoopEdgeTraverser">
         <details>
-            <summary>class LoopEdgeTraverser</summary>
+            <summary>class LoopEdgeTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -348,9 +402,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LoopType">
         <details>
-            <summary>class LoopType</summary>
+            <summary>class LoopType <span class="tag">Class</span></summary>
             <code>kUnclassified: ClassVar[Self]</code>
             <code>kExterior: ClassVar[Self]</code>
             <code>kInterior: ClassVar[Self]</code>
@@ -360,9 +414,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LoopVertexTraverser">
         <details>
-            <summary>class LoopVertexTraverser</summary>
+            <summary>class LoopVertexTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -377,9 +431,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MassProps">
         <details>
-            <summary>class MassProps</summary>
+            <summary>class MassProps <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def centroid(self) -&gt; PyGe.Point3d</code>
@@ -393,9 +447,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Mesh">
         <details>
-            <summary>class Mesh</summary>
+            <summary>class Mesh <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -403,9 +457,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Mesh2d">
         <details>
-            <summary>class Mesh2d</summary>
+            <summary>class Mesh2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -413,9 +467,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Mesh2dElement2dTraverser">
         <details>
-            <summary>class Mesh2dElement2dTraverser</summary>
+            <summary>class Mesh2dElement2dTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -428,9 +482,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MeshEntity">
         <details>
-            <summary>class MeshEntity</summary>
+            <summary>class MeshEntity <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def brepChanged(self) -&gt; bool</code>
@@ -444,9 +498,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Node">
         <details>
-            <summary>class Node</summary>
+            <summary>class Node <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -455,9 +509,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Relation">
         <details>
-            <summary>class Relation</summary>
+            <summary>class Relation <span class="tag">Class</span></summary>
             <code>kUnknown: ClassVar[Self]</code>
             <code>kOutside: ClassVar[Self]</code>
             <code>kInside: ClassVar[Self]</code>
@@ -468,9 +522,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Shell">
         <details>
-            <summary>class Shell</summary>
+            <summary>class Shell <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -480,9 +534,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShellFaceTraverser">
         <details>
-            <summary>class ShellFaceTraverser</summary>
+            <summary>class ShellFaceTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -496,9 +550,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShellTraverser">
         <details>
-            <summary>class ShellTraverser</summary>
+            <summary>class ShellTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -512,18 +566,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShellType">
         <details>
-            <summary>class ShellType</summary>
+            <summary>class ShellType <span class="tag">Class</span></summary>
             <code>kShellUnclassified: ClassVar[Self]</code>
             <code>kShellExterior: ClassVar[Self]</code>
             <code>kShellInterior: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Traverser">
         <details>
-            <summary>class Traverser</summary>
+            <summary>class Traverser <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def brepChanged(self) -&gt; bool</code>
@@ -539,17 +593,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ValidationLevel">
         <details>
-            <summary>class ValidationLevel</summary>
+            <summary>class ValidationLevel <span class="tag">Class</span></summary>
             <code>kFullValidation: ClassVar[Self]</code>
             <code>kNoValidation: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vertex">
         <details>
-            <summary>class Vertex</summary>
+            <summary>class Vertex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -558,9 +612,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VertexEdgeTraverser">
         <details>
-            <summary>class VertexEdgeTraverser</summary>
+            <summary>class VertexEdgeTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -572,9 +626,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VertexLoopTraverser">
         <details>
-            <summary>class VertexLoopTraverser</summary>
+            <summary>class VertexLoopTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -587,9 +641,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VertexTraverser">
         <details>
-            <summary>class VertexTraverser</summary>
+            <summary>class VertexTraverser <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>

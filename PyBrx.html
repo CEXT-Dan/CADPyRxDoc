@@ -42,14 +42,34 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyBrx.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#Core">Core</a></li>
+            <li><a href="#DbProperties">DbProperties</a></li>
+            <li><a href="#LicensedFeature">LicensedFeature</a></li>
+            <li><a href="#PyBrxPanel">PyBrxPanel</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="Core">
         <details>
-            <summary>class Core</summary>
+            <summary>class Core <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def getOpenObjects() -&gt; list</code>
@@ -57,9 +77,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DbProperties">
         <details>
-            <summary>class DbProperties</summary>
+            <summary>class DbProperties <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def dumpAll(id: PyDb.ObjectId) -&gt; None</code>
@@ -71,9 +91,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LicensedFeature">
         <details>
-            <summary>class LicensedFeature</summary>
+            <summary>class LicensedFeature <span class="tag">Class</span></summary>
             <code>eCore: ClassVar[Self]</code>
             <code>eCommunicator: ClassVar[Self]</code>
             <code>eBim: ClassVar[Self]</code>
@@ -81,9 +101,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PyBrxPanel">
         <details>
-            <summary>class PyBrxPanel</summary>
+            <summary>class PyBrxPanel <span class="tag">Class</span></summary>
             <code>def __init__(self, name: str, configKey: str) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def backgroundColor(self) -&gt; int</code>

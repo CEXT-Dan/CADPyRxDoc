@@ -42,14 +42,112 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyGe.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#AcGeCSIConfig">AcGeCSIConfig</a></li>
+            <li><a href="#AcGeError">AcGeError</a></li>
+            <li><a href="#AcGeSSIConfig">AcGeSSIConfig</a></li>
+            <li><a href="#AcGeSSIType">AcGeSSIType</a></li>
+            <li><a href="#AcGeXConfig">AcGeXConfig</a></li>
+            <li><a href="#AutoTol">AutoTol</a></li>
+            <li><a href="#BoundBlock2d">BoundBlock2d</a></li>
+            <li><a href="#BoundBlock3d">BoundBlock3d</a></li>
+            <li><a href="#BoundedPlane">BoundedPlane</a></li>
+            <li><a href="#CircArc2d">CircArc2d</a></li>
+            <li><a href="#CircArc3d">CircArc3d</a></li>
+            <li><a href="#ClipBoundary2d">ClipBoundary2d</a></li>
+            <li><a href="#CompositeCurve2d">CompositeCurve2d</a></li>
+            <li><a href="#CompositeCurve3d">CompositeCurve3d</a></li>
+            <li><a href="#Cone">Cone</a></li>
+            <li><a href="#CubicSplineCurve2d">CubicSplineCurve2d</a></li>
+            <li><a href="#CubicSplineCurve3d">CubicSplineCurve3d</a></li>
+            <li><a href="#Curve2d">Curve2d</a></li>
+            <li><a href="#Curve3d">Curve3d</a></li>
+            <li><a href="#CurveCurveInt2d">CurveCurveInt2d</a></li>
+            <li><a href="#CurveCurveInt3d">CurveCurveInt3d</a></li>
+            <li><a href="#CurveSurfInt">CurveSurfInt</a></li>
+            <li><a href="#Cylinder">Cylinder</a></li>
+            <li><a href="#EllipArc2d">EllipArc2d</a></li>
+            <li><a href="#EllipArc3d">EllipArc3d</a></li>
+            <li><a href="#Entity2d">Entity2d</a></li>
+            <li><a href="#Entity3d">Entity3d</a></li>
+            <li><a href="#EntityId">EntityId</a></li>
+            <li><a href="#ExternalBoundedSurface">ExternalBoundedSurface</a></li>
+            <li><a href="#ExternalCurve2d">ExternalCurve2d</a></li>
+            <li><a href="#ExternalCurve3d">ExternalCurve3d</a></li>
+            <li><a href="#ExternalEntityKind">ExternalEntityKind</a></li>
+            <li><a href="#ExternalSurface">ExternalSurface</a></li>
+            <li><a href="#Interval">Interval</a></li>
+            <li><a href="#KnotParameterization">KnotParameterization</a></li>
+            <li><a href="#KnotVector">KnotVector</a></li>
+            <li><a href="#Line2d">Line2d</a></li>
+            <li><a href="#Line3d">Line3d</a></li>
+            <li><a href="#LineSeg2d">LineSeg2d</a></li>
+            <li><a href="#LineSeg3d">LineSeg3d</a></li>
+            <li><a href="#LinearEnt2d">LinearEnt2d</a></li>
+            <li><a href="#LinearEnt3d">LinearEnt3d</a></li>
+            <li><a href="#Matrix2d">Matrix2d</a></li>
+            <li><a href="#Matrix3d">Matrix3d</a></li>
+            <li><a href="#NurbCurve2d">NurbCurve2d</a></li>
+            <li><a href="#NurbCurve3d">NurbCurve3d</a></li>
+            <li><a href="#NurbSurface">NurbSurface</a></li>
+            <li><a href="#OffsetCrvExtType">OffsetCrvExtType</a></li>
+            <li><a href="#OffsetCurve2d">OffsetCurve2d</a></li>
+            <li><a href="#OffsetCurve3d">OffsetCurve3d</a></li>
+            <li><a href="#OffsetSurface">OffsetSurface</a></li>
+            <li><a href="#PlanarEnt">PlanarEnt</a></li>
+            <li><a href="#Plane">Plane</a></li>
+            <li><a href="#Point2d">Point2d</a></li>
+            <li><a href="#Point2dArray">Point2dArray</a></li>
+            <li><a href="#Point2dTree">Point2dTree</a></li>
+            <li><a href="#Point3d">Point3d</a></li>
+            <li><a href="#Point3dArray">Point3dArray</a></li>
+            <li><a href="#Point3dTree">Point3dTree</a></li>
+            <li><a href="#PointContainment">PointContainment</a></li>
+            <li><a href="#PointEnt2d">PointEnt2d</a></li>
+            <li><a href="#PointEnt3d">PointEnt3d</a></li>
+            <li><a href="#PointOnCurve2d">PointOnCurve2d</a></li>
+            <li><a href="#PointOnCurve3d">PointOnCurve3d</a></li>
+            <li><a href="#PointOnSurface">PointOnSurface</a></li>
+            <li><a href="#Polyline2d">Polyline2d</a></li>
+            <li><a href="#Polyline3d">Polyline3d</a></li>
+            <li><a href="#Position2d">Position2d</a></li>
+            <li><a href="#Position3d">Position3d</a></li>
+            <li><a href="#Ray2d">Ray2d</a></li>
+            <li><a href="#Ray3d">Ray3d</a></li>
+            <li><a href="#Scale2d">Scale2d</a></li>
+            <li><a href="#Scale3d">Scale3d</a></li>
+            <li><a href="#Sphere">Sphere</a></li>
+            <li><a href="#SplineEnt2d">SplineEnt2d</a></li>
+            <li><a href="#SplineEnt3d">SplineEnt3d</a></li>
+            <li><a href="#SurfSurfInt">SurfSurfInt</a></li>
+            <li><a href="#Surface">Surface</a></li>
+            <li><a href="#Tol">Tol</a></li>
+            <li><a href="#Torus">Torus</a></li>
+            <li><a href="#Vector2d">Vector2d</a></li>
+            <li><a href="#Vector3d">Vector3d</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="AcGeCSIConfig">
         <details>
-            <summary>class AcGeCSIConfig</summary>
+            <summary>class AcGeCSIConfig <span class="tag">Class</span></summary>
             <code>kXUnknown: ClassVar[Self]</code>
             <code>kXOut: ClassVar[Self]</code>
             <code>kXIn: ClassVar[Self]</code>
@@ -60,9 +158,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeError">
         <details>
-            <summary>class AcGeError</summary>
+            <summary>class AcGeError <span class="tag">Class</span></summary>
             <code>kOk: ClassVar[Self]</code>
             <code>k0This: ClassVar[Self]</code>
             <code>k0Arg1: ClassVar[Self]</code>
@@ -78,9 +176,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeSSIConfig">
         <details>
-            <summary>class AcGeSSIConfig</summary>
+            <summary>class AcGeSSIConfig <span class="tag">Class</span></summary>
             <code>kSSIUnknown: ClassVar[Self]</code>
             <code>kSSIOut: ClassVar[Self]</code>
             <code>kSSIIn: ClassVar[Self]</code>
@@ -88,18 +186,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeSSIType">
         <details>
-            <summary>class AcGeSSIType</summary>
+            <summary>class AcGeSSIType <span class="tag">Class</span></summary>
             <code>kSSITransverse: ClassVar[Self]</code>
             <code>kSSITangent: ClassVar[Self]</code>
             <code>kSSIAntiTangent: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeXConfig">
         <details>
-            <summary>class AcGeXConfig</summary>
+            <summary>class AcGeXConfig <span class="tag">Class</span></summary>
             <code>kNotDefined: ClassVar[Self]</code>
             <code>kUnknown: ClassVar[Self]</code>
             <code>kLeftRight: ClassVar[Self]</code>
@@ -118,9 +216,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AutoTol">
         <details>
-            <summary>class AutoTol</summary>
+            <summary>class AutoTol <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def equalPoint(self) -&gt; float</code>
@@ -130,9 +228,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BoundBlock2d">
         <details>
-            <summary>class BoundBlock2d</summary>
+            <summary>class BoundBlock2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pt1: PyGe.Point2d, pt2: PyGe.Point2d) -&gt; None</code>
             <code>def __init__(self, base: PyGe.Point2d, dir1: PyGe.Vector2d, dir2: PyGe.Vector2d) -&gt; None</code>
@@ -158,9 +256,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BoundBlock3d">
         <details>
-            <summary>class BoundBlock3d</summary>
+            <summary>class BoundBlock3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, base: PyGe.Point3d, dir1: PyGe.Vector3d, dir2: PyGe.Vector3d, dir3: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -185,9 +283,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BoundedPlane">
         <details>
-            <summary>class BoundedPlane</summary>
+            <summary>class BoundedPlane <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, origin: PyGe.Point3d, uVec: PyGe.Vector3d, vVec: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, p1: PyGe.Point3d, origin: PyGe.Point3d, p2: PyGe.Point3d) -&gt; None</code>
@@ -203,9 +301,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CircArc2d">
         <details>
-            <summary>class CircArc2d</summary>
+            <summary>class CircArc2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point2d, radius: float) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point2d, radius: float, startAngle: float, endAngle: float) -&gt; None</code>
@@ -243,9 +341,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CircArc3d">
         <details>
-            <summary>class CircArc3d</summary>
+            <summary>class CircArc3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point3d, nrm: PyGe.Vector3d, radius: float) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point3d, nrm: PyGe.Vector3d, refVec: PyGe.Vector3d, radius: float, startAngle: float, endAngle: float) -&gt; None</code>
@@ -282,9 +380,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ClipBoundary2d">
         <details>
-            <summary>class ClipBoundary2d</summary>
+            <summary>class ClipBoundary2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, cornerA: PyGe.Point2d, cornerB: PyGe.Point2d) -&gt; None</code>
             <code>def __init__(self, clipBoundary: list[PyGe.Point2d]) -&gt; None</code>
@@ -296,9 +394,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CompositeCurve2d">
         <details>
-            <summary>class CompositeCurve2d</summary>
+            <summary>class CompositeCurve2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curveList: list[PyGe.Curve2d]) -&gt; None</code>
             <code>def __init__(self, curveList: list[PyGe.Curve2d], isOwnerOfCurves: list[int]) -&gt; None</code>
@@ -316,9 +414,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CompositeCurve3d">
         <details>
-            <summary>class CompositeCurve3d</summary>
+            <summary>class CompositeCurve3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curveList: list[PyGe.Curve3d]) -&gt; None</code>
             <code>def __init__(self, curveList: list[PyGe.Curve3d], isOwnerOfCurves: list[int]) -&gt; None</code>
@@ -337,9 +435,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Cone">
         <details>
-            <summary>class Cone</summary>
+            <summary>class Cone <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, cosineAngle: float, sineAngle: float, baseOrigin: PyGe.Point3d, baseRadius: float, axisOfSymmetry: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, cosineAngle: float, sineAngle: float, baseOrigin: PyGe.Point3d, baseRadius: float, axisOfSymmetry: PyGe.Vector3d, refAxis: PyGe.Vector3d, height: PyGe.Interval, startAngle: float, endAngle: float) -&gt; None</code>
@@ -370,9 +468,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CubicSplineCurve2d">
         <details>
-            <summary>class CubicSplineCurve2d</summary>
+            <summary>class CubicSplineCurve2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve2d, epsilon: float) -&gt; None</code>
             <code>def __init__(self, fitPnts: list[PyGe.Point2d], tol: PyGe.Tol) -&gt; None</code>
@@ -391,9 +489,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CubicSplineCurve3d">
         <details>
-            <summary>class CubicSplineCurve3d</summary>
+            <summary>class CubicSplineCurve3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve3d, epsilon: float) -&gt; None</code>
             <code>def __init__(self, fitPnts: list[PyGe.Point3d], tol: PyGe.Tol) -&gt; None</code>
@@ -412,9 +510,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Curve2d">
         <details>
-            <summary>class Curve2d</summary>
+            <summary>class Curve2d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self, startParam: float, endParam: float, tol: float) -&gt; float</code>
@@ -453,9 +551,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Curve3d">
         <details>
-            <summary>class Curve3d</summary>
+            <summary>class Curve3d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self, startParam: float, endParam: float, tol: float) -&gt; float</code>
@@ -502,9 +600,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CurveCurveInt2d">
         <details>
-            <summary>class CurveCurveInt2d</summary>
+            <summary>class CurveCurveInt2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve1: PyGe.Curve2d, curve2: PyGe.Curve2d) -&gt; None</code>
             <code>def __init__(self, curve1: PyGe.Curve2d, curve2: PyGe.Curve2d, tol: PyGe.Tol) -&gt; None</code>
@@ -537,9 +635,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CurveCurveInt3d">
         <details>
-            <summary>class CurveCurveInt3d</summary>
+            <summary>class CurveCurveInt3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve1: PyGe.Curve3d, curve2: PyGe.Curve3d) -&gt; None</code>
             <code>def __init__(self, curve1: PyGe.Curve3d, curve2: PyGe.Curve3d, planeNormal: PyGe.Vector3d, tol: PyGe.Tol) -&gt; None</code>
@@ -574,9 +672,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CurveSurfInt">
         <details>
-            <summary>class CurveSurfInt</summary>
+            <summary>class CurveSurfInt <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve3d, surf: PyGe.Surface) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve3d, surf: PyGe.Surface, tol: PyGe.Tol) -&gt; None</code>
@@ -600,9 +698,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Cylinder">
         <details>
-            <summary>class Cylinder</summary>
+            <summary>class Cylinder <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, radius: float, origin: PyGe.Point3d, axisOfSymmetry: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, radius: float, origin: PyGe.Point3d, axisOfSymmetry: PyGe.Vector3d, refAxis: PyGe.Vector3d, height: PyGe.Interval, startAngle: float, endAngle: float) -&gt; None</code>
@@ -630,9 +728,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EllipArc2d">
         <details>
-            <summary>class EllipArc2d</summary>
+            <summary>class EllipArc2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, carc: PyGe.CircArc2d) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point2d, majorAxis: PyGe.Vector2d, minorAxis: PyGe.Vector2d, majorRadius: float, minorRadius: float) -&gt; None</code>
@@ -667,9 +765,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EllipArc3d">
         <details>
-            <summary>class EllipArc3d</summary>
+            <summary>class EllipArc3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, carc: PyGe.CircArc3d) -&gt; None</code>
             <code>def __init__(self, cent: PyGe.Point3d, majorAxis: PyGe.Vector3d, minorAxis: PyGe.Vector3d, majorRadius: float, minorRadius: float) -&gt; None</code>
@@ -707,9 +805,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Entity2d">
         <details>
-            <summary>class Entity2d</summary>
+            <summary>class Entity2d <span class="tag">Class</span></summary>
             <code>def __hash__(self) -&gt; int</code>
             <code>def __init__() -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
@@ -730,9 +828,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Entity3d">
         <details>
-            <summary>class Entity3d</summary>
+            <summary>class Entity3d <span class="tag">Class</span></summary>
             <code>def __hash__(self) -&gt; int</code>
             <code>def __init__() -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
@@ -753,9 +851,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EntityId">
         <details>
-            <summary>class EntityId</summary>
+            <summary>class EntityId <span class="tag">Class</span></summary>
             <code>kEntity2d: ClassVar[Self]</code>
             <code>kEntity3d: ClassVar[Self]</code>
             <code>kPointEnt2d: ClassVar[Self]</code>
@@ -840,9 +938,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExternalBoundedSurface">
         <details>
-            <summary>class ExternalBoundedSurface</summary>
+            <summary>class ExternalBoundedSurface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; ExternalBoundedSurface</code>
@@ -851,9 +949,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExternalCurve2d">
         <details>
-            <summary>class ExternalCurve2d</summary>
+            <summary>class ExternalCurve2d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity2d) -&gt; ExternalCurve2d</code>
@@ -862,9 +960,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExternalCurve3d">
         <details>
-            <summary>class ExternalCurve3d</summary>
+            <summary>class ExternalCurve3d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; ExternalCurve3d</code>
@@ -884,17 +982,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExternalEntityKind">
         <details>
-            <summary>class ExternalEntityKind</summary>
+            <summary>class ExternalEntityKind <span class="tag">Class</span></summary>
             <code>kAcisEntity: ClassVar[Self]</code>
             <code>kExternalEntityUndefined: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExternalSurface">
         <details>
-            <summary>class ExternalSurface</summary>
+            <summary>class ExternalSurface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; ExternalSurface</code>
@@ -903,9 +1001,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Interval">
         <details>
-            <summary>class Interval</summary>
+            <summary>class Interval <span class="tag">Class</span></summary>
             <code>def __ge__(self, val: PyGe.Interval | float) -&gt; bool</code>
             <code>def __gt__(self, val: PyGe.Interval | float) -&gt; bool</code>
             <code>def __init__(self) -&gt; None</code>
@@ -952,9 +1050,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="KnotParameterization">
         <details>
-            <summary>class KnotParameterization</summary>
+            <summary>class KnotParameterization <span class="tag">Class</span></summary>
             <code>kChord: ClassVar[Self]</code>
             <code>kSqrtChord: ClassVar[Self]</code>
             <code>kUniform: ClassVar[Self]</code>
@@ -963,9 +1061,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="KnotVector">
         <details>
-            <summary>class KnotVector</summary>
+            <summary>class KnotVector <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, size: int, growSize: int) -&gt; None</code>
             <code>def __init__(self, data: list[float]) -&gt; None</code>
@@ -1007,9 +1105,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Line2d">
         <details>
-            <summary>class Line2d</summary>
+            <summary>class Line2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, direction: PyGe.Vector2d) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, end: PyGe.Point3d) -&gt; None</code>
@@ -1026,9 +1124,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Line3d">
         <details>
-            <summary>class Line3d</summary>
+            <summary>class Line3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, endPoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, direction: PyGe.Vector3d) -&gt; None</code>
@@ -1046,9 +1144,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LineSeg2d">
         <details>
-            <summary>class LineSeg2d</summary>
+            <summary>class LineSeg2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, direction: PyGe.Vector2d) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, end: PyGe.Point3d) -&gt; None</code>
@@ -1074,9 +1172,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LineSeg3d">
         <details>
-            <summary>class LineSeg3d</summary>
+            <summary>class LineSeg3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, endPoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, direction: PyGe.Vector3d) -&gt; None</code>
@@ -1100,9 +1198,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LinearEnt2d">
         <details>
-            <summary>class LinearEnt2d</summary>
+            <summary>class LinearEnt2d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity2d) -&gt; LinearEnt2d</code>
@@ -1120,9 +1218,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LinearEnt3d">
         <details>
-            <summary>class LinearEnt3d</summary>
+            <summary>class LinearEnt3d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; LinearEnt3d</code>
@@ -1156,9 +1254,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Matrix2d">
         <details>
-            <summary>class Matrix2d</summary>
+            <summary>class Matrix2d <span class="tag">Class</span></summary>
             <code>def __imul__(self, xform: PyGe.Matrix2d) -&gt; Matrix2d</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, entry: Collection[Collection[float]]) -&gt; None</code>
@@ -1207,9 +1305,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Matrix3d">
         <details>
-            <summary>class Matrix3d</summary>
+            <summary>class Matrix3d <span class="tag">Class</span></summary>
             <code>def __imul__(self, xform: PyGe.Matrix3d) -&gt; Matrix3d</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, entry: Collection[Collection[float]]) -&gt; None</code>
@@ -1273,9 +1371,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="NurbCurve2d">
         <details>
-            <summary>class NurbCurve2d</summary>
+            <summary>class NurbCurve2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, src: PyGe.Curve2d) -&gt; None</code>
             <code>def __init__(self, src: PyGe.LineSeg2d) -&gt; None</code>
@@ -1333,9 +1431,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="NurbCurve3d">
         <details>
-            <summary>class NurbCurve3d</summary>
+            <summary>class NurbCurve3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, src: PyGe.Curve3d) -&gt; None</code>
             <code>def __init__(self, src: PyGe.LineSeg3d) -&gt; None</code>
@@ -1395,9 +1493,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="NurbSurface">
         <details>
-            <summary>class NurbSurface</summary>
+            <summary>class NurbSurface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; NurbSurface</code>
@@ -1406,18 +1504,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OffsetCrvExtType">
         <details>
-            <summary>class OffsetCrvExtType</summary>
+            <summary>class OffsetCrvExtType <span class="tag">Class</span></summary>
             <code>kFillet: ClassVar[Self]</code>
             <code>kChamfer: ClassVar[Self]</code>
             <code>kExtend: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OffsetCurve2d">
         <details>
-            <summary>class OffsetCurve2d</summary>
+            <summary>class OffsetCurve2d <span class="tag">Class</span></summary>
             <code>def __init__(self, baseCurve: PyGe.Curve2d, offsetDistance: float) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity2d) -&gt; OffsetCurve2d</code>
@@ -1426,9 +1524,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OffsetCurve3d">
         <details>
-            <summary>class OffsetCurve3d</summary>
+            <summary>class OffsetCurve3d <span class="tag">Class</span></summary>
             <code>def __init__(self, baseCurve: PyGe.Curve3d, planeNormal: PyGe.Vector3d, offsetDistance: float) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; OffsetCurve3d</code>
@@ -1445,9 +1543,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OffsetSurface">
         <details>
-            <summary>class OffsetSurface</summary>
+            <summary>class OffsetSurface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; OffsetSurface</code>
@@ -1456,9 +1554,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlanarEnt">
         <details>
-            <summary>class PlanarEnt</summary>
+            <summary>class PlanarEnt <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; PlanarEnt</code>
@@ -1477,9 +1575,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Plane">
         <details>
-            <summary>class Plane</summary>
+            <summary>class Plane <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, origin: PyGe.Point3d, normal: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, origin: PyGe.Point3d, uAxis: PyGe.Vector3d, vAxis: PyGe.Vector3d) -&gt; None</code>
@@ -1500,9 +1598,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point2d">
         <details>
-            <summary>class Point2d</summary>
+            <summary>class Point2d <span class="tag">Class</span></summary>
             <code>def __add__(self, vec: PyGe.Vector2d) -&gt; Point2d</code>
             <code>def __getinitargs__(self) -&gt; tuple</code>
             <code>def __getitem__(self, idx: int) -&gt; float</code>
@@ -1541,9 +1639,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point2dArray">
         <details>
-            <summary>class Point2dArray</summary>
+            <summary>class Point2dArray <span class="tag">Class</span></summary>
             <code>def __contains__(self) -&gt; bool</code>
             <code>def __delitem__(self) -&gt; None</code>
             <code>def __getitem__(self) -&gt; object</code>
@@ -1564,9 +1662,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point2dTree">
         <details>
-            <summary>class Point2dTree</summary>
+            <summary>class Point2dTree <span class="tag">Class</span></summary>
             <code>def __init__(self, points: Collection[PyGe.Point2d]) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1576,9 +1674,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point3d">
         <details>
-            <summary>class Point3d</summary>
+            <summary>class Point3d <span class="tag">Class</span></summary>
             <code>def __add__(self, vec: PyGe.Vector3d) -&gt; Point3d</code>
             <code>def __getinitargs__(self) -&gt; tuple</code>
             <code>def __getitem__(self, idx: int) -&gt; float</code>
@@ -1626,9 +1724,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point3dArray">
         <details>
-            <summary>class Point3dArray</summary>
+            <summary>class Point3dArray <span class="tag">Class</span></summary>
             <code>def __contains__(self) -&gt; bool</code>
             <code>def __delitem__(self) -&gt; None</code>
             <code>def __getitem__(self) -&gt; object</code>
@@ -1651,9 +1749,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point3dTree">
         <details>
-            <summary>class Point3dTree</summary>
+            <summary>class Point3dTree <span class="tag">Class</span></summary>
             <code>def __init__(self, points: Collection[PyGe.Point3d]) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1663,18 +1761,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointContainment">
         <details>
-            <summary>class PointContainment</summary>
+            <summary>class PointContainment <span class="tag">Class</span></summary>
             <code>kInside: ClassVar[Self]</code>
             <code>kOutside: ClassVar[Self]</code>
             <code>kOnBoundary: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointEnt2d">
         <details>
-            <summary>class PointEnt2d</summary>
+            <summary>class PointEnt2d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity2d) -&gt; PointEnt2d</code>
@@ -1684,9 +1782,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointEnt3d">
         <details>
-            <summary>class PointEnt3d</summary>
+            <summary>class PointEnt3d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; PointEnt3d</code>
@@ -1696,9 +1794,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointOnCurve2d">
         <details>
-            <summary>class PointOnCurve2d</summary>
+            <summary>class PointOnCurve2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve2d) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve2d, param: float) -&gt; None</code>
@@ -1722,9 +1820,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointOnCurve3d">
         <details>
-            <summary>class PointOnCurve3d</summary>
+            <summary>class PointOnCurve3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve3d) -&gt; None</code>
             <code>def __init__(self, curve: PyGe.Curve3d, param: float) -&gt; None</code>
@@ -1750,9 +1848,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointOnSurface">
         <details>
-            <summary>class PointOnSurface</summary>
+            <summary>class PointOnSurface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, surface: PyGe.Surface) -&gt; None</code>
             <code>def __init__(self, surface: PyGe.Surface, pnt: PyGe.Point2d) -&gt; None</code>
@@ -1796,9 +1894,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline2d">
         <details>
-            <summary>class Polyline2d</summary>
+            <summary>class Polyline2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, points: list[PyGe.Point2d]) -&gt; None</code>
             <code>def __init__(self, knots: PyGe.KnotVector, points: list[PyGe.Point2d]) -&gt; None</code>
@@ -1814,9 +1912,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline3d">
         <details>
-            <summary>class Polyline3d</summary>
+            <summary>class Polyline3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, points: list[PyGe.Point3d]) -&gt; None</code>
             <code>def __init__(self, knots: PyGe.KnotVector, points: list[PyGe.Point3d]) -&gt; None</code>
@@ -1832,9 +1930,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Position2d">
         <details>
-            <summary>class Position2d</summary>
+            <summary>class Position2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pnt: PyGe.Point2d) -&gt; None</code>
             <code>def __init__(self, x: float, y: float) -&gt; None</code>
@@ -1849,9 +1947,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Position3d">
         <details>
-            <summary>class Position3d</summary>
+            <summary>class Position3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pnt: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, x: float, y: float, z: float) -&gt; None</code>
@@ -1866,9 +1964,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Ray2d">
         <details>
-            <summary>class Ray2d</summary>
+            <summary>class Ray2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, direction: PyGe.Vector2d) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, end: PyGe.Point3d) -&gt; None</code>
@@ -1883,9 +1981,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Ray3d">
         <details>
-            <summary>class Ray3d</summary>
+            <summary>class Ray3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, endPoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, startPoint: PyGe.Point3d, direction: PyGe.Vector3d) -&gt; None</code>
@@ -1900,9 +1998,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Scale2d">
         <details>
-            <summary>class Scale2d</summary>
+            <summary>class Scale2d <span class="tag">Class</span></summary>
             <code>def __getitem__(self, idx: int) -&gt; float</code>
             <code>def __imul__(self, val: float) -&gt; Scale2d</code>
             <code>def __init__(self) -&gt; None</code>
@@ -1925,9 +2023,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Scale3d">
         <details>
-            <summary>class Scale3d</summary>
+            <summary>class Scale3d <span class="tag">Class</span></summary>
             <code>def __getitem__(self, idx: int) -&gt; float</code>
             <code>def __imul__(self, val: float) -&gt; Scale3d</code>
             <code>def __init__(self) -&gt; None</code>
@@ -1951,9 +2049,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Sphere">
         <details>
-            <summary>class Sphere</summary>
+            <summary>class Sphere <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, radius: float, center: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, radius: float, center: PyGe.Point3d, northAxis: PyGe.Vector3d, refAxis: PyGe.Vector3d, startAngleU: float, endAngleU: float, startAngleV: float, endAngleV: float) -&gt; None</code>
@@ -1982,9 +2080,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SplineEnt2d">
         <details>
-            <summary>class SplineEnt2d</summary>
+            <summary>class SplineEnt2d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity2d) -&gt; SplineEnt2d</code>
@@ -2009,9 +2107,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SplineEnt3d">
         <details>
-            <summary>class SplineEnt3d</summary>
+            <summary>class SplineEnt3d <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; SplineEnt3d</code>
@@ -2036,9 +2134,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SurfSurfInt">
         <details>
-            <summary>class SurfSurfInt</summary>
+            <summary>class SurfSurfInt <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, srf1: PyGe.Surface, srf2: PyGe.Surface) -&gt; None</code>
             <code>def __init__(self, srf1: PyGe.Surface, srf2: PyGe.Surface, tol: PyGe.Tol) -&gt; None</code>
@@ -2062,9 +2160,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Surface">
         <details>
-            <summary>class Surface</summary>
+            <summary>class Surface <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; PyGe.Surface</code>
@@ -2089,9 +2187,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Tol">
         <details>
-            <summary>class Tol</summary>
+            <summary>class Tol <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def current() -&gt; Tol</code>
@@ -2103,9 +2201,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Torus">
         <details>
-            <summary>class Torus</summary>
+            <summary>class Torus <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyGe.Entity3d) -&gt; Torus</code>
@@ -2114,9 +2212,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vector2d">
         <details>
-            <summary>class Vector2d</summary>
+            <summary>class Vector2d <span class="tag">Class</span></summary>
             <code>def __add__(self, vec: PyGe.Vector2d) -&gt; Vector2d</code>
             <code>def __getinitargs__(self) -&gt; tuple</code>
             <code>def __getitem__(self, idx: int) -&gt; float</code>
@@ -2171,9 +2269,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vector3d">
         <details>
-            <summary>class Vector3d</summary>
+            <summary>class Vector3d <span class="tag">Class</span></summary>
             <code>def __add__(self, vec: PyGe.Vector3d) -&gt; Vector3d</code>
             <code>def __getinitargs__(self) -&gt; tuple</code>
             <code>def __getitem__(self, idx: int) -&gt; float</code>

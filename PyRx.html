@@ -42,14 +42,37 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyRx.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#LispType">LispType</a></li>
+            <li><a href="#Ordering">Ordering</a></li>
+            <li><a href="#Overrule">Overrule</a></li>
+            <li><a href="#RxClass">RxClass</a></li>
+            <li><a href="#RxObject">RxObject</a></li>
+            <li><a href="#stderr">stderr</a></li>
+            <li><a href="#stdout">stdout</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="LispType">
         <details>
-            <summary>class LispType</summary>
+            <summary>class LispType <span class="tag">Class</span></summary>
             <code>kAngle: ClassVar[Self]</code>
             <code>kDottedPair: ClassVar[Self]</code>
             <code>kDouble: ClassVar[Self]</code>
@@ -72,9 +95,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Ordering">
         <details>
-            <summary>class Ordering</summary>
+            <summary>class Ordering <span class="tag">Class</span></summary>
             <code>kLessThan: ClassVar[Self]</code>
             <code>kEqual: ClassVar[Self]</code>
             <code>kGreaterThan: ClassVar[Self]</code>
@@ -82,9 +105,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Overrule">
         <details>
-            <summary>class Overrule</summary>
+            <summary>class Overrule <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addOverrule(rxClass: PyRx.RxClass, overrule: PyRx.Overrule) -&gt; None</code>
@@ -98,9 +121,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RxClass">
         <details>
-            <summary>class RxClass</summary>
+            <summary>class RxClass <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def appName(self) -&gt; str</code>
@@ -114,9 +137,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RxObject">
         <details>
-            <summary>class RxObject</summary>
+            <summary>class RxObject <span class="tag">Class</span></summary>
             <code>def __hash__(self) -&gt; int</code>
             <code>def __init__() -&gt; None</code>
             <code>def __ne__(self, rhs: PyRx.RxObject) -&gt; bool</code>
@@ -137,9 +160,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="stderr">
         <details>
-            <summary>class stderr</summary>
+            <summary>class stderr <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def flush(self) -&gt; None</code>
@@ -147,9 +170,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="stdout">
         <details>
-            <summary>class stdout</summary>
+            <summary>class stdout <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def flush(self) -&gt; None</code>

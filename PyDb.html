@@ -42,14 +42,370 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyDb.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#ACIcolorMethod">ACIcolorMethod</a></li>
+            <li><a href="#AbstractViewTable">AbstractViewTable</a></li>
+            <li><a href="#AbstractViewTableRecord">AbstractViewTableRecord</a></li>
+            <li><a href="#AcCmDialogTabs">AcCmDialogTabs</a></li>
+            <li><a href="#AcGeoMapResolution">AcGeoMapResolution</a></li>
+            <li><a href="#AcGeoMapType">AcGeoMapType</a></li>
+            <li><a href="#AcValue">AcValue</a></li>
+            <li><a href="#AdsName">AdsName</a></li>
+            <li><a href="#AlignedDimension">AlignedDimension</a></li>
+            <li><a href="#AnnoType">AnnoType</a></li>
+            <li><a href="#AnnotationScale">AnnotationScale</a></li>
+            <li><a href="#AnnotativeStates">AnnotativeStates</a></li>
+            <li><a href="#Arc">Arc</a></li>
+            <li><a href="#ArcDimension">ArcDimension</a></li>
+            <li><a href="#AssocFlags">AssocFlags</a></li>
+            <li><a href="#AssocPersSubentIdPE">AssocPersSubentIdPE</a></li>
+            <li><a href="#AttributeDefinition">AttributeDefinition</a></li>
+            <li><a href="#AttributeReference">AttributeReference</a></li>
+            <li><a href="#AutoWorkingDatabase">AutoWorkingDatabase</a></li>
+            <li><a href="#BlockBegin">BlockBegin</a></li>
+            <li><a href="#BlockEnd">BlockEnd</a></li>
+            <li><a href="#BlockReference">BlockReference</a></li>
+            <li><a href="#BlockScaling">BlockScaling</a></li>
+            <li><a href="#BlockTable">BlockTable</a></li>
+            <li><a href="#BlockTableRecord">BlockTableRecord</a></li>
+            <li><a href="#Body">Body</a></li>
+            <li><a href="#BoolOperType">BoolOperType</a></li>
+            <li><a href="#Cell">Cell</a></li>
+            <li><a href="#CellAlignment">CellAlignment</a></li>
+            <li><a href="#CellContentLayout">CellContentLayout</a></li>
+            <li><a href="#CellContentType">CellContentType</a></li>
+            <li><a href="#CellEdgeMask">CellEdgeMask</a></li>
+            <li><a href="#CellMargin">CellMargin</a></li>
+            <li><a href="#CellOption">CellOption</a></li>
+            <li><a href="#CellProperty">CellProperty</a></li>
+            <li><a href="#CellRange">CellRange</a></li>
+            <li><a href="#CellState">CellState</a></li>
+            <li><a href="#CellType">CellType</a></li>
+            <li><a href="#CenterMarkType">CenterMarkType</a></li>
+            <li><a href="#Circle">Circle</a></li>
+            <li><a href="#ClipBoundaryType">ClipBoundaryType</a></li>
+            <li><a href="#CollisionType">CollisionType</a></li>
+            <li><a href="#Color">Color</a></li>
+            <li><a href="#ColorMethod">ColorMethod</a></li>
+            <li><a href="#Core">Core</a></li>
+            <li><a href="#Curve">Curve</a></li>
+            <li><a href="#Database">Database</a></li>
+            <li><a href="#DatabaseOpenMode">DatabaseOpenMode</a></li>
+            <li><a href="#DatabaseReactor">DatabaseReactor</a></li>
+            <li><a href="#DatabaseSummaryInfo">DatabaseSummaryInfo</a></li>
+            <li><a href="#Date">Date</a></li>
+            <li><a href="#DbObject">DbObject</a></li>
+            <li><a href="#DbObjectOverrule">DbObjectOverrule</a></li>
+            <li><a href="#DbObjectReactor">DbObjectReactor</a></li>
+            <li><a href="#DeepCloneType">DeepCloneType</a></li>
+            <li><a href="#DiametricDimension">DiametricDimension</a></li>
+            <li><a href="#DictUtil">DictUtil</a></li>
+            <li><a href="#Dictionary">Dictionary</a></li>
+            <li><a href="#DimArrowFlags">DimArrowFlags</a></li>
+            <li><a href="#DimAssoc">DimAssoc</a></li>
+            <li><a href="#DimAssocPointType">DimAssocPointType</a></li>
+            <li><a href="#DimInspect">DimInspect</a></li>
+            <li><a href="#DimStyleTable">DimStyleTable</a></li>
+            <li><a href="#DimStyleTableRecord">DimStyleTableRecord</a></li>
+            <li><a href="#Dimension">Dimension</a></li>
+            <li><a href="#DrawLeaderOrderType">DrawLeaderOrderType</a></li>
+            <li><a href="#DrawMLeaderOrderType">DrawMLeaderOrderType</a></li>
+            <li><a href="#DuplicateRecordCloning">DuplicateRecordCloning</a></li>
+            <li><a href="#DwgDataType">DwgDataType</a></li>
+            <li><a href="#DwgVersion">DwgVersion</a></li>
+            <li><a href="#DxfCode">DxfCode</a></li>
+            <li><a href="#DynBlockReference">DynBlockReference</a></li>
+            <li><a href="#DynBlockReferenceProperty">DynBlockReferenceProperty</a></li>
+            <li><a href="#DynBlockTableRecord">DynBlockTableRecord</a></li>
+            <li><a href="#DynUnitsType">DynUnitsType</a></li>
+            <li><a href="#Ellipse">Ellipse</a></li>
+            <li><a href="#EndCaps">EndCaps</a></li>
+            <li><a href="#Entity">Entity</a></li>
+            <li><a href="#EntityColor">EntityColor</a></li>
+            <li><a href="#EntityHyperlinkPE">EntityHyperlinkPE</a></li>
+            <li><a href="#EntityReactor">EntityReactor</a></li>
+            <li><a href="#ErrorStatus">ErrorStatus</a></li>
+            <li><a href="#ErrorStatusException">ErrorStatusException</a></li>
+            <li><a href="#EvalVariant">EvalVariant</a></li>
+            <li><a href="#Extents">Extents</a></li>
+            <li><a href="#Extents2d">Extents2d</a></li>
+            <li><a href="#ExtrudedSurface">ExtrudedSurface</a></li>
+            <li><a href="#Face">Face</a></li>
+            <li><a href="#FaceRecord">FaceRecord</a></li>
+            <li><a href="#Fcf">Fcf</a></li>
+            <li><a href="#Field">Field</a></li>
+            <li><a href="#FieldCodeFlag">FieldCodeFlag</a></li>
+            <li><a href="#FieldEngine">FieldEngine</a></li>
+            <li><a href="#FieldEvalContext">FieldEvalContext</a></li>
+            <li><a href="#FieldEvalOption">FieldEvalOption</a></li>
+            <li><a href="#FieldEvalStatus">FieldEvalStatus</a></li>
+            <li><a href="#FieldEvaluator">FieldEvaluator</a></li>
+            <li><a href="#FieldState">FieldState</a></li>
+            <li><a href="#FilerType">FilerType</a></li>
+            <li><a href="#FindFileHint">FindFileHint</a></li>
+            <li><a href="#FullSubentPath">FullSubentPath</a></li>
+            <li><a href="#GeoCoordinateSystem">GeoCoordinateSystem</a></li>
+            <li><a href="#GeoCoordinateSystemProjectionCode">GeoCoordinateSystemProjectionCode</a></li>
+            <li><a href="#GeoCoordinateSystemTransformer">GeoCoordinateSystemTransformer</a></li>
+            <li><a href="#GeoCoordinateSystemType">GeoCoordinateSystemType</a></li>
+            <li><a href="#GeoCoordinateSystemUnit">GeoCoordinateSystemUnit</a></li>
+            <li><a href="#GeoData">GeoData</a></li>
+            <li><a href="#GeoMap">GeoMap</a></li>
+            <li><a href="#GeoPositionMarker">GeoPositionMarker</a></li>
+            <li><a href="#GeoScaleEstimationMethod">GeoScaleEstimationMethod</a></li>
+            <li><a href="#GeoTextAlignmentType">GeoTextAlignmentType</a></li>
+            <li><a href="#GeoTypeOfCoordinates">GeoTypeOfCoordinates</a></li>
+            <li><a href="#Graph">Graph</a></li>
+            <li><a href="#GraphNode">GraphNode</a></li>
+            <li><a href="#GraphNodeFlags">GraphNodeFlags</a></li>
+            <li><a href="#GridLineStyle">GridLineStyle</a></li>
+            <li><a href="#GridLineType">GridLineType</a></li>
+            <li><a href="#GridProperty">GridProperty</a></li>
+            <li><a href="#GripData">GripData</a></li>
+            <li><a href="#Group">Group</a></li>
+            <li><a href="#Handle">Handle</a></li>
+            <li><a href="#HardOwnershipId">HardOwnershipId</a></li>
+            <li><a href="#HardPointerId">HardPointerId</a></li>
+            <li><a href="#Hatch">Hatch</a></li>
+            <li><a href="#HatchEdgeType">HatchEdgeType</a></li>
+            <li><a href="#HatchGradientPatternType">HatchGradientPatternType</a></li>
+            <li><a href="#HatchLoopType">HatchLoopType</a></li>
+            <li><a href="#HatchObjectType">HatchObjectType</a></li>
+            <li><a href="#HatchPatternType">HatchPatternType</a></li>
+            <li><a href="#HatchStyle">HatchStyle</a></li>
+            <li><a href="#Helix">Helix</a></li>
+            <li><a href="#HelixConstrainType">HelixConstrainType</a></li>
+            <li><a href="#HostApplicationServices">HostApplicationServices</a></li>
+            <li><a href="#Hyperlink">Hyperlink</a></li>
+            <li><a href="#HyperlinkCollection">HyperlinkCollection</a></li>
+            <li><a href="#IdMapping">IdMapping</a></li>
+            <li><a href="#IdPair">IdPair</a></li>
+            <li><a href="#Image">Image</a></li>
+            <li><a href="#ImageDisplayOpt">ImageDisplayOpt</a></li>
+            <li><a href="#ImageUnits">ImageUnits</a></li>
+            <li><a href="#IndexFilterManager">IndexFilterManager</a></li>
+            <li><a href="#Intersect">Intersect</a></li>
+            <li><a href="#JoinEntityPE">JoinEntityPE</a></li>
+            <li><a href="#JoinStyle">JoinStyle</a></li>
+            <li><a href="#LayerFilter">LayerFilter</a></li>
+            <li><a href="#LayerStateManager">LayerStateManager</a></li>
+            <li><a href="#LayerStateMask">LayerStateMask</a></li>
+            <li><a href="#LayerTable">LayerTable</a></li>
+            <li><a href="#LayerTableRecord">LayerTableRecord</a></li>
+            <li><a href="#Layout">Layout</a></li>
+            <li><a href="#LayoutManager">LayoutManager</a></li>
+            <li><a href="#Leader">Leader</a></li>
+            <li><a href="#Line">Line</a></li>
+            <li><a href="#LineAngularDimension2">LineAngularDimension2</a></li>
+            <li><a href="#LineSpacingStyle">LineSpacingStyle</a></li>
+            <li><a href="#LineWeight">LineWeight</a></li>
+            <li><a href="#LinetypeTable">LinetypeTable</a></li>
+            <li><a href="#LinetypeTableRecord">LinetypeTableRecord</a></li>
+            <li><a href="#LoftedSurface">LoftedSurface</a></li>
+            <li><a href="#MInsertBlock">MInsertBlock</a></li>
+            <li><a href="#MLeader">MLeader</a></li>
+            <li><a href="#MLeaderBlockConnectionType">MLeaderBlockConnectionType</a></li>
+            <li><a href="#MLeaderContentType">MLeaderContentType</a></li>
+            <li><a href="#MLeaderGsMarkType">MLeaderGsMarkType</a></li>
+            <li><a href="#MLeaderLeaderDirectionType">MLeaderLeaderDirectionType</a></li>
+            <li><a href="#MLeaderLeaderType">MLeaderLeaderType</a></li>
+            <li><a href="#MLeaderMoveType">MLeaderMoveType</a></li>
+            <li><a href="#MLeaderPropertyOverrideType">MLeaderPropertyOverrideType</a></li>
+            <li><a href="#MLeaderSegmentAngleType">MLeaderSegmentAngleType</a></li>
+            <li><a href="#MLeaderStyle">MLeaderStyle</a></li>
+            <li><a href="#MLeaderTextAlignmentType">MLeaderTextAlignmentType</a></li>
+            <li><a href="#MLeaderTextAngleType">MLeaderTextAngleType</a></li>
+            <li><a href="#MLeaderTextAttachmentDirection">MLeaderTextAttachmentDirection</a></li>
+            <li><a href="#MLeaderTextAttachmentType">MLeaderTextAttachmentType</a></li>
+            <li><a href="#MPolygon">MPolygon</a></li>
+            <li><a href="#MPolygonloopDir">MPolygonloopDir</a></li>
+            <li><a href="#MText">MText</a></li>
+            <li><a href="#MTextAttachmentPoint">MTextAttachmentPoint</a></li>
+            <li><a href="#MTextColumnType">MTextColumnType</a></li>
+            <li><a href="#MTextFlowDirection">MTextFlowDirection</a></li>
+            <li><a href="#MTextFragmentType">MTextFragmentType</a></li>
+            <li><a href="#MeasurementValue">MeasurementValue</a></li>
+            <li><a href="#MergeCellStyleOption">MergeCellStyleOption</a></li>
+            <li><a href="#Mline">Mline</a></li>
+            <li><a href="#MlineJustification">MlineJustification</a></li>
+            <li><a href="#MlineStyle">MlineStyle</a></li>
+            <li><a href="#NurbSurface">NurbSurface</a></li>
+            <li><a href="#ObjectContext">ObjectContext</a></li>
+            <li><a href="#ObjectContextCollection">ObjectContextCollection</a></li>
+            <li><a href="#ObjectContextManager">ObjectContextManager</a></li>
+            <li><a href="#ObjectId">ObjectId</a></li>
+            <li><a href="#ObjectIdArray">ObjectIdArray</a></li>
+            <li><a href="#ObjectIdGraph">ObjectIdGraph</a></li>
+            <li><a href="#ObjectIdGraphNode">ObjectIdGraphNode</a></li>
+            <li><a href="#OpenMode">OpenMode</a></li>
+            <li><a href="#OrdinateDimension">OrdinateDimension</a></li>
+            <li><a href="#OrthographicView">OrthographicView</a></li>
+            <li><a href="#OsnapMask">OsnapMask</a></li>
+            <li><a href="#OsnapMode">OsnapMode</a></li>
+            <li><a href="#OsnapOverrule">OsnapOverrule</a></li>
+            <li><a href="#OsnapPointRef">OsnapPointRef</a></li>
+            <li><a href="#OsnapType">OsnapType</a></li>
+            <li><a href="#OutputDisplayService">OutputDisplayService</a></li>
+            <li><a href="#PdfDefinition">PdfDefinition</a></li>
+            <li><a href="#PdfReference">PdfReference</a></li>
+            <li><a href="#Planarity">Planarity</a></li>
+            <li><a href="#PlaneSurface">PlaneSurface</a></li>
+            <li><a href="#PlotPaperUnits">PlotPaperUnits</a></li>
+            <li><a href="#PlotRotation">PlotRotation</a></li>
+            <li><a href="#PlotSettings">PlotSettings</a></li>
+            <li><a href="#PlotSettingsValidator">PlotSettingsValidator</a></li>
+            <li><a href="#PlotStyleNameType">PlotStyleNameType</a></li>
+            <li><a href="#PlotType">PlotType</a></li>
+            <li><a href="#Point">Point</a></li>
+            <li><a href="#Point3AngularDimension">Point3AngularDimension</a></li>
+            <li><a href="#PointCloudClassificationColorRamp">PointCloudClassificationColorRamp</a></li>
+            <li><a href="#PointCloudColorMap">PointCloudColorMap</a></li>
+            <li><a href="#PointCloudColorRamp">PointCloudColorRamp</a></li>
+            <li><a href="#PointCloudCrop">PointCloudCrop</a></li>
+            <li><a href="#PointCloudCropType">PointCloudCropType</a></li>
+            <li><a href="#PointCloudDefEx">PointCloudDefEx</a></li>
+            <li><a href="#PointCloudDispOptionOutOfRange">PointCloudDispOptionOutOfRange</a></li>
+            <li><a href="#PointCloudEx">PointCloudEx</a></li>
+            <li><a href="#PointCloudOSnapMode">PointCloudOSnapMode</a></li>
+            <li><a href="#PointCloudProperty">PointCloudProperty</a></li>
+            <li><a href="#PointCloudPropertyState">PointCloudPropertyState</a></li>
+            <li><a href="#PointCloudStylizationType">PointCloudStylizationType</a></li>
+            <li><a href="#PointRef">PointRef</a></li>
+            <li><a href="#Poly2dType">Poly2dType</a></li>
+            <li><a href="#Poly3dType">Poly3dType</a></li>
+            <li><a href="#PolyFaceMeshVertex">PolyFaceMeshVertex</a></li>
+            <li><a href="#PolygonMeshVertex">PolygonMeshVertex</a></li>
+            <li><a href="#Polyline">Polyline</a></li>
+            <li><a href="#Polyline2d">Polyline2d</a></li>
+            <li><a href="#Polyline3d">Polyline3d</a></li>
+            <li><a href="#Polyline3dVertex">Polyline3dVertex</a></li>
+            <li><a href="#Profile3d">Profile3d</a></li>
+            <li><a href="#RadialDimension">RadialDimension</a></li>
+            <li><a href="#RadialDimensionLarge">RadialDimensionLarge</a></li>
+            <li><a href="#RasterImage">RasterImage</a></li>
+            <li><a href="#RasterImageDef">RasterImageDef</a></li>
+            <li><a href="#RasterImageDefReactor">RasterImageDefReactor</a></li>
+            <li><a href="#RegAppTable">RegAppTable</a></li>
+            <li><a href="#RegAppTableRecord">RegAppTableRecord</a></li>
+            <li><a href="#Region">Region</a></li>
+            <li><a href="#RemapFileContext">RemapFileContext</a></li>
+            <li><a href="#ReservedStringEnumType">ReservedStringEnumType</a></li>
+            <li><a href="#RevolveOptions">RevolveOptions</a></li>
+            <li><a href="#RevolvedSurface">RevolvedSurface</a></li>
+            <li><a href="#RotatedDimType">RotatedDimType</a></li>
+            <li><a href="#RotatedDimension">RotatedDimension</a></li>
+            <li><a href="#RotationAngle">RotationAngle</a></li>
+            <li><a href="#RowType">RowType</a></li>
+            <li><a href="#Section">Section</a></li>
+            <li><a href="#SectionGeneration">SectionGeneration</a></li>
+            <li><a href="#SectionGeometry">SectionGeometry</a></li>
+            <li><a href="#SectionHeight">SectionHeight</a></li>
+            <li><a href="#SectionManager">SectionManager</a></li>
+            <li><a href="#SectionSettings">SectionSettings</a></li>
+            <li><a href="#SectionState">SectionState</a></li>
+            <li><a href="#SectionSubItem">SectionSubItem</a></li>
+            <li><a href="#SectionType">SectionType</a></li>
+            <li><a href="#SegType">SegType</a></li>
+            <li><a href="#SequenceEnd">SequenceEnd</a></li>
+            <li><a href="#ShadePlotResLevel">ShadePlotResLevel</a></li>
+            <li><a href="#ShadePlotType">ShadePlotType</a></li>
+            <li><a href="#Shape">Shape</a></li>
+            <li><a href="#SnoopDwgFiler">SnoopDwgFiler</a></li>
+            <li><a href="#SnoopDxfFiler">SnoopDxfFiler</a></li>
+            <li><a href="#SoftOwnershipId">SoftOwnershipId</a></li>
+            <li><a href="#SoftPointerId">SoftPointerId</a></li>
+            <li><a href="#Solid">Solid</a></li>
+            <li><a href="#Solid3d">Solid3d</a></li>
+            <li><a href="#SortentsTable">SortentsTable</a></li>
+            <li><a href="#SpatialFilter">SpatialFilter</a></li>
+            <li><a href="#Spline">Spline</a></li>
+            <li><a href="#SplineType">SplineType</a></li>
+            <li><a href="#StandardScaleType">StandardScaleType</a></li>
+            <li><a href="#StdScaleType">StdScaleType</a></li>
+            <li><a href="#SubDMesh">SubDMesh</a></li>
+            <li><a href="#SubentId">SubentId</a></li>
+            <li><a href="#SubentType">SubentType</a></li>
+            <li><a href="#Surface">Surface</a></li>
+            <li><a href="#SurfaceEdgeExtensionType">SurfaceEdgeExtensionType</a></li>
+            <li><a href="#SurfaceWireframeType">SurfaceWireframeType</a></li>
+            <li><a href="#SweepAlignOption">SweepAlignOption</a></li>
+            <li><a href="#SweepMiterOption">SweepMiterOption</a></li>
+            <li><a href="#SweepOptions">SweepOptions</a></li>
+            <li><a href="#SweptSurface">SweptSurface</a></li>
+            <li><a href="#SymUtilServices">SymUtilServices</a></li>
+            <li><a href="#SymbolTable">SymbolTable</a></li>
+            <li><a href="#SymbolTableRecord">SymbolTableRecord</a></li>
+            <li><a href="#Table">Table</a></li>
+            <li><a href="#TableBreakFlowDirection">TableBreakFlowDirection</a></li>
+            <li><a href="#TableBreakOption">TableBreakOption</a></li>
+            <li><a href="#TableFlowDirection">TableFlowDirection</a></li>
+            <li><a href="#TableHitItem">TableHitItem</a></li>
+            <li><a href="#TableIteratorOption">TableIteratorOption</a></li>
+            <li><a href="#TableStyle">TableStyle</a></li>
+            <li><a href="#Text">Text</a></li>
+            <li><a href="#TextAlignment">TextAlignment</a></li>
+            <li><a href="#TextHorzMode">TextHorzMode</a></li>
+            <li><a href="#TextStyleTable">TextStyleTable</a></li>
+            <li><a href="#TextStyleTableRecord">TextStyleTableRecord</a></li>
+            <li><a href="#TextVertMode">TextVertMode</a></li>
+            <li><a href="#TimeZone">TimeZone</a></li>
+            <li><a href="#Trace">Trace</a></li>
+            <li><a href="#Transaction">Transaction</a></li>
+            <li><a href="#TransactionManager">TransactionManager</a></li>
+            <li><a href="#Transparency">Transparency</a></li>
+            <li><a href="#TransparencyMethod">TransparencyMethod</a></li>
+            <li><a href="#UCSTable">UCSTable</a></li>
+            <li><a href="#UCSTableRecord">UCSTableRecord</a></li>
+            <li><a href="#UnderlayDefinition">UnderlayDefinition</a></li>
+            <li><a href="#UnderlayLayer">UnderlayLayer</a></li>
+            <li><a href="#UnderlayReference">UnderlayReference</a></li>
+            <li><a href="#UnitsValue">UnitsValue</a></li>
+            <li><a href="#UpdateDirection">UpdateDirection</a></li>
+            <li><a href="#UpdateOption">UpdateOption</a></li>
+            <li><a href="#ValueDataType">ValueDataType</a></li>
+            <li><a href="#ValueFormatOption">ValueFormatOption</a></li>
+            <li><a href="#ValueParseOption">ValueParseOption</a></li>
+            <li><a href="#ValueUnitType">ValueUnitType</a></li>
+            <li><a href="#Vertex">Vertex</a></li>
+            <li><a href="#Vertex2d">Vertex2d</a></li>
+            <li><a href="#Vertex2dType">Vertex2dType</a></li>
+            <li><a href="#ViewTable">ViewTable</a></li>
+            <li><a href="#ViewTableRecord">ViewTableRecord</a></li>
+            <li><a href="#Viewport">Viewport</a></li>
+            <li><a href="#ViewportTable">ViewportTable</a></li>
+            <li><a href="#ViewportTableRecord">ViewportTableRecord</a></li>
+            <li><a href="#Visibility">Visibility</a></li>
+            <li><a href="#VpFreezeOps">VpFreezeOps</a></li>
+            <li><a href="#VpShadePlotType">VpShadePlotType</a></li>
+            <li><a href="#Wipeout">Wipeout</a></li>
+            <li><a href="#Xrecord">Xrecord</a></li>
+            <li><a href="#XrefGraph">XrefGraph</a></li>
+            <li><a href="#XrefGraphNode">XrefGraphNode</a></li>
+            <li><a href="#XrefObjectId">XrefObjectId</a></li>
+            <li><a href="#XrefStatus">XrefStatus</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="ACIcolorMethod">
         <details>
-            <summary>class ACIcolorMethod</summary>
+            <summary>class ACIcolorMethod <span class="tag">Class</span></summary>
             <code>kACIbyBlock: ClassVar[Self]</code>
             <code>kACIforeground: ClassVar[Self]</code>
             <code>kACIbyLayer: ClassVar[Self]</code>
@@ -62,9 +418,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AbstractViewTable">
         <details>
-            <summary>class AbstractViewTable</summary>
+            <summary>class AbstractViewTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.AbstractViewTableRecord) -&gt; ObjectId</code>
@@ -75,9 +431,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AbstractViewTableRecord">
         <details>
-            <summary>class AbstractViewTableRecord</summary>
+            <summary>class AbstractViewTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def ambientLightColor(self) -&gt; Color</code>
@@ -142,18 +498,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCmDialogTabs">
         <details>
-            <summary>class AcCmDialogTabs</summary>
+            <summary>class AcCmDialogTabs <span class="tag">Class</span></summary>
             <code>kACITab: ClassVar[Self]</code>
             <code>kTrueColorTab: ClassVar[Self]</code>
             <code>kColorBookTab: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeoMapResolution">
         <details>
-            <summary>class AcGeoMapResolution</summary>
+            <summary>class AcGeoMapResolution <span class="tag">Class</span></summary>
             <code>kCoarse: ClassVar[Self]</code>
             <code>kOptimal: ClassVar[Self]</code>
             <code>kFine: ClassVar[Self]</code>
@@ -161,9 +517,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGeoMapType">
         <details>
-            <summary>class AcGeoMapType</summary>
+            <summary>class AcGeoMapType <span class="tag">Class</span></summary>
             <code>kNoMap: ClassVar[Self]</code>
             <code>kAerial: ClassVar[Self]</code>
             <code>kRoad: ClassVar[Self]</code>
@@ -179,9 +535,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcValue">
         <details>
-            <summary>class AcValue</summary>
+            <summary>class AcValue <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, ival: int) -&gt; None</code>
             <code>def __init__(self, fval: float) -&gt; None</code>
@@ -218,9 +574,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AdsName">
         <details>
-            <summary>class AdsName</summary>
+            <summary>class AdsName <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def fromObjectId(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -228,9 +584,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AlignedDimension">
         <details>
-            <summary>class AlignedDimension</summary>
+            <summary>class AlignedDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, xLine1Point: PyGe.Point3d, xLine2Point: PyGe.Point3d, dimLinePoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, xLine1Point: PyGe.Point3d, xLine2Point: PyGe.Point3d, dimLinePoint: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -259,9 +615,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AnnoType">
         <details>
-            <summary>class AnnoType</summary>
+            <summary>class AnnoType <span class="tag">Class</span></summary>
             <code>kMText: ClassVar[Self]</code>
             <code>kFcf: ClassVar[Self]</code>
             <code>kBlockRef: ClassVar[Self]</code>
@@ -269,9 +625,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AnnotationScale">
         <details>
-            <summary>class AnnotationScale</summary>
+            <summary>class AnnotationScale <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyDb.ObjectContext) -&gt; AnnotationScale</code>
@@ -288,18 +644,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AnnotativeStates">
         <details>
-            <summary>class AnnotativeStates</summary>
+            <summary>class AnnotativeStates <span class="tag">Class</span></summary>
             <code>kTrue: ClassVar[Self]</code>
             <code>kFalse: ClassVar[Self]</code>
             <code>kNotApplicable: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Arc">
         <details>
-            <summary>class Arc</summary>
+            <summary>class Arc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, radius: float, startAngle: float, endAngle: float) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, normal: PyGe.Vector2d, radius: float, startAngle: float, endAngle: float) -&gt; None</code>
@@ -330,9 +686,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ArcDimension">
         <details>
-            <summary>class ArcDimension</summary>
+            <summary>class ArcDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, centerPoint: PyGe.Point3d, xLine1Point: PyGe.Point3d, xLine2Point: PyGe.Point3d, arcPnt: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, centerPoint: PyGe.Point3d, xLine1Point: PyGe.Point3d, xLine2Point: PyGe.Point3d, arcPnt: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -371,9 +727,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AssocFlags">
         <details>
-            <summary>class AssocFlags</summary>
+            <summary>class AssocFlags <span class="tag">Class</span></summary>
             <code>kFirstPointRef: ClassVar[Self]</code>
             <code>kSecondPointRef: ClassVar[Self]</code>
             <code>kThirdPointRef: ClassVar[Self]</code>
@@ -381,9 +737,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AssocPersSubentIdPE">
         <details>
-            <summary>class AssocPersSubentIdPE</summary>
+            <summary>class AssocPersSubentIdPE <span class="tag">Class</span></summary>
             <code>def __init__(self, obj: PyRx.RxObject) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -398,9 +754,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AttributeDefinition">
         <details>
-            <summary>class AttributeDefinition</summary>
+            <summary>class AttributeDefinition <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, text: str, tag: str, prompt: str, styleid: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -437,9 +793,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AttributeReference">
         <details>
-            <summary>class AttributeReference</summary>
+            <summary>class AttributeReference <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, text: str, tag: str, styleid: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -474,18 +830,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AutoWorkingDatabase">
         <details>
-            <summary>class AutoWorkingDatabase</summary>
+            <summary>class AutoWorkingDatabase <span class="tag">Class</span></summary>
             <code>def __init__(self, db: PyDb.Database) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def wdb(self) -&gt; Database</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockBegin">
         <details>
-            <summary>class BlockBegin</summary>
+            <summary>class BlockBegin <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -498,9 +854,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockEnd">
         <details>
-            <summary>class BlockEnd</summary>
+            <summary>class BlockEnd <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -513,9 +869,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockReference">
         <details>
-            <summary>class BlockReference</summary>
+            <summary>class BlockReference <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, blockTableRec: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -550,17 +906,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockScaling">
         <details>
-            <summary>class BlockScaling</summary>
+            <summary>class BlockScaling <span class="tag">Class</span></summary>
             <code>kAny: ClassVar[Self]</code>
             <code>kUniform: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockTable">
         <details>
-            <summary>class BlockTable</summary>
+            <summary>class BlockTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, block: BlockTableRecord) -&gt; ObjectId</code>
@@ -571,9 +927,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockTableRecord">
         <details>
-            <summary>class BlockTableRecord</summary>
+            <summary>class BlockTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -634,9 +990,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Body">
         <details>
-            <summary>class Body</summary>
+            <summary>class Body <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -649,18 +1005,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BoolOperType">
         <details>
-            <summary>class BoolOperType</summary>
+            <summary>class BoolOperType <span class="tag">Class</span></summary>
             <code>kBoolUnite: ClassVar[Self]</code>
             <code>kBoolIntersect: ClassVar[Self]</code>
             <code>kBoolSubtract: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Cell">
         <details>
-            <summary>class Cell</summary>
+            <summary>class Cell <span class="tag">Class</span></summary>
             <code>def __getitem__(self, idx: int) -&gt; int</code>
             <code>def __init__(self, row: int, column: int) -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
@@ -671,9 +1027,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellAlignment">
         <details>
-            <summary>class CellAlignment</summary>
+            <summary>class CellAlignment <span class="tag">Class</span></summary>
             <code>kTopLeft: ClassVar[Self]</code>
             <code>kTopCenter: ClassVar[Self]</code>
             <code>kTopRight: ClassVar[Self]</code>
@@ -686,18 +1042,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellContentLayout">
         <details>
-            <summary>class CellContentLayout</summary>
+            <summary>class CellContentLayout <span class="tag">Class</span></summary>
             <code>kCellStateNone: ClassVar[Self]</code>
             <code>kCellContentLayoutStackedHorizontal: ClassVar[Self]</code>
             <code>kCellContentLayoutStackedVertical: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellContentType">
         <details>
-            <summary>class CellContentType</summary>
+            <summary>class CellContentType <span class="tag">Class</span></summary>
             <code>kCellContentTypeUnknown: ClassVar[Self]</code>
             <code>kCellContentTypeValue: ClassVar[Self]</code>
             <code>kCellContentTypeField: ClassVar[Self]</code>
@@ -705,9 +1061,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellEdgeMask">
         <details>
-            <summary>class CellEdgeMask</summary>
+            <summary>class CellEdgeMask <span class="tag">Class</span></summary>
             <code>kTopMask: ClassVar[Self]</code>
             <code>kRightMask: ClassVar[Self]</code>
             <code>kBottomMask: ClassVar[Self]</code>
@@ -715,9 +1071,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellMargin">
         <details>
-            <summary>class CellMargin</summary>
+            <summary>class CellMargin <span class="tag">Class</span></summary>
             <code>kCellMarginTop: ClassVar[Self]</code>
             <code>kCellMarginLeft: ClassVar[Self]</code>
             <code>kCellMarginBottom: ClassVar[Self]</code>
@@ -727,17 +1083,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellOption">
         <details>
-            <summary>class CellOption</summary>
+            <summary>class CellOption <span class="tag">Class</span></summary>
             <code>kNoMap: ClassVar[Self]</code>
             <code>kAerial: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellProperty">
         <details>
-            <summary>class CellProperty</summary>
+            <summary>class CellProperty <span class="tag">Class</span></summary>
             <code>kCellPropInvalid: ClassVar[Self]</code>
             <code>kCellPropDataType: ClassVar[Self]</code>
             <code>kCellPropDataFormat: ClassVar[Self]</code>
@@ -765,9 +1121,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellRange">
         <details>
-            <summary>class CellRange</summary>
+            <summary>class CellRange <span class="tag">Class</span></summary>
             <code>def __getitem__(self, idx: int) -&gt; int</code>
             <code>def __init__(self, topRow: int, leftColumn: int, bottomRow: int, rightColumn: int) -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
@@ -780,9 +1136,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellState">
         <details>
-            <summary>class CellState</summary>
+            <summary>class CellState <span class="tag">Class</span></summary>
             <code>kCellStateNone: ClassVar[Self]</code>
             <code>kCellStateContentLocked: ClassVar[Self]</code>
             <code>kCellStateContentReadOnly: ClassVar[Self]</code>
@@ -795,9 +1151,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CellType">
         <details>
-            <summary>class CellType</summary>
+            <summary>class CellType <span class="tag">Class</span></summary>
             <code>kUnknownCell: ClassVar[Self]</code>
             <code>kTextCell: ClassVar[Self]</code>
             <code>kBlockCell: ClassVar[Self]</code>
@@ -805,18 +1161,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CenterMarkType">
         <details>
-            <summary>class CenterMarkType</summary>
+            <summary>class CenterMarkType <span class="tag">Class</span></summary>
             <code>kMark: ClassVar[Self]</code>
             <code>kLine: ClassVar[Self]</code>
             <code>kNone: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Circle">
         <details>
-            <summary>class Circle</summary>
+            <summary>class Circle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, normal: PyGe.Vector3d, radius: float) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -844,26 +1200,26 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ClipBoundaryType">
         <details>
-            <summary>class ClipBoundaryType</summary>
+            <summary>class ClipBoundaryType <span class="tag">Class</span></summary>
             <code>kInvalid: ClassVar[Self]</code>
             <code>kRect: ClassVar[Self]</code>
             <code>kPoly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CollisionType">
         <details>
-            <summary>class CollisionType</summary>
+            <summary>class CollisionType <span class="tag">Class</span></summary>
             <code>kCollisionTypeNone: ClassVar[Self]</code>
             <code>kCollisionTypeSolid: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Color">
         <details>
-            <summary>class Color</summary>
+            <summary>class Color <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -886,9 +1242,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ColorMethod">
         <details>
-            <summary>class ColorMethod</summary>
+            <summary>class ColorMethod <span class="tag">Class</span></summary>
             <code>kByLayer: ClassVar[Self]</code>
             <code>kByBlock: ClassVar[Self]</code>
             <code>kByColor: ClassVar[Self]</code>
@@ -901,9 +1257,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Core">
         <details>
-            <summary>class Core</summary>
+            <summary>class Core <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activeDatabaseArray() -&gt; list[PyDb.PyDbDatabase]</code>
@@ -1006,9 +1362,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Curve">
         <details>
-            <summary>class Curve</summary>
+            <summary>class Curve <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; Curve</code>
@@ -1051,9 +1407,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Database">
         <details>
-            <summary>class Database</summary>
+            <summary>class Database <span class="tag">Class</span></summary>
             <code>def UCSTableId(self) -&gt; ObjectId</code>
             <code>def __init__(self, buildDefaultDrawing: bool, noDocument: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -1552,9 +1908,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DatabaseOpenMode">
         <details>
-            <summary>class DatabaseOpenMode</summary>
+            <summary>class DatabaseOpenMode <span class="tag">Class</span></summary>
             <code>kForReadAndReadShare: ClassVar[Self]</code>
             <code>kForReadAndWriteNoShare: ClassVar[Self]</code>
             <code>kForReadAndAllShare: ClassVar[Self]</code>
@@ -1562,9 +1918,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DatabaseReactor">
         <details>
-            <summary>class DatabaseReactor</summary>
+            <summary>class DatabaseReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1582,9 +1938,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DatabaseSummaryInfo">
         <details>
-            <summary>class DatabaseSummaryInfo</summary>
+            <summary>class DatabaseSummaryInfo <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; tuple</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -1621,9 +1977,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Date">
         <details>
-            <summary>class Date</summary>
+            <summary>class Date <span class="tag">Class</span></summary>
             <code>def __add__(self, val: PyDb.Date) -&gt; Date</code>
             <code>def __ge__(self, val: PyDb.Date) -&gt; bool</code>
             <code>def __gt__(self, val: PyDb.Date) -&gt; bool</code>
@@ -1671,9 +2027,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DbObject">
         <details>
-            <summary>class DbObject</summary>
+            <summary>class DbObject <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addContext(self, obj: PyDb.ObjectContext) -&gt; None</code>
@@ -1752,9 +2108,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DbObjectOverrule">
         <details>
-            <summary>class DbObjectOverrule</summary>
+            <summary>class DbObjectOverrule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def baseCancel(self, object: PyDb.DbObject) -&gt; ErrorStatus</code>
@@ -1775,9 +2131,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DbObjectReactor">
         <details>
-            <summary>class DbObjectReactor</summary>
+            <summary>class DbObjectReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cancelled(self, obj: PyDb.DbObject) -&gt; None</code>
@@ -1797,9 +2153,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DeepCloneType">
         <details>
-            <summary>class DeepCloneType</summary>
+            <summary>class DeepCloneType <span class="tag">Class</span></summary>
             <code>kDcCopy: ClassVar[Self]</code>
             <code>kDcExplode: ClassVar[Self]</code>
             <code>kDcBlock: ClassVar[Self]</code>
@@ -1814,9 +2170,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DiametricDimension">
         <details>
-            <summary>class DiametricDimension</summary>
+            <summary>class DiametricDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, chordPoint: PyGe.Point3d, farChordPoint: PyGe.Point3d, leaderLength: float) -&gt; None</code>
             <code>def __init__(self, chordPoint: PyGe.Point3d, farChordPoint: PyGe.Point3d, leaderLength: float, dimText: str) -&gt; None</code>
@@ -1843,9 +2199,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DictUtil">
         <details>
-            <summary>class DictUtil</summary>
+            <summary>class DictUtil <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def dictionaryGetAt(name: str, owner: PyDb.ObjectId) -&gt; ObjectId</code>
@@ -1879,9 +2235,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Dictionary">
         <details>
-            <summary>class Dictionary</summary>
+            <summary>class Dictionary <span class="tag">Class</span></summary>
             <code>def __contains__(self, val: str | PyDb.ObjectId) -&gt; bool</code>
             <code>def __getitem__(self, val: str) -&gt; ObjectId</code>
             <code>def __init__(self) -&gt; None</code>
@@ -1909,17 +2265,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimArrowFlags">
         <details>
-            <summary>class DimArrowFlags</summary>
+            <summary>class DimArrowFlags <span class="tag">Class</span></summary>
             <code>kNoMap: ClassVar[Self]</code>
             <code>kAerial: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimAssoc">
         <details>
-            <summary>class DimAssoc</summary>
+            <summary>class DimAssoc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -1967,9 +2323,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimAssocPointType">
         <details>
-            <summary>class DimAssocPointType</summary>
+            <summary>class DimAssocPointType <span class="tag">Class</span></summary>
             <code>kXline1Point: ClassVar[Self]</code>
             <code>kXline2Point: ClassVar[Self]</code>
             <code>kOriginPoint: ClassVar[Self]</code>
@@ -1990,9 +2346,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimInspect">
         <details>
-            <summary>class DimInspect</summary>
+            <summary>class DimInspect <span class="tag">Class</span></summary>
             <code>kShapeRemove: ClassVar[Self]</code>
             <code>kShapeRound: ClassVar[Self]</code>
             <code>kShapeAngular: ClassVar[Self]</code>
@@ -2002,9 +2358,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimStyleTable">
         <details>
-            <summary>class DimStyleTable</summary>
+            <summary>class DimStyleTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.DimStyleTableRecord) -&gt; ObjectId</code>
@@ -2015,9 +2371,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DimStyleTableRecord">
         <details>
-            <summary>class DimStyleTableRecord</summary>
+            <summary>class DimStyleTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -2189,9 +2545,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Dimension">
         <details>
-            <summary>class Dimension</summary>
+            <summary>class Dimension <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altSuppressLeadingZeros(self) -&gt; bool</code>
@@ -2315,25 +2671,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawLeaderOrderType">
         <details>
-            <summary>class DrawLeaderOrderType</summary>
+            <summary>class DrawLeaderOrderType <span class="tag">Class</span></summary>
             <code>kDrawLeaderHeadFirst: ClassVar[Self]</code>
             <code>kDrawLeaderTailFirst: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawMLeaderOrderType">
         <details>
-            <summary>class DrawMLeaderOrderType</summary>
+            <summary>class DrawMLeaderOrderType <span class="tag">Class</span></summary>
             <code>kDrawContentFirst: ClassVar[Self]</code>
             <code>kDrawLeaderFirst: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DuplicateRecordCloning">
         <details>
-            <summary>class DuplicateRecordCloning</summary>
+            <summary>class DuplicateRecordCloning <span class="tag">Class</span></summary>
             <code>kDrcNotApplicable: ClassVar[Self]</code>
             <code>kDrcIgnore: ClassVar[Self]</code>
             <code>kDrcReplace: ClassVar[Self]</code>
@@ -2343,9 +2699,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DwgDataType">
         <details>
-            <summary>class DwgDataType</summary>
+            <summary>class DwgDataType <span class="tag">Class</span></summary>
             <code>kDwgNull: ClassVar[Self]</code>
             <code>kDwgReal: ClassVar[Self]</code>
             <code>kDwgInt32: ClassVar[Self]</code>
@@ -2364,9 +2720,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DwgVersion">
         <details>
-            <summary>class DwgVersion</summary>
+            <summary>class DwgVersion <span class="tag">Class</span></summary>
             <code>kDHL_MC0_0: ClassVar[Self]</code>
             <code>kDHL_AC1_2: ClassVar[Self]</code>
             <code>kDHL_AC1_40: ClassVar[Self]</code>
@@ -2408,9 +2764,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DxfCode">
         <details>
-            <summary>class DxfCode</summary>
+            <summary>class DxfCode <span class="tag">Class</span></summary>
             <code>kDxfInvalid: ClassVar[Self]</code>
             <code>kDxfXDictionary: ClassVar[Self]</code>
             <code>kDxfPReactors: ClassVar[Self]</code>
@@ -2583,9 +2939,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DynBlockReference">
         <details>
-            <summary>class DynBlockReference</summary>
+            <summary>class DynBlockReference <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def anonymousBlockTableRecord(self) -&gt; ObjectId</code>
@@ -2600,9 +2956,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DynBlockReferenceProperty">
         <details>
-            <summary>class DynBlockReferenceProperty</summary>
+            <summary>class DynBlockReferenceProperty <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def blockId(self) -&gt; ObjectId</code>
@@ -2620,9 +2976,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DynBlockTableRecord">
         <details>
-            <summary>class DynBlockTableRecord</summary>
+            <summary>class DynBlockTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def blockTableRecordId(self) -&gt; ObjectId</code>
@@ -2634,9 +2990,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DynUnitsType">
         <details>
-            <summary>class DynUnitsType</summary>
+            <summary>class DynUnitsType <span class="tag">Class</span></summary>
             <code>kNoUnits: ClassVar[Self]</code>
             <code>kAngular: ClassVar[Self]</code>
             <code>kDistance: ClassVar[Self]</code>
@@ -2644,9 +3000,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Ellipse">
         <details>
-            <summary>class Ellipse</summary>
+            <summary>class Ellipse <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, unitNormal: PyGe.Vector3d, majorAxis: PyGe.Vector3d, radiusRatio: float) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, unitNormal: PyGe.Vector3d, majorAxis: PyGe.Vector3d, radiusRatio: float, startAngle: float, endAngle: float) -&gt; None</code>
@@ -2686,9 +3042,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EndCaps">
         <details>
-            <summary>class EndCaps</summary>
+            <summary>class EndCaps <span class="tag">Class</span></summary>
             <code>kEndCapNone: ClassVar[Self]</code>
             <code>kEndCapRound: ClassVar[Self]</code>
             <code>kEndCapAngle: ClassVar[Self]</code>
@@ -2696,9 +3052,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Entity">
         <details>
-            <summary>class Entity</summary>
+            <summary>class Entity <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addReactor(self, reactor: PyDb.EntityReactor) -&gt; None</code>
@@ -2771,9 +3127,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EntityColor">
         <details>
-            <summary>class EntityColor</summary>
+            <summary>class EntityColor <span class="tag">Class</span></summary>
             <code>def ByBlock() -&gt; EntityColor</code>
             <code>def ByLayer() -&gt; EntityColor</code>
             <code>def ByNone(self) -&gt; EntityColor</code>
@@ -2822,9 +3178,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EntityHyperlinkPE">
         <details>
-            <summary>class EntityHyperlinkPE</summary>
+            <summary>class EntityHyperlinkPE <span class="tag">Class</span></summary>
             <code>def __init__(self, obj: PyRx.RxObject) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -2842,9 +3198,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EntityReactor">
         <details>
-            <summary>class EntityReactor</summary>
+            <summary>class EntityReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cancelled(self, obj: PyDb.DbObject) -&gt; None</code>
@@ -2866,9 +3222,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ErrorStatus">
         <details>
-            <summary>class ErrorStatus</summary>
+            <summary>class ErrorStatus <span class="tag">Class</span></summary>
             <code>Ok: ClassVar[Self]</code>
             <code>eOk: ClassVar[Self]</code>
             <code>eNotImplementedYet: ClassVar[Self]</code>
@@ -3383,18 +3739,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ErrorStatusException">
         <details>
-            <summary>class ErrorStatusException</summary>
+            <summary>class ErrorStatusException <span class="tag">Class</span></summary>
             <code>code: PyDb.ErrorStatus</code>
             <code>message: str</code>
             <code>fullmessage: str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EvalVariant">
         <details>
-            <summary>class EvalVariant</summary>
+            <summary>class EvalVariant <span class="tag">Class</span></summary>
             <code>def __ge__(self) -&gt; bool</code>
             <code>def __gt__(self) -&gt; bool</code>
             <code>def __init__(self) -&gt; None</code>
@@ -3435,9 +3791,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Extents">
         <details>
-            <summary>class Extents</summary>
+            <summary>class Extents <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, min: PyGe.Point3d, max: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -3458,9 +3814,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Extents2d">
         <details>
-            <summary>class Extents2d</summary>
+            <summary>class Extents2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, min: PyGe.Point2d, max: PyGe.Point2d) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -3480,9 +3836,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ExtrudedSurface">
         <details>
-            <summary>class ExtrudedSurface</summary>
+            <summary>class ExtrudedSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; ExtrudedSurface</code>
@@ -3492,9 +3848,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Face">
         <details>
-            <summary>class Face</summary>
+            <summary>class Face <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pt0: PyGe.Point3d, pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, pt0: PyGe.Point3d, pt1: PyGe.Point3d, pt2: PyGe.Point3d, pt3: PyGe.Point3d) -&gt; None</code>
@@ -3517,9 +3873,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FaceRecord">
         <details>
-            <summary>class FaceRecord</summary>
+            <summary>class FaceRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, vtx0: int, vtx1: int, vtx2: int, vtx3: int) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -3539,9 +3895,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Fcf">
         <details>
-            <summary>class Fcf</summary>
+            <summary>class Fcf <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, val: str, pnt: PyGe.Point3d, normal: PyGe.Vector3d, direction: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -3585,9 +3941,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Field">
         <details>
-            <summary>class Field</summary>
+            <summary>class Field <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pszFieldCode: str) -&gt; None</code>
             <code>def __init__(self, pszFieldCode: str, bTextField: bool) -&gt; None</code>
@@ -3628,9 +3984,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldCodeFlag">
         <details>
-            <summary>class FieldCodeFlag</summary>
+            <summary>class FieldCodeFlag <span class="tag">Class</span></summary>
             <code>kFieldCode: ClassVar[Self]</code>
             <code>kEvaluatedText: ClassVar[Self]</code>
             <code>kEvaluatedChildren: ClassVar[Self]</code>
@@ -3647,9 +4003,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldEngine">
         <details>
-            <summary>class FieldEngine</summary>
+            <summary>class FieldEngine <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3663,9 +4019,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldEvalContext">
         <details>
-            <summary>class FieldEvalContext</summary>
+            <summary>class FieldEvalContext <span class="tag">Class</span></summary>
             <code>kOpen: ClassVar[Self]</code>
             <code>kSave: ClassVar[Self]</code>
             <code>kPlot: ClassVar[Self]</code>
@@ -3677,9 +4033,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldEvalOption">
         <details>
-            <summary>class FieldEvalOption</summary>
+            <summary>class FieldEvalOption <span class="tag">Class</span></summary>
             <code>kDisable: ClassVar[Self]</code>
             <code>kOnOpen: ClassVar[Self]</code>
             <code>kOnSave: ClassVar[Self]</code>
@@ -3691,9 +4047,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldEvalStatus">
         <details>
-            <summary>class FieldEvalStatus</summary>
+            <summary>class FieldEvalStatus <span class="tag">Class</span></summary>
             <code>kNotYetEvaluated: ClassVar[Self]</code>
             <code>kSuccess: ClassVar[Self]</code>
             <code>kEvaluatorNotFound: ClassVar[Self]</code>
@@ -3704,9 +4060,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldEvaluator">
         <details>
-            <summary>class FieldEvaluator</summary>
+            <summary>class FieldEvaluator <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def beginEvaluateFields(self, context: int, db: PyDb.Database) -&gt; None</code>
@@ -3721,9 +4077,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FieldState">
         <details>
-            <summary>class FieldState</summary>
+            <summary>class FieldState <span class="tag">Class</span></summary>
             <code>kInitialized: ClassVar[Self]</code>
             <code>kCompiled: ClassVar[Self]</code>
             <code>kModified: ClassVar[Self]</code>
@@ -3733,9 +4089,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FilerType">
         <details>
-            <summary>class FilerType</summary>
+            <summary>class FilerType <span class="tag">Class</span></summary>
             <code>kFileFiler: ClassVar[Self]</code>
             <code>kCopyFiler: ClassVar[Self]</code>
             <code>kUndoFiler: ClassVar[Self]</code>
@@ -3749,9 +4105,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FindFileHint">
         <details>
-            <summary>class FindFileHint</summary>
+            <summary>class FindFileHint <span class="tag">Class</span></summary>
             <code>kDefault: ClassVar[Self]</code>
             <code>kFontFile: ClassVar[Self]</code>
             <code>kCompiledShapeFile: ClassVar[Self]</code>
@@ -3769,9 +4125,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FullSubentPath">
         <details>
-            <summary>class FullSubentPath</summary>
+            <summary>class FullSubentPath <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, sub: PyDb.SubentType, gsMarker: int) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, sub: PyDb.SubentType, gsMarker: int) -&gt; None</code>
@@ -3788,9 +4144,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoCoordinateSystem">
         <details>
-            <summary>class GeoCoordinateSystem</summary>
+            <summary>class GeoCoordinateSystem <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3813,9 +4169,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoCoordinateSystemProjectionCode">
         <details>
-            <summary>class GeoCoordinateSystemProjectionCode</summary>
+            <summary>class GeoCoordinateSystemProjectionCode <span class="tag">Class</span></summary>
             <code>kProjectionCodeUnknown: ClassVar[Self]</code>
             <code>kProjectionCodeAlber: ClassVar[Self]</code>
             <code>kProjectionCodeAzede: ClassVar[Self]</code>
@@ -3891,9 +4247,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoCoordinateSystemTransformer">
         <details>
-            <summary>class GeoCoordinateSystemTransformer</summary>
+            <summary>class GeoCoordinateSystemTransformer <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3904,9 +4260,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoCoordinateSystemType">
         <details>
-            <summary>class GeoCoordinateSystemType</summary>
+            <summary>class GeoCoordinateSystemType <span class="tag">Class</span></summary>
             <code>kTypeUnknown: ClassVar[Self]</code>
             <code>kTypeArbitrary: ClassVar[Self]</code>
             <code>kTypeGeographic: ClassVar[Self]</code>
@@ -3914,9 +4270,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoCoordinateSystemUnit">
         <details>
-            <summary>class GeoCoordinateSystemUnit</summary>
+            <summary>class GeoCoordinateSystemUnit <span class="tag">Class</span></summary>
             <code>kUnitUnknown: ClassVar[Self]</code>
             <code>kUnitMeter: ClassVar[Self]</code>
             <code>kUnitFoot: ClassVar[Self]</code>
@@ -3982,9 +4338,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoData">
         <details>
-            <summary>class GeoData</summary>
+            <summary>class GeoData <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -4053,9 +4409,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoMap">
         <details>
-            <summary>class GeoMap</summary>
+            <summary>class GeoMap <span class="tag">Class</span></summary>
             <code>def LOD(self) -&gt; int</code>
             <code>def __init__(self, mapType: PyDb.AcGeoMapType, res: PyDb.AcGeoMapResolution, levelOfDetail: int) -&gt; None</code>
             <code>def __init__(self, viewportId: PyDb.ObjectId, isViewportSpecific: bool) -&gt; None</code>
@@ -4083,9 +4439,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoPositionMarker">
         <details>
-            <summary>class GeoPositionMarker</summary>
+            <summary>class GeoPositionMarker <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, radius: float, landingGap: float) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -4124,9 +4480,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoScaleEstimationMethod">
         <details>
-            <summary>class GeoScaleEstimationMethod</summary>
+            <summary>class GeoScaleEstimationMethod <span class="tag">Class</span></summary>
             <code>kScaleEstMethodUnity: ClassVar[Self]</code>
             <code>kScaleEstMethodUserDefined: ClassVar[Self]</code>
             <code>kScaleEstMethodReferencePoint: ClassVar[Self]</code>
@@ -4134,18 +4490,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoTextAlignmentType">
         <details>
-            <summary>class GeoTextAlignmentType</summary>
+            <summary>class GeoTextAlignmentType <span class="tag">Class</span></summary>
             <code>kLeftAlignment: ClassVar[Self]</code>
             <code>kCenterAlignment: ClassVar[Self]</code>
             <code>kRightAlignment: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GeoTypeOfCoordinates">
         <details>
-            <summary>class GeoTypeOfCoordinates</summary>
+            <summary>class GeoTypeOfCoordinates <span class="tag">Class</span></summary>
             <code>kCoordTypUnknown: ClassVar[Self]</code>
             <code>kCoordTypLocal: ClassVar[Self]</code>
             <code>kCoordTypGrid: ClassVar[Self]</code>
@@ -4153,9 +4509,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Graph">
         <details>
-            <summary>class Graph</summary>
+            <summary>class Graph <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addEdge(self, pfrom: PyDb.GraphNode, pto: PyDb.GraphNode) -&gt; None</code>
@@ -4174,9 +4530,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GraphNode">
         <details>
-            <summary>class GraphNode</summary>
+            <summary>class GraphNode <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addRefTo(self, val: PyDb.GraphNode) -&gt; None</code>
@@ -4201,9 +4557,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GraphNodeFlags">
         <details>
-            <summary>class GraphNodeFlags</summary>
+            <summary>class GraphNodeFlags <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kVisited: ClassVar[Self]</code>
             <code>kOutsideRefed: ClassVar[Self]</code>
@@ -4216,17 +4572,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GridLineStyle">
         <details>
-            <summary>class GridLineStyle</summary>
+            <summary>class GridLineStyle <span class="tag">Class</span></summary>
             <code>kGridLineStyleSingle: ClassVar[Self]</code>
             <code>kGridLineStyleDouble: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GridLineType">
         <details>
-            <summary>class GridLineType</summary>
+            <summary>class GridLineType <span class="tag">Class</span></summary>
             <code>kInvalidGridLine: ClassVar[Self]</code>
             <code>kHorzTop: ClassVar[Self]</code>
             <code>kHorzInside: ClassVar[Self]</code>
@@ -4242,9 +4598,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GridProperty">
         <details>
-            <summary>class GridProperty</summary>
+            <summary>class GridProperty <span class="tag">Class</span></summary>
             <code>kGridPropInvalid: ClassVar[Self]</code>
             <code>kGridPropLineStyle: ClassVar[Self]</code>
             <code>kGridPropLineWeight: ClassVar[Self]</code>
@@ -4256,9 +4612,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GripData">
         <details>
-            <summary>class GripData</summary>
+            <summary>class GripData <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4267,9 +4623,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Group">
         <details>
-            <summary>class Group</summary>
+            <summary>class Group <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, grpDesc: str) -&gt; None</code>
             <code>def __init__(self, grpDesc: str, selectable: bool) -&gt; None</code>
@@ -4316,9 +4672,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Handle">
         <details>
-            <summary>class Handle</summary>
+            <summary>class Handle <span class="tag">Class</span></summary>
             <code>def __getinitargs__(self) -&gt; tuple</code>
             <code>def __hash__(self) -&gt; int</code>
             <code>def __init__(self) -&gt; None</code>
@@ -4343,25 +4699,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HardOwnershipId">
         <details>
-            <summary>class HardOwnershipId</summary>
+            <summary>class HardOwnershipId <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HardPointerId">
         <details>
-            <summary>class HardPointerId</summary>
+            <summary>class HardPointerId <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Hatch">
         <details>
-            <summary>class Hatch</summary>
+            <summary>class Hatch <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -4441,9 +4797,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchEdgeType">
         <details>
-            <summary>class HatchEdgeType</summary>
+            <summary>class HatchEdgeType <span class="tag">Class</span></summary>
             <code>kLine: ClassVar[Self]</code>
             <code>kCirArc: ClassVar[Self]</code>
             <code>kEllArc: ClassVar[Self]</code>
@@ -4451,17 +4807,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchGradientPatternType">
         <details>
-            <summary>class HatchGradientPatternType</summary>
+            <summary>class HatchGradientPatternType <span class="tag">Class</span></summary>
             <code>kPreDefinedGradient: ClassVar[Self]</code>
             <code>kUserDefinedGradient: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchLoopType">
         <details>
-            <summary>class HatchLoopType</summary>
+            <summary>class HatchLoopType <span class="tag">Class</span></summary>
             <code>kDefault: ClassVar[Self]</code>
             <code>kExternal: ClassVar[Self]</code>
             <code>kPolyline: ClassVar[Self]</code>
@@ -4480,35 +4836,35 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchObjectType">
         <details>
-            <summary>class HatchObjectType</summary>
+            <summary>class HatchObjectType <span class="tag">Class</span></summary>
             <code>kHatchObject: ClassVar[Self]</code>
             <code>kGradientObject: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchPatternType">
         <details>
-            <summary>class HatchPatternType</summary>
+            <summary>class HatchPatternType <span class="tag">Class</span></summary>
             <code>kUserDefined: ClassVar[Self]</code>
             <code>kPreDefined: ClassVar[Self]</code>
             <code>kCustomDefined: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HatchStyle">
         <details>
-            <summary>class HatchStyle</summary>
+            <summary>class HatchStyle <span class="tag">Class</span></summary>
             <code>kNormal: ClassVar[Self]</code>
             <code>kOuter: ClassVar[Self]</code>
             <code>kIgnore: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Helix">
         <details>
-            <summary>class Helix</summary>
+            <summary>class Helix <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def axisPoint(self) -&gt; PyGe.Point3d</code>
@@ -4542,18 +4898,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HelixConstrainType">
         <details>
-            <summary>class HelixConstrainType</summary>
+            <summary>class HelixConstrainType <span class="tag">Class</span></summary>
             <code>kTurnHeight: ClassVar[Self]</code>
             <code>kTurns: ClassVar[Self]</code>
             <code>kHeight: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HostApplicationServices">
         <details>
-            <summary>class HostApplicationServices</summary>
+            <summary>class HostApplicationServices <span class="tag">Class</span></summary>
             <code>def LayoutManager(self) -&gt; LayoutManager</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -4576,9 +4932,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Hyperlink">
         <details>
-            <summary>class Hyperlink</summary>
+            <summary>class Hyperlink <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4596,9 +4952,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HyperlinkCollection">
         <details>
-            <summary>class HyperlinkCollection</summary>
+            <summary>class HyperlinkCollection <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addAt(self, index: int, sName: str, sDescription: str, sSubLocation: str) -&gt; None</code>
@@ -4615,9 +4971,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IdMapping">
         <details>
-            <summary>class IdMapping</summary>
+            <summary>class IdMapping <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def assign(self, pair: PyDb.IdPair) -&gt; None</code>
@@ -4633,9 +4989,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IdPair">
         <details>
-            <summary>class IdPair</summary>
+            <summary>class IdPair <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, key: PyDb.ObjectId, val: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, key: PyDb.ObjectId, val: PyDb.ObjectId, isCloned: bool) -&gt; None</code>
@@ -4655,9 +5011,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Image">
         <details>
-            <summary>class Image</summary>
+            <summary>class Image <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; Image</code>
@@ -4667,9 +5023,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ImageDisplayOpt">
         <details>
-            <summary>class ImageDisplayOpt</summary>
+            <summary>class ImageDisplayOpt <span class="tag">Class</span></summary>
             <code>kShow: ClassVar[Self]</code>
             <code>kShowUnAligned: ClassVar[Self]</code>
             <code>kClip: ClassVar[Self]</code>
@@ -4677,9 +5033,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ImageUnits">
         <details>
-            <summary>class ImageUnits</summary>
+            <summary>class ImageUnits <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kMillimeter: ClassVar[Self]</code>
             <code>kCentimeter: ClassVar[Self]</code>
@@ -4704,9 +5060,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IndexFilterManager">
         <details>
-            <summary>class IndexFilterManager</summary>
+            <summary>class IndexFilterManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addFilter(blkRef: PyDb.BlockReference, filter: PyDb.SpatialFilter) -&gt; None</code>
@@ -4719,9 +5075,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Intersect">
         <details>
-            <summary>class Intersect</summary>
+            <summary>class Intersect <span class="tag">Class</span></summary>
             <code>kOnBothOperands: ClassVar[Self]</code>
             <code>kExtendThis: ClassVar[Self]</code>
             <code>kExtendArg: ClassVar[Self]</code>
@@ -4729,9 +5085,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="JoinEntityPE">
         <details>
-            <summary>class JoinEntityPE</summary>
+            <summary>class JoinEntityPE <span class="tag">Class</span></summary>
             <code>def __init__(self, obj: PyRx.RxObject) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4741,9 +5097,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="JoinStyle">
         <details>
-            <summary>class JoinStyle</summary>
+            <summary>class JoinStyle <span class="tag">Class</span></summary>
             <code>kJnStylNone: ClassVar[Self]</code>
             <code>kJnStylRound: ClassVar[Self]</code>
             <code>kJnStylAngle: ClassVar[Self]</code>
@@ -4751,9 +5107,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerFilter">
         <details>
-            <summary>class LayerFilter</summary>
+            <summary>class LayerFilter <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -4773,9 +5129,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerStateManager">
         <details>
-            <summary>class LayerStateManager</summary>
+            <summary>class LayerStateManager <span class="tag">Class</span></summary>
             <code>def __init__(self, db: PyDb.Database) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addLayerStateLayers(self, sName: str, layerIds: list[PyDb.ObjectId]) -&gt; None</code>
@@ -4805,9 +5161,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerStateMask">
         <details>
-            <summary>class LayerStateMask</summary>
+            <summary>class LayerStateMask <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kOn: ClassVar[Self]</code>
             <code>kFrozen: ClassVar[Self]</code>
@@ -4827,9 +5183,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerTable">
         <details>
-            <summary>class LayerTable</summary>
+            <summary>class LayerTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.LayerTableRecord) -&gt; ObjectId</code>
@@ -4840,9 +5196,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerTableRecord">
         <details>
-            <summary>class LayerTableRecord</summary>
+            <summary>class LayerTableRecord <span class="tag">Class</span></summary>
             <code>def VPDFLT(self) -&gt; bool</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -4897,9 +5253,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Layout">
         <details>
-            <summary>class Layout</summary>
+            <summary>class Layout <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -4928,9 +5284,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayoutManager">
         <details>
-            <summary>class LayoutManager</summary>
+            <summary>class LayoutManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4955,9 +5311,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Leader">
         <details>
-            <summary>class Leader</summary>
+            <summary>class Leader <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5025,9 +5381,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Line">
         <details>
-            <summary>class Line</summary>
+            <summary>class Line <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, start: PyGe.Point3d, end: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -5054,9 +5410,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LineAngularDimension2">
         <details>
-            <summary>class LineAngularDimension2</summary>
+            <summary>class LineAngularDimension2 <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, xL1Start: PyGe.Point3d, xL1End: PyGe.Point3d, xL2Start: PyGe.Point3d, xL2End: PyGe.Point3d, arcPnt: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, xL1Start: PyGe.Point3d, xL1End: PyGe.Point3d, xL2Start: PyGe.Point3d, xL2End: PyGe.Point3d, arcPnt: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -5085,17 +5441,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LineSpacingStyle">
         <details>
-            <summary>class LineSpacingStyle</summary>
+            <summary>class LineSpacingStyle <span class="tag">Class</span></summary>
             <code>kAtLeast: ClassVar[Self]</code>
             <code>kExactly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LineWeight">
         <details>
-            <summary>class LineWeight</summary>
+            <summary>class LineWeight <span class="tag">Class</span></summary>
             <code>kLnWt000: ClassVar[Self]</code>
             <code>kLnWt005: ClassVar[Self]</code>
             <code>kLnWt009: ClassVar[Self]</code>
@@ -5126,9 +5482,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LinetypeTable">
         <details>
-            <summary>class LinetypeTable</summary>
+            <summary>class LinetypeTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.LinetypeTableRecord) -&gt; ObjectId</code>
@@ -5139,9 +5495,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LinetypeTableRecord">
         <details>
-            <summary>class LinetypeTableRecord</summary>
+            <summary>class LinetypeTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5181,9 +5537,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LoftedSurface">
         <details>
-            <summary>class LoftedSurface</summary>
+            <summary>class LoftedSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; LoftedSurface</code>
@@ -5193,9 +5549,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MInsertBlock">
         <details>
-            <summary>class MInsertBlock</summary>
+            <summary>class MInsertBlock <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, blockTableRec: PyDb.ObjectId, columns: int, rows: int, colSpacing: float, rowSpacing: float) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -5218,9 +5574,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeader">
         <details>
-            <summary>class MLeader</summary>
+            <summary>class MLeader <span class="tag">Class</span></summary>
             <code>def MLeaderStyle(self) -&gt; ObjectId</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -5365,17 +5721,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderBlockConnectionType">
         <details>
-            <summary>class MLeaderBlockConnectionType</summary>
+            <summary>class MLeaderBlockConnectionType <span class="tag">Class</span></summary>
             <code>kConnectExtents: ClassVar[Self]</code>
             <code>kConnectBase: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderContentType">
         <details>
-            <summary>class MLeaderContentType</summary>
+            <summary>class MLeaderContentType <span class="tag">Class</span></summary>
             <code>kNoneContent: ClassVar[Self]</code>
             <code>kBlockContent: ClassVar[Self]</code>
             <code>kMTextContent: ClassVar[Self]</code>
@@ -5383,9 +5739,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderGsMarkType">
         <details>
-            <summary>class MLeaderGsMarkType</summary>
+            <summary>class MLeaderGsMarkType <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kArrowMark: ClassVar[Self]</code>
             <code>kLeaderLineMark: ClassVar[Self]</code>
@@ -5398,9 +5754,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderLeaderDirectionType">
         <details>
-            <summary>class MLeaderLeaderDirectionType</summary>
+            <summary>class MLeaderLeaderDirectionType <span class="tag">Class</span></summary>
             <code>kUnknownLeader: ClassVar[Self]</code>
             <code>kLeftLeader: ClassVar[Self]</code>
             <code>kRightLeader: ClassVar[Self]</code>
@@ -5409,27 +5765,27 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderLeaderType">
         <details>
-            <summary>class MLeaderLeaderType</summary>
+            <summary>class MLeaderLeaderType <span class="tag">Class</span></summary>
             <code>kInVisibleLeader: ClassVar[Self]</code>
             <code>kStraightLeader: ClassVar[Self]</code>
             <code>kSplineLeader: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderMoveType">
         <details>
-            <summary>class MLeaderMoveType</summary>
+            <summary>class MLeaderMoveType <span class="tag">Class</span></summary>
             <code>kMoveAllPoints: ClassVar[Self]</code>
             <code>kMoveAllExceptArrowHeaderPoints: ClassVar[Self]</code>
             <code>kMoveContentAndDoglegPoints: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderPropertyOverrideType">
         <details>
-            <summary>class MLeaderPropertyOverrideType</summary>
+            <summary>class MLeaderPropertyOverrideType <span class="tag">Class</span></summary>
             <code>kLeaderLineType: ClassVar[Self]</code>
             <code>kLeaderLineColor: ClassVar[Self]</code>
             <code>kLeaderLineTypeId: ClassVar[Self]</code>
@@ -5465,9 +5821,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderSegmentAngleType">
         <details>
-            <summary>class MLeaderSegmentAngleType</summary>
+            <summary>class MLeaderSegmentAngleType <span class="tag">Class</span></summary>
             <code>kAny: ClassVar[Self]</code>
             <code>k15: ClassVar[Self]</code>
             <code>k30: ClassVar[Self]</code>
@@ -5478,9 +5834,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderStyle">
         <details>
-            <summary>class MLeaderStyle</summary>
+            <summary>class MLeaderStyle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5581,35 +5937,35 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderTextAlignmentType">
         <details>
-            <summary>class MLeaderTextAlignmentType</summary>
+            <summary>class MLeaderTextAlignmentType <span class="tag">Class</span></summary>
             <code>kLeftAlignment: ClassVar[Self]</code>
             <code>kCenterAlignment: ClassVar[Self]</code>
             <code>kRightAlignment: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderTextAngleType">
         <details>
-            <summary>class MLeaderTextAngleType</summary>
+            <summary>class MLeaderTextAngleType <span class="tag">Class</span></summary>
             <code>kInsertAngle: ClassVar[Self]</code>
             <code>kHorizontalAngle: ClassVar[Self]</code>
             <code>kAlwaysRightReadingAngle: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderTextAttachmentDirection">
         <details>
-            <summary>class MLeaderTextAttachmentDirection</summary>
+            <summary>class MLeaderTextAttachmentDirection <span class="tag">Class</span></summary>
             <code>kAttachmentHorizontal: ClassVar[Self]</code>
             <code>kAttachmentVertical: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MLeaderTextAttachmentType">
         <details>
-            <summary>class MLeaderTextAttachmentType</summary>
+            <summary>class MLeaderTextAttachmentType <span class="tag">Class</span></summary>
             <code>kAttachmentTopOfTop: ClassVar[Self]</code>
             <code>kAttachmentMiddleOfTop: ClassVar[Self]</code>
             <code>kAttachmentMiddle: ClassVar[Self]</code>
@@ -5624,9 +5980,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MPolygon">
         <details>
-            <summary>class MPolygon</summary>
+            <summary>class MPolygon <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5693,18 +6049,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MPolygonloopDir">
         <details>
-            <summary>class MPolygonloopDir</summary>
+            <summary>class MPolygonloopDir <span class="tag">Class</span></summary>
             <code>kExterior: ClassVar[Self]</code>
             <code>kInterior: ClassVar[Self]</code>
             <code>kAnnotation: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MText">
         <details>
-            <summary>class MText</summary>
+            <summary>class MText <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5784,9 +6140,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MTextAttachmentPoint">
         <details>
-            <summary>class MTextAttachmentPoint</summary>
+            <summary>class MTextAttachmentPoint <span class="tag">Class</span></summary>
             <code>kTopLeft: ClassVar[Self]</code>
             <code>kTopCenter: ClassVar[Self]</code>
             <code>kTopRight: ClassVar[Self]</code>
@@ -5814,18 +6170,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MTextColumnType">
         <details>
-            <summary>class MTextColumnType</summary>
+            <summary>class MTextColumnType <span class="tag">Class</span></summary>
             <code>kNoColumns: ClassVar[Self]</code>
             <code>kStaticColumns: ClassVar[Self]</code>
             <code>kDynamicColumns: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MTextFlowDirection">
         <details>
-            <summary>class MTextFlowDirection</summary>
+            <summary>class MTextFlowDirection <span class="tag">Class</span></summary>
             <code>kLtoR: ClassVar[Self]</code>
             <code>kRtoL: ClassVar[Self]</code>
             <code>kTtoB: ClassVar[Self]</code>
@@ -5834,9 +6190,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MTextFragmentType">
         <details>
-            <summary>class MTextFragmentType</summary>
+            <summary>class MTextFragmentType <span class="tag">Class</span></summary>
             <code>kLocation: ClassVar[Self]</code>
             <code>kNormal: ClassVar[Self]</code>
             <code>kDirection: ClassVar[Self]</code>
@@ -5864,17 +6220,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MeasurementValue">
         <details>
-            <summary>class MeasurementValue</summary>
+            <summary>class MeasurementValue <span class="tag">Class</span></summary>
             <code>kEnglish: ClassVar[Self]</code>
             <code>kMetric: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MergeCellStyleOption">
         <details>
-            <summary>class MergeCellStyleOption</summary>
+            <summary>class MergeCellStyleOption <span class="tag">Class</span></summary>
             <code>kMergeCellStyleNone: ClassVar[Self]</code>
             <code>kMergeCellStyleCopyDuplicates: ClassVar[Self]</code>
             <code>kMergeCellStyleOverwriteDuplicates: ClassVar[Self]</code>
@@ -5883,9 +6239,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Mline">
         <details>
-            <summary>class Mline</summary>
+            <summary>class Mline <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -5927,9 +6283,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MlineJustification">
         <details>
-            <summary>class MlineJustification</summary>
+            <summary>class MlineJustification <span class="tag">Class</span></summary>
             <code>kTop: ClassVar[Self]</code>
             <code>kZero: ClassVar[Self]</code>
             <code>kBottom: ClassVar[Self]</code>
@@ -5939,9 +6295,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="MlineStyle">
         <details>
-            <summary>class MlineStyle</summary>
+            <summary>class MlineStyle <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addElement(self, offset: float, clr: PyDb.AcCmColor, ltid: PyDb.ObjectId, checkIfReferenced: bool) -&gt; int</code>
@@ -5984,9 +6340,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="NurbSurface">
         <details>
-            <summary>class NurbSurface</summary>
+            <summary>class NurbSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; NurbSurface</code>
@@ -5996,9 +6352,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectContext">
         <details>
-            <summary>class ObjectContext</summary>
+            <summary>class ObjectContext <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6010,9 +6366,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectContextCollection">
         <details>
-            <summary>class ObjectContextCollection</summary>
+            <summary>class ObjectContextCollection <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addContext(self, obj: PyDb.ObjectContext) -&gt; None</code>
@@ -6031,9 +6387,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectContextManager">
         <details>
-            <summary>class ObjectContextManager</summary>
+            <summary>class ObjectContextManager <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6044,9 +6400,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectId">
         <details>
-            <summary>class ObjectId</summary>
+            <summary>class ObjectId <span class="tag">Class</span></summary>
             <code>def __ge__(self) -&gt; bool</code>
             <code>def __gt__(self) -&gt; bool</code>
             <code>def __hash__(self) -&gt; int</code>
@@ -6076,9 +6432,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectIdArray">
         <details>
-            <summary>class ObjectIdArray</summary>
+            <summary>class ObjectIdArray <span class="tag">Class</span></summary>
             <code>def __contains__(self) -&gt; bool</code>
             <code>def __delitem__(self) -&gt; None</code>
             <code>def __getitem__(self) -&gt; object</code>
@@ -6097,9 +6453,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectIdGraph">
         <details>
-            <summary>class ObjectIdGraph</summary>
+            <summary>class ObjectIdGraph <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addNode(self, val: PyDb.ObjectIdGraphNode) -&gt; None</code>
@@ -6110,9 +6466,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ObjectIdGraphNode">
         <details>
-            <summary>class ObjectIdGraphNode</summary>
+            <summary>class ObjectIdGraphNode <span class="tag">Class</span></summary>
             <code>def __init__(self, val: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6120,9 +6476,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OpenMode">
         <details>
-            <summary>class OpenMode</summary>
+            <summary>class OpenMode <span class="tag">Class</span></summary>
             <code>ForRead: ClassVar[Self]</code>
             <code>ForWrite: ClassVar[Self]</code>
             <code>ForNotify: ClassVar[Self]</code>
@@ -6132,9 +6488,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OrdinateDimension">
         <details>
-            <summary>class OrdinateDimension</summary>
+            <summary>class OrdinateDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, useXAxis: bool, definingPoint: PyGe.Point3d, leaderEndPoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, useXAxis: bool, definingPoint: PyGe.Point3d, leaderEndPoint: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -6163,9 +6519,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OrthographicView">
         <details>
-            <summary>class OrthographicView</summary>
+            <summary>class OrthographicView <span class="tag">Class</span></summary>
             <code>kNonOrthoView: ClassVar[Self]</code>
             <code>kTopView: ClassVar[Self]</code>
             <code>kBottomView: ClassVar[Self]</code>
@@ -6176,9 +6532,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OsnapMask">
         <details>
-            <summary>class OsnapMask</summary>
+            <summary>class OsnapMask <span class="tag">Class</span></summary>
             <code>kOsMaskEnd: ClassVar[Self]</code>
             <code>kOsMaskMid: ClassVar[Self]</code>
             <code>kOsMaskCen: ClassVar[Self]</code>
@@ -6201,9 +6557,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OsnapMode">
         <details>
-            <summary>class OsnapMode</summary>
+            <summary>class OsnapMode <span class="tag">Class</span></summary>
             <code>kOsModeEnd: ClassVar[Self]</code>
             <code>kOsModeMid: ClassVar[Self]</code>
             <code>kOsModeCen: ClassVar[Self]</code>
@@ -6217,9 +6573,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OsnapOverrule">
         <details>
-            <summary>class OsnapOverrule</summary>
+            <summary>class OsnapOverrule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def baseGetOsnapPoints(self, pSubject: PyDb.Entity, osMode: PyDb.OsnapMode, gsMark: int, pickPnt: PyGe.Point3d, lastPnt: PyGe.Point3d, viewXform: PyGe.Matrix3d) -&gt; tuple[int, list[PyGe.Point3d]]</code>
@@ -6234,9 +6590,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OsnapPointRef">
         <details>
-            <summary>class OsnapPointRef</summary>
+            <summary>class OsnapPointRef <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, refPt: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -6254,9 +6610,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OsnapType">
         <details>
-            <summary>class OsnapType</summary>
+            <summary>class OsnapType <span class="tag">Class</span></summary>
             <code>kOsnapNone: ClassVar[Self]</code>
             <code>kOsnapEnd: ClassVar[Self]</code>
             <code>kOsnapMid: ClassVar[Self]</code>
@@ -6274,9 +6630,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OutputDisplayService">
         <details>
-            <summary>class OutputDisplayService</summary>
+            <summary>class OutputDisplayService <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6286,9 +6642,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PdfDefinition">
         <details>
-            <summary>class PdfDefinition</summary>
+            <summary>class PdfDefinition <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; PdfDefinition</code>
@@ -6298,9 +6654,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PdfReference">
         <details>
-            <summary>class PdfReference</summary>
+            <summary>class PdfReference <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; PdfReference</code>
@@ -6310,18 +6666,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Planarity">
         <details>
-            <summary>class Planarity</summary>
+            <summary>class Planarity <span class="tag">Class</span></summary>
             <code>kNonPlanar: ClassVar[Self]</code>
             <code>kPlanar: ClassVar[Self]</code>
             <code>kLinear: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlaneSurface">
         <details>
-            <summary>class PlaneSurface</summary>
+            <summary>class PlaneSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; PlaneSurface</code>
@@ -6331,18 +6687,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotPaperUnits">
         <details>
-            <summary>class PlotPaperUnits</summary>
+            <summary>class PlotPaperUnits <span class="tag">Class</span></summary>
             <code>kInches: ClassVar[Self]</code>
             <code>kMillimeters: ClassVar[Self]</code>
             <code>kPixels: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotRotation">
         <details>
-            <summary>class PlotRotation</summary>
+            <summary>class PlotRotation <span class="tag">Class</span></summary>
             <code>k0degrees: ClassVar[Self]</code>
             <code>k90degrees: ClassVar[Self]</code>
             <code>k180degrees: ClassVar[Self]</code>
@@ -6350,9 +6706,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotSettings">
         <details>
-            <summary>class PlotSettings</summary>
+            <summary>class PlotSettings <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, ModelType: bool) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -6414,9 +6770,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotSettingsValidator">
         <details>
-            <summary>class PlotSettingsValidator</summary>
+            <summary>class PlotSettingsValidator <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def canonicalMediaNameList(self, settings: PyDb.PlotSettings) -&gt; list[str]</code>
@@ -6451,9 +6807,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotStyleNameType">
         <details>
-            <summary>class PlotStyleNameType</summary>
+            <summary>class PlotStyleNameType <span class="tag">Class</span></summary>
             <code>kPlotStyleNameByLayer: ClassVar[Self]</code>
             <code>kPlotStyleNameByBlock: ClassVar[Self]</code>
             <code>kPlotStyleNameIsDictDefault: ClassVar[Self]</code>
@@ -6461,9 +6817,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PlotType">
         <details>
-            <summary>class PlotType</summary>
+            <summary>class PlotType <span class="tag">Class</span></summary>
             <code>kDisplay: ClassVar[Self]</code>
             <code>kExtents: ClassVar[Self]</code>
             <code>kLimits: ClassVar[Self]</code>
@@ -6473,9 +6829,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point">
         <details>
-            <summary>class Point</summary>
+            <summary>class Point <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pos: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -6498,9 +6854,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Point3AngularDimension">
         <details>
-            <summary>class Point3AngularDimension</summary>
+            <summary>class Point3AngularDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, centerPoint: PyGe.Point3d, xL1Start: PyGe.Point3d, xL1End: PyGe.Point3d, arcPnt: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, centerPoint: PyGe.Point3d, xL1Start: PyGe.Point3d, xL1End: PyGe.Point3d, arcPnt: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -6527,9 +6883,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudClassificationColorRamp">
         <details>
-            <summary>class PointCloudClassificationColorRamp</summary>
+            <summary>class PointCloudClassificationColorRamp <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6544,9 +6900,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudColorMap">
         <details>
-            <summary>class PointCloudColorMap</summary>
+            <summary>class PointCloudColorMap <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; PointCloudColorMap</code>
@@ -6575,9 +6931,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudColorRamp">
         <details>
-            <summary>class PointCloudColorRamp</summary>
+            <summary>class PointCloudColorRamp <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6593,9 +6949,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudCrop">
         <details>
-            <summary>class PointCloudCrop</summary>
+            <summary>class PointCloudCrop <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6615,9 +6971,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudCropType">
         <details>
-            <summary>class PointCloudCropType</summary>
+            <summary>class PointCloudCropType <span class="tag">Class</span></summary>
             <code>kInvalid: ClassVar[Self]</code>
             <code>kRectangular: ClassVar[Self]</code>
             <code>kPolygonal: ClassVar[Self]</code>
@@ -6625,9 +6981,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudDefEx">
         <details>
-            <summary>class PointCloudDefEx</summary>
+            <summary>class PointCloudDefEx <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activeFileName(self) -&gt; str</code>
@@ -6660,18 +7016,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudDispOptionOutOfRange">
         <details>
-            <summary>class PointCloudDispOptionOutOfRange</summary>
+            <summary>class PointCloudDispOptionOutOfRange <span class="tag">Class</span></summary>
             <code>kUseMinMaxColors: ClassVar[Self]</code>
             <code>kUseRGBScanColors: ClassVar[Self]</code>
             <code>kHidePoints: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudEx">
         <details>
-            <summary>class PointCloudEx</summary>
+            <summary>class PointCloudEx <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addCroppingBoundary(self, val: PyDb.PointCloudCrop) -&gt; None</code>
@@ -6759,9 +7115,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudOSnapMode">
         <details>
-            <summary>class PointCloudOSnapMode</summary>
+            <summary>class PointCloudOSnapMode <span class="tag">Class</span></summary>
             <code>kOsModePNod: ClassVar[Self]</code>
             <code>kOsModePNea: ClassVar[Self]</code>
             <code>kOsModePPer: ClassVar[Self]</code>
@@ -6773,9 +7129,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudProperty">
         <details>
-            <summary>class PointCloudProperty</summary>
+            <summary>class PointCloudProperty <span class="tag">Class</span></summary>
             <code>kColor: ClassVar[Self]</code>
             <code>kIntensity: ClassVar[Self]</code>
             <code>kClassification: ClassVar[Self]</code>
@@ -6785,18 +7141,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudPropertyState">
         <details>
-            <summary>class PointCloudPropertyState</summary>
+            <summary>class PointCloudPropertyState <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kSome: ClassVar[Self]</code>
             <code>kAll: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointCloudStylizationType">
         <details>
-            <summary>class PointCloudStylizationType</summary>
+            <summary>class PointCloudStylizationType <span class="tag">Class</span></summary>
             <code>kTrueColor: ClassVar[Self]</code>
             <code>kSingleColor: ClassVar[Self]</code>
             <code>kNormalRamp: ClassVar[Self]</code>
@@ -6806,9 +7162,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointRef">
         <details>
-            <summary>class PointRef</summary>
+            <summary>class PointRef <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -6816,9 +7172,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Poly2dType">
         <details>
-            <summary>class Poly2dType</summary>
+            <summary>class Poly2dType <span class="tag">Class</span></summary>
             <code>k2dSimplePoly: ClassVar[Self]</code>
             <code>k2dFitCurvePoly: ClassVar[Self]</code>
             <code>k2dQuadSplinePoly: ClassVar[Self]</code>
@@ -6826,18 +7182,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Poly3dType">
         <details>
-            <summary>class Poly3dType</summary>
+            <summary>class Poly3dType <span class="tag">Class</span></summary>
             <code>k3dSimplePoly: ClassVar[Self]</code>
             <code>k3dQuadSplinePoly: ClassVar[Self]</code>
             <code>k3dCubicSplinePoly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PolyFaceMeshVertex">
         <details>
-            <summary>class PolyFaceMeshVertex</summary>
+            <summary>class PolyFaceMeshVertex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pos: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -6854,9 +7210,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PolygonMeshVertex">
         <details>
-            <summary>class PolygonMeshVertex</summary>
+            <summary>class PolygonMeshVertex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pos: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -6874,9 +7230,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline">
         <details>
-            <summary>class Polyline</summary>
+            <summary>class Polyline <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, num_verts: int) -&gt; None</code>
             <code>def __init__(self, pnts: list[PyGe.Point3d]) -&gt; None</code>
@@ -6939,9 +7295,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline2d">
         <details>
-            <summary>class Polyline2d</summary>
+            <summary>class Polyline2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, ptype: PyDb.Poly2dType, points: list[PyGe.Point3d], closed: bool) -&gt; None</code>
             <code>def __init__(self, ptype: PyDb.Poly2dType, points: PyGe.Point3dArray, closed: bool) -&gt; None</code>
@@ -6994,9 +7350,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline3d">
         <details>
-            <summary>class Polyline3d</summary>
+            <summary>class Polyline3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, ptype: PyDb.Poly3dType, points: list[PyGe.Point3d], closed: bool) -&gt; None</code>
             <code>def __init__(self, ptype: PyDb.Poly3dType, points: PyGe.Point3dArray, closed: bool) -&gt; None</code>
@@ -7033,9 +7389,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Polyline3dVertex">
         <details>
-            <summary>class Polyline3dVertex</summary>
+            <summary>class Polyline3dVertex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pos: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -7053,9 +7409,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Profile3d">
         <details>
-            <summary>class Profile3d</summary>
+            <summary>class Profile3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, val: PyDb.Entity) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -7071,9 +7427,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RadialDimension">
         <details>
-            <summary>class RadialDimension</summary>
+            <summary>class RadialDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, chordPoint: PyGe.Point3d, length: float) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, chordPoint: PyGe.Point3d, length: float, dimText: str) -&gt; None</code>
@@ -7100,9 +7456,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RadialDimensionLarge">
         <details>
-            <summary>class RadialDimensionLarge</summary>
+            <summary>class RadialDimensionLarge <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, chordPoint: PyGe.Point3d, overrideCenter: PyGe.Point3d, jogPoint: PyGe.Point3d, jogAngle: float) -&gt; None</code>
             <code>def __init__(self, center: PyGe.Point3d, chordPoint: PyGe.Point3d, overrideCenter: PyGe.Point3d, jogPoint: PyGe.Point3d, jogAngle: float, dimText: str) -&gt; None</code>
@@ -7136,9 +7492,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RasterImage">
         <details>
-            <summary>class RasterImage</summary>
+            <summary>class RasterImage <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7191,9 +7547,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RasterImageDef">
         <details>
-            <summary>class RasterImageDef</summary>
+            <summary>class RasterImageDef <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7228,9 +7584,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RasterImageDefReactor">
         <details>
-            <summary>class RasterImageDefReactor</summary>
+            <summary>class RasterImageDefReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7244,9 +7600,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RegAppTable">
         <details>
-            <summary>class RegAppTable</summary>
+            <summary>class RegAppTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.RegAppTableRecord) -&gt; ObjectId</code>
@@ -7257,9 +7613,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RegAppTableRecord">
         <details>
-            <summary>class RegAppTableRecord</summary>
+            <summary>class RegAppTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7273,9 +7629,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Region">
         <details>
-            <summary>class Region</summary>
+            <summary>class Region <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7295,9 +7651,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RemapFileContext">
         <details>
-            <summary>class RemapFileContext</summary>
+            <summary>class RemapFileContext <span class="tag">Class</span></summary>
             <code>kDrawingOpen: ClassVar[Self]</code>
             <code>kXrefResolution: ClassVar[Self]</code>
             <code>kRasterResolution: ClassVar[Self]</code>
@@ -7305,9 +7661,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ReservedStringEnumType">
         <details>
-            <summary>class ReservedStringEnumType</summary>
+            <summary>class ReservedStringEnumType <span class="tag">Class</span></summary>
             <code>kByLayer: ClassVar[Self]</code>
             <code>kByBlock: ClassVar[Self]</code>
             <code>kNone: ClassVar[Self]</code>
@@ -7337,9 +7693,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RevolveOptions">
         <details>
-            <summary>class RevolveOptions</summary>
+            <summary>class RevolveOptions <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def checkRevolveCurve(self, ent: PyDb.Entity, axisPnt: PyGe.Point3d, axisDir: PyGe.Vector3d, displayErrorMessages: bool) -&gt; tuple[bool, bool, bool]</code>
@@ -7352,9 +7708,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RevolvedSurface">
         <details>
-            <summary>class RevolvedSurface</summary>
+            <summary>class RevolvedSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; RevolvedSurface</code>
@@ -7364,18 +7720,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RotatedDimType">
         <details>
-            <summary>class RotatedDimType</summary>
+            <summary>class RotatedDimType <span class="tag">Class</span></summary>
             <code>kUnknown: ClassVar[Self]</code>
             <code>kParallel: ClassVar[Self]</code>
             <code>kPerpendicular: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RotatedDimension">
         <details>
-            <summary>class RotatedDimension</summary>
+            <summary>class RotatedDimension <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, rotation: float, xl1: PyGe.Point3d, xl2: PyGe.Point3d, dimLinePoint: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, rotation: float, xl1: PyGe.Point3d, xl2: PyGe.Point3d, dimLinePoint: PyGe.Point3d, dimText: str) -&gt; None</code>
@@ -7406,9 +7762,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RotationAngle">
         <details>
-            <summary>class RotationAngle</summary>
+            <summary>class RotationAngle <span class="tag">Class</span></summary>
             <code>kDegreesUnknown: ClassVar[Self]</code>
             <code>kDegrees000: ClassVar[Self]</code>
             <code>kDegrees090: ClassVar[Self]</code>
@@ -7417,9 +7773,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RowType">
         <details>
-            <summary>class RowType</summary>
+            <summary>class RowType <span class="tag">Class</span></summary>
             <code>kUnknownRow: ClassVar[Self]</code>
             <code>kDataRow: ClassVar[Self]</code>
             <code>kTitleRow: ClassVar[Self]</code>
@@ -7428,9 +7784,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Section">
         <details>
-            <summary>class Section</summary>
+            <summary>class Section <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pts: list[PyGe.Point3d], verticalDir: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, pts: list[PyGe.Point3d], verticalDir: PyGe.Vector3d, vecViewingDir: PyGe.Vector3d) -&gt; None</code>
@@ -7488,9 +7844,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionGeneration">
         <details>
-            <summary>class SectionGeneration</summary>
+            <summary>class SectionGeneration <span class="tag">Class</span></summary>
             <code>kSourceAllObjects: ClassVar[Self]</code>
             <code>kSourceSelectedObjects: ClassVar[Self]</code>
             <code>kDestinationNewBlock: ClassVar[Self]</code>
@@ -7499,9 +7855,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionGeometry">
         <details>
-            <summary>class SectionGeometry</summary>
+            <summary>class SectionGeometry <span class="tag">Class</span></summary>
             <code>kIntersectionBoundary: ClassVar[Self]</code>
             <code>kIntersectionFill: ClassVar[Self]</code>
             <code>kBackgroundGeometry: ClassVar[Self]</code>
@@ -7510,17 +7866,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionHeight">
         <details>
-            <summary>class SectionHeight</summary>
+            <summary>class SectionHeight <span class="tag">Class</span></summary>
             <code>kHeightAboveSectionLine: ClassVar[Self]</code>
             <code>kHeightBelowSectionLine: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionManager">
         <details>
-            <summary>class SectionManager</summary>
+            <summary>class SectionManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; SectionManager</code>
@@ -7535,9 +7891,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionSettings">
         <details>
-            <summary>class SectionSettings</summary>
+            <summary>class SectionSettings <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; SectionSettings</code>
@@ -7592,18 +7948,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionState">
         <details>
-            <summary>class SectionState</summary>
+            <summary>class SectionState <span class="tag">Class</span></summary>
             <code>kPlane: ClassVar[Self]</code>
             <code>kBoundary: ClassVar[Self]</code>
             <code>kVolume: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionSubItem">
         <details>
-            <summary>class SectionSubItem</summary>
+            <summary>class SectionSubItem <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kSectionLine: ClassVar[Self]</code>
             <code>kSectionLineTop: ClassVar[Self]</code>
@@ -7616,18 +7972,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SectionType">
         <details>
-            <summary>class SectionType</summary>
+            <summary>class SectionType <span class="tag">Class</span></summary>
             <code>kLiveSection: ClassVar[Self]</code>
             <code>k2dSection: ClassVar[Self]</code>
             <code>k3dSection: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SegType">
         <details>
-            <summary>class SegType</summary>
+            <summary>class SegType <span class="tag">Class</span></summary>
             <code>kLine: ClassVar[Self]</code>
             <code>kArc: ClassVar[Self]</code>
             <code>kCoincident: ClassVar[Self]</code>
@@ -7636,9 +7992,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SequenceEnd">
         <details>
-            <summary>class SequenceEnd</summary>
+            <summary>class SequenceEnd <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7651,9 +8007,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShadePlotResLevel">
         <details>
-            <summary>class ShadePlotResLevel</summary>
+            <summary>class ShadePlotResLevel <span class="tag">Class</span></summary>
             <code>kAsDisplayed: ClassVar[Self]</code>
             <code>kPreview: ClassVar[Self]</code>
             <code>kNormal: ClassVar[Self]</code>
@@ -7663,9 +8019,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShadePlotType">
         <details>
-            <summary>class ShadePlotType</summary>
+            <summary>class ShadePlotType <span class="tag">Class</span></summary>
             <code>kAsDisplayed: ClassVar[Self]</code>
             <code>kWireframe: ClassVar[Self]</code>
             <code>kHidden: ClassVar[Self]</code>
@@ -7675,9 +8031,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Shape">
         <details>
-            <summary>class Shape</summary>
+            <summary>class Shape <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pnt: PyGe.Point3d, size: float, rotation: float, widthFactor: float) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -7712,9 +8068,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SnoopDwgFiler">
         <details>
-            <summary>class SnoopDwgFiler</summary>
+            <summary>class SnoopDwgFiler <span class="tag">Class</span></summary>
             <code>def __getitem__(self) -&gt; object</code>
             <code>def __init__(self, filerType: PyDb.FilerType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -7722,9 +8078,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SnoopDxfFiler">
         <details>
-            <summary>class SnoopDxfFiler</summary>
+            <summary>class SnoopDxfFiler <span class="tag">Class</span></summary>
             <code>def __getitem__(self) -&gt; object</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -7732,25 +8088,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SoftOwnershipId">
         <details>
-            <summary>class SoftOwnershipId</summary>
+            <summary>class SoftOwnershipId <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SoftPointerId">
         <details>
-            <summary>class SoftPointerId</summary>
+            <summary>class SoftPointerId <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Solid">
         <details>
-            <summary>class Solid</summary>
+            <summary>class Solid <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pnt0: PyGe.Point3d, pnt1: PyGe.Point3d, pnt2: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, pnt0: PyGe.Point3d, pnt1: PyGe.Point3d, pnt2: PyGe.Point3d, pnt3: PyGe.Point3d) -&gt; None</code>
@@ -7772,9 +8128,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Solid3d">
         <details>
-            <summary>class Solid3d</summary>
+            <summary>class Solid3d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7842,9 +8198,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SortentsTable">
         <details>
-            <summary>class SortentsTable</summary>
+            <summary>class SortentsTable <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7872,9 +8228,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpatialFilter">
         <details>
-            <summary>class SpatialFilter</summary>
+            <summary>class SpatialFilter <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7900,9 +8256,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Spline">
         <details>
-            <summary>class Spline</summary>
+            <summary>class Spline <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -7970,17 +8326,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SplineType">
         <details>
-            <summary>class SplineType</summary>
+            <summary>class SplineType <span class="tag">Class</span></summary>
             <code>kFitPoints: ClassVar[Self]</code>
             <code>kControlPoints: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StandardScaleType">
         <details>
-            <summary>class StandardScaleType</summary>
+            <summary>class StandardScaleType <span class="tag">Class</span></summary>
             <code>kScaleToFit: ClassVar[Self]</code>
             <code>kCustomScale: ClassVar[Self]</code>
             <code>k1_1: ClassVar[Self]</code>
@@ -8019,9 +8375,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StdScaleType">
         <details>
-            <summary>class StdScaleType</summary>
+            <summary>class StdScaleType <span class="tag">Class</span></summary>
             <code>kScaleToFit: ClassVar[Self]</code>
             <code>k1_128in_1ft: ClassVar[Self]</code>
             <code>k1_64in_1ft: ClassVar[Self]</code>
@@ -8060,9 +8416,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SubDMesh">
         <details>
-            <summary>class SubDMesh</summary>
+            <summary>class SubDMesh <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -8135,9 +8491,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SubentId">
         <details>
-            <summary>class SubentId</summary>
+            <summary>class SubentId <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, type: PyDb.SubentType, indexMarker: int) -&gt; None</code>
             <code>def __init__(self, pTypeClass: PyRx.RxClass, indexMarker: int) -&gt; None</code>
@@ -8154,9 +8510,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SubentType">
         <details>
-            <summary>class SubentType</summary>
+            <summary>class SubentType <span class="tag">Class</span></summary>
             <code>kNullSubentType: ClassVar[Self]</code>
             <code>kFaceSubentType: ClassVar[Self]</code>
             <code>kEdgeSubentType: ClassVar[Self]</code>
@@ -8168,9 +8524,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Surface">
         <details>
-            <summary>class Surface</summary>
+            <summary>class Surface <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -8200,25 +8556,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SurfaceEdgeExtensionType">
         <details>
-            <summary>class SurfaceEdgeExtensionType</summary>
+            <summary>class SurfaceEdgeExtensionType <span class="tag">Class</span></summary>
             <code>kExtendEdge: ClassVar[Self]</code>
             <code>kStretchEdge: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SurfaceWireframeType">
         <details>
-            <summary>class SurfaceWireframeType</summary>
+            <summary>class SurfaceWireframeType <span class="tag">Class</span></summary>
             <code>kIsolines: ClassVar[Self]</code>
             <code>kIsoparms: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SweepAlignOption">
         <details>
-            <summary>class SweepAlignOption</summary>
+            <summary>class SweepAlignOption <span class="tag">Class</span></summary>
             <code>kNoAlignment: ClassVar[Self]</code>
             <code>kAlignSweepEntityToPath: ClassVar[Self]</code>
             <code>kTranslateSweepEntityToPath: ClassVar[Self]</code>
@@ -8226,9 +8582,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SweepMiterOption">
         <details>
-            <summary>class SweepMiterOption</summary>
+            <summary>class SweepMiterOption <span class="tag">Class</span></summary>
             <code>kDefaultMiter: ClassVar[Self]</code>
             <code>kOldMiter: ClassVar[Self]</code>
             <code>kNewMiter: ClassVar[Self]</code>
@@ -8237,9 +8593,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SweepOptions">
         <details>
-            <summary>class SweepOptions</summary>
+            <summary>class SweepOptions <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def align(self) -&gt; SweepAlignOption</code>
@@ -8283,9 +8639,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SweptSurface">
         <details>
-            <summary>class SweptSurface</summary>
+            <summary>class SweptSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; SweptSurface</code>
@@ -8295,9 +8651,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SymUtilServices">
         <details>
-            <summary>class SymUtilServices</summary>
+            <summary>class SymUtilServices <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def blockModelSpaceId(self, db: PyDb.Database) -&gt; ObjectId</code>
@@ -8346,9 +8702,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SymbolTable">
         <details>
-            <summary>class SymbolTable</summary>
+            <summary>class SymbolTable <span class="tag">Class</span></summary>
             <code>def __contains__(self, val: str | PyDb.ObjectId) -&gt; bool</code>
             <code>def __getitem__(self, val: str) -&gt; ObjectId</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
@@ -8367,9 +8723,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SymbolTableRecord">
         <details>
-            <summary>class SymbolTableRecord</summary>
+            <summary>class SymbolTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; SymbolTableRecord</code>
@@ -8385,9 +8741,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Table">
         <details>
-            <summary>class Table</summary>
+            <summary>class Table <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -8686,18 +9042,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableBreakFlowDirection">
         <details>
-            <summary>class TableBreakFlowDirection</summary>
+            <summary>class TableBreakFlowDirection <span class="tag">Class</span></summary>
             <code>kTableIteratorNone: ClassVar[Self]</code>
             <code>kTableBreakFlowDownOrUp: ClassVar[Self]</code>
             <code>kTableBreakFlowLeft: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableBreakOption">
         <details>
-            <summary>class TableBreakOption</summary>
+            <summary>class TableBreakOption <span class="tag">Class</span></summary>
             <code>kTableBreakNone: ClassVar[Self]</code>
             <code>kTableBreakEnableBreaking: ClassVar[Self]</code>
             <code>kTableBreakRepeatTopLabels: ClassVar[Self]</code>
@@ -8707,17 +9063,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableFlowDirection">
         <details>
-            <summary>class TableFlowDirection</summary>
+            <summary>class TableFlowDirection <span class="tag">Class</span></summary>
             <code>kTtoB: ClassVar[Self]</code>
             <code>kExactly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableHitItem">
         <details>
-            <summary>class TableHitItem</summary>
+            <summary>class TableHitItem <span class="tag">Class</span></summary>
             <code>kTableHitNone: ClassVar[Self]</code>
             <code>kTableHitCell: ClassVar[Self]</code>
             <code>kTableHitRowIndicator: ClassVar[Self]</code>
@@ -8726,9 +9082,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableIteratorOption">
         <details>
-            <summary>class TableIteratorOption</summary>
+            <summary>class TableIteratorOption <span class="tag">Class</span></summary>
             <code>kTableIteratorNone: ClassVar[Self]</code>
             <code>kTableIteratorIterateSelection: ClassVar[Self]</code>
             <code>kTableIteratorIterateRows: ClassVar[Self]</code>
@@ -8741,9 +9097,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TableStyle">
         <details>
-            <summary>class TableStyle</summary>
+            <summary>class TableStyle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -8868,9 +9224,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Text">
         <details>
-            <summary>class Text</summary>
+            <summary>class Text <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, text: str) -&gt; None</code>
             <code>def __init__(self, position: PyGe.Point3d, text: str, height: float, rotation: float) -&gt; None</code>
@@ -8923,9 +9279,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TextAlignment">
         <details>
-            <summary>class TextAlignment</summary>
+            <summary>class TextAlignment <span class="tag">Class</span></summary>
             <code>kTextAlignmentLeft: ClassVar[Self]</code>
             <code>kTextAlignmentCenter: ClassVar[Self]</code>
             <code>kTextAlignmentRight: ClassVar[Self]</code>
@@ -8944,9 +9300,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TextHorzMode">
         <details>
-            <summary>class TextHorzMode</summary>
+            <summary>class TextHorzMode <span class="tag">Class</span></summary>
             <code>kTextLeft: ClassVar[Self]</code>
             <code>kTextCenter: ClassVar[Self]</code>
             <code>kTextRight: ClassVar[Self]</code>
@@ -8956,9 +9312,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TextStyleTable">
         <details>
-            <summary>class TextStyleTable</summary>
+            <summary>class TextStyleTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.TextStyleTableRecord) -&gt; ObjectId</code>
@@ -8969,9 +9325,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TextStyleTableRecord">
         <details>
-            <summary>class TextStyleTableRecord</summary>
+            <summary>class TextStyleTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9005,9 +9361,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TextVertMode">
         <details>
-            <summary>class TextVertMode</summary>
+            <summary>class TextVertMode <span class="tag">Class</span></summary>
             <code>kTextBase: ClassVar[Self]</code>
             <code>kTextBottom: ClassVar[Self]</code>
             <code>kTextVertMid: ClassVar[Self]</code>
@@ -9015,9 +9371,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TimeZone">
         <details>
-            <summary>class TimeZone</summary>
+            <summary>class TimeZone <span class="tag">Class</span></summary>
             <code>kInternationalDateLine: ClassVar[Self]</code>
             <code>kMidwayIsland: ClassVar[Self]</code>
             <code>kHawaii: ClassVar[Self]</code>
@@ -9097,9 +9453,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Trace">
         <details>
-            <summary>class Trace</summary>
+            <summary>class Trace <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pnt0: PyGe.Point3d, pnt1: PyGe.Point3d, pnt2: PyGe.Point3d, pnt3: PyGe.Point3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -9120,9 +9476,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Transaction">
         <details>
-            <summary>class Transaction</summary>
+            <summary>class Transaction <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -9133,9 +9489,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransactionManager">
         <details>
-            <summary>class TransactionManager</summary>
+            <summary>class TransactionManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def abortTransaction(self) -&gt; None</code>
@@ -9153,9 +9509,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Transparency">
         <details>
-            <summary>class Transparency</summary>
+            <summary>class Transparency <span class="tag">Class</span></summary>
             <code>def __init__(self, alpha: int | float) -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -9173,9 +9529,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransparencyMethod">
         <details>
-            <summary>class TransparencyMethod</summary>
+            <summary>class TransparencyMethod <span class="tag">Class</span></summary>
             <code>kByLayer: ClassVar[Self]</code>
             <code>kByBlock: ClassVar[Self]</code>
             <code>kByAlpha: ClassVar[Self]</code>
@@ -9183,9 +9539,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UCSTable">
         <details>
-            <summary>class UCSTable</summary>
+            <summary>class UCSTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.UCSTableRecord) -&gt; ObjectId</code>
@@ -9196,9 +9552,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UCSTableRecord">
         <details>
-            <summary>class UCSTableRecord</summary>
+            <summary>class UCSTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9220,9 +9576,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UnderlayDefinition">
         <details>
-            <summary>class UnderlayDefinition</summary>
+            <summary>class UnderlayDefinition <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; UnderlayDefinition</code>
@@ -9241,9 +9597,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UnderlayLayer">
         <details>
-            <summary>class UnderlayLayer</summary>
+            <summary>class UnderlayLayer <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def name(self) -&gt; str</code>
@@ -9253,9 +9609,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UnderlayReference">
         <details>
-            <summary>class UnderlayReference</summary>
+            <summary>class UnderlayReference <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9312,9 +9668,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UnitsValue">
         <details>
-            <summary>class UnitsValue</summary>
+            <summary>class UnitsValue <span class="tag">Class</span></summary>
             <code>kUnitsUndefined: ClassVar[Self]</code>
             <code>kUnitsInches: ClassVar[Self]</code>
             <code>kUnitsFeet: ClassVar[Self]</code>
@@ -9344,17 +9700,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UpdateDirection">
         <details>
-            <summary>class UpdateDirection</summary>
+            <summary>class UpdateDirection <span class="tag">Class</span></summary>
             <code>kUpdateDirSourceToData: ClassVar[Self]</code>
             <code>kUpdateDirDataToSource: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UpdateOption">
         <details>
-            <summary>class UpdateOption</summary>
+            <summary>class UpdateOption <span class="tag">Class</span></summary>
             <code>kUpdateOptionNone: ClassVar[Self]</code>
             <code>kUpdateOptionSkipFormat: ClassVar[Self]</code>
             <code>kUpdateOptionUpdateRowHeight: ClassVar[Self]</code>
@@ -9369,9 +9725,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ValueDataType">
         <details>
-            <summary>class ValueDataType</summary>
+            <summary>class ValueDataType <span class="tag">Class</span></summary>
             <code>kUnknown: ClassVar[Self]</code>
             <code>kLong: ClassVar[Self]</code>
             <code>kDouble: ClassVar[Self]</code>
@@ -9387,9 +9743,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ValueFormatOption">
         <details>
-            <summary>class ValueFormatOption</summary>
+            <summary>class ValueFormatOption <span class="tag">Class</span></summary>
             <code>kFormatOptionNone: ClassVar[Self]</code>
             <code>kForEditing: ClassVar[Self]</code>
             <code>kForExpression: ClassVar[Self]</code>
@@ -9398,9 +9754,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ValueParseOption">
         <details>
-            <summary>class ValueParseOption</summary>
+            <summary>class ValueParseOption <span class="tag">Class</span></summary>
             <code>kParseOptionNone: ClassVar[Self]</code>
             <code>kSetDefaultFormat: ClassVar[Self]</code>
             <code>kPreserveMtextFormat: ClassVar[Self]</code>
@@ -9410,9 +9766,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ValueUnitType">
         <details>
-            <summary>class ValueUnitType</summary>
+            <summary>class ValueUnitType <span class="tag">Class</span></summary>
             <code>kUnitless: ClassVar[Self]</code>
             <code>kDistance: ClassVar[Self]</code>
             <code>kAngle: ClassVar[Self]</code>
@@ -9424,9 +9780,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vertex">
         <details>
-            <summary>class Vertex</summary>
+            <summary>class Vertex <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9440,9 +9796,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vertex2d">
         <details>
-            <summary>class Vertex2d</summary>
+            <summary>class Vertex2d <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, pos: PyGe.Point3d, bulge: float, startWidth: float, endWidth: float, tangent: float, vertexId: int) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -9474,9 +9830,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Vertex2dType">
         <details>
-            <summary>class Vertex2dType</summary>
+            <summary>class Vertex2dType <span class="tag">Class</span></summary>
             <code>k2dVertex: ClassVar[Self]</code>
             <code>k2dSplineCtlVertex: ClassVar[Self]</code>
             <code>k2dSplineFitVertex: ClassVar[Self]</code>
@@ -9484,9 +9840,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewTable">
         <details>
-            <summary>class ViewTable</summary>
+            <summary>class ViewTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.AbstractViewTableRecord) -&gt; ObjectId</code>
@@ -9497,9 +9853,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewTableRecord">
         <details>
-            <summary>class ViewTableRecord</summary>
+            <summary>class ViewTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9536,9 +9892,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Viewport">
         <details>
-            <summary>class Viewport</summary>
+            <summary>class Viewport <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9716,9 +10072,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewportTable">
         <details>
-            <summary>class ViewportTable</summary>
+            <summary>class ViewportTable <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyDb.AbstractViewTableRecord) -&gt; ObjectId</code>
@@ -9729,9 +10085,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewportTableRecord">
         <details>
-            <summary>class ViewportTableRecord</summary>
+            <summary>class ViewportTableRecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9796,26 +10152,26 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Visibility">
         <details>
-            <summary>class Visibility</summary>
+            <summary>class Visibility <span class="tag">Class</span></summary>
             <code>kVisible: ClassVar[Self]</code>
             <code>kInvisible: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VpFreezeOps">
         <details>
-            <summary>class VpFreezeOps</summary>
+            <summary>class VpFreezeOps <span class="tag">Class</span></summary>
             <code>kFreeze: ClassVar[Self]</code>
             <code>kThaw: ClassVar[Self]</code>
             <code>kReset: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VpShadePlotType">
         <details>
-            <summary>class VpShadePlotType</summary>
+            <summary>class VpShadePlotType <span class="tag">Class</span></summary>
             <code>kAsDisplayed: ClassVar[Self]</code>
             <code>kWireframe: ClassVar[Self]</code>
             <code>kHidden: ClassVar[Self]</code>
@@ -9825,9 +10181,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Wipeout">
         <details>
-            <summary>class Wipeout</summary>
+            <summary>class Wipeout <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, points: list[PyGe.Point2d], normal: PyGe.Vector3d) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -9844,9 +10200,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Xrecord">
         <details>
-            <summary>class Xrecord</summary>
+            <summary>class Xrecord <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None</code>
@@ -9865,9 +10221,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="XrefGraph">
         <details>
-            <summary>class XrefGraph</summary>
+            <summary>class XrefGraph <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -9881,9 +10237,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="XrefGraphNode">
         <details>
-            <summary>class XrefGraphNode</summary>
+            <summary>class XrefGraphNode <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def btrId(self) -&gt; ObjectId</code>
@@ -9902,9 +10258,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="XrefObjectId">
         <details>
-            <summary>class XrefObjectId</summary>
+            <summary>class XrefObjectId <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __ne__(self) -&gt; bool</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -9920,9 +10276,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="XrefStatus">
         <details>
-            <summary>class XrefStatus</summary>
+            <summary>class XrefStatus <span class="tag">Class</span></summary>
             <code>kXrfNotAnXref: ClassVar[Self]</code>
             <code>kXrfResolved: ClassVar[Self]</code>
             <code>kXrfUnloaded: ClassVar[Self]</code>

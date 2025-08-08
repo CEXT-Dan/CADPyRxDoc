@@ -42,31 +42,278 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyAx.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#Ac3DPolylineType">Ac3DPolylineType</a></li>
+            <li><a href="#AcActiveSpace">AcActiveSpace</a></li>
+            <li><a href="#AcAlignment">AcAlignment</a></li>
+            <li><a href="#AcAlignmentPointAcquisition">AcAlignmentPointAcquisition</a></li>
+            <li><a href="#AcAngleUnits">AcAngleUnits</a></li>
+            <li><a href="#AcAttachmentPoint">AcAttachmentPoint</a></li>
+            <li><a href="#AcAttributeMode">AcAttributeMode</a></li>
+            <li><a href="#AcBlockConnectionType">AcBlockConnectionType</a></li>
+            <li><a href="#AcBlockScaling">AcBlockScaling</a></li>
+            <li><a href="#AcBooleanType">AcBooleanType</a></li>
+            <li><a href="#AcCellAlignment">AcCellAlignment</a></li>
+            <li><a href="#AcCellContentLayout">AcCellContentLayout</a></li>
+            <li><a href="#AcCellContentType">AcCellContentType</a></li>
+            <li><a href="#AcCellEdgeMask">AcCellEdgeMask</a></li>
+            <li><a href="#AcCellMargin">AcCellMargin</a></li>
+            <li><a href="#AcCellProperty">AcCellProperty</a></li>
+            <li><a href="#AcCellState">AcCellState</a></li>
+            <li><a href="#AcCellType">AcCellType</a></li>
+            <li><a href="#AcColor">AcColor</a></li>
+            <li><a href="#AcColorMethod">AcColorMethod</a></li>
+            <li><a href="#AcCoordinateSystem">AcCoordinateSystem</a></li>
+            <li><a href="#AcDataLinkUpdateDirection">AcDataLinkUpdateDirection</a></li>
+            <li><a href="#AcDataLinkUpdateOption">AcDataLinkUpdateOption</a></li>
+            <li><a href="#AcDimArcLengthSymbol">AcDimArcLengthSymbol</a></li>
+            <li><a href="#AcDimArrowheadType">AcDimArrowheadType</a></li>
+            <li><a href="#AcDimCenterType">AcDimCenterType</a></li>
+            <li><a href="#AcDimFit">AcDimFit</a></li>
+            <li><a href="#AcDimFractionType">AcDimFractionType</a></li>
+            <li><a href="#AcDimHorizontalJustification">AcDimHorizontalJustification</a></li>
+            <li><a href="#AcDimLUnits">AcDimLUnits</a></li>
+            <li><a href="#AcDimPrecision">AcDimPrecision</a></li>
+            <li><a href="#AcDimTextMovement">AcDimTextMovement</a></li>
+            <li><a href="#AcDimToleranceJustify">AcDimToleranceJustify</a></li>
+            <li><a href="#AcDimToleranceMethod">AcDimToleranceMethod</a></li>
+            <li><a href="#AcDimUnits">AcDimUnits</a></li>
+            <li><a href="#AcDimVerticalJustification">AcDimVerticalJustification</a></li>
+            <li><a href="#AcDrawLeaderOrderType">AcDrawLeaderOrderType</a></li>
+            <li><a href="#AcDrawMLeaderOrderType">AcDrawMLeaderOrderType</a></li>
+            <li><a href="#AcDrawingAreaSCMCommand">AcDrawingAreaSCMCommand</a></li>
+            <li><a href="#AcDrawingAreaSCMDefault">AcDrawingAreaSCMDefault</a></li>
+            <li><a href="#AcDrawingAreaSCMEdit">AcDrawingAreaSCMEdit</a></li>
+            <li><a href="#AcDrawingDirection">AcDrawingDirection</a></li>
+            <li><a href="#AcDynamicBlockReferencePropertyUnitsType">AcDynamicBlockReferencePropertyUnitsType</a></li>
+            <li><a href="#AcExtendOption">AcExtendOption</a></li>
+            <li><a href="#AcFormatOption">AcFormatOption</a></li>
+            <li><a href="#AcGridLineStyle">AcGridLineStyle</a></li>
+            <li><a href="#AcGridLineType">AcGridLineType</a></li>
+            <li><a href="#AcHatchObjectType">AcHatchObjectType</a></li>
+            <li><a href="#AcHatchStyle">AcHatchStyle</a></li>
+            <li><a href="#AcHorizontalAlignment">AcHorizontalAlignment</a></li>
+            <li><a href="#AcISOPenWidth">AcISOPenWidth</a></li>
+            <li><a href="#AcInsertUnits">AcInsertUnits</a></li>
+            <li><a href="#AcKeyboardAccelerator">AcKeyboardAccelerator</a></li>
+            <li><a href="#AcKeyboardPriority">AcKeyboardPriority</a></li>
+            <li><a href="#AcLeaderType">AcLeaderType</a></li>
+            <li><a href="#AcLineSpacingStyle">AcLineSpacingStyle</a></li>
+            <li><a href="#AcLineWeight">AcLineWeight</a></li>
+            <li><a href="#AcLoopType">AcLoopType</a></li>
+            <li><a href="#AcMLeaderContentType">AcMLeaderContentType</a></li>
+            <li><a href="#AcMLeaderType">AcMLeaderType</a></li>
+            <li><a href="#AcMLineJustification">AcMLineJustification</a></li>
+            <li><a href="#AcMenuFileType">AcMenuFileType</a></li>
+            <li><a href="#AcMenuGroupType">AcMenuGroupType</a></li>
+            <li><a href="#AcMenuItemType">AcMenuItemType</a></li>
+            <li><a href="#AcMergeCellStyleOption">AcMergeCellStyleOption</a></li>
+            <li><a href="#AcOleQuality">AcOleQuality</a></li>
+            <li><a href="#AcParseOption">AcParseOption</a></li>
+            <li><a href="#AcPatternType">AcPatternType</a></li>
+            <li><a href="#AcPlotPaperUnits">AcPlotPaperUnits</a></li>
+            <li><a href="#AcPlotRotation">AcPlotRotation</a></li>
+            <li><a href="#AcPlotScale">AcPlotScale</a></li>
+            <li><a href="#AcPlotType">AcPlotType</a></li>
+            <li><a href="#AcPolylineType">AcPolylineType</a></li>
+            <li><a href="#AcPolymeshType">AcPolymeshType</a></li>
+            <li><a href="#AcPredefBlockType">AcPredefBlockType</a></li>
+            <li><a href="#AcPreviewMode">AcPreviewMode</a></li>
+            <li><a href="#AcPrinterSpoolAlert">AcPrinterSpoolAlert</a></li>
+            <li><a href="#AcProxyImage">AcProxyImage</a></li>
+            <li><a href="#AcRegenType">AcRegenType</a></li>
+            <li><a href="#AcRotationAngle">AcRotationAngle</a></li>
+            <li><a href="#AcRowType">AcRowType</a></li>
+            <li><a href="#AcSaveAsType">AcSaveAsType</a></li>
+            <li><a href="#AcSectionGeneration">AcSectionGeneration</a></li>
+            <li><a href="#AcSectionState">AcSectionState</a></li>
+            <li><a href="#AcSectionSubItem">AcSectionSubItem</a></li>
+            <li><a href="#AcSectionType">AcSectionType</a></li>
+            <li><a href="#AcSegmentAngleType">AcSegmentAngleType</a></li>
+            <li><a href="#AcSelect">AcSelect</a></li>
+            <li><a href="#AcSelectType">AcSelectType</a></li>
+            <li><a href="#AcSplineFrameType">AcSplineFrameType</a></li>
+            <li><a href="#AcSplineKnotParameterizationType">AcSplineKnotParameterizationType</a></li>
+            <li><a href="#AcSplineMethodType">AcSplineMethodType</a></li>
+            <li><a href="#AcTableDirection">AcTableDirection</a></li>
+            <li><a href="#AcTableFlowDirection">AcTableFlowDirection</a></li>
+            <li><a href="#AcTextAlignmentType">AcTextAlignmentType</a></li>
+            <li><a href="#AcTextAngleType">AcTextAngleType</a></li>
+            <li><a href="#AcTextAttachmentDirection">AcTextAttachmentDirection</a></li>
+            <li><a href="#AcTextAttachmentType">AcTextAttachmentType</a></li>
+            <li><a href="#AcTextFontStyle">AcTextFontStyle</a></li>
+            <li><a href="#AcToolbarDockStatus">AcToolbarDockStatus</a></li>
+            <li><a href="#AcToolbarItemType">AcToolbarItemType</a></li>
+            <li><a href="#AcUnits">AcUnits</a></li>
+            <li><a href="#AcValueDataType">AcValueDataType</a></li>
+            <li><a href="#AcValueUnitType">AcValueUnitType</a></li>
+            <li><a href="#AcVerticalAlignment">AcVerticalAlignment</a></li>
+            <li><a href="#AcVerticalTextAttachmentType">AcVerticalTextAttachmentType</a></li>
+            <li><a href="#AcViewportScale">AcViewportScale</a></li>
+            <li><a href="#AcViewportSplitType">AcViewportSplitType</a></li>
+            <li><a href="#AcWindowState">AcWindowState</a></li>
+            <li><a href="#AcXRefDemandLoad">AcXRefDemandLoad</a></li>
+            <li><a href="#AcZoomScaleType">AcZoomScaleType</a></li>
+            <li><a href="#Acad3DFace">Acad3DFace</a></li>
+            <li><a href="#Acad3DPolyline">Acad3DPolyline</a></li>
+            <li><a href="#Acad3DSolid">Acad3DSolid</a></li>
+            <li><a href="#AcadAcCmColor">AcadAcCmColor</a></li>
+            <li><a href="#AcadApplication">AcadApplication</a></li>
+            <li><a href="#AcadArc">AcadArc</a></li>
+            <li><a href="#AcadAttribute">AcadAttribute</a></li>
+            <li><a href="#AcadAttributeReference">AcadAttributeReference</a></li>
+            <li><a href="#AcadBlock">AcadBlock</a></li>
+            <li><a href="#AcadBlockReference">AcadBlockReference</a></li>
+            <li><a href="#AcadBlocks">AcadBlocks</a></li>
+            <li><a href="#AcadCircle">AcadCircle</a></li>
+            <li><a href="#AcadDatabase">AcadDatabase</a></li>
+            <li><a href="#AcadDatabasePreferences">AcadDatabasePreferences</a></li>
+            <li><a href="#AcadDictionaries">AcadDictionaries</a></li>
+            <li><a href="#AcadDictionary">AcadDictionary</a></li>
+            <li><a href="#AcadDim3PointAngular">AcadDim3PointAngular</a></li>
+            <li><a href="#AcadDimAligned">AcadDimAligned</a></li>
+            <li><a href="#AcadDimAngular">AcadDimAngular</a></li>
+            <li><a href="#AcadDimArcLength">AcadDimArcLength</a></li>
+            <li><a href="#AcadDimDiametric">AcadDimDiametric</a></li>
+            <li><a href="#AcadDimOrdinate">AcadDimOrdinate</a></li>
+            <li><a href="#AcadDimRadial">AcadDimRadial</a></li>
+            <li><a href="#AcadDimRadialLarge">AcadDimRadialLarge</a></li>
+            <li><a href="#AcadDimRotated">AcadDimRotated</a></li>
+            <li><a href="#AcadDimStyle">AcadDimStyle</a></li>
+            <li><a href="#AcadDimStyles">AcadDimStyles</a></li>
+            <li><a href="#AcadDimension">AcadDimension</a></li>
+            <li><a href="#AcadDocument">AcadDocument</a></li>
+            <li><a href="#AcadDocuments">AcadDocuments</a></li>
+            <li><a href="#AcadDynamicBlockReferenceProperty">AcadDynamicBlockReferenceProperty</a></li>
+            <li><a href="#AcadEllipse">AcadEllipse</a></li>
+            <li><a href="#AcadEntity">AcadEntity</a></li>
+            <li><a href="#AcadExternalReference">AcadExternalReference</a></li>
+            <li><a href="#AcadGroup">AcadGroup</a></li>
+            <li><a href="#AcadGroups">AcadGroups</a></li>
+            <li><a href="#AcadHatch">AcadHatch</a></li>
+            <li><a href="#AcadHyperlink">AcadHyperlink</a></li>
+            <li><a href="#AcadHyperlinks">AcadHyperlinks</a></li>
+            <li><a href="#AcadIdPair">AcadIdPair</a></li>
+            <li><a href="#AcadLWPolyline">AcadLWPolyline</a></li>
+            <li><a href="#AcadLayer">AcadLayer</a></li>
+            <li><a href="#AcadLayers">AcadLayers</a></li>
+            <li><a href="#AcadLayout">AcadLayout</a></li>
+            <li><a href="#AcadLayouts">AcadLayouts</a></li>
+            <li><a href="#AcadLeader">AcadLeader</a></li>
+            <li><a href="#AcadLine">AcadLine</a></li>
+            <li><a href="#AcadLineType">AcadLineType</a></li>
+            <li><a href="#AcadLineTypes">AcadLineTypes</a></li>
+            <li><a href="#AcadMInsertBlock">AcadMInsertBlock</a></li>
+            <li><a href="#AcadMLeader">AcadMLeader</a></li>
+            <li><a href="#AcadMLeaderStyle">AcadMLeaderStyle</a></li>
+            <li><a href="#AcadMLine">AcadMLine</a></li>
+            <li><a href="#AcadMText">AcadMText</a></li>
+            <li><a href="#AcadMaterial">AcadMaterial</a></li>
+            <li><a href="#AcadMaterials">AcadMaterials</a></li>
+            <li><a href="#AcadMenuBar">AcadMenuBar</a></li>
+            <li><a href="#AcadMenuGroup">AcadMenuGroup</a></li>
+            <li><a href="#AcadMenuGroups">AcadMenuGroups</a></li>
+            <li><a href="#AcadObject">AcadObject</a></li>
+            <li><a href="#AcadPViewport">AcadPViewport</a></li>
+            <li><a href="#AcadPlot">AcadPlot</a></li>
+            <li><a href="#AcadPlotConfiguration">AcadPlotConfiguration</a></li>
+            <li><a href="#AcadPlotConfigurations">AcadPlotConfigurations</a></li>
+            <li><a href="#AcadPoint">AcadPoint</a></li>
+            <li><a href="#AcadPolyfaceMesh">AcadPolyfaceMesh</a></li>
+            <li><a href="#AcadPolygonMesh">AcadPolygonMesh</a></li>
+            <li><a href="#AcadPolyline">AcadPolyline</a></li>
+            <li><a href="#AcadPopupMenu">AcadPopupMenu</a></li>
+            <li><a href="#AcadPopupMenuItem">AcadPopupMenuItem</a></li>
+            <li><a href="#AcadPopupMenus">AcadPopupMenus</a></li>
+            <li><a href="#AcadPreferences">AcadPreferences</a></li>
+            <li><a href="#AcadPreferencesDisplay">AcadPreferencesDisplay</a></li>
+            <li><a href="#AcadPreferencesDrafting">AcadPreferencesDrafting</a></li>
+            <li><a href="#AcadPreferencesFiles">AcadPreferencesFiles</a></li>
+            <li><a href="#AcadPreferencesOpenSave">AcadPreferencesOpenSave</a></li>
+            <li><a href="#AcadPreferencesOutput">AcadPreferencesOutput</a></li>
+            <li><a href="#AcadPreferencesProfiles">AcadPreferencesProfiles</a></li>
+            <li><a href="#AcadPreferencesSelection">AcadPreferencesSelection</a></li>
+            <li><a href="#AcadPreferencesSystem">AcadPreferencesSystem</a></li>
+            <li><a href="#AcadPreferencesUser">AcadPreferencesUser</a></li>
+            <li><a href="#AcadRasterImage">AcadRasterImage</a></li>
+            <li><a href="#AcadRay">AcadRay</a></li>
+            <li><a href="#AcadRegion">AcadRegion</a></li>
+            <li><a href="#AcadRegisteredApplication">AcadRegisteredApplication</a></li>
+            <li><a href="#AcadRegisteredApplications">AcadRegisteredApplications</a></li>
+            <li><a href="#AcadSection">AcadSection</a></li>
+            <li><a href="#AcadSectionManager">AcadSectionManager</a></li>
+            <li><a href="#AcadSectionSettings">AcadSectionSettings</a></li>
+            <li><a href="#AcadSectionTypeSettings">AcadSectionTypeSettings</a></li>
+            <li><a href="#AcadSecurityParams">AcadSecurityParams</a></li>
+            <li><a href="#AcadSelectionSet">AcadSelectionSet</a></li>
+            <li><a href="#AcadSelectionSets">AcadSelectionSets</a></li>
+            <li><a href="#AcadShape">AcadShape</a></li>
+            <li><a href="#AcadSolid">AcadSolid</a></li>
+            <li><a href="#AcadSortentsTable">AcadSortentsTable</a></li>
+            <li><a href="#AcadSpline">AcadSpline</a></li>
+            <li><a href="#AcadState">AcadState</a></li>
+            <li><a href="#AcadSummaryInfo">AcadSummaryInfo</a></li>
+            <li><a href="#AcadTable">AcadTable</a></li>
+            <li><a href="#AcadTableStyle">AcadTableStyle</a></li>
+            <li><a href="#AcadText">AcadText</a></li>
+            <li><a href="#AcadTextStyle">AcadTextStyle</a></li>
+            <li><a href="#AcadTextStyles">AcadTextStyles</a></li>
+            <li><a href="#AcadTolerance">AcadTolerance</a></li>
+            <li><a href="#AcadToolbar">AcadToolbar</a></li>
+            <li><a href="#AcadToolbarItem">AcadToolbarItem</a></li>
+            <li><a href="#AcadToolbars">AcadToolbars</a></li>
+            <li><a href="#AcadTrace">AcadTrace</a></li>
+            <li><a href="#AcadUCS">AcadUCS</a></li>
+            <li><a href="#AcadUCSs">AcadUCSs</a></li>
+            <li><a href="#AcadUtility">AcadUtility</a></li>
+            <li><a href="#AcadView">AcadView</a></li>
+            <li><a href="#AcadViewport">AcadViewport</a></li>
+            <li><a href="#AcadViewports">AcadViewports</a></li>
+            <li><a href="#AcadViews">AcadViews</a></li>
+            <li><a href="#AcadXRecord">AcadXRecord</a></li>
+            <li><a href="#AcadXline">AcadXline</a></li>
+            <li><a href="#ModelSpace">ModelSpace</a></li>
+            <li><a href="#PaperSpace">PaperSpace</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="Ac3DPolylineType">
         <details>
-            <summary>class Ac3DPolylineType</summary>
+            <summary>class Ac3DPolylineType <span class="tag">Class</span></summary>
             <code>acSimple3DPoly: ClassVar[Self]</code>
             <code>acQuadSpline3DPoly: ClassVar[Self]</code>
             <code>acCubicSpline3DPoly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcActiveSpace">
         <details>
-            <summary>class AcActiveSpace</summary>
+            <summary>class AcActiveSpace <span class="tag">Class</span></summary>
             <code>acPaperSpace: ClassVar[Self]</code>
             <code>acModelSpace: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcAlignment">
         <details>
-            <summary>class AcAlignment</summary>
+            <summary>class AcAlignment <span class="tag">Class</span></summary>
             <code>acAlignmentLeft: ClassVar[Self]</code>
             <code>acAlignmentCenter: ClassVar[Self]</code>
             <code>acAlignmentRight: ClassVar[Self]</code>
@@ -85,17 +332,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcAlignmentPointAcquisition">
         <details>
-            <summary>class AcAlignmentPointAcquisition</summary>
+            <summary>class AcAlignmentPointAcquisition <span class="tag">Class</span></summary>
             <code>acAlignPntAcquisitionAutomatic: ClassVar[Self]</code>
             <code>acAlignPntAcquisitionShiftToAcquire: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcAngleUnits">
         <details>
-            <summary>class AcAngleUnits</summary>
+            <summary>class AcAngleUnits <span class="tag">Class</span></summary>
             <code>acDegrees: ClassVar[Self]</code>
             <code>acDegreeMinuteSeconds: ClassVar[Self]</code>
             <code>acGrads: ClassVar[Self]</code>
@@ -103,9 +350,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcAttachmentPoint">
         <details>
-            <summary>class AcAttachmentPoint</summary>
+            <summary>class AcAttachmentPoint <span class="tag">Class</span></summary>
             <code>acAttachmentPointTopLeft: ClassVar[Self]</code>
             <code>acAttachmentPointTopCenter: ClassVar[Self]</code>
             <code>acAttachmentPointTopRight: ClassVar[Self]</code>
@@ -118,9 +365,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcAttributeMode">
         <details>
-            <summary>class AcAttributeMode</summary>
+            <summary>class AcAttributeMode <span class="tag">Class</span></summary>
             <code>acAttributeModeNormal: ClassVar[Self]</code>
             <code>acAttributeModeInvisible: ClassVar[Self]</code>
             <code>acAttributeModeConstant: ClassVar[Self]</code>
@@ -131,34 +378,34 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcBlockConnectionType">
         <details>
-            <summary>class AcBlockConnectionType</summary>
+            <summary>class AcBlockConnectionType <span class="tag">Class</span></summary>
             <code>acConnectExtents: ClassVar[Self]</code>
             <code>acConnectBase: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcBlockScaling">
         <details>
-            <summary>class AcBlockScaling</summary>
+            <summary>class AcBlockScaling <span class="tag">Class</span></summary>
             <code>acAny: ClassVar[Self]</code>
             <code>acUniform: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcBooleanType">
         <details>
-            <summary>class AcBooleanType</summary>
+            <summary>class AcBooleanType <span class="tag">Class</span></summary>
             <code>acUnion: ClassVar[Self]</code>
             <code>acIntersection: ClassVar[Self]</code>
             <code>acSubtraction: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellAlignment">
         <details>
-            <summary>class AcCellAlignment</summary>
+            <summary>class AcCellAlignment <span class="tag">Class</span></summary>
             <code>acTopLeft: ClassVar[Self]</code>
             <code>acTopCenter: ClassVar[Self]</code>
             <code>acTopRight: ClassVar[Self]</code>
@@ -171,18 +418,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellContentLayout">
         <details>
-            <summary>class AcCellContentLayout</summary>
+            <summary>class AcCellContentLayout <span class="tag">Class</span></summary>
             <code>acCellContentLayoutFlow: ClassVar[Self]</code>
             <code>acCellContentLayoutStackedHorizontal: ClassVar[Self]</code>
             <code>acCellContentLayoutStackedVertical: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellContentType">
         <details>
-            <summary>class AcCellContentType</summary>
+            <summary>class AcCellContentType <span class="tag">Class</span></summary>
             <code>acCellContentTypeUnknown: ClassVar[Self]</code>
             <code>acCellContentTypeValue: ClassVar[Self]</code>
             <code>acCellContentTypeField: ClassVar[Self]</code>
@@ -190,9 +437,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellEdgeMask">
         <details>
-            <summary>class AcCellEdgeMask</summary>
+            <summary>class AcCellEdgeMask <span class="tag">Class</span></summary>
             <code>acTopMask: ClassVar[Self]</code>
             <code>acRightMask: ClassVar[Self]</code>
             <code>acBottomMask: ClassVar[Self]</code>
@@ -200,9 +447,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellMargin">
         <details>
-            <summary>class AcCellMargin</summary>
+            <summary>class AcCellMargin <span class="tag">Class</span></summary>
             <code>acCellMarginTop: ClassVar[Self]</code>
             <code>acCellMarginLeft: ClassVar[Self]</code>
             <code>acCellMarginBottom: ClassVar[Self]</code>
@@ -212,9 +459,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellProperty">
         <details>
-            <summary>class AcCellProperty</summary>
+            <summary>class AcCellProperty <span class="tag">Class</span></summary>
             <code>acInvalidCellProperty: ClassVar[Self]</code>
             <code>acLock: ClassVar[Self]</code>
             <code>acDataType: ClassVar[Self]</code>
@@ -242,9 +489,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellState">
         <details>
-            <summary>class AcCellState</summary>
+            <summary>class AcCellState <span class="tag">Class</span></summary>
             <code>acCellStateNone: ClassVar[Self]</code>
             <code>acCellStateContentLocked: ClassVar[Self]</code>
             <code>acCellStateContentReadOnly: ClassVar[Self]</code>
@@ -256,18 +503,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCellType">
         <details>
-            <summary>class AcCellType</summary>
+            <summary>class AcCellType <span class="tag">Class</span></summary>
             <code>acUnknownCell: ClassVar[Self]</code>
             <code>acTextCell: ClassVar[Self]</code>
             <code>acBlockCell: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcColor">
         <details>
-            <summary>class AcColor</summary>
+            <summary>class AcColor <span class="tag">Class</span></summary>
             <code>acByBlock: ClassVar[Self]</code>
             <code>acRed: ClassVar[Self]</code>
             <code>acYellow: ClassVar[Self]</code>
@@ -280,9 +527,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcColorMethod">
         <details>
-            <summary>class AcColorMethod</summary>
+            <summary>class AcColorMethod <span class="tag">Class</span></summary>
             <code>acColorMethodByLayer: ClassVar[Self]</code>
             <code>acColorMethodByBlock: ClassVar[Self]</code>
             <code>acColorMethodByRGB: ClassVar[Self]</code>
@@ -291,9 +538,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcCoordinateSystem">
         <details>
-            <summary>class AcCoordinateSystem</summary>
+            <summary>class AcCoordinateSystem <span class="tag">Class</span></summary>
             <code>acWorld: ClassVar[Self]</code>
             <code>acUCS: ClassVar[Self]</code>
             <code>acDisplayDCS: ClassVar[Self]</code>
@@ -302,17 +549,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDataLinkUpdateDirection">
         <details>
-            <summary>class AcDataLinkUpdateDirection</summary>
+            <summary>class AcDataLinkUpdateDirection <span class="tag">Class</span></summary>
             <code>acUpdateDataFromSource: ClassVar[Self]</code>
             <code>acUpdateSourceFromData: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDataLinkUpdateOption">
         <details>
-            <summary>class AcDataLinkUpdateOption</summary>
+            <summary>class AcDataLinkUpdateOption <span class="tag">Class</span></summary>
             <code>acUpdateOptionNone: ClassVar[Self]</code>
             <code>acUpdateOptionOverwriteContentModifiedAfterUpdate: ClassVar[Self]</code>
             <code>acUpdateOptionOverwriteFormatModifiedAfterUpdate: ClassVar[Self]</code>
@@ -321,18 +568,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimArcLengthSymbol">
         <details>
-            <summary>class AcDimArcLengthSymbol</summary>
+            <summary>class AcDimArcLengthSymbol <span class="tag">Class</span></summary>
             <code>acSymInFront: ClassVar[Self]</code>
             <code>acSymAbove: ClassVar[Self]</code>
             <code>acSymNone: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimArrowheadType">
         <details>
-            <summary>class AcDimArrowheadType</summary>
+            <summary>class AcDimArrowheadType <span class="tag">Class</span></summary>
             <code>acArrowDefault: ClassVar[Self]</code>
             <code>acArrowClosedBlank: ClassVar[Self]</code>
             <code>acArrowClosed: ClassVar[Self]</code>
@@ -357,18 +604,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimCenterType">
         <details>
-            <summary>class AcDimCenterType</summary>
+            <summary>class AcDimCenterType <span class="tag">Class</span></summary>
             <code>acCenterMark: ClassVar[Self]</code>
             <code>acCenterLine: ClassVar[Self]</code>
             <code>acCenterNone: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimFit">
         <details>
-            <summary>class AcDimFit</summary>
+            <summary>class AcDimFit <span class="tag">Class</span></summary>
             <code>acTextAndArrows: ClassVar[Self]</code>
             <code>acArrowsOnly: ClassVar[Self]</code>
             <code>acTextOnly: ClassVar[Self]</code>
@@ -376,18 +623,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimFractionType">
         <details>
-            <summary>class AcDimFractionType</summary>
+            <summary>class AcDimFractionType <span class="tag">Class</span></summary>
             <code>acHorizontal: ClassVar[Self]</code>
             <code>acDiagonal: ClassVar[Self]</code>
             <code>acNotStacked: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimHorizontalJustification">
         <details>
-            <summary>class AcDimHorizontalJustification</summary>
+            <summary>class AcDimHorizontalJustification <span class="tag">Class</span></summary>
             <code>acHorzCentered: ClassVar[Self]</code>
             <code>acFirstExtensionLine: ClassVar[Self]</code>
             <code>acSecondExtensionLine: ClassVar[Self]</code>
@@ -396,9 +643,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimLUnits">
         <details>
-            <summary>class AcDimLUnits</summary>
+            <summary>class AcDimLUnits <span class="tag">Class</span></summary>
             <code>acDimLScientific: ClassVar[Self]</code>
             <code>acDimLDecimal: ClassVar[Self]</code>
             <code>acDimLEngineering: ClassVar[Self]</code>
@@ -408,9 +655,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimPrecision">
         <details>
-            <summary>class AcDimPrecision</summary>
+            <summary>class AcDimPrecision <span class="tag">Class</span></summary>
             <code>acDimPrecisionZero: ClassVar[Self]</code>
             <code>acDimPrecisionOne: ClassVar[Self]</code>
             <code>acDimPrecisionTwo: ClassVar[Self]</code>
@@ -423,27 +670,27 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimTextMovement">
         <details>
-            <summary>class AcDimTextMovement</summary>
+            <summary>class AcDimTextMovement <span class="tag">Class</span></summary>
             <code>acDimLineWithText: ClassVar[Self]</code>
             <code>acMoveTextAddLeader: ClassVar[Self]</code>
             <code>acMoveTextNoLeader: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimToleranceJustify">
         <details>
-            <summary>class AcDimToleranceJustify</summary>
+            <summary>class AcDimToleranceJustify <span class="tag">Class</span></summary>
             <code>acTolBottom: ClassVar[Self]</code>
             <code>acTolMiddle: ClassVar[Self]</code>
             <code>acTolTop: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimToleranceMethod">
         <details>
-            <summary>class AcDimToleranceMethod</summary>
+            <summary>class AcDimToleranceMethod <span class="tag">Class</span></summary>
             <code>acTolNone: ClassVar[Self]</code>
             <code>acTolSymmetrical: ClassVar[Self]</code>
             <code>acTolDeviation: ClassVar[Self]</code>
@@ -452,9 +699,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimUnits">
         <details>
-            <summary>class AcDimUnits</summary>
+            <summary>class AcDimUnits <span class="tag">Class</span></summary>
             <code>acDimScientific: ClassVar[Self]</code>
             <code>acDimDecimal: ClassVar[Self]</code>
             <code>acDimEngineering: ClassVar[Self]</code>
@@ -466,9 +713,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDimVerticalJustification">
         <details>
-            <summary>class AcDimVerticalJustification</summary>
+            <summary>class AcDimVerticalJustification <span class="tag">Class</span></summary>
             <code>acVertCentered: ClassVar[Self]</code>
             <code>acAbove: ClassVar[Self]</code>
             <code>acOutside: ClassVar[Self]</code>
@@ -477,50 +724,50 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawLeaderOrderType">
         <details>
-            <summary>class AcDrawLeaderOrderType</summary>
+            <summary>class AcDrawLeaderOrderType <span class="tag">Class</span></summary>
             <code>acDrawLeaderHeadFirst: ClassVar[Self]</code>
             <code>acDrawLeaderTailFirst: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawMLeaderOrderType">
         <details>
-            <summary>class AcDrawMLeaderOrderType</summary>
+            <summary>class AcDrawMLeaderOrderType <span class="tag">Class</span></summary>
             <code>acDrawContentFirst: ClassVar[Self]</code>
             <code>acDrawLeaderFirst: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawingAreaSCMCommand">
         <details>
-            <summary>class AcDrawingAreaSCMCommand</summary>
+            <summary>class AcDrawingAreaSCMCommand <span class="tag">Class</span></summary>
             <code>acEnter: ClassVar[Self]</code>
             <code>acEnableSCMOptions: ClassVar[Self]</code>
             <code>acEnableSCM: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawingAreaSCMDefault">
         <details>
-            <summary>class AcDrawingAreaSCMDefault</summary>
+            <summary>class AcDrawingAreaSCMDefault <span class="tag">Class</span></summary>
             <code>acRepeatLastCommand: ClassVar[Self]</code>
             <code>acSCM: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawingAreaSCMEdit">
         <details>
-            <summary>class AcDrawingAreaSCMEdit</summary>
+            <summary>class AcDrawingAreaSCMEdit <span class="tag">Class</span></summary>
             <code>acEdRepeatLastCommand: ClassVar[Self]</code>
             <code>acEdSCM: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDrawingDirection">
         <details>
-            <summary>class AcDrawingDirection</summary>
+            <summary>class AcDrawingDirection <span class="tag">Class</span></summary>
             <code>acLeftToRight: ClassVar[Self]</code>
             <code>acRightToLeft: ClassVar[Self]</code>
             <code>acTopToBottom: ClassVar[Self]</code>
@@ -529,9 +776,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcDynamicBlockReferencePropertyUnitsType">
         <details>
-            <summary>class AcDynamicBlockReferencePropertyUnitsType</summary>
+            <summary>class AcDynamicBlockReferencePropertyUnitsType <span class="tag">Class</span></summary>
             <code>acNoUnits: ClassVar[Self]</code>
             <code>acAngular: ClassVar[Self]</code>
             <code>acDistance: ClassVar[Self]</code>
@@ -539,9 +786,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcExtendOption">
         <details>
-            <summary>class AcExtendOption</summary>
+            <summary>class AcExtendOption <span class="tag">Class</span></summary>
             <code>acExtendNone: ClassVar[Self]</code>
             <code>acExtendThisEntity: ClassVar[Self]</code>
             <code>acExtendOtherEntity: ClassVar[Self]</code>
@@ -549,9 +796,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcFormatOption">
         <details>
-            <summary>class AcFormatOption</summary>
+            <summary>class AcFormatOption <span class="tag">Class</span></summary>
             <code>kFormatOptionNone: ClassVar[Self]</code>
             <code>acForEditing: ClassVar[Self]</code>
             <code>acForExpression: ClassVar[Self]</code>
@@ -560,17 +807,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGridLineStyle">
         <details>
-            <summary>class AcGridLineStyle</summary>
+            <summary>class AcGridLineStyle <span class="tag">Class</span></summary>
             <code>acGridLineStyleSingle: ClassVar[Self]</code>
             <code>acGridLineStyleDouble: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcGridLineType">
         <details>
-            <summary>class AcGridLineType</summary>
+            <summary>class AcGridLineType <span class="tag">Class</span></summary>
             <code>acInvalidGridLine: ClassVar[Self]</code>
             <code>acHorzTop: ClassVar[Self]</code>
             <code>acHorzInside: ClassVar[Self]</code>
@@ -581,26 +828,26 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcHatchObjectType">
         <details>
-            <summary>class AcHatchObjectType</summary>
+            <summary>class AcHatchObjectType <span class="tag">Class</span></summary>
             <code>acHatchObject: ClassVar[Self]</code>
             <code>acGradientObject: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcHatchStyle">
         <details>
-            <summary>class AcHatchStyle</summary>
+            <summary>class AcHatchStyle <span class="tag">Class</span></summary>
             <code>acHatchStyleNormal: ClassVar[Self]</code>
             <code>acHatchStyleOuter: ClassVar[Self]</code>
             <code>acHatchStyleIgnore: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcHorizontalAlignment">
         <details>
-            <summary>class AcHorizontalAlignment</summary>
+            <summary>class AcHorizontalAlignment <span class="tag">Class</span></summary>
             <code>acHorizontalAlignmentLeft: ClassVar[Self]</code>
             <code>acHorizontalAlignmentCenter: ClassVar[Self]</code>
             <code>acHorizontalAlignmentRight: ClassVar[Self]</code>
@@ -610,9 +857,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcISOPenWidth">
         <details>
-            <summary>class AcISOPenWidth</summary>
+            <summary>class AcISOPenWidth <span class="tag">Class</span></summary>
             <code>acPenWidth013: ClassVar[Self]</code>
             <code>acPenWidth018: ClassVar[Self]</code>
             <code>acPenWidth025: ClassVar[Self]</code>
@@ -626,9 +873,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcInsertUnits">
         <details>
-            <summary>class AcInsertUnits</summary>
+            <summary>class AcInsertUnits <span class="tag">Class</span></summary>
             <code>acInsertUnitsUnitless: ClassVar[Self]</code>
             <code>acInsertUnitsInches: ClassVar[Self]</code>
             <code>acInsertUnitsFeet: ClassVar[Self]</code>
@@ -657,25 +904,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcKeyboardAccelerator">
         <details>
-            <summary>class AcKeyboardAccelerator</summary>
+            <summary>class AcKeyboardAccelerator <span class="tag">Class</span></summary>
             <code>acPreferenceClassic: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcKeyboardPriority">
         <details>
-            <summary>class AcKeyboardPriority</summary>
+            <summary>class AcKeyboardPriority <span class="tag">Class</span></summary>
             <code>acKeyboardRunningObjSnap: ClassVar[Self]</code>
             <code>acKeyboardEntry: ClassVar[Self]</code>
             <code>acKeyboardEntryExceptScripts: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcLeaderType">
         <details>
-            <summary>class AcLeaderType</summary>
+            <summary>class AcLeaderType <span class="tag">Class</span></summary>
             <code>acLineNoArrow: ClassVar[Self]</code>
             <code>acSplineNoArrow: ClassVar[Self]</code>
             <code>acLineWithArrow: ClassVar[Self]</code>
@@ -683,17 +930,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcLineSpacingStyle">
         <details>
-            <summary>class AcLineSpacingStyle</summary>
+            <summary>class AcLineSpacingStyle <span class="tag">Class</span></summary>
             <code>acLineSpacingStyleAtLeast: ClassVar[Self]</code>
             <code>acLineSpacingStyleExactly: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcLineWeight">
         <details>
-            <summary>class AcLineWeight</summary>
+            <summary>class AcLineWeight <span class="tag">Class</span></summary>
             <code>acLnWt000: ClassVar[Self]</code>
             <code>acLnWt005: ClassVar[Self]</code>
             <code>acLnWt009: ClassVar[Self]</code>
@@ -724,9 +971,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcLoopType">
         <details>
-            <summary>class AcLoopType</summary>
+            <summary>class AcLoopType <span class="tag">Class</span></summary>
             <code>acHatchLoopTypeDefault: ClassVar[Self]</code>
             <code>acHatchLoopTypeExternal: ClassVar[Self]</code>
             <code>acHatchLoopTypePolyline: ClassVar[Self]</code>
@@ -735,61 +982,61 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMLeaderContentType">
         <details>
-            <summary>class AcMLeaderContentType</summary>
+            <summary>class AcMLeaderContentType <span class="tag">Class</span></summary>
             <code>acNoneContent: ClassVar[Self]</code>
             <code>acBlockContent: ClassVar[Self]</code>
             <code>acMTextContent: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMLeaderType">
         <details>
-            <summary>class AcMLeaderType</summary>
+            <summary>class AcMLeaderType <span class="tag">Class</span></summary>
             <code>acStraightLeader: ClassVar[Self]</code>
             <code>acSplineLeader: ClassVar[Self]</code>
             <code>acInVisibleLeader: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMLineJustification">
         <details>
-            <summary>class AcMLineJustification</summary>
+            <summary>class AcMLineJustification <span class="tag">Class</span></summary>
             <code>acTop: ClassVar[Self]</code>
             <code>acZero: ClassVar[Self]</code>
             <code>acBottom: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMenuFileType">
         <details>
-            <summary>class AcMenuFileType</summary>
+            <summary>class AcMenuFileType <span class="tag">Class</span></summary>
             <code>acMenuFileCompiled: ClassVar[Self]</code>
             <code>acMenuFileSource: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMenuGroupType">
         <details>
-            <summary>class AcMenuGroupType</summary>
+            <summary>class AcMenuGroupType <span class="tag">Class</span></summary>
             <code>acBaseMenuGroup: ClassVar[Self]</code>
             <code>acPartialMenuGroup: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMenuItemType">
         <details>
-            <summary>class AcMenuItemType</summary>
+            <summary>class AcMenuItemType <span class="tag">Class</span></summary>
             <code>acMenuItem: ClassVar[Self]</code>
             <code>acMenuSeparator: ClassVar[Self]</code>
             <code>acMenuSubMenu: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcMergeCellStyleOption">
         <details>
-            <summary>class AcMergeCellStyleOption</summary>
+            <summary>class AcMergeCellStyleOption <span class="tag">Class</span></summary>
             <code>acMergeCellStyleNone: ClassVar[Self]</code>
             <code>acMergeCellStyleCopyDuplicates: ClassVar[Self]</code>
             <code>acMergeCellStyleOverwriteDuplicates: ClassVar[Self]</code>
@@ -798,9 +1045,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcOleQuality">
         <details>
-            <summary>class AcOleQuality</summary>
+            <summary>class AcOleQuality <span class="tag">Class</span></summary>
             <code>acOQLineArt: ClassVar[Self]</code>
             <code>acOQText: ClassVar[Self]</code>
             <code>acOQGraphics: ClassVar[Self]</code>
@@ -809,36 +1056,36 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcParseOption">
         <details>
-            <summary>class AcParseOption</summary>
+            <summary>class AcParseOption <span class="tag">Class</span></summary>
             <code>acParseOptionNone: ClassVar[Self]</code>
             <code>acSetDefaultFormat: ClassVar[Self]</code>
             <code>acPreserveMtextFormat: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPatternType">
         <details>
-            <summary>class AcPatternType</summary>
+            <summary>class AcPatternType <span class="tag">Class</span></summary>
             <code>acHatchPatternTypeUserDefined: ClassVar[Self]</code>
             <code>acHatchPatternTypePreDefined: ClassVar[Self]</code>
             <code>acHatchPatternTypeCustomDefined: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPlotPaperUnits">
         <details>
-            <summary>class AcPlotPaperUnits</summary>
+            <summary>class AcPlotPaperUnits <span class="tag">Class</span></summary>
             <code>acInches: ClassVar[Self]</code>
             <code>acMillimeters: ClassVar[Self]</code>
             <code>acPixels: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPlotRotation">
         <details>
-            <summary>class AcPlotRotation</summary>
+            <summary>class AcPlotRotation <span class="tag">Class</span></summary>
             <code>ac0degrees: ClassVar[Self]</code>
             <code>ac90degrees: ClassVar[Self]</code>
             <code>ac180degrees: ClassVar[Self]</code>
@@ -846,9 +1093,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPlotScale">
         <details>
-            <summary>class AcPlotScale</summary>
+            <summary>class AcPlotScale <span class="tag">Class</span></summary>
             <code>acScaleToFit: ClassVar[Self]</code>
             <code>ac1_128in_1f: ClassVar[Self]</code>
             <code>ac1_64in_1ft: ClassVar[Self]</code>
@@ -885,9 +1132,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPlotType">
         <details>
-            <summary>class AcPlotType</summary>
+            <summary>class AcPlotType <span class="tag">Class</span></summary>
             <code>acDisplay: ClassVar[Self]</code>
             <code>acExtents: ClassVar[Self]</code>
             <code>acLimits: ClassVar[Self]</code>
@@ -897,9 +1144,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPolylineType">
         <details>
-            <summary>class AcPolylineType</summary>
+            <summary>class AcPolylineType <span class="tag">Class</span></summary>
             <code>acSimplePoly: ClassVar[Self]</code>
             <code>acFitCurvePoly: ClassVar[Self]</code>
             <code>acQuadSplinePoly: ClassVar[Self]</code>
@@ -907,9 +1154,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPolymeshType">
         <details>
-            <summary>class AcPolymeshType</summary>
+            <summary>class AcPolymeshType <span class="tag">Class</span></summary>
             <code>acSimpleMesh: ClassVar[Self]</code>
             <code>acQuadSurfaceMesh: ClassVar[Self]</code>
             <code>acCubicSurfaceMesh: ClassVar[Self]</code>
@@ -917,9 +1164,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPredefBlockType">
         <details>
-            <summary>class AcPredefBlockType</summary>
+            <summary>class AcPredefBlockType <span class="tag">Class</span></summary>
             <code>acBlockImperial: ClassVar[Self]</code>
             <code>acBlockSlot: ClassVar[Self]</code>
             <code>acBlockCircle: ClassVar[Self]</code>
@@ -930,17 +1177,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPreviewMode">
         <details>
-            <summary>class AcPreviewMode</summary>
+            <summary>class AcPreviewMode <span class="tag">Class</span></summary>
             <code>acPartialPreview: ClassVar[Self]</code>
             <code>acFullPreview: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcPrinterSpoolAlert">
         <details>
-            <summary>class AcPrinterSpoolAlert</summary>
+            <summary>class AcPrinterSpoolAlert <span class="tag">Class</span></summary>
             <code>acPrinterAlwaysAlert: ClassVar[Self]</code>
             <code>acPrinterAlertOnce: ClassVar[Self]</code>
             <code>acPrinterNeverAlertLogOnce: ClassVar[Self]</code>
@@ -948,26 +1195,26 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcProxyImage">
         <details>
-            <summary>class AcProxyImage</summary>
+            <summary>class AcProxyImage <span class="tag">Class</span></summary>
             <code>acProxyNotShow: ClassVar[Self]</code>
             <code>acProxyShow: ClassVar[Self]</code>
             <code>acProxyBoundingBox: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcRegenType">
         <details>
-            <summary>class AcRegenType</summary>
+            <summary>class AcRegenType <span class="tag">Class</span></summary>
             <code>acActiveViewport: ClassVar[Self]</code>
             <code>acAllViewports: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcRotationAngle">
         <details>
-            <summary>class AcRotationAngle</summary>
+            <summary>class AcRotationAngle <span class="tag">Class</span></summary>
             <code>acDegreesUnknown: ClassVar[Self]</code>
             <code>acDegrees000: ClassVar[Self]</code>
             <code>acDegrees180: ClassVar[Self]</code>
@@ -975,9 +1222,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcRowType">
         <details>
-            <summary>class AcRowType</summary>
+            <summary>class AcRowType <span class="tag">Class</span></summary>
             <code>acUnknownRow: ClassVar[Self]</code>
             <code>acDataRow: ClassVar[Self]</code>
             <code>acTitleRow: ClassVar[Self]</code>
@@ -985,9 +1232,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSaveAsType">
         <details>
-            <summary>class AcSaveAsType</summary>
+            <summary>class AcSaveAsType <span class="tag">Class</span></summary>
             <code>acUnknown: ClassVar[Self]</code>
             <code>acR12_dxf: ClassVar[Self]</code>
             <code>acR13_dwg: ClassVar[Self]</code>
@@ -1022,9 +1269,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSectionGeneration">
         <details>
-            <summary>class AcSectionGeneration</summary>
+            <summary>class AcSectionGeneration <span class="tag">Class</span></summary>
             <code>acSectionGenerationSourceAllObjects: ClassVar[Self]</code>
             <code>acSectionGenerationSourceSelectedObjects: ClassVar[Self]</code>
             <code>acSectionGenerationDestinationNewBlock: ClassVar[Self]</code>
@@ -1033,18 +1280,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSectionState">
         <details>
-            <summary>class AcSectionState</summary>
+            <summary>class AcSectionState <span class="tag">Class</span></summary>
             <code>acSectionStatePlane: ClassVar[Self]</code>
             <code>acSectionStateBoundary: ClassVar[Self]</code>
             <code>acSectionStateVolume: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSectionSubItem">
         <details>
-            <summary>class AcSectionSubItem</summary>
+            <summary>class AcSectionSubItem <span class="tag">Class</span></summary>
             <code>acSectionSubItemkNone: ClassVar[Self]</code>
             <code>acSectionSubItemSectionLine: ClassVar[Self]</code>
             <code>acSectionSubItemSectionLineTop: ClassVar[Self]</code>
@@ -1057,18 +1304,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSectionType">
         <details>
-            <summary>class AcSectionType</summary>
+            <summary>class AcSectionType <span class="tag">Class</span></summary>
             <code>acSectionTypeLiveSection: ClassVar[Self]</code>
             <code>acSectionType2dSection: ClassVar[Self]</code>
             <code>acSectionType3dSection: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSegmentAngleType">
         <details>
-            <summary>class AcSegmentAngleType</summary>
+            <summary>class AcSegmentAngleType <span class="tag">Class</span></summary>
             <code>acDegreesAny: ClassVar[Self]</code>
             <code>acDegrees15: ClassVar[Self]</code>
             <code>acDegrees30: ClassVar[Self]</code>
@@ -1079,9 +1326,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSelect">
         <details>
-            <summary>class AcSelect</summary>
+            <summary>class AcSelect <span class="tag">Class</span></summary>
             <code>acSelectionSetWindow: ClassVar[Self]</code>
             <code>acSelectionSetCrossing: ClassVar[Self]</code>
             <code>acSelectionSetFence: ClassVar[Self]</code>
@@ -1092,25 +1339,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSelectType">
         <details>
-            <summary>class AcSelectType</summary>
+            <summary>class AcSelectType <span class="tag">Class</span></summary>
             <code>acTableSelectWindow: ClassVar[Self]</code>
             <code>acTableSelectCrossing: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSplineFrameType">
         <details>
-            <summary>class AcSplineFrameType</summary>
+            <summary>class AcSplineFrameType <span class="tag">Class</span></summary>
             <code>acShow: ClassVar[Self]</code>
             <code>acHide: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSplineKnotParameterizationType">
         <details>
-            <summary>class AcSplineKnotParameterizationType</summary>
+            <summary>class AcSplineKnotParameterizationType <span class="tag">Class</span></summary>
             <code>acChord: ClassVar[Self]</code>
             <code>acSqrtChord: ClassVar[Self]</code>
             <code>acUniformParam: ClassVar[Self]</code>
@@ -1118,60 +1365,60 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcSplineMethodType">
         <details>
-            <summary>class AcSplineMethodType</summary>
+            <summary>class AcSplineMethodType <span class="tag">Class</span></summary>
             <code>acFit: ClassVar[Self]</code>
             <code>acControlVertices: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTableDirection">
         <details>
-            <summary>class AcTableDirection</summary>
+            <summary>class AcTableDirection <span class="tag">Class</span></summary>
             <code>acTableTopToBottom: ClassVar[Self]</code>
             <code>acTableBottomToTop: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTableFlowDirection">
         <details>
-            <summary>class AcTableFlowDirection</summary>
+            <summary>class AcTableFlowDirection <span class="tag">Class</span></summary>
             <code>acTableFlowRight: ClassVar[Self]</code>
             <code>acTableFlowDownOrUp: ClassVar[Self]</code>
             <code>acTableFlowLeft: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTextAlignmentType">
         <details>
-            <summary>class AcTextAlignmentType</summary>
+            <summary>class AcTextAlignmentType <span class="tag">Class</span></summary>
             <code>acLeftAlignment: ClassVar[Self]</code>
             <code>acCenterAlignment: ClassVar[Self]</code>
             <code>acRightAlignment: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTextAngleType">
         <details>
-            <summary>class AcTextAngleType</summary>
+            <summary>class AcTextAngleType <span class="tag">Class</span></summary>
             <code>acInsertAngle: ClassVar[Self]</code>
             <code>acHorizontalAngle: ClassVar[Self]</code>
             <code>acAlwaysRightReadingAngle: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTextAttachmentDirection">
         <details>
-            <summary>class AcTextAttachmentDirection</summary>
+            <summary>class AcTextAttachmentDirection <span class="tag">Class</span></summary>
             <code>acAttachmentHorizontal: ClassVar[Self]</code>
             <code>acAttachmentVertical: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTextAttachmentType">
         <details>
-            <summary>class AcTextAttachmentType</summary>
+            <summary>class AcTextAttachmentType <span class="tag">Class</span></summary>
             <code>acAttachmentTopOfTop: ClassVar[Self]</code>
             <code>acAttachmentMiddleOfTop: ClassVar[Self]</code>
             <code>acAttachmentBottomOfTop: ClassVar[Self]</code>
@@ -1184,9 +1431,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcTextFontStyle">
         <details>
-            <summary>class AcTextFontStyle</summary>
+            <summary>class AcTextFontStyle <span class="tag">Class</span></summary>
             <code>acFontRegular: ClassVar[Self]</code>
             <code>acFontItalic: ClassVar[Self]</code>
             <code>acFontBold: ClassVar[Self]</code>
@@ -1194,9 +1441,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcToolbarDockStatus">
         <details>
-            <summary>class AcToolbarDockStatus</summary>
+            <summary>class AcToolbarDockStatus <span class="tag">Class</span></summary>
             <code>acToolbarDockTop: ClassVar[Self]</code>
             <code>acToolbarDockBottom: ClassVar[Self]</code>
             <code>acToolbarDockLeft: ClassVar[Self]</code>
@@ -1205,9 +1452,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcToolbarItemType">
         <details>
-            <summary>class AcToolbarItemType</summary>
+            <summary>class AcToolbarItemType <span class="tag">Class</span></summary>
             <code>acToolbarButton: ClassVar[Self]</code>
             <code>acToolbarSeparator: ClassVar[Self]</code>
             <code>acToolbarControl: ClassVar[Self]</code>
@@ -1215,9 +1462,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcUnits">
         <details>
-            <summary>class AcUnits</summary>
+            <summary>class AcUnits <span class="tag">Class</span></summary>
             <code>acDefaultUnits: ClassVar[Self]</code>
             <code>acScientific: ClassVar[Self]</code>
             <code>acDecimal: ClassVar[Self]</code>
@@ -1227,9 +1474,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcValueDataType">
         <details>
-            <summary>class AcValueDataType</summary>
+            <summary>class AcValueDataType <span class="tag">Class</span></summary>
             <code>acUnknownDataType: ClassVar[Self]</code>
             <code>acLong: ClassVar[Self]</code>
             <code>acDouble: ClassVar[Self]</code>
@@ -1244,9 +1491,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcValueUnitType">
         <details>
-            <summary>class AcValueUnitType</summary>
+            <summary>class AcValueUnitType <span class="tag">Class</span></summary>
             <code>acUnitless: ClassVar[Self]</code>
             <code>acUnitDistance: ClassVar[Self]</code>
             <code>acUnitAngle: ClassVar[Self]</code>
@@ -1255,9 +1502,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcVerticalAlignment">
         <details>
-            <summary>class AcVerticalAlignment</summary>
+            <summary>class AcVerticalAlignment <span class="tag">Class</span></summary>
             <code>acVerticalAlignmentBaseline: ClassVar[Self]</code>
             <code>acVerticalAlignmentBottom: ClassVar[Self]</code>
             <code>acVerticalAlignmentMiddle: ClassVar[Self]</code>
@@ -1265,17 +1512,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcVerticalTextAttachmentType">
         <details>
-            <summary>class AcVerticalTextAttachmentType</summary>
+            <summary>class AcVerticalTextAttachmentType <span class="tag">Class</span></summary>
             <code>acAttachmentCenter: ClassVar[Self]</code>
             <code>acAttachmentLinedCenter: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcViewportScale">
         <details>
-            <summary>class AcViewportScale</summary>
+            <summary>class AcViewportScale <span class="tag">Class</span></summary>
             <code>acVpScaleToFit: ClassVar[Self]</code>
             <code>acVpCustomScale: ClassVar[Self]</code>
             <code>acVp1_1: ClassVar[Self]</code>
@@ -1314,9 +1561,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcViewportSplitType">
         <details>
-            <summary>class AcViewportSplitType</summary>
+            <summary>class AcViewportSplitType <span class="tag">Class</span></summary>
             <code>acViewport2Horizontal: ClassVar[Self]</code>
             <code>acViewport2Vertical: ClassVar[Self]</code>
             <code>acViewport3Left: ClassVar[Self]</code>
@@ -1329,36 +1576,36 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcWindowState">
         <details>
-            <summary>class AcWindowState</summary>
+            <summary>class AcWindowState <span class="tag">Class</span></summary>
             <code>acNorm: ClassVar[Self]</code>
             <code>acMin: ClassVar[Self]</code>
             <code>acMax: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcXRefDemandLoad">
         <details>
-            <summary>class AcXRefDemandLoad</summary>
+            <summary>class AcXRefDemandLoad <span class="tag">Class</span></summary>
             <code>acDemandLoadDisabled: ClassVar[Self]</code>
             <code>acDemandLoadEnabled: ClassVar[Self]</code>
             <code>acDemandLoadEnabledWithCopy: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcZoomScaleType">
         <details>
-            <summary>class AcZoomScaleType</summary>
+            <summary>class AcZoomScaleType <span class="tag">Class</span></summary>
             <code>acZoomScaledAbsolute: ClassVar[Self]</code>
             <code>acZoomScaledRelative: ClassVar[Self]</code>
             <code>acZoomScaledRelativePSpace: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Acad3DFace">
         <details>
-            <summary>class Acad3DFace</summary>
+            <summary>class Acad3DFace <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; Acad3DFace</code>
@@ -1372,9 +1619,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Acad3DPolyline">
         <details>
-            <summary>class Acad3DPolyline</summary>
+            <summary>class Acad3DPolyline <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def appendVertex(self, vertex: PyGe.Point3d) -&gt; None</code>
@@ -1393,9 +1640,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Acad3DSolid">
         <details>
-            <summary>class Acad3DSolid</summary>
+            <summary>class Acad3DSolid <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def boolean(self, val: PyAx.AcBooleanType, solid: PyAx.Acad3DSolid) -&gt; None</code>
@@ -1421,9 +1668,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadAcCmColor">
         <details>
-            <summary>class AcadAcCmColor</summary>
+            <summary>class AcadAcCmColor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, r: int, g: int, b: int) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -1447,9 +1694,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadApplication">
         <details>
-            <summary>class AcadApplication</summary>
+            <summary>class AcadApplication <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def acadState(self) -&gt; AcadState</code>
@@ -1498,9 +1745,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadArc">
         <details>
-            <summary>class AcadArc</summary>
+            <summary>class AcadArc <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arcLength(self) -&gt; float</code>
@@ -1525,9 +1772,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadAttribute">
         <details>
-            <summary>class AcadAttribute</summary>
+            <summary>class AcadAttribute <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignment(self) -&gt; AcAlignment</code>
@@ -1593,9 +1840,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadAttributeReference">
         <details>
-            <summary>class AcadAttributeReference</summary>
+            <summary>class AcadAttributeReference <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignment(self) -&gt; AcAlignment</code>
@@ -1651,9 +1898,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadBlock">
         <details>
-            <summary>class AcadBlock</summary>
+            <summary>class AcadBlock <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadEntity</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadEntity]</code>
@@ -1742,9 +1989,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadBlockReference">
         <details>
-            <summary>class AcadBlockReference</summary>
+            <summary>class AcadBlockReference <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def attributes(self) -&gt; list[PyAx.AcadAttributeReference]</code>
@@ -1784,9 +2031,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadBlocks">
         <details>
-            <summary>class AcadBlocks</summary>
+            <summary>class AcadBlocks <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadBlock</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadBlock]</code>
@@ -1802,9 +2049,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadCircle">
         <details>
-            <summary>class AcadCircle</summary>
+            <summary>class AcadCircle <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self) -&gt; float</code>
@@ -1827,9 +2074,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDatabase">
         <details>
-            <summary>class AcadDatabase</summary>
+            <summary>class AcadDatabase <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def blocks(self) -&gt; AcadBlocks</code>
@@ -1864,9 +2111,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDatabasePreferences">
         <details>
-            <summary>class AcadDatabasePreferences</summary>
+            <summary>class AcadDatabasePreferences <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allowLongSymbolNames(self) -&gt; bool</code>
@@ -1911,9 +2158,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDictionaries">
         <details>
-            <summary>class AcadDictionaries</summary>
+            <summary>class AcadDictionaries <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadDictionary</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadDictionary]</code>
@@ -1927,9 +2174,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDictionary">
         <details>
-            <summary>class AcadDictionary</summary>
+            <summary>class AcadDictionary <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addObject(self, keyword: str, objectName: str) -&gt; AcadObject</code>
@@ -1949,9 +2196,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDim3PointAngular">
         <details>
-            <summary>class AcadDim3PointAngular</summary>
+            <summary>class AcadDim3PointAngular <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angleFormat(self) -&gt; AcAngleUnits</code>
@@ -2036,9 +2283,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimAligned">
         <details>
-            <summary>class AcadDimAligned</summary>
+            <summary>class AcadDimAligned <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altSubUnitsFactor(self) -&gt; float</code>
@@ -2171,9 +2418,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimAngular">
         <details>
-            <summary>class AcadDimAngular</summary>
+            <summary>class AcadDimAngular <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angleFormat(self) -&gt; AcAngleUnits</code>
@@ -2260,9 +2507,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimArcLength">
         <details>
-            <summary>class AcadDimArcLength</summary>
+            <summary>class AcadDimArcLength <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altRoundDistance(self) -&gt; float</code>
@@ -2407,9 +2654,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimDiametric">
         <details>
-            <summary>class AcadDimDiametric</summary>
+            <summary>class AcadDimDiametric <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altSuppressLeadingZeros(self) -&gt; bool</code>
@@ -2513,9 +2760,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimOrdinate">
         <details>
-            <summary>class AcadDimOrdinate</summary>
+            <summary>class AcadDimOrdinate <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altRoundDistance(self) -&gt; float</code>
@@ -2594,9 +2841,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimRadial">
         <details>
-            <summary>class AcadDimRadial</summary>
+            <summary>class AcadDimRadial <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altRoundDistance(self) -&gt; float</code>
@@ -2696,9 +2943,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimRadialLarge">
         <details>
-            <summary>class AcadDimRadialLarge</summary>
+            <summary>class AcadDimRadialLarge <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altRoundDistance(self) -&gt; float</code>
@@ -2795,9 +3042,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimRotated">
         <details>
-            <summary>class AcadDimRotated</summary>
+            <summary>class AcadDimRotated <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def altRoundDistance(self) -&gt; float</code>
@@ -2932,9 +3179,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimStyle">
         <details>
-            <summary>class AcadDimStyle</summary>
+            <summary>class AcadDimStyle <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadDimStyle</code>
@@ -2945,9 +3192,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimStyles">
         <details>
-            <summary>class AcadDimStyles</summary>
+            <summary>class AcadDimStyles <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadDimStyle</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadDimStyle]</code>
@@ -2961,9 +3208,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDimension">
         <details>
-            <summary>class AcadDimension</summary>
+            <summary>class AcadDimension <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadDimension</code>
@@ -3029,9 +3276,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDocument">
         <details>
-            <summary>class AcadDocument</summary>
+            <summary>class AcadDocument <span class="tag">Class</span></summary>
             <code>def HWND(self) -&gt; int</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3103,9 +3350,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDocuments">
         <details>
-            <summary>class AcadDocuments</summary>
+            <summary>class AcadDocuments <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadDocument</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3118,9 +3365,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadDynamicBlockReferenceProperty">
         <details>
-            <summary>class AcadDynamicBlockReferenceProperty</summary>
+            <summary>class AcadDynamicBlockReferenceProperty <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allowedValues(self) -&gt; list[PyDb.EvalVariant]</code>
@@ -3135,9 +3382,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadEllipse">
         <details>
-            <summary>class AcadEllipse</summary>
+            <summary>class AcadEllipse <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self) -&gt; float</code>
@@ -3170,9 +3417,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadEntity">
         <details>
-            <summary>class AcadEntity</summary>
+            <summary>class AcadEntity <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arrayPolar(self, numberOfObjects: int, angleToFill: float, centerPoint: PyGe.Point3d) -&gt; list[PyAx.AcadEntity]</code>
@@ -3217,9 +3464,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadExternalReference">
         <details>
-            <summary>class AcadExternalReference</summary>
+            <summary>class AcadExternalReference <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadExternalReference</code>
@@ -3230,9 +3477,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadGroup">
         <details>
-            <summary>class AcadGroup</summary>
+            <summary>class AcadGroup <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadEntity</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadEntity]</code>
@@ -3260,9 +3507,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadGroups">
         <details>
-            <summary>class AcadGroups</summary>
+            <summary>class AcadGroups <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadGroup</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadGroup]</code>
@@ -3276,9 +3523,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadHatch">
         <details>
-            <summary>class AcadHatch</summary>
+            <summary>class AcadHatch <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def appendInnerLoop(self, objects: Collection[PyAx.AcadEntity]) -&gt; None</code>
@@ -3330,9 +3577,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadHyperlink">
         <details>
-            <summary>class AcadHyperlink</summary>
+            <summary>class AcadHyperlink <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3346,9 +3593,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadHyperlinks">
         <details>
-            <summary>class AcadHyperlinks</summary>
+            <summary>class AcadHyperlinks <span class="tag">Class</span></summary>
             <code>def __getitem__(self, name: str, description: str, namedLocation: str) -&gt; AcadHyperlink</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3359,9 +3606,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadIdPair">
         <details>
-            <summary>class AcadIdPair</summary>
+            <summary>class AcadIdPair <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3373,9 +3620,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLWPolyline">
         <details>
-            <summary>class AcadLWPolyline</summary>
+            <summary>class AcadLWPolyline <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addVertex(self, index: int, val: PyGe.Point2d) -&gt; None</code>
@@ -3408,9 +3655,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLayer">
         <details>
-            <summary>class AcadLayer</summary>
+            <summary>class AcadLayer <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadLayer</code>
@@ -3445,9 +3692,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLayers">
         <details>
-            <summary>class AcadLayers</summary>
+            <summary>class AcadLayers <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadLayer</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadLayer]</code>
@@ -3461,9 +3708,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLayout">
         <details>
-            <summary>class AcadLayout</summary>
+            <summary>class AcadLayout <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def block(self) -&gt; AcadBlock</code>
@@ -3474,9 +3721,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLayouts">
         <details>
-            <summary>class AcadLayouts</summary>
+            <summary>class AcadLayouts <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadLayout</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadLayout]</code>
@@ -3490,9 +3737,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLeader">
         <details>
-            <summary>class AcadLeader</summary>
+            <summary>class AcadLeader <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def annotation(self) -&gt; AcadEntity</code>
@@ -3527,9 +3774,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLine">
         <details>
-            <summary>class AcadLine</summary>
+            <summary>class AcadLine <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angle(self) -&gt; float</code>
@@ -3549,9 +3796,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLineType">
         <details>
-            <summary>class AcadLineType</summary>
+            <summary>class AcadLineType <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadLineType</code>
@@ -3563,9 +3810,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadLineTypes">
         <details>
-            <summary>class AcadLineTypes</summary>
+            <summary>class AcadLineTypes <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadLineType</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadLineType]</code>
@@ -3579,9 +3826,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMInsertBlock">
         <details>
-            <summary>class AcadMInsertBlock</summary>
+            <summary>class AcadMInsertBlock <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadMInsertBlock</code>
@@ -3597,9 +3844,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMLeader">
         <details>
-            <summary>class AcadMLeader</summary>
+            <summary>class AcadMLeader <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addLeader(self) -&gt; int</code>
@@ -3690,9 +3937,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMLeaderStyle">
         <details>
-            <summary>class AcadMLeaderStyle</summary>
+            <summary>class AcadMLeaderStyle <span class="tag">Class</span></summary>
             <code>def BlockRotation(self) -&gt; float</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3783,9 +4030,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMLine">
         <details>
-            <summary>class AcadMLine</summary>
+            <summary>class AcadMLine <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadMLine</code>
@@ -3800,9 +4047,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMText">
         <details>
-            <summary>class AcadMText</summary>
+            <summary>class AcadMText <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def attachmentPoint(self) -&gt; AcAttachmentPoint</code>
@@ -3838,9 +4085,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMaterial">
         <details>
-            <summary>class AcadMaterial</summary>
+            <summary>class AcadMaterial <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadMaterial</code>
@@ -3852,9 +4099,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMaterials">
         <details>
-            <summary>class AcadMaterials</summary>
+            <summary>class AcadMaterials <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadMaterial</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadMaterial]</code>
@@ -3868,9 +4115,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMenuBar">
         <details>
-            <summary>class AcadMenuBar</summary>
+            <summary>class AcadMenuBar <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadPopupMenu</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3880,9 +4127,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMenuGroup">
         <details>
-            <summary>class AcadMenuGroup</summary>
+            <summary>class AcadMenuGroup <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -3898,9 +4145,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadMenuGroups">
         <details>
-            <summary>class AcadMenuGroups</summary>
+            <summary>class AcadMenuGroups <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadMenuGroup</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -3911,9 +4158,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadObject">
         <details>
-            <summary>class AcadObject</summary>
+            <summary>class AcadObject <span class="tag">Class</span></summary>
             <code>def __hash__(self) -&gt; int</code>
             <code>def __init__() -&gt; None</code>
             <code>def __ne__(self, rhs: PyAx.AcadObject) -&gt; bool</code>
@@ -3936,9 +4183,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPViewport">
         <details>
-            <summary>class AcadPViewport</summary>
+            <summary>class AcadPViewport <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arcSmoothness(self) -&gt; int</code>
@@ -4009,9 +4256,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPlot">
         <details>
-            <summary>class AcadPlot</summary>
+            <summary>class AcadPlot <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def batchPlotProgress(self) -&gt; bool</code>
@@ -4027,9 +4274,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPlotConfiguration">
         <details>
-            <summary>class AcadPlotConfiguration</summary>
+            <summary>class AcadPlotConfiguration <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def canonicalMediaName(self) -&gt; str</code>
@@ -4088,9 +4335,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPlotConfigurations">
         <details>
-            <summary>class AcadPlotConfigurations</summary>
+            <summary>class AcadPlotConfigurations <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadPlotConfiguration</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadPlotConfiguration]</code>
@@ -4104,9 +4351,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPoint">
         <details>
-            <summary>class AcadPoint</summary>
+            <summary>class AcadPoint <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadPoint</code>
@@ -4120,9 +4367,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPolyfaceMesh">
         <details>
-            <summary>class AcadPolyfaceMesh</summary>
+            <summary>class AcadPolyfaceMesh <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadPolyfaceMesh</code>
@@ -4137,9 +4384,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPolygonMesh">
         <details>
-            <summary>class AcadPolygonMesh</summary>
+            <summary>class AcadPolygonMesh <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def appendVertex(self, vertex: PyGe.Point3d) -&gt; None</code>
@@ -4165,9 +4412,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPolyline">
         <details>
-            <summary>class AcadPolyline</summary>
+            <summary>class AcadPolyline <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self) -&gt; float</code>
@@ -4199,9 +4446,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPopupMenu">
         <details>
-            <summary>class AcadPopupMenu</summary>
+            <summary>class AcadPopupMenu <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadPopupMenuItem</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -4223,9 +4470,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPopupMenuItem">
         <details>
-            <summary>class AcadPopupMenuItem</summary>
+            <summary>class AcadPopupMenuItem <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def caption(self) -&gt; str</code>
@@ -4252,9 +4499,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPopupMenus">
         <details>
-            <summary>class AcadPopupMenus</summary>
+            <summary>class AcadPopupMenus <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadPopupMenu</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -4268,9 +4515,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferences">
         <details>
-            <summary>class AcadPreferences</summary>
+            <summary>class AcadPreferences <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4286,9 +4533,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesDisplay">
         <details>
-            <summary>class AcadPreferencesDisplay</summary>
+            <summary>class AcadPreferencesDisplay <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def autoTrackingVecColor(self) -&gt; tuple[int, int, int]</code>
@@ -4347,9 +4594,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesDrafting">
         <details>
-            <summary>class AcadPreferencesDrafting</summary>
+            <summary>class AcadPreferencesDrafting <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignmentPointAcquisition(self) -&gt; AcAlignmentPointAcquisition</code>
@@ -4378,9 +4625,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesFiles">
         <details>
-            <summary>class AcadPreferencesFiles</summary>
+            <summary>class AcadPreferencesFiles <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activeInvProject(self) -&gt; str</code>
@@ -4459,9 +4706,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesOpenSave">
         <details>
-            <summary>class AcadPreferencesOpenSave</summary>
+            <summary>class AcadPreferencesOpenSave <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def autoAudit(self) -&gt; bool</code>
@@ -4495,9 +4742,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesOutput">
         <details>
-            <summary>class AcadPreferencesOutput</summary>
+            <summary>class AcadPreferencesOutput <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def automaticPlotLog(self) -&gt; bool</code>
@@ -4530,9 +4777,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesProfiles">
         <details>
-            <summary>class AcadPreferencesProfiles</summary>
+            <summary>class AcadPreferencesProfiles <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activeProfile(self) -&gt; str</code>
@@ -4548,9 +4795,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesSelection">
         <details>
-            <summary>class AcadPreferencesSelection</summary>
+            <summary>class AcadPreferencesSelection <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -4579,9 +4826,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesSystem">
         <details>
-            <summary>class AcadPreferencesSystem</summary>
+            <summary>class AcadPreferencesSystem <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def beepOnError(self) -&gt; bool</code>
@@ -4604,9 +4851,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadPreferencesUser">
         <details>
-            <summary>class AcadPreferencesUser</summary>
+            <summary>class AcadPreferencesUser <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def acmEditMode(self) -&gt; AcDrawingAreaSCMEdit</code>
@@ -4635,9 +4882,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadRasterImage">
         <details>
-            <summary>class AcadRasterImage</summary>
+            <summary>class AcadRasterImage <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def brightness(self) -&gt; int</code>
@@ -4676,9 +4923,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadRay">
         <details>
-            <summary>class AcadRay</summary>
+            <summary>class AcadRay <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def basePoint(self) -&gt; PyGe.Point3d</code>
@@ -4692,9 +4939,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadRegion">
         <details>
-            <summary>class AcadRegion</summary>
+            <summary>class AcadRegion <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def area(self) -&gt; float</code>
@@ -4712,9 +4959,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadRegisteredApplication">
         <details>
-            <summary>class AcadRegisteredApplication</summary>
+            <summary>class AcadRegisteredApplication <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadRegisteredApplication</code>
@@ -4724,9 +4971,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadRegisteredApplications">
         <details>
-            <summary>class AcadRegisteredApplications</summary>
+            <summary>class AcadRegisteredApplications <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadRegisteredApplication</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadRegisteredApplication]</code>
@@ -4740,9 +4987,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSection">
         <details>
-            <summary>class AcadSection</summary>
+            <summary>class AcadSection <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addVertex(self, index: int, val: PyGe.Point3d) -&gt; None</code>
@@ -4782,9 +5029,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSectionManager">
         <details>
-            <summary>class AcadSectionManager</summary>
+            <summary>class AcadSectionManager <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadSectionManager</code>
@@ -4796,9 +5043,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSectionSettings">
         <details>
-            <summary>class AcadSectionSettings</summary>
+            <summary>class AcadSectionSettings <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadSectionSettings</code>
@@ -4809,9 +5056,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSectionTypeSettings">
         <details>
-            <summary>class AcadSectionTypeSettings</summary>
+            <summary>class AcadSectionTypeSettings <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def backgroundLinesColor(self) -&gt; AcadAcCmColor</code>
@@ -4916,18 +5163,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSecurityParams">
         <details>
-            <summary>class AcadSecurityParams</summary>
+            <summary>class AcadSecurityParams <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSelectionSet">
         <details>
-            <summary>class AcadSelectionSet</summary>
+            <summary>class AcadSelectionSet <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadEntity</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadEntity]</code>
@@ -4955,9 +5202,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSelectionSets">
         <details>
-            <summary>class AcadSelectionSets</summary>
+            <summary>class AcadSelectionSets <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadSelectionSet</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -4968,9 +5215,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadShape">
         <details>
-            <summary>class AcadShape</summary>
+            <summary>class AcadShape <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadShape</code>
@@ -4994,9 +5241,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSolid">
         <details>
-            <summary>class AcadSolid</summary>
+            <summary>class AcadSolid <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadSolid</code>
@@ -5010,9 +5257,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSortentsTable">
         <details>
-            <summary>class AcadSortentsTable</summary>
+            <summary>class AcadSortentsTable <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def block(self) -&gt; AcadBlock</code>
@@ -5029,9 +5276,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSpline">
         <details>
-            <summary>class AcadSpline</summary>
+            <summary>class AcadSpline <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addFitPoint(self, val: int, point: PyGe.Point3d) -&gt; None</code>
@@ -5082,9 +5329,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadState">
         <details>
-            <summary>class AcadState</summary>
+            <summary>class AcadState <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -5092,9 +5339,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadSummaryInfo">
         <details>
-            <summary>class AcadSummaryInfo</summary>
+            <summary>class AcadSummaryInfo <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; tuple[str, str]</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -5126,9 +5373,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTable">
         <details>
-            <summary>class AcadTable</summary>
+            <summary>class AcadTable <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allowManualHeights(self) -&gt; bool</code>
@@ -5328,9 +5575,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTableStyle">
         <details>
-            <summary>class AcadTableStyle</summary>
+            <summary>class AcadTableStyle <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignment(self, cellStyle: str) -&gt; AcCellAlignment</code>
@@ -5389,9 +5636,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadText">
         <details>
-            <summary>class AcadText</summary>
+            <summary>class AcadText <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignment(self) -&gt; AcAlignment</code>
@@ -5432,9 +5679,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTextStyle">
         <details>
-            <summary>class AcadTextStyle</summary>
+            <summary>class AcadTextStyle <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def bigFontFile(self) -&gt; str</code>
@@ -5459,9 +5706,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTextStyles">
         <details>
-            <summary>class AcadTextStyles</summary>
+            <summary>class AcadTextStyles <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadTextStyle</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadTextStyle]</code>
@@ -5475,9 +5722,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTolerance">
         <details>
-            <summary>class AcadTolerance</summary>
+            <summary>class AcadTolerance <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadTolerance</code>
@@ -5505,9 +5752,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadToolbar">
         <details>
-            <summary>class AcadToolbar</summary>
+            <summary>class AcadToolbar <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadToolbarItem</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -5539,9 +5786,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadToolbarItem">
         <details>
-            <summary>class AcadToolbarItem</summary>
+            <summary>class AcadToolbarItem <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def attachToolbarToFlyout(self, menuGroupName: str, toolbarGroupName: str) -&gt; None</code>
@@ -5565,9 +5812,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadToolbars">
         <details>
-            <summary>class AcadToolbars</summary>
+            <summary>class AcadToolbars <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadToolbar</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -5581,9 +5828,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadTrace">
         <details>
-            <summary>class AcadTrace</summary>
+            <summary>class AcadTrace <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadTrace</code>
@@ -5597,9 +5844,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadUCS">
         <details>
-            <summary>class AcadUCS</summary>
+            <summary>class AcadUCS <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadUCS</code>
@@ -5615,9 +5862,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadUCSs">
         <details>
-            <summary>class AcadUCSs</summary>
+            <summary>class AcadUCSs <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadUCS</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadUCS]</code>
@@ -5631,9 +5878,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadUtility">
         <details>
-            <summary>class AcadUtility</summary>
+            <summary>class AcadUtility <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angleFromXAxis(self, startPoint: PyGe.Point3d, endPoint: PyGe.Point3d) -&gt; float</code>
@@ -5673,9 +5920,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadView">
         <details>
-            <summary>class AcadView</summary>
+            <summary>class AcadView <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadView</code>
@@ -5703,9 +5950,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadViewport">
         <details>
-            <summary>class AcadViewport</summary>
+            <summary>class AcadViewport <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arcSmoothness(self) -&gt; int</code>
@@ -5749,9 +5996,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadViewports">
         <details>
-            <summary>class AcadViewports</summary>
+            <summary>class AcadViewports <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadViewport</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadViewport]</code>
@@ -5765,9 +6012,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadViews">
         <details>
-            <summary>class AcadViews</summary>
+            <summary>class AcadViews <span class="tag">Class</span></summary>
             <code>def __getitem__(self, index: int) -&gt; AcadView</code>
             <code>def __init__() -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyAx.AcadView]</code>
@@ -5781,9 +6028,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadXRecord">
         <details>
-            <summary>class AcadXRecord</summary>
+            <summary>class AcadXRecord <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; AcadXRecord</code>
@@ -5797,9 +6044,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AcadXline">
         <details>
-            <summary>class AcadXline</summary>
+            <summary>class AcadXline <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def basePoint(self) -&gt; PyGe.Point3d</code>
@@ -5814,9 +6061,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ModelSpace">
         <details>
-            <summary>class ModelSpace</summary>
+            <summary>class ModelSpace <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyAx.AcadObject) -&gt; ModelSpace</code>
@@ -5824,9 +6071,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PaperSpace">
         <details>
-            <summary>class PaperSpace</summary>
+            <summary>class PaperSpace <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addPViewport(self) -&gt; AcadPViewport</code>

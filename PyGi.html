@@ -42,23 +42,69 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyGi.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#ArcType">ArcType</a></li>
+            <li><a href="#CommonDraw">CommonDraw</a></li>
+            <li><a href="#DefaultLightingType">DefaultLightingType</a></li>
+            <li><a href="#DrawFlags">DrawFlags</a></li>
+            <li><a href="#Drawable">Drawable</a></li>
+            <li><a href="#DrawableOverrule">DrawableOverrule</a></li>
+            <li><a href="#DrawableTraits">DrawableTraits</a></li>
+            <li><a href="#FillType">FillType</a></li>
+            <li><a href="#Geometry">Geometry</a></li>
+            <li><a href="#GiAttributesFlags">GiAttributesFlags</a></li>
+            <li><a href="#GiDrawableType">GiDrawableType</a></li>
+            <li><a href="#GiGraphicsKernel">GiGraphicsKernel</a></li>
+            <li><a href="#GiKernelDescriptor">GiKernelDescriptor</a></li>
+            <li><a href="#OrientationTransformBehavior">OrientationTransformBehavior</a></li>
+            <li><a href="#OrientationType">OrientationType</a></li>
+            <li><a href="#PixelBGRA32Array">PixelBGRA32Array</a></li>
+            <li><a href="#PositionTransformBehavior">PositionTransformBehavior</a></li>
+            <li><a href="#RegenType">RegenType</a></li>
+            <li><a href="#ScaleTransformBehavior">ScaleTransformBehavior</a></li>
+            <li><a href="#SelectionFlags">SelectionFlags</a></li>
+            <li><a href="#ShadowFlags">ShadowFlags</a></li>
+            <li><a href="#SubEntityTraits">SubEntityTraits</a></li>
+            <li><a href="#TransientDrawingMode">TransientDrawingMode</a></li>
+            <li><a href="#TransientManager">TransientManager</a></li>
+            <li><a href="#TransparencyMode">TransparencyMode</a></li>
+            <li><a href="#ViewportDraw">ViewportDraw</a></li>
+            <li><a href="#ViewportGeometry">ViewportGeometry</a></li>
+            <li><a href="#Visibility">Visibility</a></li>
+            <li><a href="#WorldDraw">WorldDraw</a></li>
+            <li><a href="#WorldGeometry">WorldGeometry</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="ArcType">
         <details>
-            <summary>class ArcType</summary>
+            <summary>class ArcType <span class="tag">Class</span></summary>
             <code>kAcGiArcSimple: ClassVar[Self]</code>
             <code>kAcGiArcSector: ClassVar[Self]</code>
             <code>kAcGiArcChord: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CommonDraw">
         <details>
-            <summary>class CommonDraw</summary>
+            <summary>class CommonDraw <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -70,18 +116,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DefaultLightingType">
         <details>
-            <summary>class DefaultLightingType</summary>
+            <summary>class DefaultLightingType <span class="tag">Class</span></summary>
             <code>kOneDistantLight: ClassVar[Self]</code>
             <code>kTwoDistantLights: ClassVar[Self]</code>
             <code>kBackLighting: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawFlags">
         <details>
-            <summary>class DrawFlags</summary>
+            <summary>class DrawFlags <span class="tag">Class</span></summary>
             <code>kNoDrawFlags: ClassVar[Self]</code>
             <code>kDrawHatchGroup: ClassVar[Self]</code>
             <code>kDrawFrontfacesOnly: ClassVar[Self]</code>
@@ -99,9 +145,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Drawable">
         <details>
-            <summary>class Drawable</summary>
+            <summary>class Drawable <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def bounds(self, ext: PyDb.Extents) -&gt; bool</code>
@@ -118,9 +164,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawableOverrule">
         <details>
-            <summary>class DrawableOverrule</summary>
+            <summary>class DrawableOverrule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def baseViewportDraw(self) -&gt; None</code>
@@ -136,9 +182,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawableTraits">
         <details>
-            <summary>class DrawableTraits</summary>
+            <summary>class DrawableTraits <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -147,17 +193,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="FillType">
         <details>
-            <summary>class FillType</summary>
+            <summary>class FillType <span class="tag">Class</span></summary>
             <code>kAcGiFillAlways: ClassVar[Self]</code>
             <code>kAcGiFillNever: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Geometry">
         <details>
-            <summary>class Geometry</summary>
+            <summary>class Geometry <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def circle(self, center: PyGe.Point3d, radius: float, normal: PyGe.Vector3d) -&gt; bool</code>
@@ -194,9 +240,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GiAttributesFlags">
         <details>
-            <summary>class GiAttributesFlags</summary>
+            <summary>class GiAttributesFlags <span class="tag">Class</span></summary>
             <code>kDrawableNone: ClassVar[Self]</code>
             <code>kDrawableIsAnEntity: ClassVar[Self]</code>
             <code>kDrawableUsesNesting: ClassVar[Self]</code>
@@ -219,9 +265,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GiDrawableType">
         <details>
-            <summary>class GiDrawableType</summary>
+            <summary>class GiDrawableType <span class="tag">Class</span></summary>
             <code>kGeometry: ClassVar[Self]</code>
             <code>kDistantLight: ClassVar[Self]</code>
             <code>kPointLight: ClassVar[Self]</code>
@@ -238,9 +284,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GiGraphicsKernel">
         <details>
-            <summary>class GiGraphicsKernel</summary>
+            <summary>class GiGraphicsKernel <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -248,9 +294,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GiKernelDescriptor">
         <details>
-            <summary>class GiKernelDescriptor</summary>
+            <summary>class GiKernelDescriptor <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -258,27 +304,27 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OrientationTransformBehavior">
         <details>
-            <summary>class OrientationTransformBehavior</summary>
+            <summary>class OrientationTransformBehavior <span class="tag">Class</span></summary>
             <code>kAcGiWorldOrientation: ClassVar[Self]</code>
             <code>kAcGiScreenOrientation: ClassVar[Self]</code>
             <code>kAcGiZAxisOrientation: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OrientationType">
         <details>
-            <summary>class OrientationType</summary>
+            <summary>class OrientationType <span class="tag">Class</span></summary>
             <code>kAcGiCounterClockwise: ClassVar[Self]</code>
             <code>kAcGiNoOrientation: ClassVar[Self]</code>
             <code>kAcGiClockwise: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PixelBGRA32Array">
         <details>
-            <summary>class PixelBGRA32Array</summary>
+            <summary>class PixelBGRA32Array <span class="tag">Class</span></summary>
             <code>def __contains__(self) -&gt; bool</code>
             <code>def __delitem__(self) -&gt; None</code>
             <code>def __getitem__(self) -&gt; object</code>
@@ -293,9 +339,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PositionTransformBehavior">
         <details>
-            <summary>class PositionTransformBehavior</summary>
+            <summary>class PositionTransformBehavior <span class="tag">Class</span></summary>
             <code>kAcGiWorldPosition: ClassVar[Self]</code>
             <code>kAcGiViewportPosition: ClassVar[Self]</code>
             <code>kAcGiScreenPosition: ClassVar[Self]</code>
@@ -304,9 +350,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="RegenType">
         <details>
-            <summary>class RegenType</summary>
+            <summary>class RegenType <span class="tag">Class</span></summary>
             <code>eAcGiRegenTypeInvalid: ClassVar[Self]</code>
             <code>kAcGiStandardDisplay: ClassVar[Self]</code>
             <code>kAcGiHideOrShadeCommand: ClassVar[Self]</code>
@@ -316,9 +362,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ScaleTransformBehavior">
         <details>
-            <summary>class ScaleTransformBehavior</summary>
+            <summary>class ScaleTransformBehavior <span class="tag">Class</span></summary>
             <code>kAcGiWorldScale: ClassVar[Self]</code>
             <code>kAcGiViewportScale: ClassVar[Self]</code>
             <code>kAcGiScreenScale: ClassVar[Self]</code>
@@ -327,17 +373,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SelectionFlags">
         <details>
-            <summary>class SelectionFlags</summary>
+            <summary>class SelectionFlags <span class="tag">Class</span></summary>
             <code>kNoSelectionFlags: ClassVar[Self]</code>
             <code>kSelectionIgnore: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ShadowFlags">
         <details>
-            <summary>class ShadowFlags</summary>
+            <summary>class ShadowFlags <span class="tag">Class</span></summary>
             <code>kNoDrawFlags: ClassVar[Self]</code>
             <code>kShadowsDoesNotCast: ClassVar[Self]</code>
             <code>kShadowsDoesNotReceive: ClassVar[Self]</code>
@@ -345,9 +391,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SubEntityTraits">
         <details>
-            <summary>class SubEntityTraits</summary>
+            <summary>class SubEntityTraits <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -388,9 +434,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransientDrawingMode">
         <details>
-            <summary>class TransientDrawingMode</summary>
+            <summary>class TransientDrawingMode <span class="tag">Class</span></summary>
             <code>kAcGiMain: ClassVar[Self]</code>
             <code>kAcGiSprite: ClassVar[Self]</code>
             <code>kAcGiDirectShortTerm: ClassVar[Self]</code>
@@ -401,9 +447,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransientManager">
         <details>
-            <summary>class TransientManager</summary>
+            <summary>class TransientManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addChildTransient(self, drawable: PyGi.Drawable, parentDrawable: PyGi.Drawable) -&gt; bool</code>
@@ -418,18 +464,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransparencyMode">
         <details>
-            <summary>class TransparencyMode</summary>
+            <summary>class TransparencyMode <span class="tag">Class</span></summary>
             <code>kTransparencyOff: ClassVar[Self]</code>
             <code>kTransparency1Bit: ClassVar[Self]</code>
             <code>kTransparency8Bit: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewportDraw">
         <details>
-            <summary>class ViewportDraw</summary>
+            <summary>class ViewportDraw <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -438,9 +484,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ViewportGeometry">
         <details>
-            <summary>class ViewportGeometry</summary>
+            <summary>class ViewportGeometry <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -448,18 +494,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Visibility">
         <details>
-            <summary>class Visibility</summary>
+            <summary>class Visibility <span class="tag">Class</span></summary>
             <code>kAcGiInvisible: ClassVar[Self]</code>
             <code>kAcGiVisible: ClassVar[Self]</code>
             <code>kAcGiSilhouette: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="WorldDraw">
         <details>
-            <summary>class WorldDraw</summary>
+            <summary>class WorldDraw <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -468,9 +514,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="WorldGeometry">
         <details>
-            <summary>class WorldGeometry</summary>
+            <summary>class WorldGeometry <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>

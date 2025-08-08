@@ -42,14 +42,178 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyBrxCv.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#ArcParameterType">ArcParameterType</a></li>
+            <li><a href="#ArcType">ArcType</a></li>
+            <li><a href="#BlockAttachment">BlockAttachment</a></li>
+            <li><a href="#BorderType">BorderType</a></li>
+            <li><a href="#BreaklineIntersectionElevation">BreaklineIntersectionElevation</a></li>
+            <li><a href="#Civil3dAlignmentType">Civil3dAlignmentType</a></li>
+            <li><a href="#Civil3dEntityType">Civil3dEntityType</a></li>
+            <li><a href="#Civil3dLabels">Civil3dLabels</a></li>
+            <li><a href="#Civil3dProfileType">Civil3dProfileType</a></li>
+            <li><a href="#CustomSymbol">CustomSymbol</a></li>
+            <li><a href="#CvAttribVariant">CvAttribVariant</a></li>
+            <li><a href="#CvCivil3dConverter">CvCivil3dConverter</a></li>
+            <li><a href="#CvCivil3dEntityInfo">CvCivil3dEntityInfo</a></li>
+            <li><a href="#CvDataType">CvDataType</a></li>
+            <li><a href="#CvDb3dAlignment">CvDb3dAlignment</a></li>
+            <li><a href="#CvDbCurve">CvDbCurve</a></li>
+            <li><a href="#CvDbCurveLabelStyleManager">CvDbCurveLabelStyleManager</a></li>
+            <li><a href="#CvDbEntity">CvDbEntity</a></li>
+            <li><a href="#CvDbFileFormatManager">CvDbFileFormatManager</a></li>
+            <li><a href="#CvDbGrading">CvDbGrading</a></li>
+            <li><a href="#CvDbHAlignment">CvDbHAlignment</a></li>
+            <li><a href="#CvDbHAlignmentArc">CvDbHAlignmentArc</a></li>
+            <li><a href="#CvDbHAlignmentCurve">CvDbHAlignmentCurve</a></li>
+            <li><a href="#CvDbHAlignmentElement">CvDbHAlignmentElement</a></li>
+            <li><a href="#CvDbHAlignmentLine">CvDbHAlignmentLine</a></li>
+            <li><a href="#CvDbHAlignmentPI">CvDbHAlignmentPI</a></li>
+            <li><a href="#CvDbHAlignmentSCS">CvDbHAlignmentSCS</a></li>
+            <li><a href="#CvDbHAlignmentSSCSS">CvDbHAlignmentSSCSS</a></li>
+            <li><a href="#CvDbHAlignmentSTS">CvDbHAlignmentSTS</a></li>
+            <li><a href="#CvDbHAlignmentSpiral">CvDbHAlignmentSpiral</a></li>
+            <li><a href="#CvDbLabelStyle">CvDbLabelStyle</a></li>
+            <li><a href="#CvDbLabelStyleArrow">CvDbLabelStyleArrow</a></li>
+            <li><a href="#CvDbLabelStyleBlock">CvDbLabelStyleBlock</a></li>
+            <li><a href="#CvDbLabelStyleComponent">CvDbLabelStyleComponent</a></li>
+            <li><a href="#CvDbLabelStyleLine">CvDbLabelStyleLine</a></li>
+            <li><a href="#CvDbLabelStyleText">CvDbLabelStyleText</a></li>
+            <li><a href="#CvDbLineLabelStyleManager">CvDbLineLabelStyleManager</a></li>
+            <li><a href="#CvDbObject">CvDbObject</a></li>
+            <li><a href="#CvDbObjectManager">CvDbObjectManager</a></li>
+            <li><a href="#CvDbPoint">CvDbPoint</a></li>
+            <li><a href="#CvDbPointGroup">CvDbPointGroup</a></li>
+            <li><a href="#CvDbPointGroupManager">CvDbPointGroupManager</a></li>
+            <li><a href="#CvDbPointLabelStyleManager">CvDbPointLabelStyleManager</a></li>
+            <li><a href="#CvDbPointReferencedEntity">CvDbPointReferencedEntity</a></li>
+            <li><a href="#CvDbStyle">CvDbStyle</a></li>
+            <li><a href="#CvDbStyleManager">CvDbStyleManager</a></li>
+            <li><a href="#CvDbStylePartDisplaySettings">CvDbStylePartDisplaySettings</a></li>
+            <li><a href="#CvDbSubObject">CvDbSubObject</a></li>
+            <li><a href="#CvDbSurfaceContourLabelStyleManager">CvDbSurfaceContourLabelStyleManager</a></li>
+            <li><a href="#CvDbSurfaceElevationLabelStyleManager">CvDbSurfaceElevationLabelStyleManager</a></li>
+            <li><a href="#CvDbSurfaceSlopeLabelStyleManager">CvDbSurfaceSlopeLabelStyleManager</a></li>
+            <li><a href="#CvDbSymbolStyle">CvDbSymbolStyle</a></li>
+            <li><a href="#CvDbSymbolStyleManager">CvDbSymbolStyleManager</a></li>
+            <li><a href="#CvDbTinSurface">CvDbTinSurface</a></li>
+            <li><a href="#CvDbTinSurfaceBoundary">CvDbTinSurfaceBoundary</a></li>
+            <li><a href="#CvDbTinSurfaceBreakline">CvDbTinSurfaceBreakline</a></li>
+            <li><a href="#CvDbTinSurfaceConstraint">CvDbTinSurfaceConstraint</a></li>
+            <li><a href="#CvDbTinSurfaceDefinition">CvDbTinSurfaceDefinition</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddDrawingObjects">CvDbTinSurfaceDefinitionAddDrawingObjects</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddFromFiles">CvDbTinSurfaceDefinitionAddFromFiles</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddFromPointClouds">CvDbTinSurfaceDefinitionAddFromPointClouds</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddLine">CvDbTinSurfaceDefinitionAddLine</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddLines">CvDbTinSurfaceDefinitionAddLines</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddPoint">CvDbTinSurfaceDefinitionAddPoint</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddPointGroups">CvDbTinSurfaceDefinitionAddPointGroups</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionAddPoints">CvDbTinSurfaceDefinitionAddPoints</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionCreateFromC3D">CvDbTinSurfaceDefinitionCreateFromC3D</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionCreateFromFaces">CvDbTinSurfaceDefinitionCreateFromFaces</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionCreateFromLandXML">CvDbTinSurfaceDefinitionCreateFromLandXML</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionDeleteEdge">CvDbTinSurfaceDefinitionDeleteEdge</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionDeleteEdges">CvDbTinSurfaceDefinitionDeleteEdges</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionDeletePoint">CvDbTinSurfaceDefinitionDeletePoint</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionGroupDefs">CvDbTinSurfaceDefinitionGroupDefs</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionModifyPointElevation">CvDbTinSurfaceDefinitionModifyPointElevation</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionModifyPointsElevation">CvDbTinSurfaceDefinitionModifyPointsElevation</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionModifyPointsElevations">CvDbTinSurfaceDefinitionModifyPointsElevations</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionMovePoint">CvDbTinSurfaceDefinitionMovePoint</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionMovePoints">CvDbTinSurfaceDefinitionMovePoints</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionRemoveElevations">CvDbTinSurfaceDefinitionRemoveElevations</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionRemoveOuterEdges">CvDbTinSurfaceDefinitionRemoveOuterEdges</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionRiseLower">CvDbTinSurfaceDefinitionRiseLower</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionSwapEdge">CvDbTinSurfaceDefinitionSwapEdge</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionTransform">CvDbTinSurfaceDefinitionTransform</a></li>
+            <li><a href="#CvDbTinSurfaceDefinitionTrianglesVisibility">CvDbTinSurfaceDefinitionTrianglesVisibility</a></li>
+            <li><a href="#CvDbTinSurfaceWall">CvDbTinSurfaceWall</a></li>
+            <li><a href="#CvDbVAlignment">CvDbVAlignment</a></li>
+            <li><a href="#CvDbVAlignmentArc">CvDbVAlignmentArc</a></li>
+            <li><a href="#CvDbVAlignmentCurve">CvDbVAlignmentCurve</a></li>
+            <li><a href="#CvDbVAlignmentElement">CvDbVAlignmentElement</a></li>
+            <li><a href="#CvDbVAlignmentPVI">CvDbVAlignmentPVI</a></li>
+            <li><a href="#CvDbVAlignmentParabola">CvDbVAlignmentParabola</a></li>
+            <li><a href="#CvDbVAlignmentTangent">CvDbVAlignmentTangent</a></li>
+            <li><a href="#CvDbVAlignmentView">CvDbVAlignmentView</a></li>
+            <li><a href="#CvDbView">CvDbView</a></li>
+            <li><a href="#CvDbVolumeSurface">CvDbVolumeSurface</a></li>
+            <li><a href="#CvGradingRule">CvGradingRule</a></li>
+            <li><a href="#CvGradingSlopeOffsetRule">CvGradingSlopeOffsetRule</a></li>
+            <li><a href="#CvGradingSlopeSurfaceRule">CvGradingSlopeSurfaceRule</a></li>
+            <li><a href="#CvStationEquation">CvStationEquation</a></li>
+            <li><a href="#CvStationEquations">CvStationEquations</a></li>
+            <li><a href="#CvTinPoint">CvTinPoint</a></li>
+            <li><a href="#CvTinTriangle">CvTinTriangle</a></li>
+            <li><a href="#DisplayMode">DisplayMode</a></li>
+            <li><a href="#DisplayOrientation">DisplayOrientation</a></li>
+            <li><a href="#DrawingObjectType">DrawingObjectType</a></li>
+            <li><a href="#ForcedInsertion">ForcedInsertion</a></li>
+            <li><a href="#GradingCalculationMethod">GradingCalculationMethod</a></li>
+            <li><a href="#GradingSide">GradingSide</a></li>
+            <li><a href="#GradingSlopeFormat">GradingSlopeFormat</a></li>
+            <li><a href="#GradingStatus">GradingStatus</a></li>
+            <li><a href="#GradingType">GradingType</a></li>
+            <li><a href="#GradingVisualStyle">GradingVisualStyle</a></li>
+            <li><a href="#HAlignmentElementType">HAlignmentElementType</a></li>
+            <li><a href="#HAlignmentParameterConstraint">HAlignmentParameterConstraint</a></li>
+            <li><a href="#HAlignmentTangencyConstraint">HAlignmentTangencyConstraint</a></li>
+            <li><a href="#HAlignmentVisualStyle">HAlignmentVisualStyle</a></li>
+            <li><a href="#LabelAnchor">LabelAnchor</a></li>
+            <li><a href="#LeaderAttachment">LeaderAttachment</a></li>
+            <li><a href="#LeaderType">LeaderType</a></li>
+            <li><a href="#LengthType">LengthType</a></li>
+            <li><a href="#OrientationRef">OrientationRef</a></li>
+            <li><a href="#ScalingType">ScalingType</a></li>
+            <li><a href="#SpiralCurveType">SpiralCurveType</a></li>
+            <li><a href="#SpiralDefinitionType">SpiralDefinitionType</a></li>
+            <li><a href="#SpiralDefinitionTypeSpiral">SpiralDefinitionTypeSpiral</a></li>
+            <li><a href="#SpiralDirectionType">SpiralDirectionType</a></li>
+            <li><a href="#SpiralParameterType">SpiralParameterType</a></li>
+            <li><a href="#SpiralParameterType2">SpiralParameterType2</a></li>
+            <li><a href="#StationEquationType">StationEquationType</a></li>
+            <li><a href="#StyleManagerType">StyleManagerType</a></li>
+            <li><a href="#SymbolType">SymbolType</a></li>
+            <li><a href="#TinBoundaryType">TinBoundaryType</a></li>
+            <li><a href="#TinBreaklineType">TinBreaklineType</a></li>
+            <li><a href="#TinConstraintType">TinConstraintType</a></li>
+            <li><a href="#TinIntersectionElevation">TinIntersectionElevation</a></li>
+            <li><a href="#TinSurfaceDefinitionType">TinSurfaceDefinitionType</a></li>
+            <li><a href="#TinSurfaceIntersectType">TinSurfaceIntersectType</a></li>
+            <li><a href="#TinSurfaceMeshType">TinSurfaceMeshType</a></li>
+            <li><a href="#TinSurfaceSolidType">TinSurfaceSolidType</a></li>
+            <li><a href="#TinSurfaceStyle">TinSurfaceStyle</a></li>
+            <li><a href="#TinWallSide">TinWallSide</a></li>
+            <li><a href="#TinWallType">TinWallType</a></li>
+            <li><a href="#VAlignmentElementType">VAlignmentElementType</a></li>
+            <li><a href="#VAlignmentParameterConstraint">VAlignmentParameterConstraint</a></li>
+            <li><a href="#VAlignmentTangencyConstraint">VAlignmentTangencyConstraint</a></li>
+            <li><a href="#VAlignmentType">VAlignmentType</a></li>
+            <li><a href="#VAlignmentVisualStyle">VAlignmentVisualStyle</a></li>
+            <li><a href="#VolumeSurfaceType">VolumeSurfaceType</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="ArcParameterType">
         <details>
-            <summary>class ArcParameterType</summary>
+            <summary>class ArcParameterType <span class="tag">Class</span></summary>
             <code>eRadius: ClassVar[Self]</code>
             <code>eDegreeOfCurve: ClassVar[Self]</code>
             <code>eTangentLength: ClassVar[Self]</code>
@@ -62,17 +226,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ArcType">
         <details>
-            <summary>class ArcType</summary>
+            <summary>class ArcType <span class="tag">Class</span></summary>
             <code>eCompound: ClassVar[Self]</code>
             <code>eReverse: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BlockAttachment">
         <details>
-            <summary>class BlockAttachment</summary>
+            <summary>class BlockAttachment <span class="tag">Class</span></summary>
             <code>eBlockAttachmentTopLeft: ClassVar[Self]</code>
             <code>eBlockAttachmentTopCenter: ClassVar[Self]</code>
             <code>eBlockAttachmentTopRight: ClassVar[Self]</code>
@@ -86,18 +250,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BorderType">
         <details>
-            <summary>class BorderType</summary>
+            <summary>class BorderType <span class="tag">Class</span></summary>
             <code>eBorderTypeRectangular: ClassVar[Self]</code>
             <code>eBorderTypeRoundedRectangular: ClassVar[Self]</code>
             <code>eBorderTypeCircular: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BreaklineIntersectionElevation">
         <details>
-            <summary>class BreaklineIntersectionElevation</summary>
+            <summary>class BreaklineIntersectionElevation <span class="tag">Class</span></summary>
             <code>eTinNotAllowed: ClassVar[Self]</code>
             <code>eTinElevationMin: ClassVar[Self]</code>
             <code>eTinElevationMax: ClassVar[Self]</code>
@@ -105,9 +269,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Civil3dAlignmentType">
         <details>
-            <summary>class Civil3dAlignmentType</summary>
+            <summary>class Civil3dAlignmentType <span class="tag">Class</span></summary>
             <code>eNotAlignment: ClassVar[Self]</code>
             <code>eCenterline: ClassVar[Self]</code>
             <code>eOffset: ClassVar[Self]</code>
@@ -117,9 +281,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Civil3dEntityType">
         <details>
-            <summary>class Civil3dEntityType</summary>
+            <summary>class Civil3dEntityType <span class="tag">Class</span></summary>
             <code>eNoEntity: ClassVar[Self]</code>
             <code>eAlignment: ClassVar[Self]</code>
             <code>eProfile: ClassVar[Self]</code>
@@ -128,9 +292,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Civil3dLabels">
         <details>
-            <summary>class Civil3dLabels</summary>
+            <summary>class Civil3dLabels <span class="tag">Class</span></summary>
             <code>eNoLabels: ClassVar[Self]</code>
             <code>eSurfaceLabels: ClassVar[Self]</code>
             <code>eAlignmentsLabels: ClassVar[Self]</code>
@@ -140,9 +304,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Civil3dProfileType">
         <details>
-            <summary>class Civil3dProfileType</summary>
+            <summary>class Civil3dProfileType <span class="tag">Class</span></summary>
             <code>eNotProfile: ClassVar[Self]</code>
             <code>eLayout: ClassVar[Self]</code>
             <code>eStaticSurface: ClassVar[Self]</code>
@@ -151,9 +315,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CustomSymbol">
         <details>
-            <summary>class CustomSymbol</summary>
+            <summary>class CustomSymbol <span class="tag">Class</span></summary>
             <code>eCustomSymbolSpotPoint: ClassVar[Self]</code>
             <code>eCustomSymbolSpotEmpty: ClassVar[Self]</code>
             <code>eCustomSymbolSpotCross: ClassVar[Self]</code>
@@ -164,9 +328,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvAttribVariant">
         <details>
-            <summary>class CvAttribVariant</summary>
+            <summary>class CvAttribVariant <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, val: str) -&gt; None</code>
             <code>def __init__(self, val: PyBrxCv.CvDataType) -&gt; None</code>
@@ -215,9 +379,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvCivil3dConverter">
         <details>
-            <summary>class CvCivil3dConverter</summary>
+            <summary>class CvCivil3dConverter <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, sourceDb: PyDb.Database, targetDb: PyDb.Database, doLabels: PyBrxCv.Civil3dLabels) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -231,9 +395,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvCivil3dEntityInfo">
         <details>
-            <summary>class CvCivil3dEntityInfo</summary>
+            <summary>class CvCivil3dEntityInfo <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignmentType(self) -&gt; Civil3dAlignmentType</code>
@@ -250,9 +414,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDataType">
         <details>
-            <summary>class CvDataType</summary>
+            <summary>class CvDataType <span class="tag">Class</span></summary>
             <code>eBrxCvDataTypeNone: ClassVar[Self]</code>
             <code>eBrxCvDataTypeBool: ClassVar[Self]</code>
             <code>eBrxCvDataTypeString: ClassVar[Self]</code>
@@ -276,9 +440,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDb3dAlignment">
         <details>
-            <summary>class CvDb3dAlignment</summary>
+            <summary>class CvDb3dAlignment <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def baseHAlignment(self) -&gt; PyDb.ObjectId</code>
@@ -294,9 +458,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbCurve">
         <details>
-            <summary>class CvDbCurve</summary>
+            <summary>class CvDbCurve <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbCurve</code>
@@ -310,9 +474,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbCurveLabelStyleManager">
         <details>
-            <summary>class CvDbCurveLabelStyleManager</summary>
+            <summary>class CvDbCurveLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbCurveLabelStyleManager</code>
@@ -326,9 +490,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbEntity">
         <details>
-            <summary>class CvDbEntity</summary>
+            <summary>class CvDbEntity <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbEntity</code>
@@ -342,9 +506,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbFileFormatManager">
         <details>
-            <summary>class CvDbFileFormatManager</summary>
+            <summary>class CvDbFileFormatManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allFileFormats(self) -&gt; list[PyDb.ObjectId]</code>
@@ -358,9 +522,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbGrading">
         <details>
-            <summary>class CvDbGrading</summary>
+            <summary>class CvDbGrading <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbGrading</code>
@@ -398,9 +562,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignment">
         <details>
-            <summary>class CvDbHAlignment</summary>
+            <summary>class CvDbHAlignment <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addArcAuto(self, prevId: int, nextId: int) -&gt; int</code>
@@ -499,9 +663,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentArc">
         <details>
-            <summary>class CvDbHAlignmentArc</summary>
+            <summary>class CvDbHAlignmentArc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentArc</code>
@@ -528,9 +692,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentCurve">
         <details>
-            <summary>class CvDbHAlignmentCurve</summary>
+            <summary>class CvDbHAlignmentCurve <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentCurve</code>
@@ -544,9 +708,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentElement">
         <details>
-            <summary>class CvDbHAlignmentElement</summary>
+            <summary>class CvDbHAlignmentElement <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentElement</code>
@@ -566,9 +730,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentLine">
         <details>
-            <summary>class CvDbHAlignmentLine</summary>
+            <summary>class CvDbHAlignmentLine <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentLine</code>
@@ -583,9 +747,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentPI">
         <details>
-            <summary>class CvDbHAlignmentPI</summary>
+            <summary>class CvDbHAlignmentPI <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentPI</code>
@@ -595,9 +759,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentSCS">
         <details>
-            <summary>class CvDbHAlignmentSCS</summary>
+            <summary>class CvDbHAlignmentSCS <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arc(self) -&gt; CvDbHAlignmentArc</code>
@@ -609,9 +773,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentSSCSS">
         <details>
-            <summary>class CvDbHAlignmentSSCSS</summary>
+            <summary>class CvDbHAlignmentSSCSS <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def arc(self) -&gt; CvDbHAlignmentArc</code>
@@ -625,9 +789,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentSTS">
         <details>
-            <summary>class CvDbHAlignmentSTS</summary>
+            <summary>class CvDbHAlignmentSTS <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentSTS</code>
@@ -640,9 +804,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbHAlignmentSpiral">
         <details>
-            <summary>class CvDbHAlignmentSpiral</summary>
+            <summary>class CvDbHAlignmentSpiral <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbHAlignmentSpiral</code>
@@ -669,9 +833,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyle">
         <details>
-            <summary>class CvDbLabelStyle</summary>
+            <summary>class CvDbLabelStyle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, metric: bool) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -762,9 +926,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyleArrow">
         <details>
-            <summary>class CvDbLabelStyleArrow</summary>
+            <summary>class CvDbLabelStyleArrow <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angle(self) -&gt; float</code>
@@ -794,9 +958,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyleBlock">
         <details>
-            <summary>class CvDbLabelStyleBlock</summary>
+            <summary>class CvDbLabelStyleBlock <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angle(self) -&gt; float</code>
@@ -823,9 +987,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyleComponent">
         <details>
-            <summary>class CvDbLabelStyleComponent</summary>
+            <summary>class CvDbLabelStyleComponent <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def anchorIndex(self) -&gt; int</code>
@@ -839,9 +1003,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyleLine">
         <details>
-            <summary>class CvDbLabelStyleLine</summary>
+            <summary>class CvDbLabelStyleLine <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angle(self) -&gt; float</code>
@@ -878,9 +1042,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLabelStyleText">
         <details>
-            <summary>class CvDbLabelStyleText</summary>
+            <summary>class CvDbLabelStyleText <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allowCurvedText(self) -&gt; bool</code>
@@ -931,9 +1095,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbLineLabelStyleManager">
         <details>
-            <summary>class CvDbLineLabelStyleManager</summary>
+            <summary>class CvDbLineLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbLineLabelStyleManager</code>
@@ -947,9 +1111,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbObject">
         <details>
-            <summary>class CvDbObject</summary>
+            <summary>class CvDbObject <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbObject</code>
@@ -963,9 +1127,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbObjectManager">
         <details>
-            <summary>class CvDbObjectManager</summary>
+            <summary>class CvDbObjectManager <span class="tag">Class</span></summary>
             <code>def __contains__(self, id: str | PyDb.ObjectId) -&gt; bool</code>
             <code>def __getitem__(self, val: int | str) -&gt; PyDb.ObjectId</code>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
@@ -985,9 +1149,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbPoint">
         <details>
-            <summary>class CvDbPoint</summary>
+            <summary>class CvDbPoint <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addUserAttribute(self, name: str, value: PyBrxCv.CvAttribVariant) -&gt; bool</code>
@@ -1043,9 +1207,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbPointGroup">
         <details>
-            <summary>class CvDbPointGroup</summary>
+            <summary>class CvDbPointGroup <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbPointGroup</code>
@@ -1089,9 +1253,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbPointGroupManager">
         <details>
-            <summary>class CvDbPointGroupManager</summary>
+            <summary>class CvDbPointGroupManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbPointGroupManager</code>
@@ -1108,9 +1272,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbPointLabelStyleManager">
         <details>
-            <summary>class CvDbPointLabelStyleManager</summary>
+            <summary>class CvDbPointLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbPointLabelStyleManager</code>
@@ -1124,9 +1288,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbPointReferencedEntity">
         <details>
-            <summary>class CvDbPointReferencedEntity</summary>
+            <summary>class CvDbPointReferencedEntity <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbPointReferencedEntity</code>
@@ -1138,9 +1302,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbStyle">
         <details>
-            <summary>class CvDbStyle</summary>
+            <summary>class CvDbStyle <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbStyle</code>
@@ -1156,9 +1320,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbStyleManager">
         <details>
-            <summary>class CvDbStyleManager</summary>
+            <summary>class CvDbStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbStyleManager</code>
@@ -1170,9 +1334,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbStylePartDisplaySettings">
         <details>
-            <summary>class CvDbStylePartDisplaySettings</summary>
+            <summary>class CvDbStylePartDisplaySettings <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def color(self) -&gt; PyDb.Color</code>
@@ -1194,9 +1358,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSubObject">
         <details>
-            <summary>class CvDbSubObject</summary>
+            <summary>class CvDbSubObject <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbSubObject</code>
@@ -1209,9 +1373,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSurfaceContourLabelStyleManager">
         <details>
-            <summary>class CvDbSurfaceContourLabelStyleManager</summary>
+            <summary>class CvDbSurfaceContourLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbSurfaceContourLabelStyleManager</code>
@@ -1225,9 +1389,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSurfaceElevationLabelStyleManager">
         <details>
-            <summary>class CvDbSurfaceElevationLabelStyleManager</summary>
+            <summary>class CvDbSurfaceElevationLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbSurfaceElevationLabelStyleManager</code>
@@ -1241,9 +1405,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSurfaceSlopeLabelStyleManager">
         <details>
-            <summary>class CvDbSurfaceSlopeLabelStyleManager</summary>
+            <summary>class CvDbSurfaceSlopeLabelStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbSurfaceSlopeLabelStyleManager</code>
@@ -1257,9 +1421,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSymbolStyle">
         <details>
-            <summary>class CvDbSymbolStyle</summary>
+            <summary>class CvDbSymbolStyle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, metric: bool) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -1297,9 +1461,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbSymbolStyleManager">
         <details>
-            <summary>class CvDbSymbolStyleManager</summary>
+            <summary>class CvDbSymbolStyleManager <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbSymbolStyleManager</code>
@@ -1313,9 +1477,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurface">
         <details>
-            <summary>class CvDbTinSurface</summary>
+            <summary>class CvDbTinSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addConstraint(self, constraint: PyBrxCv.CvDbTinSurfaceConstraint, addReactor: bool) -&gt; bool</code>
@@ -1409,9 +1573,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceBoundary">
         <details>
-            <summary>class CvDbTinSurfaceBoundary</summary>
+            <summary>class CvDbTinSurfaceBoundary <span class="tag">Class</span></summary>
             <code>def __init__(self, type: PyBrxCv.TinBoundaryType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1419,9 +1583,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceBreakline">
         <details>
-            <summary>class CvDbTinSurfaceBreakline</summary>
+            <summary>class CvDbTinSurfaceBreakline <span class="tag">Class</span></summary>
             <code>def __init__(self, type: PyBrxCv.TinBreaklineType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1430,9 +1594,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceConstraint">
         <details>
-            <summary>class CvDbTinSurfaceConstraint</summary>
+            <summary>class CvDbTinSurfaceConstraint <span class="tag">Class</span></summary>
             <code>def __init__(self, type: PyBrxCv.TinConstraintType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1448,9 +1612,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinition">
         <details>
-            <summary>class CvDbTinSurfaceDefinition</summary>
+            <summary>class CvDbTinSurfaceDefinition <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinition</code>
@@ -1472,9 +1636,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddDrawingObjects">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddDrawingObjects</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddDrawingObjects <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addEntity(self, entity: PyDb.Entity) -&gt; bool</code>
@@ -1493,9 +1657,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddFromFiles">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddFromFiles</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddFromFiles <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddFromFiles</code>
@@ -1508,9 +1672,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddFromPointClouds">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddFromPointClouds</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddFromPointClouds <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddFromPointClouds</code>
@@ -1521,9 +1685,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddLine">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddLine</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddLine <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddLine</code>
@@ -1534,9 +1698,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddLines">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddLines</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddLines <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddLines</code>
@@ -1547,9 +1711,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddPoint">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddPoint</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddPoint <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddPoint</code>
@@ -1560,9 +1724,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddPointGroups">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddPointGroups</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddPointGroups <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddPointGroups</code>
@@ -1573,9 +1737,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionAddPoints">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionAddPoints</summary>
+            <summary>class CvDbTinSurfaceDefinitionAddPoints <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionAddPoints</code>
@@ -1586,9 +1750,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionCreateFromC3D">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionCreateFromC3D</summary>
+            <summary>class CvDbTinSurfaceDefinitionCreateFromC3D <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionCreateFromC3D</code>
@@ -1601,9 +1765,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionCreateFromFaces">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionCreateFromFaces</summary>
+            <summary>class CvDbTinSurfaceDefinitionCreateFromFaces <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionCreateFromFaces</code>
@@ -1617,9 +1781,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionCreateFromLandXML">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionCreateFromLandXML</summary>
+            <summary>class CvDbTinSurfaceDefinitionCreateFromLandXML <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionCreateFromLandXML</code>
@@ -1635,9 +1799,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionDeleteEdge">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionDeleteEdge</summary>
+            <summary>class CvDbTinSurfaceDefinitionDeleteEdge <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionDeleteEdge</code>
@@ -1648,9 +1812,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionDeleteEdges">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionDeleteEdges</summary>
+            <summary>class CvDbTinSurfaceDefinitionDeleteEdges <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addPolygon(self, edgePolygon: list[PyGe.Point2d], includeIntersected: bool) -&gt; bool</code>
@@ -1664,9 +1828,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionDeletePoint">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionDeletePoint</summary>
+            <summary>class CvDbTinSurfaceDefinitionDeletePoint <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionDeletePoint</code>
@@ -1677,9 +1841,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionGroupDefs">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionGroupDefs</summary>
+            <summary>class CvDbTinSurfaceDefinitionGroupDefs <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addSubDefinition(self, val: PyBrxCv.CvDbTinSurfaceDefinition) -&gt; int</code>
@@ -1693,9 +1857,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionModifyPointElevation">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionModifyPointElevation</summary>
+            <summary>class CvDbTinSurfaceDefinitionModifyPointElevation <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionModifyPointElevation</code>
@@ -1710,9 +1874,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionModifyPointsElevation">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionModifyPointsElevation</summary>
+            <summary>class CvDbTinSurfaceDefinitionModifyPointsElevation <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionModifyPointsElevation</code>
@@ -1726,9 +1890,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionModifyPointsElevations">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionModifyPointsElevations</summary>
+            <summary>class CvDbTinSurfaceDefinitionModifyPointsElevations <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addPointElevation(self) -&gt; bool</code>
@@ -1742,9 +1906,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionMovePoint">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionMovePoint</summary>
+            <summary>class CvDbTinSurfaceDefinitionMovePoint <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionMovePoint</code>
@@ -1757,9 +1921,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionMovePoints">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionMovePoints</summary>
+            <summary>class CvDbTinSurfaceDefinitionMovePoints <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionMovePoints</code>
@@ -1772,9 +1936,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionRemoveElevations">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionRemoveElevations</summary>
+            <summary>class CvDbTinSurfaceDefinitionRemoveElevations <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionRemoveElevations</code>
@@ -1792,9 +1956,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionRemoveOuterEdges">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionRemoveOuterEdges</summary>
+            <summary>class CvDbTinSurfaceDefinitionRemoveOuterEdges <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionRemoveOuterEdges</code>
@@ -1815,9 +1979,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionRiseLower">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionRiseLower</summary>
+            <summary>class CvDbTinSurfaceDefinitionRiseLower <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionRiseLower</code>
@@ -1828,9 +1992,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionSwapEdge">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionSwapEdge</summary>
+            <summary>class CvDbTinSurfaceDefinitionSwapEdge <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionSwapEdge</code>
@@ -1841,9 +2005,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionTransform">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionTransform</summary>
+            <summary>class CvDbTinSurfaceDefinitionTransform <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionTransform</code>
@@ -1854,9 +2018,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceDefinitionTrianglesVisibility">
         <details>
-            <summary>class CvDbTinSurfaceDefinitionTrianglesVisibility</summary>
+            <summary>class CvDbTinSurfaceDefinitionTrianglesVisibility <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbTinSurfaceDefinitionTrianglesVisibility</code>
@@ -1869,9 +2033,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbTinSurfaceWall">
         <details>
-            <summary>class CvDbTinSurfaceWall</summary>
+            <summary>class CvDbTinSurfaceWall <span class="tag">Class</span></summary>
             <code>def __init__(self, type: PyBrxCv.TinWallType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1882,9 +2046,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignment">
         <details>
-            <summary>class CvDbVAlignment</summary>
+            <summary>class CvDbVAlignment <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addArcAuto(self, prevId: int, nextId: int) -&gt; int</code>
@@ -1934,9 +2098,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentArc">
         <details>
-            <summary>class CvDbVAlignmentArc</summary>
+            <summary>class CvDbVAlignmentArc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentArc</code>
@@ -1953,9 +2117,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentCurve">
         <details>
-            <summary>class CvDbVAlignmentCurve</summary>
+            <summary>class CvDbVAlignmentCurve <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentCurve</code>
@@ -1967,9 +2131,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentElement">
         <details>
-            <summary>class CvDbVAlignmentElement</summary>
+            <summary>class CvDbVAlignmentElement <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentElement</code>
@@ -1988,9 +2152,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentPVI">
         <details>
-            <summary>class CvDbVAlignmentPVI</summary>
+            <summary>class CvDbVAlignmentPVI <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentPVI</code>
@@ -2000,9 +2164,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentParabola">
         <details>
-            <summary>class CvDbVAlignmentParabola</summary>
+            <summary>class CvDbVAlignmentParabola <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentParabola</code>
@@ -2015,9 +2179,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentTangent">
         <details>
-            <summary>class CvDbVAlignmentTangent</summary>
+            <summary>class CvDbVAlignmentTangent <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentTangent</code>
@@ -2030,9 +2194,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVAlignmentView">
         <details>
-            <summary>class CvDbVAlignmentView</summary>
+            <summary>class CvDbVAlignmentView <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyRx.RxObject) -&gt; CvDbVAlignmentView</code>
@@ -2043,9 +2207,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbView">
         <details>
-            <summary>class CvDbView</summary>
+            <summary>class CvDbView <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addGraph(self, id: PyDb.ObjectId) -&gt; bool</code>
@@ -2079,9 +2243,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvDbVolumeSurface">
         <details>
-            <summary>class CvDbVolumeSurface</summary>
+            <summary>class CvDbVolumeSurface <span class="tag">Class</span></summary>
             <code>def __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode, erased: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def baseSurfaceObjectId(self) -&gt; PyDb.ObjectId</code>
@@ -2104,9 +2268,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvGradingRule">
         <details>
-            <summary>class CvGradingRule</summary>
+            <summary>class CvGradingRule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyBrxCv.CvGradingRule) -&gt; CvGradingRule</code>
@@ -2123,9 +2287,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvGradingSlopeOffsetRule">
         <details>
-            <summary>class CvGradingSlopeOffsetRule</summary>
+            <summary>class CvGradingSlopeOffsetRule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyBrxCv.CvGradingRule) -&gt; CvGradingSlopeOffsetRule</code>
@@ -2137,9 +2301,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvGradingSlopeSurfaceRule">
         <details>
-            <summary>class CvGradingSlopeSurfaceRule</summary>
+            <summary>class CvGradingSlopeSurfaceRule <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyBrxCv.CvGradingRule) -&gt; CvGradingSlopeSurfaceRule</code>
@@ -2153,9 +2317,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvStationEquation">
         <details>
-            <summary>class CvStationEquation</summary>
+            <summary>class CvStationEquation <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, rawStation: float, stationForward: float, type: StationEquationType) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -2171,9 +2335,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvStationEquations">
         <details>
-            <summary>class CvStationEquations</summary>
+            <summary>class CvStationEquations <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, alignment: PyBrxCv.CvDbHAlignment) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -2198,9 +2362,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvTinPoint">
         <details>
-            <summary>class CvTinPoint</summary>
+            <summary>class CvTinPoint <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def isValid(self) -&gt; bool</code>
@@ -2209,9 +2373,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CvTinTriangle">
         <details>
-            <summary>class CvTinTriangle</summary>
+            <summary>class CvTinTriangle <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def isValid(self) -&gt; bool</code>
@@ -2222,17 +2386,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DisplayMode">
         <details>
-            <summary>class DisplayMode</summary>
+            <summary>class DisplayMode <span class="tag">Class</span></summary>
             <code>eDisplayModeAsComposed: ClassVar[Self]</code>
             <code>eDisplayModeStackedText: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DisplayOrientation">
         <details>
-            <summary>class DisplayOrientation</summary>
+            <summary>class DisplayOrientation <span class="tag">Class</span></summary>
             <code>eDisplayOrientationPlan: ClassVar[Self]</code>
             <code>eDisplayOrientationModel: ClassVar[Self]</code>
             <code>eDisplayOrientationProfile: ClassVar[Self]</code>
@@ -2240,9 +2404,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawingObjectType">
         <details>
-            <summary>class DrawingObjectType</summary>
+            <summary>class DrawingObjectType <span class="tag">Class</span></summary>
             <code>eUnknown: ClassVar[Self]</code>
             <code>ePoint: ClassVar[Self]</code>
             <code>eBlock: ClassVar[Self]</code>
@@ -2254,35 +2418,35 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ForcedInsertion">
         <details>
-            <summary>class ForcedInsertion</summary>
+            <summary>class ForcedInsertion <span class="tag">Class</span></summary>
             <code>eForcedInsertionNone: ClassVar[Self]</code>
             <code>eForcedInsertionTop: ClassVar[Self]</code>
             <code>eForcedInsertionBottom: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingCalculationMethod">
         <details>
-            <summary>class GradingCalculationMethod</summary>
+            <summary>class GradingCalculationMethod <span class="tag">Class</span></summary>
             <code>eGradingAccurate: ClassVar[Self]</code>
             <code>eGradingFast: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingSide">
         <details>
-            <summary>class GradingSide</summary>
+            <summary>class GradingSide <span class="tag">Class</span></summary>
             <code>eGradingSideNone: ClassVar[Self]</code>
             <code>eGradingSideLeft: ClassVar[Self]</code>
             <code>eGradingSideRight: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingSlopeFormat">
         <details>
-            <summary>class GradingSlopeFormat</summary>
+            <summary>class GradingSlopeFormat <span class="tag">Class</span></summary>
             <code>eSlopeNoFormat: ClassVar[Self]</code>
             <code>eSlopeRiseRun: ClassVar[Self]</code>
             <code>eSlopeDegrees: ClassVar[Self]</code>
@@ -2291,9 +2455,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingStatus">
         <details>
-            <summary>class GradingStatus</summary>
+            <summary>class GradingStatus <span class="tag">Class</span></summary>
             <code>eGradingNoStatus: ClassVar[Self]</code>
             <code>eGradingOk: ClassVar[Self]</code>
             <code>eGradingUpdateNeeded: ClassVar[Self]</code>
@@ -2313,18 +2477,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingType">
         <details>
-            <summary>class GradingType</summary>
+            <summary>class GradingType <span class="tag">Class</span></summary>
             <code>eGradingTypeNone: ClassVar[Self]</code>
             <code>eGradingTypeSlopeSurface: ClassVar[Self]</code>
             <code>eGradingTypeSlopeOffset: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="GradingVisualStyle">
         <details>
-            <summary>class GradingVisualStyle</summary>
+            <summary>class GradingVisualStyle <span class="tag">Class</span></summary>
             <code>eGradingDrawNothing: ClassVar[Self]</code>
             <code>eGradingDrawSurface: ClassVar[Self]</code>
             <code>eGradingDrawRays: ClassVar[Self]</code>
@@ -2332,9 +2496,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HAlignmentElementType">
         <details>
-            <summary>class HAlignmentElementType</summary>
+            <summary>class HAlignmentElementType <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eLine: ClassVar[Self]</code>
             <code>eArc: ClassVar[Self]</code>
@@ -2359,9 +2523,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HAlignmentParameterConstraint">
         <details>
-            <summary>class HAlignmentParameterConstraint</summary>
+            <summary>class HAlignmentParameterConstraint <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eAutomatic: ClassVar[Self]</code>
             <code>eLine_TwoPoints: ClassVar[Self]</code>
@@ -2408,9 +2572,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HAlignmentTangencyConstraint">
         <details>
-            <summary>class HAlignmentTangencyConstraint</summary>
+            <summary>class HAlignmentTangencyConstraint <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eFixed: ClassVar[Self]</code>
             <code>ePrevious: ClassVar[Self]</code>
@@ -2419,9 +2583,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="HAlignmentVisualStyle">
         <details>
-            <summary>class HAlignmentVisualStyle</summary>
+            <summary>class HAlignmentVisualStyle <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eElements: ClassVar[Self]</code>
             <code>eTangentExtensions: ClassVar[Self]</code>
@@ -2429,9 +2593,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LabelAnchor">
         <details>
-            <summary>class LabelAnchor</summary>
+            <summary>class LabelAnchor <span class="tag">Class</span></summary>
             <code>eLabelAnchors: ClassVar[Self]</code>
             <code>eLabelAnchorStart: ClassVar[Self]</code>
             <code>eLabelAnchorMiddle: ClassVar[Self]</code>
@@ -2452,9 +2616,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LeaderAttachment">
         <details>
-            <summary>class LeaderAttachment</summary>
+            <summary>class LeaderAttachment <span class="tag">Class</span></summary>
             <code>eLeaderAttachmentTopOfTopLine: ClassVar[Self]</code>
             <code>eLeaderAttachmentMiddleOfTopLine: ClassVar[Self]</code>
             <code>eLeaderAttachmentMiddle: ClassVar[Self]</code>
@@ -2463,25 +2627,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LeaderType">
         <details>
-            <summary>class LeaderType</summary>
+            <summary>class LeaderType <span class="tag">Class</span></summary>
             <code>eLeaderTypeStraight: ClassVar[Self]</code>
             <code>eLeaderTypeSpline: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LengthType">
         <details>
-            <summary>class LengthType</summary>
+            <summary>class LengthType <span class="tag">Class</span></summary>
             <code>eLengthTypeFixed: ClassVar[Self]</code>
             <code>eLengthTypePercentage: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="OrientationRef">
         <details>
-            <summary>class OrientationRef</summary>
+            <summary>class OrientationRef <span class="tag">Class</span></summary>
             <code>eOrientationReferenceObject: ClassVar[Self]</code>
             <code>eOrientationReferenceView: ClassVar[Self]</code>
             <code>eOrientationReferenceWCS: ClassVar[Self]</code>
@@ -2489,9 +2653,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ScalingType">
         <details>
-            <summary>class ScalingType</summary>
+            <summary>class ScalingType <span class="tag">Class</span></summary>
             <code>eScalingTypeDrawingScale: ClassVar[Self]</code>
             <code>eScalingTypeFixedScale: ClassVar[Self]</code>
             <code>eScalingTypeAbsoluteUnits: ClassVar[Self]</code>
@@ -2499,65 +2663,65 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralCurveType">
         <details>
-            <summary>class SpiralCurveType</summary>
+            <summary>class SpiralCurveType <span class="tag">Class</span></summary>
             <code>eInCurve: ClassVar[Self]</code>
             <code>eOutCurve: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralDefinitionType">
         <details>
-            <summary>class SpiralDefinitionType</summary>
+            <summary>class SpiralDefinitionType <span class="tag">Class</span></summary>
             <code>eClothoid: ClassVar[Self]</code>
             <code>eCubicParabola: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralDefinitionTypeSpiral">
         <details>
-            <summary>class SpiralDefinitionTypeSpiral</summary>
+            <summary>class SpiralDefinitionTypeSpiral <span class="tag">Class</span></summary>
             <code>eClothoid: ClassVar[Self]</code>
             <code>eCubicParabola: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralDirectionType">
         <details>
-            <summary>class SpiralDirectionType</summary>
+            <summary>class SpiralDirectionType <span class="tag">Class</span></summary>
             <code>eDirectionRight: ClassVar[Self]</code>
             <code>eDirectionLeft: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralParameterType">
         <details>
-            <summary>class SpiralParameterType</summary>
+            <summary>class SpiralParameterType <span class="tag">Class</span></summary>
             <code>eClothoid: ClassVar[Self]</code>
             <code>eCubicParabola: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SpiralParameterType2">
         <details>
-            <summary>class SpiralParameterType2</summary>
+            <summary>class SpiralParameterType2 <span class="tag">Class</span></summary>
             <code>eParamA: ClassVar[Self]</code>
             <code>eParamLength: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StationEquationType">
         <details>
-            <summary>class StationEquationType</summary>
+            <summary>class StationEquationType <span class="tag">Class</span></summary>
             <code>Increasing: ClassVar[Self]</code>
             <code>Decreasing: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="StyleManagerType">
         <details>
-            <summary>class StyleManagerType</summary>
+            <summary>class StyleManagerType <span class="tag">Class</span></summary>
             <code>eSymbolStyle: ClassVar[Self]</code>
             <code>eLineLabel: ClassVar[Self]</code>
             <code>eCurveLabel: ClassVar[Self]</code>
@@ -2568,9 +2732,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SymbolType">
         <details>
-            <summary>class SymbolType</summary>
+            <summary>class SymbolType <span class="tag">Class</span></summary>
             <code>eSymbolTypeACADPoint: ClassVar[Self]</code>
             <code>eSymbolTypeCustom: ClassVar[Self]</code>
             <code>eSymbolTypeBlock: ClassVar[Self]</code>
@@ -2578,35 +2742,35 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinBoundaryType">
         <details>
-            <summary>class TinBoundaryType</summary>
+            <summary>class TinBoundaryType <span class="tag">Class</span></summary>
             <code>eTinShow: ClassVar[Self]</code>
             <code>eTinHide: ClassVar[Self]</code>
             <code>eTinOuter: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinBreaklineType">
         <details>
-            <summary>class TinBreaklineType</summary>
+            <summary>class TinBreaklineType <span class="tag">Class</span></summary>
             <code>eTinBreaklineNormal: ClassVar[Self]</code>
             <code>eTinNonDestructive: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinConstraintType">
         <details>
-            <summary>class TinConstraintType</summary>
+            <summary>class TinConstraintType <span class="tag">Class</span></summary>
             <code>eTinBreakline: ClassVar[Self]</code>
             <code>eTinBoundary: ClassVar[Self]</code>
             <code>eTinWall: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinIntersectionElevation">
         <details>
-            <summary>class TinIntersectionElevation</summary>
+            <summary>class TinIntersectionElevation <span class="tag">Class</span></summary>
             <code>eTinNotAllowed: ClassVar[Self]</code>
             <code>eTinElevationMin: ClassVar[Self]</code>
             <code>eTinElevationMax: ClassVar[Self]</code>
@@ -2614,9 +2778,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinSurfaceDefinitionType">
         <details>
-            <summary>class TinSurfaceDefinitionType</summary>
+            <summary>class TinSurfaceDefinitionType <span class="tag">Class</span></summary>
             <code>eNone: ClassVar[Self]</code>
             <code>eTransform: ClassVar[Self]</code>
             <code>eAddPoint: ClassVar[Self]</code>
@@ -2662,35 +2826,35 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinSurfaceIntersectType">
         <details>
-            <summary>class TinSurfaceIntersectType</summary>
+            <summary>class TinSurfaceIntersectType <span class="tag">Class</span></summary>
             <code>eTinSurfaceFirstOnly: ClassVar[Self]</code>
             <code>eTinSurfaceAll: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinSurfaceMeshType">
         <details>
-            <summary>class TinSurfaceMeshType</summary>
+            <summary>class TinSurfaceMeshType <span class="tag">Class</span></summary>
             <code>eTinSurfaceMeshSurface: ClassVar[Self]</code>
             <code>eTinSurfaceMeshElevation: ClassVar[Self]</code>
             <code>eTinSurfaceMeshDepth: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinSurfaceSolidType">
         <details>
-            <summary>class TinSurfaceSolidType</summary>
+            <summary>class TinSurfaceSolidType <span class="tag">Class</span></summary>
             <code>eSolidTypeSurfaceSurface: ClassVar[Self]</code>
             <code>eSolidTypeSurfaceElevation: ClassVar[Self]</code>
             <code>eSolidTypeSurfaceDepth: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinSurfaceStyle">
         <details>
-            <summary>class TinSurfaceStyle</summary>
+            <summary>class TinSurfaceStyle <span class="tag">Class</span></summary>
             <code>eTinStyleNone: ClassVar[Self]</code>
             <code>eTinStyleBoundaryLine: ClassVar[Self]</code>
             <code>eTinStylePoints: ClassVar[Self]</code>
@@ -2700,25 +2864,25 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinWallSide">
         <details>
-            <summary>class TinWallSide</summary>
+            <summary>class TinWallSide <span class="tag">Class</span></summary>
             <code>eTinWallLeft: ClassVar[Self]</code>
             <code>eTinWallRight: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TinWallType">
         <details>
-            <summary>class TinWallType</summary>
+            <summary>class TinWallType <span class="tag">Class</span></summary>
             <code>eTinWallNormal: ClassVar[Self]</code>
             <code>eTinWallProjected: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VAlignmentElementType">
         <details>
-            <summary>class VAlignmentElementType</summary>
+            <summary>class VAlignmentElementType <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eTangent: ClassVar[Self]</code>
             <code>eArc: ClassVar[Self]</code>
@@ -2727,9 +2891,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VAlignmentParameterConstraint">
         <details>
-            <summary>class VAlignmentParameterConstraint</summary>
+            <summary>class VAlignmentParameterConstraint <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>ePassThroughPoints: ClassVar[Self]</code>
             <code>eRadius: ClassVar[Self]</code>
@@ -2740,9 +2904,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VAlignmentTangencyConstraint">
         <details>
-            <summary>class VAlignmentTangencyConstraint</summary>
+            <summary>class VAlignmentTangencyConstraint <span class="tag">Class</span></summary>
             <code>eUndefined: ClassVar[Self]</code>
             <code>eFixed: ClassVar[Self]</code>
             <code>ePrevious: ClassVar[Self]</code>
@@ -2751,9 +2915,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VAlignmentType">
         <details>
-            <summary>class VAlignmentType</summary>
+            <summary>class VAlignmentType <span class="tag">Class</span></summary>
             <code>eLayout: ClassVar[Self]</code>
             <code>eStaticSurface: ClassVar[Self]</code>
             <code>eDynamicSurface: ClassVar[Self]</code>
@@ -2761,18 +2925,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VAlignmentVisualStyle">
         <details>
-            <summary>class VAlignmentVisualStyle</summary>
+            <summary>class VAlignmentVisualStyle <span class="tag">Class</span></summary>
             <code>eElements: ClassVar[Self]</code>
             <code>eTangents: ClassVar[Self]</code>
             <code>eExtensions: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="VolumeSurfaceType">
         <details>
-            <summary>class VolumeSurfaceType</summary>
+            <summary>class VolumeSurfaceType <span class="tag">Class</span></summary>
             <code>eTinVolumeBaseComparison: ClassVar[Self]</code>
             <code>eTinVolumeToElevation: ClassVar[Self]</code>
             <code>eTinVolumeToDepth: ClassVar[Self]</code>

@@ -42,23 +42,64 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyEd.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#AutoSysVar">AutoSysVar</a></li>
+            <li><a href="#Core">Core</a></li>
+            <li><a href="#CursorType">CursorType</a></li>
+            <li><a href="#DragStatus">DragStatus</a></li>
+            <li><a href="#DragStyle">DragStyle</a></li>
+            <li><a href="#DragStyleType">DragStyleType</a></li>
+            <li><a href="#DrawJig">DrawJig</a></li>
+            <li><a href="#DrawOrderCmdType">DrawOrderCmdType</a></li>
+            <li><a href="#Editor">Editor</a></li>
+            <li><a href="#EditorReactor">EditorReactor</a></li>
+            <li><a href="#InputPoint">InputPoint</a></li>
+            <li><a href="#InputPointFilter">InputPointFilter</a></li>
+            <li><a href="#InputPointFilterResult">InputPointFilterResult</a></li>
+            <li><a href="#InputPointManager">InputPointManager</a></li>
+            <li><a href="#InputPointMonitor">InputPointMonitor</a></li>
+            <li><a href="#InputPointMonitorResult">InputPointMonitorResult</a></li>
+            <li><a href="#Jig">Jig</a></li>
+            <li><a href="#PointHistory">PointHistory</a></li>
+            <li><a href="#PromptCondition">PromptCondition</a></li>
+            <li><a href="#PromptStatus">PromptStatus</a></li>
+            <li><a href="#SelectionSet">SelectionSet</a></li>
+            <li><a href="#UIContext">UIContext</a></li>
+            <li><a href="#UserInputControls">UserInputControls</a></li>
+            <li><a href="#UserInteraction">UserInteraction</a></li>
+            <li><a href="#Util">Util</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="AutoSysVar">
         <details>
-            <summary>class AutoSysVar</summary>
+            <summary>class AutoSysVar <span class="tag">Class</span></summary>
             <code>def __init__(self, varName: str, value) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def detach(self, val: bool) -&gt; None</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Core">
         <details>
-            <summary>class Core</summary>
+            <summary>class Core <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addSupplementalCursorImage(image: wx.Image, order: int, alpha: int) -&gt; bool</code>
@@ -230,9 +271,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CursorType">
         <details>
-            <summary>class CursorType</summary>
+            <summary>class CursorType <span class="tag">Class</span></summary>
             <code>kNoSpecialCursor: ClassVar[Self]</code>
             <code>kCrosshair: ClassVar[Self]</code>
             <code>kRectCursor: ClassVar[Self]</code>
@@ -250,9 +291,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DragStatus">
         <details>
-            <summary>class DragStatus</summary>
+            <summary>class DragStatus <span class="tag">Class</span></summary>
             <code>kModeless: ClassVar[Self]</code>
             <code>kNoChange: ClassVar[Self]</code>
             <code>kCancel: ClassVar[Self]</code>
@@ -273,9 +314,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DragStyle">
         <details>
-            <summary>class DragStyle</summary>
+            <summary>class DragStyle <span class="tag">Class</span></summary>
             <code>def __init__(self, styleTypeForOriginal: PyEd.DragStyleType, styleTypeForDragged: PyEd.DragStyleType) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def setStyleTypeForDragged(self, styleTypeForDragged: PyEd.DragStyleType) -&gt; PyDb.ErrorStatus</code>
@@ -285,9 +326,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DragStyleType">
         <details>
-            <summary>class DragStyleType</summary>
+            <summary>class DragStyleType <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kHide: ClassVar[Self]</code>
             <code>kTransparent25: ClassVar[Self]</code>
@@ -298,9 +339,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawJig">
         <details>
-            <summary>class DrawJig</summary>
+            <summary>class DrawJig <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
@@ -324,9 +365,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DrawOrderCmdType">
         <details>
-            <summary>class DrawOrderCmdType</summary>
+            <summary>class DrawOrderCmdType <span class="tag">Class</span></summary>
             <code>kDrawOrderNone: ClassVar[Self]</code>
             <code>kDrawOrderBottom: ClassVar[Self]</code>
             <code>kDrawOrderTop: ClassVar[Self]</code>
@@ -335,9 +376,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Editor">
         <details>
-            <summary>class Editor</summary>
+            <summary>class Editor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activeViewportId() -&gt; PyDb.ObjectId</code>
@@ -394,9 +435,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="EditorReactor">
         <details>
-            <summary>class EditorReactor</summary>
+            <summary>class EditorReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def abortAttach(self, dbFrom: PyDb.Database) -&gt; None</code>
@@ -493,9 +534,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPoint">
         <details>
-            <summary>class InputPoint</summary>
+            <summary>class InputPoint <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def alignmentPaths(self) -&gt; list[PyGe.Curve]</code>
@@ -521,18 +562,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPointFilter">
         <details>
-            <summary>class InputPointFilter</summary>
+            <summary>class InputPointFilter <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def processInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointFilterResult) -&gt; PyDb.ErrorStatus</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPointFilterResult">
         <details>
-            <summary>class InputPointFilterResult</summary>
+            <summary>class InputPointFilterResult <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def displayOsnapGlyph(self) -&gt; bool</code>
@@ -546,9 +587,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPointManager">
         <details>
-            <summary>class InputPointManager</summary>
+            <summary>class InputPointManager <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addPointMonitor(self, monitor: PyEd.InputPointMonitor) -&gt; None</code>
@@ -568,18 +609,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPointMonitor">
         <details>
-            <summary>class InputPointMonitor</summary>
+            <summary>class InputPointMonitor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def monitorInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointMonitorResult) -&gt; PyDb.ErrorStatus</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="InputPointMonitorResult">
         <details>
-            <summary>class InputPointMonitorResult</summary>
+            <summary>class InputPointMonitorResult <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def additionalTooltipString(self) -&gt; str</code>
@@ -588,9 +629,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Jig">
         <details>
-            <summary>class Jig</summary>
+            <summary>class Jig <span class="tag">Class</span></summary>
             <code>def __init__(self, entity: PyDb.Entity) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
@@ -613,9 +654,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PointHistory">
         <details>
-            <summary>class PointHistory</summary>
+            <summary>class PointHistory <span class="tag">Class</span></summary>
             <code>eTablet: ClassVar[Self]</code>
             <code>eNotDigitizer: ClassVar[Self]</code>
             <code>eLastPt: ClassVar[Self]</code>
@@ -644,9 +685,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PromptCondition">
         <details>
-            <summary>class PromptCondition</summary>
+            <summary>class PromptCondition <span class="tag">Class</span></summary>
             <code>eNone: ClassVar[Self]</code>
             <code>eNoZero: ClassVar[Self]</code>
             <code>eNoEmpty: ClassVar[Self]</code>
@@ -654,9 +695,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PromptStatus">
         <details>
-            <summary>class PromptStatus</summary>
+            <summary>class PromptStatus <span class="tag">Class</span></summary>
             <code>eNone: ClassVar[Self]</code>
             <code>eModeless: ClassVar[Self]</code>
             <code>eNormal: ClassVar[Self]</code>
@@ -671,9 +712,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SelectionSet">
         <details>
-            <summary>class SelectionSet</summary>
+            <summary>class SelectionSet <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __iter__(self) -&gt; Iterator[PyDb.ObjectId]</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -698,9 +739,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UIContext">
         <details>
-            <summary>class UIContext</summary>
+            <summary>class UIContext <span class="tag">Class</span></summary>
             <code>def OnUpdateMenu(self) -&gt; None</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -714,9 +755,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UserInputControls">
         <details>
-            <summary>class UserInputControls</summary>
+            <summary>class UserInputControls <span class="tag">Class</span></summary>
             <code>kGovernedByOrthoMode: ClassVar[Self]</code>
             <code>kNullResponseAccepted: ClassVar[Self]</code>
             <code>kDontEchoCancelForCtrlC: ClassVar[Self]</code>
@@ -737,17 +778,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="UserInteraction">
         <details>
-            <summary>class UserInteraction</summary>
+            <summary>class UserInteraction <span class="tag">Class</span></summary>
             <code>def __init__(self, doc: PyAp.Document, isPrompting: bool) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Util">
         <details>
-            <summary>class Util</summary>
+            <summary>class Util <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def angle(pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; float</code>

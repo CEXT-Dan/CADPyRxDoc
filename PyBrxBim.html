@@ -42,23 +42,95 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyBrxBim.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#BimAssets">BimAssets</a></li>
+            <li><a href="#BimBuilding">BimBuilding</a></li>
+            <li><a href="#BimCategory">BimCategory</a></li>
+            <li><a href="#BimClassification">BimClassification</a></li>
+            <li><a href="#BimComposition">BimComposition</a></li>
+            <li><a href="#BimElementType">BimElementType</a></li>
+            <li><a href="#BimHatchPattern">BimHatchPattern</a></li>
+            <li><a href="#BimHatchType">BimHatchType</a></li>
+            <li><a href="#BimInformationalAssets">BimInformationalAssets</a></li>
+            <li><a href="#BimLinearGeometry">BimLinearGeometry</a></li>
+            <li><a href="#BimMaterial">BimMaterial</a></li>
+            <li><a href="#BimNameSpaces">BimNameSpaces</a></li>
+            <li><a href="#BimObject">BimObject</a></li>
+            <li><a href="#BimObjectType">BimObjectType</a></li>
+            <li><a href="#BimPly">BimPly</a></li>
+            <li><a href="#BimPolicies">BimPolicies</a></li>
+            <li><a href="#BimPolicyOptions">BimPolicyOptions</a></li>
+            <li><a href="#BimProfile">BimProfile</a></li>
+            <li><a href="#BimRoom">BimRoom</a></li>
+            <li><a href="#BimSpace">BimSpace</a></li>
+            <li><a href="#BimSpaceRepresentation">BimSpaceRepresentation</a></li>
+            <li><a href="#BimSpatialLocation">BimSpatialLocation</a></li>
+            <li><a href="#BimStory">BimStory</a></li>
+            <li><a href="#BrxBimAttributeSet">BrxBimAttributeSet</a></li>
+            <li><a href="#BrxBimDialogs">BrxBimDialogs</a></li>
+            <li><a href="#Core">Core</a></li>
+            <li><a href="#IfcBinary">IfcBinary</a></li>
+            <li><a href="#IfcEntity">IfcEntity</a></li>
+            <li><a href="#IfcEntityDesc">IfcEntityDesc</a></li>
+            <li><a href="#IfcEnumValue">IfcEnumValue</a></li>
+            <li><a href="#IfcExportContext">IfcExportContext</a></li>
+            <li><a href="#IfcExportOptionFlags">IfcExportOptionFlags</a></li>
+            <li><a href="#IfcExportOptions">IfcExportOptions</a></li>
+            <li><a href="#IfcExportReactor">IfcExportReactor</a></li>
+            <li><a href="#IfcGuid">IfcGuid</a></li>
+            <li><a href="#IfcHeader">IfcHeader</a></li>
+            <li><a href="#IfcImportContext">IfcImportContext</a></li>
+            <li><a href="#IfcImportInfo">IfcImportInfo</a></li>
+            <li><a href="#IfcImportModelOrigin">IfcImportModelOrigin</a></li>
+            <li><a href="#IfcImportOptions">IfcImportOptions</a></li>
+            <li><a href="#IfcImportReactor">IfcImportReactor</a></li>
+            <li><a href="#IfcLogical">IfcLogical</a></li>
+            <li><a href="#IfcModel">IfcModel</a></li>
+            <li><a href="#IfcModelViewDefType">IfcModelViewDefType</a></li>
+            <li><a href="#IfcProjectData">IfcProjectData</a></li>
+            <li><a href="#IfcResult">IfcResult</a></li>
+            <li><a href="#IfcSchemaId">IfcSchemaId</a></li>
+            <li><a href="#IfcSelectValue">IfcSelectValue</a></li>
+            <li><a href="#IfcSelectorDesc">IfcSelectorDesc</a></li>
+            <li><a href="#IfcString">IfcString</a></li>
+            <li><a href="#IfcValueType">IfcValueType</a></li>
+            <li><a href="#IfcVariant">IfcVariant</a></li>
+            <li><a href="#IfcVectorDesc">IfcVectorDesc</a></li>
+            <li><a href="#IfcVectorValue">IfcVectorValue</a></li>
+            <li><a href="#PyBrxBimPropertySets">PyBrxBimPropertySets</a></li>
+            <li><a href="#ResultStatus">ResultStatus</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="BimAssets">
         <details>
-            <summary>class BimAssets</summary>
+            <summary>class BimAssets <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimBuilding">
         <details>
-            <summary>class BimBuilding</summary>
+            <summary>class BimBuilding <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allObjectBuildings(db: PyDb.Database) -&gt; list</code>
@@ -93,9 +165,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimCategory">
         <details>
-            <summary>class BimCategory</summary>
+            <summary>class BimCategory <span class="tag">Class</span></summary>
             <code>kStandard: ClassVar[Self]</code>
             <code>kBricsys: ClassVar[Self]</code>
             <code>kIFC2x3: ClassVar[Self]</code>
@@ -108,9 +180,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimClassification">
         <details>
-            <summary>class BimClassification</summary>
+            <summary>class BimClassification <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -163,9 +235,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimComposition">
         <details>
-            <summary>class BimComposition</summary>
+            <summary>class BimComposition <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, name: str) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -175,9 +247,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimElementType">
         <details>
-            <summary>class BimElementType</summary>
+            <summary>class BimElementType <span class="tag">Class</span></summary>
             <code>eBimGenericBuildingElt: ClassVar[Self]</code>
             <code>eBimSection: ClassVar[Self]</code>
             <code>eBimWall: ClassVar[Self]</code>
@@ -238,9 +310,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimHatchPattern">
         <details>
-            <summary>class BimHatchPattern</summary>
+            <summary>class BimHatchPattern <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, scaleOrSpacing: float, angle: float, cross: bool) -&gt; None</code>
             <code>def __init__(self, hType: PyBrxBim.BimHatchType, name: str, scaleOrSpacing: float, angle: float) -&gt; None</code>
@@ -250,9 +322,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimHatchType">
         <details>
-            <summary>class BimHatchType</summary>
+            <summary>class BimHatchType <span class="tag">Class</span></summary>
             <code>eHatchNone: ClassVar[Self]</code>
             <code>eHatchUserDefined: ClassVar[Self]</code>
             <code>eHatchPredefined: ClassVar[Self]</code>
@@ -260,18 +332,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimInformationalAssets">
         <details>
-            <summary>class BimInformationalAssets</summary>
+            <summary>class BimInformationalAssets <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimLinearGeometry">
         <details>
-            <summary>class BimLinearGeometry</summary>
+            <summary>class BimLinearGeometry <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -280,9 +352,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimMaterial">
         <details>
-            <summary>class BimMaterial</summary>
+            <summary>class BimMaterial <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, name: str) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -292,9 +364,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimNameSpaces">
         <details>
-            <summary>class BimNameSpaces</summary>
+            <summary>class BimNameSpaces <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -311,9 +383,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimObject">
         <details>
-            <summary>class BimObject</summary>
+            <summary>class BimObject <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def cast(otherObject: PyBrxBim.BimObject) -&gt; BimObject</code>
@@ -329,9 +401,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimObjectType">
         <details>
-            <summary>class BimObjectType</summary>
+            <summary>class BimObjectType <span class="tag">Class</span></summary>
             <code>eBimUnknownObject: ClassVar[Self]</code>
             <code>eBimSpatialLocation: ClassVar[Self]</code>
             <code>eBimStory: ClassVar[Self]</code>
@@ -343,9 +415,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimPly">
         <details>
-            <summary>class BimPly</summary>
+            <summary>class BimPly <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, material: PyBrxBim.BimMaterial, function: PyBrxBim.MaterialFunction, thickness: float) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -355,9 +427,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimPolicies">
         <details>
-            <summary>class BimPolicies</summary>
+            <summary>class BimPolicies <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -366,17 +438,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimPolicyOptions">
         <details>
-            <summary>class BimPolicyOptions</summary>
+            <summary>class BimPolicyOptions <span class="tag">Class</span></summary>
             <code>eNothing: ClassVar[Self]</code>
             <code>eInstantSave: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimProfile">
         <details>
-            <summary>class BimProfile</summary>
+            <summary>class BimProfile <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -385,9 +457,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimRoom">
         <details>
-            <summary>class BimRoom</summary>
+            <summary>class BimRoom <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, id: PyDb.ObjectId) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -464,9 +536,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimSpace">
         <details>
-            <summary>class BimSpace</summary>
+            <summary>class BimSpace <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def assignToBuilding(id: PyDb.ObjectId, building: PyBrxBim.BimBuilding) -&gt; None</code>
@@ -498,17 +570,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimSpaceRepresentation">
         <details>
-            <summary>class BimSpaceRepresentation</summary>
+            <summary>class BimSpaceRepresentation <span class="tag">Class</span></summary>
             <code>eSolid: ClassVar[Self]</code>
             <code>eFootprint: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimSpatialLocation">
         <details>
-            <summary>class BimSpatialLocation</summary>
+            <summary>class BimSpatialLocation <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def assignToEntity(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -534,9 +606,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BimStory">
         <details>
-            <summary>class BimStory</summary>
+            <summary>class BimStory <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def allStories(db: PyDb.Database) -&gt; list</code>
@@ -565,27 +637,27 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BrxBimAttributeSet">
         <details>
-            <summary>class BrxBimAttributeSet</summary>
+            <summary>class BrxBimAttributeSet <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="BrxBimDialogs">
         <details>
-            <summary>class BrxBimDialogs</summary>
+            <summary>class BrxBimDialogs <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Core">
         <details>
-            <summary>class Core</summary>
+            <summary>class Core <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def createAnchoredBlockReference(blockRefId: PyDb.ObjectId, faceSubentPath: PyDb.FullSubentPath, pt: PyGe.Point3d, keepOrientation: bool) -&gt; PyDb.ObjectId</code>
@@ -603,9 +675,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcBinary">
         <details>
-            <summary>class IfcBinary</summary>
+            <summary>class IfcBinary <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -619,9 +691,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcEntity">
         <details>
-            <summary>class IfcEntity</summary>
+            <summary>class IfcEntity <span class="tag">Class</span></summary>
             <code>def IfcId(self) -&gt; int</code>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -637,9 +709,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcEntityDesc">
         <details>
-            <summary>class IfcEntityDesc</summary>
+            <summary>class IfcEntityDesc <span class="tag">Class</span></summary>
             <code>def Ifc2DCompositeCurve() -&gt; IfcEntityDesc</code>
             <code>def IfcActionRequest() -&gt; IfcEntityDesc</code>
             <code>def IfcActor() -&gt; IfcEntityDesc</code>
@@ -1563,9 +1635,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcEnumValue">
         <details>
-            <summary>class IfcEnumValue</summary>
+            <summary>class IfcEnumValue <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1574,9 +1646,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcExportContext">
         <details>
-            <summary>class IfcExportContext</summary>
+            <summary>class IfcExportContext <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1604,9 +1676,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcExportOptionFlags">
         <details>
-            <summary>class IfcExportOptionFlags</summary>
+            <summary>class IfcExportOptionFlags <span class="tag">Class</span></summary>
             <code>eBaseQuantities: ClassVar[Self]</code>
             <code>eIncludeFrozenHidden: ClassVar[Self]</code>
             <code>eExplodeXrefs: ClassVar[Self]</code>
@@ -1619,9 +1691,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcExportOptions">
         <details>
-            <summary>class IfcExportOptions</summary>
+            <summary>class IfcExportOptions <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1641,9 +1713,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcExportReactor">
         <details>
-            <summary>class IfcExportReactor</summary>
+            <summary>class IfcExportReactor <span class="tag">Class</span></summary>
             <code>def __init__(self, displayName: str, guid: str) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def adjustProjectData(self, context: PyBrxBim.IfcExportContext, project: PyBrxBim.IfcProjectData) -&gt; None</code>
@@ -1657,9 +1729,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcGuid">
         <details>
-            <summary>class IfcGuid</summary>
+            <summary>class IfcGuid <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1671,9 +1743,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcHeader">
         <details>
-            <summary>class IfcHeader</summary>
+            <summary>class IfcHeader <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def author(self) -&gt; IfcString</code>
@@ -1699,9 +1771,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcImportContext">
         <details>
-            <summary>class IfcImportContext</summary>
+            <summary>class IfcImportContext <span class="tag">Class</span></summary>
             <code>def IfcModel(self) -&gt; IfcModel</code>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
@@ -1722,9 +1794,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcImportInfo">
         <details>
-            <summary>class IfcImportInfo</summary>
+            <summary>class IfcImportInfo <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def author(self) -&gt; str</code>
@@ -1742,18 +1814,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcImportModelOrigin">
         <details>
-            <summary>class IfcImportModelOrigin</summary>
+            <summary>class IfcImportModelOrigin <span class="tag">Class</span></summary>
             <code>eIfcGlobalOrigin: ClassVar[Self]</code>
             <code>eIfcSiteLocation: ClassVar[Self]</code>
             <code>eIfcProjectLocation: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcImportOptions">
         <details>
-            <summary>class IfcImportOptions</summary>
+            <summary>class IfcImportOptions <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1773,9 +1845,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcImportReactor">
         <details>
-            <summary>class IfcImportReactor</summary>
+            <summary>class IfcImportReactor <span class="tag">Class</span></summary>
             <code>def __init__(self, displayName: str, guid: str) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def attachReactor(self) -&gt; bool</code>
@@ -1788,9 +1860,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcLogical">
         <details>
-            <summary>class IfcLogical</summary>
+            <summary>class IfcLogical <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1799,9 +1871,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcModel">
         <details>
-            <summary>class IfcModel</summary>
+            <summary>class IfcModel <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1814,18 +1886,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcModelViewDefType">
         <details>
-            <summary>class IfcModelViewDefType</summary>
+            <summary>class IfcModelViewDefType <span class="tag">Class</span></summary>
             <code>eNotSet: ClassVar[Self]</code>
             <code>eReference: ClassVar[Self]</code>
             <code>eDesignTransfer: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcProjectData">
         <details>
-            <summary>class IfcProjectData</summary>
+            <summary>class IfcProjectData <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1886,9 +1958,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcResult">
         <details>
-            <summary>class IfcResult</summary>
+            <summary>class IfcResult <span class="tag">Class</span></summary>
             <code>eOk: ClassVar[Self]</code>
             <code>eNotInitialized: ClassVar[Self]</code>
             <code>eWrongName: ClassVar[Self]</code>
@@ -1897,9 +1969,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcSchemaId">
         <details>
-            <summary>class IfcSchemaId</summary>
+            <summary>class IfcSchemaId <span class="tag">Class</span></summary>
             <code>eIFC2X3: ClassVar[Self]</code>
             <code>eIFC4: ClassVar[Self]</code>
             <code>eIFC4X1: ClassVar[Self]</code>
@@ -1907,9 +1979,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcSelectValue">
         <details>
-            <summary>class IfcSelectValue</summary>
+            <summary>class IfcSelectValue <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1920,18 +1992,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcSelectorDesc">
         <details>
-            <summary>class IfcSelectorDesc</summary>
+            <summary>class IfcSelectorDesc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcString">
         <details>
-            <summary>class IfcString</summary>
+            <summary>class IfcString <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __init__(self, text: str) -&gt; None</code>
             <code>def __init__(*args) -&gt; None</code>
@@ -1945,9 +2017,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcValueType">
         <details>
-            <summary>class IfcValueType</summary>
+            <summary>class IfcValueType <span class="tag">Class</span></summary>
             <code>eBool: ClassVar[Self]</code>
             <code>eInt: ClassVar[Self]</code>
             <code>eUInt: ClassVar[Self]</code>
@@ -1964,9 +2036,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcVariant">
         <details>
-            <summary>class IfcVariant</summary>
+            <summary>class IfcVariant <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -1998,18 +2070,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcVectorDesc">
         <details>
-            <summary>class IfcVectorDesc</summary>
+            <summary>class IfcVectorDesc <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="IfcVectorValue">
         <details>
-            <summary>class IfcVectorValue</summary>
+            <summary>class IfcVectorValue <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, val: PyBrxBim.IfcVariant) -&gt; IfcResult</code>
@@ -2022,18 +2094,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PyBrxBimPropertySets">
         <details>
-            <summary>class PyBrxBimPropertySets</summary>
+            <summary>class PyBrxBimPropertySets <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ResultStatus">
         <details>
-            <summary>class ResultStatus</summary>
+            <summary>class ResultStatus <span class="tag">Class</span></summary>
             <code>eOk: ClassVar[Self]</code>
             <code>eNoDbResidentObject: ClassVar[Self]</code>
             <code>eDbNotAccessible: ClassVar[Self]</code>

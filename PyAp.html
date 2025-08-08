@@ -42,14 +42,49 @@
         h1 {
             color: #569cd6;
         }
+        .tag {
+            background: #007acc;
+            color: #fff;
+            border-radius: 4px;
+            padding: 0.1em 0.5em;
+            font-size: 0.9em;
+            margin-left: 0.5em;
+        }
+        .toc {
+            margin-bottom: 2em;
+        }
     </style>
 </head>
 <body>
     <h1>PyAp.pyi</h1>
+    <div class="toc">
+        <h2>Classes</h2>
+        <ul>
+            <li><a href="#Application">Application</a></li>
+            <li><a href="#AutoDocLock">AutoDocLock</a></li>
+            <li><a href="#CmdFlags">CmdFlags</a></li>
+            <li><a href="#DocLockMode">DocLockMode</a></li>
+            <li><a href="#DocManager">DocManager</a></li>
+            <li><a href="#DocManagerReactor">DocManagerReactor</a></li>
+            <li><a href="#Document">Document</a></li>
+            <li><a href="#LayerFilter">LayerFilter</a></li>
+            <li><a href="#LayerFilterManager">LayerFilterManager</a></li>
+            <li><a href="#LayerGroup">LayerGroup</a></li>
+            <li><a href="#LayoutManager">LayoutManager</a></li>
+            <li><a href="#Palette">Palette</a></li>
+            <li><a href="#PaletteDockStyle">PaletteDockStyle</a></li>
+            <li><a href="#PaletteSet">PaletteSet</a></li>
+            <li><a href="#PaletteTitleBarLocation">PaletteTitleBarLocation</a></li>
+            <li><a href="#PyRxTestFlags">PyRxTestFlags</a></li>
+            <li><a href="#ResourceOverride">ResourceOverride</a></li>
+            <li><a href="#SaveFormat">SaveFormat</a></li>
+            <li><a href="#TransactionManager">TransactionManager</a></li>
+        </ul>
+    </div>
 
-    <div class="class">
+    <div class="class" id="Application">
         <details>
-            <summary>class Application</summary>
+            <summary>class Application <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def acadApplication() -&gt; PyAx.AcadApplication</code>
@@ -85,9 +120,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="AutoDocLock">
         <details>
-            <summary>class AutoDocLock</summary>
+            <summary>class AutoDocLock <span class="tag">Class</span></summary>
             <code>def __init__(self, docToLock: PyAp.Document) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -95,9 +130,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="CmdFlags">
         <details>
-            <summary>class CmdFlags</summary>
+            <summary>class CmdFlags <span class="tag">Class</span></summary>
             <code>DEFUN: int</code>
             <code>DOCEXCLUSIVELOCK: int</code>
             <code>DOCREADLOCK: int</code>
@@ -123,9 +158,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DocLockMode">
         <details>
-            <summary>class DocLockMode</summary>
+            <summary>class DocLockMode <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kAutoWrite: ClassVar[Self]</code>
             <code>kNotLocked: ClassVar[Self]</code>
@@ -136,9 +171,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DocManager">
         <details>
-            <summary>class DocManager</summary>
+            <summary>class DocManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def activateDocument(self, doc: PyAp.Document, bPassScript: bool) -&gt; None</code>
@@ -177,9 +212,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="DocManagerReactor">
         <details>
-            <summary>class DocManagerReactor</summary>
+            <summary>class DocManagerReactor <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addReactor(self) -&gt; None</code>
@@ -200,9 +235,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Document">
         <details>
-            <summary>class Document</summary>
+            <summary>class Document <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def autoLock(self) -&gt; AutoDocLock</code>
@@ -232,9 +267,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerFilter">
         <details>
-            <summary>class LayerFilter</summary>
+            <summary>class LayerFilter <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addNested(self, val: PyAp.LayerFilter) -&gt; None</code>
@@ -260,9 +295,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerFilterManager">
         <details>
-            <summary>class LayerFilterManager</summary>
+            <summary>class LayerFilterManager <span class="tag">Class</span></summary>
             <code>def __init__(self, db: PyDb.Database) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def getFilters(self) -&gt; tuple[PyAp.LayerFilter, PyAp.LayerFilter]</code>
@@ -272,9 +307,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayerGroup">
         <details>
-            <summary>class LayerGroup</summary>
+            <summary>class LayerGroup <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def addLayerId(self, id: PyDb.ObjectId) -&gt; None</code>
@@ -285,9 +320,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="LayoutManager">
         <details>
-            <summary>class LayoutManager</summary>
+            <summary>class LayoutManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
@@ -317,18 +352,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="Palette">
         <details>
-            <summary>class Palette</summary>
+            <summary>class Palette <span class="tag">Class</span></summary>
             <code>def __init__() -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def getWxWindow(self) -&gt; object</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PaletteDockStyle">
         <details>
-            <summary>class PaletteDockStyle</summary>
+            <summary>class PaletteDockStyle <span class="tag">Class</span></summary>
             <code>kNone: ClassVar[Self]</code>
             <code>kLeft: ClassVar[Self]</code>
             <code>kRight: ClassVar[Self]</code>
@@ -338,9 +373,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PaletteSet">
         <details>
-            <summary>class PaletteSet</summary>
+            <summary>class PaletteSet <span class="tag">Class</span></summary>
             <code>def __init__(self, name: str, guid: str) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def add(self, name: str, panel: wx.Panel) -&gt; int</code>
@@ -397,17 +432,17 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PaletteTitleBarLocation">
         <details>
-            <summary>class PaletteTitleBarLocation</summary>
+            <summary>class PaletteTitleBarLocation <span class="tag">Class</span></summary>
             <code>kLeft: ClassVar[Self]</code>
             <code>kRight: ClassVar[Self]</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="PyRxTestFlags">
         <details>
-            <summary>class PyRxTestFlags</summary>
+            <summary>class PyRxTestFlags <span class="tag">Class</span></summary>
             <code>kNoOptimize: ClassVar[Self]</code>
             <code>kPyReserved1: ClassVar[Self]</code>
             <code>kPyReserved2: ClassVar[Self]</code>
@@ -420,18 +455,18 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="ResourceOverride">
         <details>
-            <summary>class ResourceOverride</summary>
+            <summary>class ResourceOverride <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="SaveFormat">
         <details>
-            <summary>class SaveFormat</summary>
+            <summary>class SaveFormat <span class="tag">Class</span></summary>
             <code>kUnknown: ClassVar[Self]</code>
             <code>kR12_dxf: ClassVar[Self]</code>
             <code>kR13_dwg: ClassVar[Self]</code>
@@ -468,9 +503,9 @@
         </details>
     </div>
 
-    <div class="class">
+    <div class="class" id="TransactionManager">
         <details>
-            <summary>class TransactionManager</summary>
+            <summary>class TransactionManager <span class="tag">Class</span></summary>
             <code>def __init__(self) -&gt; None</code>
             <code>def __reduce__(self) -&gt; Any</code>
             <code>def className() -&gt; str</code>
