@@ -1,2 +1,2 @@
-# CAD-PyRx.github.io
+# CAD-PyRx
 Help for CAD-PyRx
