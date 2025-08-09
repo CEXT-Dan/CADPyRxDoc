@@ -1,62 +1,189 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>CAD-PyRx Documentation</title>
-    <style>
-        body {
-            background-color: #1e1e1e;
-            color: #d4d4d4;
-            font-family: Consolas, monospace;
-            margin: 2em;
-        }
-        a {
-            color: #569cd6;
-        }
-        .class {
-            margin-bottom: 1em;
-        }
-        summary {
-            font-weight: bold;
-            font-size: 1.1em;
-            cursor: pointer;
-            padding: 0.2em 0.4em;
-            border-radius: 4px;
-        }
-        details {
-            margin-left: 0.5em;
-            background-color: #252526;
-            border: 1px solid #3c3c3c;
-            border-radius: 6px;
-            padding: 0.5em;
-        }
-        code {
-            display: block;
-            margin: 0.3em 0;
-            white-space: pre;
-            background-color: #1e1e1e;
-            color: #dcdcdc;
-            padding: 0.4em 0.6em;
-            border-left: 4px solid #007acc;
-        }
-        h1 {
-            color: #569cd6;
-        }
-        .tag {
-            background: #007acc;
-            color: #fff;
-            border-radius: 4px;
-            padding: 0.1em 0.5em;
-            font-size: 0.9em;
-            margin-left: 0.5em;
-        }
-        .toc {
-            margin-bottom: 2em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>CAD-PyRx</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #181818;
+      color: #eee;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    nav {
+      width: 260px;
+      background-color: #1f1f1f;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #333;
+    }
+
+    nav h2 {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin-bottom: 0.8em;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      background-color: #252525;
+    }
+
+    #cad-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #252525;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
 </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+
+<body>
+  <nav>
+    <h2>NameSpaces</h2>
+    <ul>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyAp.html">Ap</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyRx.html">Rx</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyGe.html">Ge</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyGi.html">Gi</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyGi.html">Gs</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyDb.html">Db</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyEd.html">Ed</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyPl.html">Pl</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PySm.html">Sm</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PySm.html">Br</a></li>
+    </ul>
+    <h2>BricsCAD NameSpaces</h2>
+    <ul>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyBrx.html">Brx</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyBrxCv.html">BrxCv</a></li>
+      <li><a href="https://cext-dan.github.io/CADPyRxDoc/PyBrxBim.html">BrxBim</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id="cad-canvas">
+      <canvas id="canvas"></canvas>
+    </div>
+  </main>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = canvas.clientWidth;
+      canvas.height = canvas.clientHeight;
+      drawCAD();
+    }
+
+    function drawCAD() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Set up semi-transparent white grid lines
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";  // white with 50% opacity
+      ctx.lineWidth = 1;
+      ctx.setLineDash([]);                          // solid lines
+
+      spacing = 100;
+      for (let x = 0; x <= canvas.width; x += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(x + 0.5, 0);    // sub-pixel offset to avoid anti-aliasing blur
+        ctx.lineTo(x + 0.5, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= canvas.height; y += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, y + 0.5);
+        ctx.lineTo(canvas.width, y + 0.5);
+        ctx.stroke();
+      }
+
+      spacing = 20;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";  // white with 50% opacity
+      for (let x = 0; x <= canvas.width; x += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(x + 0.5, 0);    // sub-pixel offset to avoid anti-aliasing blur
+        ctx.lineTo(x + 0.5, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= canvas.height; y += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, y + 0.5);
+        ctx.lineTo(canvas.width, y + 0.5);
+        ctx.stroke();
+      }
+
+      ctx.setLineDash([]);
+      ctx.strokeStyle = 'green';
+      ctx.lineWidth = 2;
+
+      // Example geometry shapes
+      ctx.beginPath();
+      ctx.rect(100, 80, 200, 120);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(350, 200);
+      ctx.lineTo(500, 150);
+      ctx.lineTo(520, 300);
+      ctx.closePath();
+      ctx.stroke();
+
+      ctx.strokeStyle = '#a00';
+      // Dimensional annotation
+      ctx.beginPath();
+      ctx.moveTo(100, 220);
+      ctx.lineTo(300, 220);
+      ctx.stroke();
+      ctx.font = "14px Arial";
+      ctx.fillStyle = '#a00';
+      ctx.fillText("200 units", 180, 216);
+
+      // Draw a red circle
+      ctx.beginPath();
+      ctx.arc(400, 100, 40, 0, 2 * Math.PI);
+      ctx.strokeStyle = 'red';
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+  </script>
+</body>
 
 </html>
