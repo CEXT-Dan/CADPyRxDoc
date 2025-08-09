@@ -44,6 +44,10 @@
             color: #569cd6;
             font-weight: bold;
         }
+        .ds {
+            color: #FF8787;
+            opacity: 0.7;
+        }
         h1 {
             color: #569cd6;
         }
@@ -113,15 +117,15 @@
     <div class="class" id="Overrule">
         <details>
             <summary>class Overrule <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addOverrule(rxClass: PyRx.RxClass, overrule: PyRx.Overrule) -&gt; None</code>
-            <code><span class="kw">def</span> addOverruleLast(rxClass: PyRx.RxClass, overrule: PyRx.Overrule, addLast: bool) -&gt; None</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> desc() -&gt; RxClass
-    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addOverrule(rxClass: PyRx.RxClass, overrule: PyRx.Overrule) -&gt; None:</code>
+            <code><span class="kw">def</span> addOverruleLast(rxClass: PyRx.RxClass, overrule: PyRx.Overrule, addLast: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> desc() -&gt; RxClass:
+    <span class="ds">Returns a pointer to the AcRxClass object representing the specific class, or most recent
 parent class explicitly registered with ObjectARX of either the pointer type used to invoke
 it or the class qualifier used with it. (Remember that when a static member function is
 invoked via a pointer, the pointer type, not the object type, determines which
@@ -130,31 +134,31 @@ the proper AcRxClass object for the class of the object pointed to is desired, t
 AcRxObject::isA() function should be used, since it is a virtual non-static method and is
 therefore not pointer type dependent. Caching the value of the pointer returned by this
 method is acceptable, provided the application knows that the AcRxClass object pointed to
-by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> hasOverrule(subject: PyRx.RxObject, rxClass: PyRx.RxClass) -&gt; bool</code>
-            <code><span class="kw">def</span> isOverruling() -&gt; bool</code>
-            <code><span class="kw">def</span> removeOverrule(rxClass: PyRx.RxClass, overrule: PyRx.Overrule) -&gt; None</code>
-            <code><span class="kw">def</span> setIsOverruling(flag: bool) -&gt; None</code>
+by the returned pointer was created by an ObjectARX application that will not be unloaded.</span></code>
+            <code><span class="kw">def</span> hasOverrule(subject: PyRx.RxObject, rxClass: PyRx.RxClass) -&gt; bool:</code>
+            <code><span class="kw">def</span> isOverruling() -&gt; bool:</code>
+            <code><span class="kw">def</span> removeOverrule(rxClass: PyRx.RxClass, overrule: PyRx.Overrule) -&gt; None:</code>
+            <code><span class="kw">def</span> setIsOverruling(flag: bool) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="RxClass">
         <details>
             <summary>class RxClass <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> appName(self) -&gt; str
-    &quot;&quot;&quot;Returns a pointer to the application name string which is the last parameter in the
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> appName(self) -&gt; str:
+    <span class="ds">Returns a pointer to the application name string which is the last parameter in the
 ACRX_DXF_DEFINE_MEMBERS macro and is also the last parameter to the global newAcRxClass()
 pseudo-constructor. This string is used as the application identifier in the error dialog
 that is displayed whenever an object of the class is loaded and the application is not
 present. WarningAs the const qualifier indicates, no attempt should be made to deallocate
-the returned string.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> desc() -&gt; RxClass
-    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+the returned string.</span></code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> desc() -&gt; RxClass:
+    <span class="ds">Returns a pointer to the AcRxClass object representing the specific class, or most recent
 parent class explicitly registered with ObjectARX of either the pointer type used to invoke
 it or the class qualifier used with it. (Remember that when a static member function is
 invoked via a pointer, the pointer type, not the object type, determines which
@@ -163,45 +167,45 @@ the proper AcRxClass object for the class of the object pointed to is desired, t
 AcRxObject::isA() function should be used, since it is a virtual non-static method and is
 therefore not pointer type dependent. Caching the value of the pointer returned by this
 method is acceptable, provided the application knows that the AcRxClass object pointed to
-by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> dxfName(self) -&gt; str
-    &quot;&quot;&quot;This function returns a pointer to the DXF name for the class. This string is only required
+by the returned pointer was created by an ObjectARX application that will not be unloaded.</span></code>
+            <code><span class="kw">def</span> dxfName(self) -&gt; str:
+    <span class="ds">This function returns a pointer to the DXF name for the class. This string is only required
 to be non-NULL for classes derived from AcDbObject. Other classes may set this via the
 second to the last parameter of the global newAcRxClass() pseudo-constructor. If the
 dxfName string has not been set, then this function will return NULL. WarningAs the const
-qualifier indicates, no attempt should be made to deallocate the string.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isDerivedFrom(self, other: PyRx.RxClass) -&gt; bool
-    &quot;&quot;&quot;Static method for checking if first (left) class arg is derived from second (right) one.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> myParent(self) -&gt; RxClass
-    &quot;&quot;&quot;This function returns a pointer to the AcRxClass object associated with the base class of
-the class that is represented by the AcRxClass object on which this method is called.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> name(self) -&gt; str
-    &quot;&quot;&quot;This function returns a pointer to a string that is the name of the C++ class represented
+qualifier indicates, no attempt should be made to deallocate the string.</span></code>
+            <code><span class="kw">def</span> isDerivedFrom(self, other: PyRx.RxClass) -&gt; bool:
+    <span class="ds">Static method for checking if first (left) class arg is derived from second (right) one.</span></code>
+            <code><span class="kw">def</span> myParent(self) -&gt; RxClass:
+    <span class="ds">This function returns a pointer to the AcRxClass object associated with the base class of
+the class that is represented by the AcRxClass object on which this method is called.</span></code>
+            <code><span class="kw">def</span> name(self) -&gt; str:
+    <span class="ds">This function returns a pointer to a string that is the name of the C++ class represented
 by this AcRxClass object. WarningAs the const qualifier indicates, no attempt should be
-made to deallocate the string.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> queryX(self, rhs: PyRx.RxClass) -&gt; RxObject
-    &quot;&quot;&quot;This function returns the protocol extension object stored with the key pProtocolClass. If
+made to deallocate the string.</span></code>
+            <code><span class="kw">def</span> queryX(self, rhs: PyRx.RxClass) -&gt; RxObject:
+    <span class="ds">This function returns the protocol extension object stored with the key pProtocolClass. If
 there is no such object specific to the class represented by this AcRxClass object, then
 the protocol extension object for the parent class is used, or its parent class, or on up
 the hierarchy as far as needed to obtain the protocol extension object sought. If the
 pProtocolClass key is not present in this AcRxClass object nor in any of the base class&#x27;s
 AcRxClass objects, then this function will return NULL. This function does the real work
-for AcRxObject::queryX() and is invoked from it.&quot;&quot;&quot;</code>
+for AcRxObject::queryX() and is invoked from it.</span></code>
         </details>
     </div>
 
     <div class="class" id="RxObject">
         <details>
             <summary>class RxObject <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __hash__(self) -&gt; int</code>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __ne__(self, rhs: PyRx.RxObject) -&gt; bool</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> comparedTo(self, other: PyRx.RxObject) -&gt; Ordering
-    &quot;&quot;&quot;Function usage: This function is intended to allow classes to provide a means to compare
+            <code><span class="kw">def</span> __hash__(self) -&gt; int:</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __ne__(self, rhs: PyRx.RxObject) -&gt; bool:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> comparedTo(self, other: PyRx.RxObject) -&gt; Ordering:
+    <span class="ds">Function usage: This function is intended to allow classes to provide a means to compare
 class objects much the way strcmp() compares character strings. The object pointed to by
 other is compared with this object. The result of the comparison is returned. The possible
 AcRx::Ordering types are: AcRx::kLessThan AcRx::kEqual AcRx::kGreaterThan
@@ -209,17 +213,17 @@ AcRx::kNotOrderable The AcRx::kNotOrderable type is there because C++ classes of
 support object value comparison. Function implementation in derived classes: There are no
 restrictions or expectations on how this function is implemented. Each class will have its
 own requirements for comparison. Default implementation: Simply returns AcRx::kNotOrderable
-since many C++ classes cannot support object value comparison.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> copyFrom(self, other: PyRx.RxObject) -&gt; None
-    &quot;&quot;&quot;Function usage: Copies the contents of other into the messaged object, whenever feasible.
+since many C++ classes cannot support object value comparison.</span></code>
+            <code><span class="kw">def</span> copyFrom(self, other: PyRx.RxObject) -&gt; None:
+    <span class="ds">Function usage: Copies the contents of other into the messaged object, whenever feasible.
 Function implementation in derived classes: If implemented, this function needs to be able
 to read the data in the object pointed to by other and copy any or all data as appropriate
 into this object. There is no requirement that the object pointed to by other and this
 object be of the same class, but that is the generally assumed condition. Default
 implementation: Because this function must be overridden to have any meaning, a fatal error
-will be caused when calling the default implementation.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> desc() -&gt; RxClass
-    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+will be caused when calling the default implementation.</span></code>
+            <code><span class="kw">def</span> desc() -&gt; RxClass:
+    <span class="ds">Returns a pointer to the AcRxClass object representing the specific class, or most recent
 parent class explicitly registered with ObjectARX of either the pointer type used to invoke
 it or the class qualifier used with it. (Remember that when a static member function is
 invoked via a pointer, the pointer type, not the object type, determines which
@@ -228,54 +232,54 @@ the proper AcRxClass object for the class of the object pointed to is desired, t
 AcRxObject::isA() function should be used, since it is a virtual non-static method and is
 therefore not pointer type dependent. Caching the value of the pointer returned by this
 method is acceptable, provided the application knows that the AcRxClass object pointed to
-by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> dispose(self) -&gt; None</code>
-            <code><span class="kw">def</span> implRefCount(self) -&gt; int</code>
-            <code><span class="kw">def</span> intPtr(self) -&gt; int</code>
-            <code><span class="kw">def</span> isA(self) -&gt; RxClass
-    &quot;&quot;&quot;Function usage: For each class registered with ObjectARX, the implementation of this
+by the returned pointer was created by an ObjectARX application that will not be unloaded.</span></code>
+            <code><span class="kw">def</span> dispose(self) -&gt; None:</code>
+            <code><span class="kw">def</span> implRefCount(self) -&gt; int:</code>
+            <code><span class="kw">def</span> intPtr(self) -&gt; int:</code>
+            <code><span class="kw">def</span> isA(self) -&gt; RxClass:
+    <span class="ds">Function usage: For each class registered with ObjectARX, the implementation of this
 function is to return a pointer to the AcRxClass object for the class of the object in
 which this method is called. For classes not registered with ObjectARX, this method has no
 meaning. Function implementation in derived classes: This function is overridden in all
 derived classes. The AcRx macros declare and define this function, so that the override is
 taken care of as part of using the macros. The implementation of this function is simply to
 return ::desc(). For example. the implementation for AcDbLine would be: return
-AcDbLine::desc(); Default implementation for AcRxObject: { return AcRxObject::desc(); }&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isDerivedFrom(self, other: PyRx.RxClass) -&gt; bool
-    &quot;&quot;&quot;Static method for checking if first (left) class arg is derived from second (right) one.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isKindOf(self, rhs: PyRx.RxClass) -&gt; bool
-    &quot;&quot;&quot;Returns true if &#x27;this&#x27; object is of a member of either the class represented by aClass, or
-a class derived from aClass.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isNullObj(self) -&gt; bool</code>
-            <code><span class="kw">def</span> keepAlive(self, flag: bool) -&gt; None</code>
-            <code><span class="kw">def</span> queryX(self, rhs: PyRx.RxClass) -&gt; RxObject
-    &quot;&quot;&quot;This method searches for a protocol extension object associated with this object. The
+AcDbLine::desc(); Default implementation for AcRxObject: { return AcRxObject::desc(); }</span></code>
+            <code><span class="kw">def</span> isDerivedFrom(self, other: PyRx.RxClass) -&gt; bool:
+    <span class="ds">Static method for checking if first (left) class arg is derived from second (right) one.</span></code>
+            <code><span class="kw">def</span> isKindOf(self, rhs: PyRx.RxClass) -&gt; bool:
+    <span class="ds">Returns true if &#x27;this&#x27; object is of a member of either the class represented by aClass, or
+a class derived from aClass.</span></code>
+            <code><span class="kw">def</span> isNullObj(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> keepAlive(self, flag: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> queryX(self, rhs: PyRx.RxClass) -&gt; RxObject:
+    <span class="ds">This method searches for a protocol extension object associated with this object. The
 method begins the search by examining the AcRxClass object associated with this object, and
 if no protocol extension object is found, the search continues in the base class of the
 object&#x27;s class and so on up the inheritance tree for the class. This procedure provides a
 form of protocol extension inheritance. An object&#x27;s AcRxClass member may be found by using
 the class&#x27;s isA() method. If the search for a protocol extension object is unsuccessful,
-then NULL is returned.&quot;&quot;&quot;</code>
+then NULL is returned.</span></code>
         </details>
     </div>
 
     <div class="class" id="stderr">
         <details>
             <summary>class stderr <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> flush(self) -&gt; None</code>
-            <code><span class="kw">def</span> write(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> flush(self) -&gt; None:</code>
+            <code><span class="kw">def</span> write(self) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="stdout">
         <details>
             <summary>class stdout <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> flush(self) -&gt; None</code>
-            <code><span class="kw">def</span> write(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> flush(self) -&gt; None:</code>
+            <code><span class="kw">def</span> write(self) -&gt; None:</code>
         </details>
     </div>
 </body>

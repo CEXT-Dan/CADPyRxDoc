@@ -44,6 +44,10 @@
             color: #569cd6;
             font-weight: bold;
         }
+        .ds {
+            color: #FF8787;
+            opacity: 0.7;
+        }
         h1 {
             color: #569cd6;
         }
@@ -103,128 +107,128 @@
     <div class="class" id="CalloutBlocks">
         <details>
             <summary>class CalloutBlocks <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> add(self, val: PySm.DbBlockRecordReference) -&gt; None</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CalloutBlocks</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getDbBlockRecordReferences(self) -&gt; list[PySm.DbBlockRecordReference]</code>
-            <code><span class="kw">def</span> remove(self, val: PySm.DbBlockRecordReference) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> add(self, val: PySm.DbBlockRecordReference) -&gt; None:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CalloutBlocks:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getDbBlockRecordReferences(self) -&gt; list[PySm.DbBlockRecordReference]:</code>
+            <code><span class="kw">def</span> remove(self, val: PySm.DbBlockRecordReference) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Component">
         <details>
             <summary>class Component <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Component</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getCustomPropertyBag(self) -&gt; CustomPropertyBag</code>
-            <code><span class="kw">def</span> getDesc(self) -&gt; str</code>
-            <code><span class="kw">def</span> getName(self) -&gt; str</code>
-            <code><span class="kw">def</span> setDesc(self, desc: str) -&gt; None</code>
-            <code><span class="kw">def</span> setName(self, name: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Component:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getCustomPropertyBag(self) -&gt; CustomPropertyBag:</code>
+            <code><span class="kw">def</span> getDesc(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> setDesc(self, desc: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setName(self, name: str) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="CustomPropertyBag">
         <details>
             <summary>class CustomPropertyBag <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CustomPropertyBag</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getProperties(self) -&gt; list[tuple[str, PySm.CustomPropertyValue]]</code>
-            <code><span class="kw">def</span> getProperty(self, prop: str) -&gt; CustomPropertyValue</code>
-            <code><span class="kw">def</span> getPropertyValues(self) -&gt; list[tuple[str, PyDb.AcValue]]</code>
-            <code><span class="kw">def</span> hasProperty(self, prop: str) -&gt; bool</code>
-            <code><span class="kw">def</span> setProperty(self, prop: str, val: PySm.CustomPropertyValue) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CustomPropertyBag:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getProperties(self) -&gt; list[tuple[str, PySm.CustomPropertyValue]]:</code>
+            <code><span class="kw">def</span> getProperty(self, prop: str) -&gt; CustomPropertyValue:</code>
+            <code><span class="kw">def</span> getPropertyValues(self) -&gt; list[tuple[str, PyDb.AcValue]]:</code>
+            <code><span class="kw">def</span> hasProperty(self, prop: str) -&gt; bool:</code>
+            <code><span class="kw">def</span> setProperty(self, prop: str, val: PySm.CustomPropertyValue) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="CustomPropertyValue">
         <details>
             <summary>class CustomPropertyValue <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CustomPropertyValue</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getFlags(self) -&gt; PropertyFlags</code>
-            <code><span class="kw">def</span> getValue(self) -&gt; PyDb.AcValue</code>
-            <code><span class="kw">def</span> setFlags(self, flags: PySm.PropertyFlags) -&gt; None</code>
-            <code><span class="kw">def</span> setValue(self, val: PyDb.AcValue | str | int | float) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; CustomPropertyValue:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getFlags(self) -&gt; PropertyFlags:</code>
+            <code><span class="kw">def</span> getValue(self) -&gt; PyDb.AcValue:</code>
+            <code><span class="kw">def</span> setFlags(self, flags: PySm.PropertyFlags) -&gt; None:</code>
+            <code><span class="kw">def</span> setValue(self, val: PyDb.AcValue | str | int | float) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="DbBlockRecordReference">
         <details>
             <summary>class DbBlockRecordReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbBlockRecordReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbBlockRecordReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
         </details>
     </div>
 
     <div class="class" id="DbDatabase">
         <details>
             <summary>class DbDatabase <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getAcDbDatabase(self) -&gt; PyDb.Database</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getAcDbDatabase(self) -&gt; PyDb.Database:</code>
         </details>
     </div>
 
     <div class="class" id="DbLayoutReference">
         <details>
             <summary>class DbLayoutReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbLayoutReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbLayoutReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
         </details>
     </div>
 
     <div class="class" id="DbObjectReference">
         <details>
             <summary>class DbObjectReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbObjectReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getAcDbHandle(self) -&gt; PyDb.Handle</code>
-            <code><span class="kw">def</span> getAcSmAcDbDatabase(self) -&gt; DbDatabase</code>
-            <code><span class="kw">def</span> resolveAcDbObject(self, db: PyDb.Database) -&gt; PyDb.Handle</code>
-            <code><span class="kw">def</span> setAcDbHandle(self, handle: PyDb.Handle) -&gt; None</code>
-            <code><span class="kw">def</span> setAcDbObject(self, obj: PyDb.Object) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbObjectReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getAcDbHandle(self) -&gt; PyDb.Handle:</code>
+            <code><span class="kw">def</span> getAcSmAcDbDatabase(self) -&gt; DbDatabase:</code>
+            <code><span class="kw">def</span> resolveAcDbObject(self, db: PyDb.Database) -&gt; PyDb.Handle:</code>
+            <code><span class="kw">def</span> setAcDbHandle(self, handle: PyDb.Handle) -&gt; None:</code>
+            <code><span class="kw">def</span> setAcDbObject(self, obj: PyDb.Object) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="DbViewReference">
         <details>
             <summary>class DbViewReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbViewReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; DbViewReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
         </details>
     </div>
 
     <div class="class" id="FileReference">
         <details>
             <summary>class FileReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; FileReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getFileName(self) -&gt; str</code>
-            <code><span class="kw">def</span> setFileName(self, fname: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; FileReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getFileName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> setFileName(self, fname: str) -&gt; None:</code>
         </details>
     </div>
 
@@ -243,28 +247,28 @@ This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
     <div class="class" id="NamedDbObjectReference">
         <details>
             <summary>class NamedDbObjectReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; NamedDbObjectReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getName(self) -&gt; str</code>
-            <code><span class="kw">def</span> getOwnerAcDbHandle(self) -&gt; PyDb.Handle</code>
-            <code><span class="kw">def</span> setName(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setOwnerAcDbHandle(self, val: PyDb.Handle) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; NamedDbObjectReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getOwnerAcDbHandle(self) -&gt; PyDb.Handle:</code>
+            <code><span class="kw">def</span> setName(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setOwnerAcDbHandle(self, val: PyDb.Handle) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="ObjectReference">
         <details>
             <summary>class ObjectReference <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ObjectReference</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getReferenceFlags(self) -&gt; ObjectReferenceFlags</code>
-            <code><span class="kw">def</span> getReferencedObject(self) -&gt; Persist</code>
-            <code><span class="kw">def</span> setReferenceFlags(self, val: PySm.ObjectReferenceFlags) -&gt; None</code>
-            <code><span class="kw">def</span> setReferencedObject(self, val: PySm.Persist) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ObjectReference:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getReferenceFlags(self) -&gt; ObjectReferenceFlags:</code>
+            <code><span class="kw">def</span> getReferencedObject(self) -&gt; Persist:</code>
+            <code><span class="kw">def</span> setReferenceFlags(self, val: PySm.ObjectReferenceFlags) -&gt; None:</code>
+            <code><span class="kw">def</span> setReferencedObject(self, val: PySm.Persist) -&gt; None:</code>
         </details>
     </div>
 
@@ -279,63 +283,63 @@ This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
     <div class="class" id="Persist">
         <details>
             <summary>class Persist <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Persist</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> clear(self) -&gt; None</code>
-            <code><span class="kw">def</span> getDatabase(self) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> getIsDirty(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getObjectId(self) -&gt; object</code>
-            <code><span class="kw">def</span> getOwner(self) -&gt; Persist</code>
-            <code><span class="kw">def</span> getTypeName(self) -&gt; str</code>
-            <code><span class="kw">def</span> initNew(self, owner: PySm.Persist) -&gt; None</code>
-            <code><span class="kw">def</span> isNull(self) -&gt; bool</code>
-            <code><span class="kw">def</span> setOwner(self, owner: PySm.Persist) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Persist:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> clear(self) -&gt; None:</code>
+            <code><span class="kw">def</span> getDatabase(self) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> getIsDirty(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getObjectId(self) -&gt; object:</code>
+            <code><span class="kw">def</span> getOwner(self) -&gt; Persist:</code>
+            <code><span class="kw">def</span> getTypeName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> initNew(self, owner: PySm.Persist) -&gt; None:</code>
+            <code><span class="kw">def</span> isNull(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> setOwner(self, owner: PySm.Persist) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="PersistProxy">
         <details>
             <summary>class PersistProxy <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; PersistProxy</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; PersistProxy:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
         </details>
     </div>
 
     <div class="class" id="ProjectPointLocation">
         <details>
             <summary>class ProjectPointLocation <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ProjectPointLocation</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getFolder(self) -&gt; str</code>
-            <code><span class="kw">def</span> getPassword(self) -&gt; str</code>
-            <code><span class="kw">def</span> getResourceType(self) -&gt; int</code>
-            <code><span class="kw">def</span> getURL(self) -&gt; str</code>
-            <code><span class="kw">def</span> getUsername(self) -&gt; str</code>
-            <code><span class="kw">def</span> setFolder(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setPassword(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setResourceType(self, val: int) -&gt; None</code>
-            <code><span class="kw">def</span> setUsername(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ProjectPointLocation:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getFolder(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getPassword(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getResourceType(self) -&gt; int:</code>
+            <code><span class="kw">def</span> getURL(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getUsername(self) -&gt; str:</code>
+            <code><span class="kw">def</span> setFolder(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setPassword(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setResourceType(self, val: int) -&gt; None:</code>
+            <code><span class="kw">def</span> setUsername(self, val: str) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="ProjectPointLocations">
         <details>
             <summary>class ProjectPointLocations <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addNewLocation(self, name: str, url: str, folder: str, username: str, password: str) -&gt; ProjectPointLocation</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ProjectPointLocations</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getLocation(self, locationName: str) -&gt; ProjectPointLocation</code>
-            <code><span class="kw">def</span> removeLocation(self, val: PySm.ProjectPointLocation) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addNewLocation(self, name: str, url: str, folder: str, username: str, password: str) -&gt; ProjectPointLocation:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ProjectPointLocations:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getLocation(self, locationName: str) -&gt; ProjectPointLocation:</code>
+            <code><span class="kw">def</span> removeLocation(self, val: PySm.ProjectPointLocation) -&gt; None:</code>
         </details>
     </div>
 
@@ -353,250 +357,250 @@ This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
     <div class="class" id="PublishOptions">
         <details>
             <summary>class PublishOptions <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; PublishOptions</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getDefaultFilename(self) -&gt; str</code>
-            <code><span class="kw">def</span> getDefaultOutputdir(self) -&gt; FileReference</code>
-            <code><span class="kw">def</span> getDwfType(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getEplotFormat(self) -&gt; int</code>
-            <code><span class="kw">def</span> getIncludeSheetData(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getIncludeSheetSetData(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getLayerInfo(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getLinesMerge(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getPromptForName(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getPromptForPassword(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getUnrecognizedData(self) -&gt; CustomPropertyBag</code>
-            <code><span class="kw">def</span> getUnrecognizedSections(self) -&gt; CustomPropertyBag</code>
-            <code><span class="kw">def</span> getUsePassword(self) -&gt; bool</code>
-            <code><span class="kw">def</span> setDefaultFilename(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setDefaultOutputdir(self, val: PySm.FileReference) -&gt; None</code>
-            <code><span class="kw">def</span> setDwfType(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setEplotFormat(self, val: int) -&gt; None</code>
-            <code><span class="kw">def</span> setIncludeSheetData(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setIncludeSheetSetData(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setLayerInfo(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setLinesMerge(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setPromptForName(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setPromptForPassword(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setUnrecognizedData(self, val: PySm.CustomPropertyBag) -&gt; None</code>
-            <code><span class="kw">def</span> setUnrecognizedSections(self, val: PySm.CustomPropertyBag) -&gt; None</code>
-            <code><span class="kw">def</span> setUsePassword(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; PublishOptions:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getDefaultFilename(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getDefaultOutputdir(self) -&gt; FileReference:</code>
+            <code><span class="kw">def</span> getDwfType(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getEplotFormat(self) -&gt; int:</code>
+            <code><span class="kw">def</span> getIncludeSheetData(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getIncludeSheetSetData(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getLayerInfo(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getLinesMerge(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getPromptForName(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getPromptForPassword(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getUnrecognizedData(self) -&gt; CustomPropertyBag:</code>
+            <code><span class="kw">def</span> getUnrecognizedSections(self) -&gt; CustomPropertyBag:</code>
+            <code><span class="kw">def</span> getUsePassword(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> setDefaultFilename(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setDefaultOutputdir(self, val: PySm.FileReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setDwfType(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setEplotFormat(self, val: int) -&gt; None:</code>
+            <code><span class="kw">def</span> setIncludeSheetData(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setIncludeSheetSetData(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setLayerInfo(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setLinesMerge(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setPromptForName(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setPromptForPassword(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setUnrecognizedData(self, val: PySm.CustomPropertyBag) -&gt; None:</code>
+            <code><span class="kw">def</span> setUnrecognizedSections(self, val: PySm.CustomPropertyBag) -&gt; None:</code>
+            <code><span class="kw">def</span> setUsePassword(self, val: bool) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Resources">
         <details>
             <summary>class Resources <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> add(self, val: PySm.FileReference) -&gt; None</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Resources</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getFileReferences(self) -&gt; list[PySm.FileReference]</code>
-            <code><span class="kw">def</span> remove(self, val: PySm.FileReference) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> add(self, val: PySm.FileReference) -&gt; None:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Resources:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getFileReferences(self) -&gt; list[PySm.FileReference]:</code>
+            <code><span class="kw">def</span> remove(self, val: PySm.FileReference) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Sheet">
         <details>
             <summary>class Sheet <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Sheet</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getCategory(self) -&gt; str</code>
-            <code><span class="kw">def</span> getDoNotPlot(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getIssuePurpose(self) -&gt; str</code>
-            <code><span class="kw">def</span> getLayout(self) -&gt; DbLayoutReference</code>
-            <code><span class="kw">def</span> getNumber(self) -&gt; str</code>
-            <code><span class="kw">def</span> getRevisionDate(self) -&gt; str</code>
-            <code><span class="kw">def</span> getRevisionNumber(self) -&gt; str</code>
-            <code><span class="kw">def</span> getSheetViews(self) -&gt; SheetViews</code>
-            <code><span class="kw">def</span> getTitle(self) -&gt; str</code>
-            <code><span class="kw">def</span> setCategory(self, cat: str) -&gt; None</code>
-            <code><span class="kw">def</span> setDoNotPlot(self, flag: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setIssuePurpose(self, why: str) -&gt; None</code>
-            <code><span class="kw">def</span> setLayout(self, layout: PySm.DbLayoutReference) -&gt; None</code>
-            <code><span class="kw">def</span> setNumber(self, number: str) -&gt; None</code>
-            <code><span class="kw">def</span> setRevisionDate(self, date: str) -&gt; None</code>
-            <code><span class="kw">def</span> setRevisionNumber(self, number: str) -&gt; None</code>
-            <code><span class="kw">def</span> setTitle(self, title: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Sheet:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getCategory(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getDoNotPlot(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getIssuePurpose(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getLayout(self) -&gt; DbLayoutReference:</code>
+            <code><span class="kw">def</span> getNumber(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getRevisionDate(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getRevisionNumber(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getSheetViews(self) -&gt; SheetViews:</code>
+            <code><span class="kw">def</span> getTitle(self) -&gt; str:</code>
+            <code><span class="kw">def</span> setCategory(self, cat: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setDoNotPlot(self, flag: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setIssuePurpose(self, why: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setLayout(self, layout: PySm.DbLayoutReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setNumber(self, number: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setRevisionDate(self, date: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setRevisionNumber(self, number: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setTitle(self, title: str) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SheetSelSet">
         <details>
             <summary>class SheetSelSet <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> add(self, val: PySm.Component) -&gt; None</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSelSet</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getComponents(self) -&gt; list[PySm.Component]</code>
-            <code><span class="kw">def</span> remove(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> add(self, val: PySm.Component) -&gt; None:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSelSet:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getComponents(self) -&gt; list[PySm.Component]:</code>
+            <code><span class="kw">def</span> remove(self) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SheetSelSets">
         <details>
             <summary>class SheetSelSets <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> add(self, name: str, desc: str) -&gt; SheetSelSet</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSelSets</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getSheetSelSets(self) -&gt; list[PySm.SheetSelSet]</code>
-            <code><span class="kw">def</span> remove(self, val: PySm.SheetSelSet) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> add(self, name: str, desc: str) -&gt; SheetSelSet:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSelSets:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getSheetSelSets(self) -&gt; list[PySm.SheetSelSet]:</code>
+            <code><span class="kw">def</span> remove(self, val: PySm.SheetSelSet) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SheetSet">
         <details>
             <summary>class SheetSet <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSet</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getAltPageSetups(self) -&gt; FileReference</code>
-            <code><span class="kw">def</span> getCalloutBlocks(self) -&gt; CalloutBlocks</code>
-            <code><span class="kw">def</span> getDefAltPageSetup(self) -&gt; NamedDbObjectReference</code>
-            <code><span class="kw">def</span> getDefLabelBlk(self) -&gt; DbBlockRecordReference</code>
-            <code><span class="kw">def</span> getPromptForDwgName(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getPublishOptions(self) -&gt; PublishOptions</code>
-            <code><span class="kw">def</span> getResources(self) -&gt; Resources</code>
-            <code><span class="kw">def</span> getSheetSelSets(self) -&gt; SheetSelSets</code>
-            <code><span class="kw">def</span> getViewCategories(self) -&gt; ViewCategories</code>
-            <code><span class="kw">def</span> setAltPageSetups(self, val: PySm.FileReference) -&gt; None</code>
-            <code><span class="kw">def</span> setDefAltPageSetup(self, val: PySm.NamedDbObjectReference) -&gt; None</code>
-            <code><span class="kw">def</span> setDefLabelBlk(self, val: PySm.DbBlockRecordReference) -&gt; None</code>
-            <code><span class="kw">def</span> setPromptForDwgName(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> sync(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> updateSheetCustomProps(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetSet:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getAltPageSetups(self) -&gt; FileReference:</code>
+            <code><span class="kw">def</span> getCalloutBlocks(self) -&gt; CalloutBlocks:</code>
+            <code><span class="kw">def</span> getDefAltPageSetup(self) -&gt; NamedDbObjectReference:</code>
+            <code><span class="kw">def</span> getDefLabelBlk(self) -&gt; DbBlockRecordReference:</code>
+            <code><span class="kw">def</span> getPromptForDwgName(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getPublishOptions(self) -&gt; PublishOptions:</code>
+            <code><span class="kw">def</span> getResources(self) -&gt; Resources:</code>
+            <code><span class="kw">def</span> getSheetSelSets(self) -&gt; SheetSelSets:</code>
+            <code><span class="kw">def</span> getViewCategories(self) -&gt; ViewCategories:</code>
+            <code><span class="kw">def</span> setAltPageSetups(self, val: PySm.FileReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setDefAltPageSetup(self, val: PySm.NamedDbObjectReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setDefLabelBlk(self, val: PySm.DbBlockRecordReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setPromptForDwgName(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> sync(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> updateSheetCustomProps(self) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SheetSetMgr">
         <details>
             <summary>class SheetSetMgr <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> close(self, smDb: PySm.Database) -&gt; None</code>
-            <code><span class="kw">def</span> closeAll(self) -&gt; None</code>
-            <code><span class="kw">def</span> createDatabase(self, filename: str) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> createDatabase(self, filename: str, template: str, bAlwaysCreate: bool) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> createDatabase(*args) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> findOpenDatabase(self, filename: str) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> getDatabases(self) -&gt; list[PySm.SmDatabase]</code>
-            <code><span class="kw">def</span> getParentSheetSet(self, dwg: str, layout: str) -&gt; tuple[PySm.SmDatabase, PySm.SheetSet]</code>
-            <code><span class="kw">def</span> getSheetFromLayout(self, layout: PyDb.Object) -&gt; tuple[PySm.SmDatabase, PySm.Sheet]</code>
-            <code><span class="kw">def</span> openDatabase(self, filename: str) -&gt; SmDatabase</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> close(self, smDb: PySm.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> closeAll(self) -&gt; None:</code>
+            <code><span class="kw">def</span> createDatabase(self, filename: str) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> createDatabase(self, filename: str, template: str, bAlwaysCreate: bool) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> createDatabase(*args) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> findOpenDatabase(self, filename: str) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> getDatabases(self) -&gt; list[PySm.SmDatabase]:</code>
+            <code><span class="kw">def</span> getParentSheetSet(self, dwg: str, layout: str) -&gt; tuple[PySm.SmDatabase, PySm.SheetSet]:</code>
+            <code><span class="kw">def</span> getSheetFromLayout(self, layout: PyDb.Object) -&gt; tuple[PySm.SmDatabase, PySm.Sheet]:</code>
+            <code><span class="kw">def</span> openDatabase(self, filename: str) -&gt; SmDatabase:</code>
         </details>
     </div>
 
     <div class="class" id="SheetView">
         <details>
             <summary>class SheetView <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetView</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getCategory(self) -&gt; ViewCategory</code>
-            <code><span class="kw">def</span> getNamedView(self) -&gt; DbViewReference</code>
-            <code><span class="kw">def</span> getNumber(self) -&gt; str</code>
-            <code><span class="kw">def</span> getTitle(self) -&gt; str</code>
-            <code><span class="kw">def</span> setCategory(self, val: PySm.ViewCategory) -&gt; None</code>
-            <code><span class="kw">def</span> setNamedView(self, val: PySm.AcDbViewReference) -&gt; None</code>
-            <code><span class="kw">def</span> setNumber(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setTitle(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetView:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getCategory(self) -&gt; ViewCategory:</code>
+            <code><span class="kw">def</span> getNamedView(self) -&gt; DbViewReference:</code>
+            <code><span class="kw">def</span> getNumber(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getTitle(self) -&gt; str:</code>
+            <code><span class="kw">def</span> setCategory(self, val: PySm.ViewCategory) -&gt; None:</code>
+            <code><span class="kw">def</span> setNamedView(self, val: PySm.AcDbViewReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setNumber(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setTitle(self, val: str) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SheetViews">
         <details>
             <summary>class SheetViews <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetViews</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getSheetViews(self) -&gt; list[PySm.SheetView]</code>
-            <code><span class="kw">def</span> sync(self, val: PySm.AcDbLayoutReference, db: PyDb.Database) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SheetViews:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getSheetViews(self) -&gt; list[PySm.SheetView]:</code>
+            <code><span class="kw">def</span> sync(self, val: PySm.AcDbLayoutReference, db: PyDb.Database) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="SmDatabase">
         <details>
             <summary>class SmDatabase <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SmDatabase</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getFileName(self) -&gt; str</code>
-            <code><span class="kw">def</span> getLockOwnerInfo(self) -&gt; tuple[str, str]</code>
-            <code><span class="kw">def</span> getLockStatus(self) -&gt; LockStatus</code>
-            <code><span class="kw">def</span> getPersistObjects(self) -&gt; list[PySm.Persist]</code>
-            <code><span class="kw">def</span> getSheetSet(self) -&gt; SheetSet</code>
-            <code><span class="kw">def</span> getTemplateDstFileName(self) -&gt; str</code>
-            <code><span class="kw">def</span> loadFromFile(self, filename: str) -&gt; None</code>
-            <code><span class="kw">def</span> lockDb(self) -&gt; None</code>
-            <code><span class="kw">def</span> setFileName(self, filename: str) -&gt; None</code>
-            <code><span class="kw">def</span> unlockDb(self, commit: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; SmDatabase:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getFileName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> getLockOwnerInfo(self) -&gt; tuple[str, str]:</code>
+            <code><span class="kw">def</span> getLockStatus(self) -&gt; LockStatus:</code>
+            <code><span class="kw">def</span> getPersistObjects(self) -&gt; list[PySm.Persist]:</code>
+            <code><span class="kw">def</span> getSheetSet(self) -&gt; SheetSet:</code>
+            <code><span class="kw">def</span> getTemplateDstFileName(self) -&gt; str:</code>
+            <code><span class="kw">def</span> loadFromFile(self, filename: str) -&gt; None:</code>
+            <code><span class="kw">def</span> lockDb(self) -&gt; None:</code>
+            <code><span class="kw">def</span> setFileName(self, filename: str) -&gt; None:</code>
+            <code><span class="kw">def</span> unlockDb(self, commit: bool) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Subset">
         <details>
             <summary>class Subset <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addNewSheet(self, name: str, desc: str) -&gt; Sheet</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Subset</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> createSubset(self, name: str, desc: str) -&gt; Subset</code>
-            <code><span class="kw">def</span> getDefDwtLayout(self) -&gt; DbLayoutReference</code>
-            <code><span class="kw">def</span> getNewSheetLocation(self) -&gt; FileReference</code>
-            <code><span class="kw">def</span> getOverrideSheetPublish(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getPromptForDwt(self) -&gt; bool</code>
-            <code><span class="kw">def</span> getSheets(self) -&gt; list[PySm.Sheet]</code>
-            <code><span class="kw">def</span> importSheet(self, val: PySm.DbLayoutReference) -&gt; Sheet</code>
-            <code><span class="kw">def</span> insertComponent(self, newSheet: PySm.Component, beforeSheet: PySm.Component) -&gt; None</code>
-            <code><span class="kw">def</span> insertComponentAfter(self, newSheet: PySm.Component, afterSheet: PySm.Component) -&gt; None</code>
-            <code><span class="kw">def</span> insertComponentFirst(self, newSheet: PySm.Component) -&gt; None</code>
-            <code><span class="kw">def</span> removeSheet(self, val: PySm.Sheet) -&gt; None</code>
-            <code><span class="kw">def</span> removeSubset(self, val: PySm.Subset) -&gt; None</code>
-            <code><span class="kw">def</span> setDefDwtLayout(self, val: PySm.DbLayoutReference) -&gt; None</code>
-            <code><span class="kw">def</span> setNewSheetLocation(self, val: PySm.FileReference) -&gt; None</code>
-            <code><span class="kw">def</span> setOverrideSheetPublish(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setPromptForDwt(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> updateInMemoryDwgHints(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addNewSheet(self, name: str, desc: str) -&gt; Sheet:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; Subset:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> createSubset(self, name: str, desc: str) -&gt; Subset:</code>
+            <code><span class="kw">def</span> getDefDwtLayout(self) -&gt; DbLayoutReference:</code>
+            <code><span class="kw">def</span> getNewSheetLocation(self) -&gt; FileReference:</code>
+            <code><span class="kw">def</span> getOverrideSheetPublish(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getPromptForDwt(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> getSheets(self) -&gt; list[PySm.Sheet]:</code>
+            <code><span class="kw">def</span> importSheet(self, val: PySm.DbLayoutReference) -&gt; Sheet:</code>
+            <code><span class="kw">def</span> insertComponent(self, newSheet: PySm.Component, beforeSheet: PySm.Component) -&gt; None:</code>
+            <code><span class="kw">def</span> insertComponentAfter(self, newSheet: PySm.Component, afterSheet: PySm.Component) -&gt; None:</code>
+            <code><span class="kw">def</span> insertComponentFirst(self, newSheet: PySm.Component) -&gt; None:</code>
+            <code><span class="kw">def</span> removeSheet(self, val: PySm.Sheet) -&gt; None:</code>
+            <code><span class="kw">def</span> removeSubset(self, val: PySm.Subset) -&gt; None:</code>
+            <code><span class="kw">def</span> setDefDwtLayout(self, val: PySm.DbLayoutReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setNewSheetLocation(self, val: PySm.FileReference) -&gt; None:</code>
+            <code><span class="kw">def</span> setOverrideSheetPublish(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setPromptForDwt(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> updateInMemoryDwgHints(self) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="ViewCategories">
         <details>
             <summary>class ViewCategories <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ViewCategories</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> createViewCategory(self, name: str, desc: str, id: str) -&gt; ViewCategory</code>
-            <code><span class="kw">def</span> getDefaultViewCategory(self) -&gt; ViewCategory</code>
-            <code><span class="kw">def</span> getViewCategories(self) -&gt; list[PySm.ViewCategory]</code>
-            <code><span class="kw">def</span> removeViewCategory(self, val: PySm.ViewCategory) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ViewCategories:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> createViewCategory(self, name: str, desc: str, id: str) -&gt; ViewCategory:</code>
+            <code><span class="kw">def</span> getDefaultViewCategory(self) -&gt; ViewCategory:</code>
+            <code><span class="kw">def</span> getViewCategories(self) -&gt; list[PySm.ViewCategory]:</code>
+            <code><span class="kw">def</span> removeViewCategory(self, val: PySm.ViewCategory) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="ViewCategory">
         <details>
             <summary>class ViewCategory <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ViewCategory</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> getCalloutBlocks(self) -&gt; CalloutBlocks</code>
-            <code><span class="kw">def</span> getSheetViews(self) -&gt; list[PySm.SheetView]</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> cast(otherObject: PySm.Persist) -&gt; ViewCategory:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> getCalloutBlocks(self) -&gt; CalloutBlocks:</code>
+            <code><span class="kw">def</span> getSheetViews(self) -&gt; list[PySm.SheetView]:</code>
         </details>
     </div>
 </body>

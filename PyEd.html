@@ -44,6 +44,10 @@
             color: #569cd6;
             font-weight: bold;
         }
+        .ds {
+            color: #FF8787;
+            opacity: 0.7;
+        }
         h1 {
             color: #569cd6;
         }
@@ -96,47 +100,47 @@
     <div class="class" id="AutoSysVar">
         <details>
             <summary>class AutoSysVar <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self, varName: str, value) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> detach(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, varName: str, value) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> detach(self, val: bool) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Core">
         <details>
             <summary>class Core <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addSupplementalCursorImage(image: wx.Image, order: int, alpha: int) -&gt; bool</code>
-            <code><span class="kw">def</span> alert(msg: str) -&gt; int
-    &quot;&quot;&quot;Displays an alert box with an error or warning message. An alert box is a dialog box with a
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addSupplementalCursorImage(image: wx.Image, order: int, alpha: int) -&gt; bool:</code>
+            <code><span class="kw">def</span> alert(msg: str) -&gt; int:
+    <span class="ds">Displays an alert box with an error or warning message. An alert box is a dialog box with a
 single OK button. If you want the message to have multiple lines, you can include newline
-characters (specified by n) in the string.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> arxLoad(path: str) -&gt; int
-    &quot;&quot;&quot;Loads an ARX module. Corresponds to the AutoLISP (arxload). acedArxLoad() returns an error
+characters (specified by n) in the string.</span></code>
+            <code><span class="kw">def</span> arxLoad(path: str) -&gt; int:
+    <span class="ds">Loads an ARX module. Corresponds to the AutoLISP (arxload). acedArxLoad() returns an error
 status code when the string parameter does not specify an existing file or when the file
-cannot be loaded for some other reason.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> arxLoaded() -&gt; list
-    &quot;&quot;&quot;Returns a pointer to a list of the external ARX applications that are currently loaded. The
+cannot be loaded for some other reason.</span></code>
+            <code><span class="kw">def</span> arxLoaded() -&gt; list:
+    <span class="ds">Returns a pointer to a list of the external ARX applications that are currently loaded. The
 name of each application is returned as a string in its own result buffer
 (resval-&gt;rstring). If no external applications are currently loaded, acedArxLoaded()
-returns NULL.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> arxUnload(app: str) -&gt; int
-    &quot;&quot;&quot;Unloads an ARX module. Corresponds to the AutoLISP (arxunload) function. The
+returns NULL.</span></code>
+            <code><span class="kw">def</span> arxUnload(app: str) -&gt; int:
+    <span class="ds">Unloads an ARX module. Corresponds to the AutoLISP (arxunload) function. The
 acedArxUnload() function returns an error status code when the string parameter does not
 specify a loaded ARX program or when the program to be unloaded has dependents registered
-on its services.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> audit(db: PyDb.Database, fix: bool, echo: bool) -&gt; None
-    &quot;&quot;&quot;This function audits the AcDbDatabase pointed to by pDb.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> autoSetVar(name: str, value) -&gt; AutoSysVar</code>
-            <code><span class="kw">def</span> calcTextExtents(val: str, textStyleId: PyDb.ObjectId) -&gt; tuple[float, float]</code>
-            <code><span class="kw">def</span> callBackOnCancel() -&gt; None
-    &quot;&quot;&quot;If you have made a call to acedCommandC or acedCmdC and wish to have your registered
+on its services.</span></code>
+            <code><span class="kw">def</span> audit(db: PyDb.Database, fix: bool, echo: bool) -&gt; None:
+    <span class="ds">This function audits the AcDbDatabase pointed to by pDb.</span></code>
+            <code><span class="kw">def</span> autoSetVar(name: str, value) -&gt; AutoSysVar:</code>
+            <code><span class="kw">def</span> calcTextExtents(val: str, textStyleId: PyDb.ObjectId) -&gt; tuple[float, float]:</code>
+            <code><span class="kw">def</span> callBackOnCancel() -&gt; None:
+    <span class="ds">If you have made a call to acedCommandC or acedCmdC and wish to have your registered
 callback called when a CANCEL or other error occurs, call this function before returning.
 If you don&#x27;t call this function and a CANCEL or other error occurs, your callback will not
-be called, instead AutoCAD will directly cancel the command state.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> clearOLELock(handle: int) -&gt; bool
-    &quot;&quot;&quot;This function is for use with OLE Automation applications. Whenever such an application
+be called, instead AutoCAD will directly cancel the command state.</span></code>
+            <code><span class="kw">def</span> clearOLELock(handle: int) -&gt; bool:
+    <span class="ds">This function is for use with OLE Automation applications. Whenever such an application
 uses any of the ObjectARX API functions, it must call acedSetOLELock() to set a lock. When
 the lock is set, the application calls this function to clear the lock and allow other OLE
 applications their chance to lock and use ObjectARX API functions. handle is a lock &#x27;code&#x27;
@@ -144,34 +148,34 @@ integer that is used to make sure that the setting and clearing of the lock are 
 same application. Both acedSetOLELock() and this function must be passed this integer lock
 code as an identifier. If handle is a different code than was used to set the lock, then
 the clear attempt will fail. Returns Adesk::kTrue is the lock is successfully cleared,
-otherwise returns Adesk::kFalse.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> clipFormatName() -&gt; str
-    &quot;&quot;&quot;Returns the clipboard format name string for the product. This string is the same for all
+otherwise returns Adesk::kFalse.</span></code>
+            <code><span class="kw">def</span> clipFormatName() -&gt; str:
+    <span class="ds">Returns the clipboard format name string for the product. This string is the same for all
 AutoCAD based products, but is different for OEM and LT products. This function replaces
-the CF_AUTOCAD macro.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> cmdCWasCancelled() -&gt; bool
-    &quot;&quot;&quot;When your registered callback is called in response to a CANCEL or error, this function
-will return true, else it will return false.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> cmdS(commandName: str) -&gt; bool
-    &quot;&quot;&quot;This function does the same thing with the same restructions as acedCommandS, with a resbuf
+the CF_AUTOCAD macro.</span></code>
+            <code><span class="kw">def</span> cmdCWasCancelled() -&gt; bool:
+    <span class="ds">When your registered callback is called in response to a CANCEL or error, this function
+will return true, else it will return false.</span></code>
+            <code><span class="kw">def</span> cmdS(commandName: str) -&gt; bool:
+    <span class="ds">This function does the same thing with the same restructions as acedCommandS, with a resbuf
 chain rather than a veriable arguments list. Two more supplied parameters are intended for
-future use.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> cmdS(resultBuffer: list[tuple[int, Any]]) -&gt; bool
-    &quot;&quot;&quot;This function does the same thing with the same restructions as acedCommandS, with a resbuf
+future use.</span></code>
+            <code><span class="kw">def</span> cmdS(resultBuffer: list[tuple[int, Any]]) -&gt; bool:
+    <span class="ds">This function does the same thing with the same restructions as acedCommandS, with a resbuf
 chain rather than a veriable arguments list. Two more supplied parameters are intended for
-future use.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> cmdS(*args) -&gt; bool
-    &quot;&quot;&quot;This function does the same thing with the same restructions as acedCommandS, with a resbuf
+future use.</span></code>
+            <code><span class="kw">def</span> cmdS(*args) -&gt; bool:
+    <span class="ds">This function does the same thing with the same restructions as acedCommandS, with a resbuf
 chain rather than a veriable arguments list. Two more supplied parameters are intended for
-future use.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> cmdUndefine(name: str, undefineit: int) -&gt; int
-    &quot;&quot;&quot;This function searches the command stack of registered commands for the command name cmdstr
+future use.</span></code>
+            <code><span class="kw">def</span> cmdUndefine(name: str, undefineit: int) -&gt; int:
+    <span class="ds">This function searches the command stack of registered commands for the command name cmdstr
 and if found sets (if undefit == 1) or unsets (if undefit == 0) the &#x27;undefine&#x27; bit in the
 command flags for that command. If the &#x27;undefine&#x27; bit is set, then AutoCAD will treat this
 command as though it is undefined in the same way that internal AutoCAD commands are
-treated if they have been undefined via the AutoCAD UNDEFINE command.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> convertEntityToHatch(hatch: PyDb.Hatch, entity: PyDb.Entity, transferId: bool) -&gt; None
-    &quot;&quot;&quot;Converts a block reference or a solid to a hatch. If transferId is true, the calling
+treated if they have been undefined via the AutoCAD UNDEFINE command.</span></code>
+            <code><span class="kw">def</span> convertEntityToHatch(hatch: PyDb.Hatch, entity: PyDb.Entity, transferId: bool) -&gt; None:
+    <span class="ds">Converts a block reference or a solid to a hatch. If transferId is true, the calling
 AcDbHatch assumes the AcDbObjectId, handle, any extended entity data, extension
 dictionaries, or reactors, as well as any hatch associativity of pEnt. This is the only way
 the associativity with the boundary objects can be transferred. pEnt will then be deleted
@@ -179,23 +183,23 @@ and set to NULL. If transferId is false, pEnt remains in the database as is and 
 is responsible for closing it. The resulting AcDbHatch is not database-resident and, as
 such, cannot assume any of the associativity with pEnt boundary objects. The caller can
 later call pEnt-&gt;handOverTo() to exchange the new AcDbHatch for pEnt in the database, but
-the associativity cannot be re-established.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> coordFromPixelToWorld(pt: tuple[int, int]) -&gt; PyGe.Point3d
-    &quot;&quot;&quot;Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
-Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> coordFromPixelToWorld(winnum: int, pt: tuple[int, int]) -&gt; PyGe.Point3d
-    &quot;&quot;&quot;Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
-Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> coordFromPixelToWorld(*args) -&gt; PyGe.Point3d
-    &quot;&quot;&quot;Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
-Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> coordFromWorldToPixel(windnum: int, pnt: PyGe.Point3d) -&gt; tuple[int, int]
-    &quot;&quot;&quot;Converts coordinates in given viewport to Windows screen coordinates. Returns TRUE if it
-successfully converts the coordinates; otherwise, returns FALSE.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> createInternetShortcut(szURL: str, szShortcutPath: str) -&gt; bool
-    &quot;&quot;&quot;Creates an MSIE-compatible Internet shortcut using the arguments passed to it.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> createViewportByView(db: PyDb.Database, view: PyDb.ObjectId, pt: PyGe.Point2d, scale: float) -&gt; PyDb.ObjectId
-    &quot;&quot;&quot;This function creates a viewport for the given model view at the desired location. It bases
+the associativity cannot be re-established.</span></code>
+            <code><span class="kw">def</span> coordFromPixelToWorld(pt: tuple[int, int]) -&gt; PyGe.Point3d:
+    <span class="ds">Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
+Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.</span></code>
+            <code><span class="kw">def</span> coordFromPixelToWorld(winnum: int, pt: tuple[int, int]) -&gt; PyGe.Point3d:
+    <span class="ds">Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
+Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.</span></code>
+            <code><span class="kw">def</span> coordFromPixelToWorld(*args) -&gt; PyGe.Point3d:
+    <span class="ds">Converts coordinates from AutoCAD drawing window to current active viewport&#x27;s coordinates.
+Returns TRUE if it successfully converts the coordinates; otherwise, it returns FALSE.</span></code>
+            <code><span class="kw">def</span> coordFromWorldToPixel(windnum: int, pnt: PyGe.Point3d) -&gt; tuple[int, int]:
+    <span class="ds">Converts coordinates in given viewport to Windows screen coordinates. Returns TRUE if it
+successfully converts the coordinates; otherwise, returns FALSE.</span></code>
+            <code><span class="kw">def</span> createInternetShortcut(szURL: str, szShortcutPath: str) -&gt; bool:
+    <span class="ds">Creates an MSIE-compatible Internet shortcut using the arguments passed to it.</span></code>
+            <code><span class="kw">def</span> createViewportByView(db: PyDb.Database, view: PyDb.ObjectId, pt: PyGe.Point2d, scale: float) -&gt; PyDb.ObjectId:
+    <span class="ds">This function creates a viewport for the given model view at the desired location. It bases
 the size of the viewport on the scale factor and the size of the model view. For example, a
 model view 20 feet across and a scale of one foot to a quarter inch would yield a viewport
 that was five inches across on the paper of the layout. This call assumes that the viewport
@@ -203,10 +207,10 @@ is being created in the current layout. Returns eOk on success. Possible error c
 include Acad::eNotInPaperspace if not currently in a layout, Acad::eWrongDatabase if the
 AcDbDatabase passed in was not the current database, various open errors if the
 AcDbViewTableRecord could not be opened, or Acad::eInvalidInput if another error occurred
-preventing the creation of the viewport.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> curDwgXrefGraph() -&gt; PyDb.XrefGraph</code>
-            <code><span class="kw">def</span> defun(name: str, funcnumber: int) -&gt; int
-    &quot;&quot;&quot;Defines an ARX application function as an external AutoLISP function and clears any
+preventing the creation of the viewport.</span></code>
+            <code><span class="kw">def</span> curDwgXrefGraph() -&gt; PyDb.XrefGraph:</code>
+            <code><span class="kw">def</span> defun(name: str, funcnumber: int) -&gt; int:
+    <span class="ds">Defines an ARX application function as an external AutoLISP function and clears any
 existing acedSetFunHelp() reference. Once a function in an ARX application has been defined
 by a call to acedDefun(), it can be called from AutoLISP. When AutoLISP sends an
 kInvkSubrMsg message to the application, the funcno for the function can be retrieved by a
@@ -228,9 +232,9 @@ invokes the AutoCAD COPY command (this alias is defined in the sample acad.pgp),
 user could invoke the external function with (c:cp). Function names defined by acedDefun()
 can be undefined by calling acedUndef(). This removes the function name from the AutoLISP
 atom list. After a function has been undefined, an attempt to invoke it causes an error. If
-acedDefun() succeeds, it returns RTNORM; otherwise, it returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> defunEx(globalName: str, name: str, funcnumber: int) -&gt; int
-    &quot;&quot;&quot;Defines an ARX application function as an external AutoLISP function and clears any
+acedDefun() succeeds, it returns RTNORM; otherwise, it returns an error code.</span></code>
+            <code><span class="kw">def</span> defunEx(globalName: str, name: str, funcnumber: int) -&gt; int:
+    <span class="ds">Defines an ARX application function as an external AutoLISP function and clears any
 existing acedSetFunHelp() references. It is similar to acedDefun(), but takes both global
 and local name arguments. If you want to set up global and local names for the same
 function, please use a single call to acedDefunEx(), rather than two calls to acedDefun().
@@ -256,20 +260,20 @@ For example, after the call to acedDefunEx(&#x27;c:cp&#x27;, 0), a user input of
 AutoCAD COPY command (this alias is defined in the sample acad.pgp), but the user could
 invoke the external function with (c:cp). Function names defined by acedDefunEx() can be
 undefined by calling acedUndef(). This removes the function name from the AutoLISP atom
-list. After a function has been undefined, an attempt to invoke it causes an error.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> disableDefaultARXExceptionHandler(val: bool) -&gt; None
-    &quot;&quot;&quot;This function will disable (if disable is Adesk::kTrue) or enable (if disable is
+list. After a function has been undefined, an attempt to invoke it causes an error.</span></code>
+            <code><span class="kw">def</span> disableDefaultARXExceptionHandler(val: bool) -&gt; None:
+    <span class="ds">This function will disable (if disable is Adesk::kTrue) or enable (if disable is
 Adesk::kFalse) exception handling in AutoCAD for exceptions thrown while code is executing
 in an ObjectARX or ObjectDBX module. When AutoCAD starts up, this exception handling is
 enabled. Disabling this exception handling allows applications to do their own exception
-handling of exceptions thrown while an ObjectARX or ObjectDBX module is executing.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> disableUsrbrk() -&gt; None
-    &quot;&quot;&quot;This function disables the user break mechanism for the current document.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> displayBorder(val: bool) -&gt; bool
-    &quot;&quot;&quot;Shows or hides a blue border around the inner edge of the drawing area of the current
-window. This behavior is used with the Drawing Compare feature (COMPARE command).&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> drawOrderInherit(parent: PyDb.ObjectId, childids: list[PyDb.ObjectId], cmd: PyEd.DrawOrderCmdType) -&gt; None
-    &quot;&quot;&quot;This function is called to set the draw order on a new child array object or objects. It
+handling of exceptions thrown while an ObjectARX or ObjectDBX module is executing.</span></code>
+            <code><span class="kw">def</span> disableUsrbrk() -&gt; None:
+    <span class="ds">This function disables the user break mechanism for the current document.</span></code>
+            <code><span class="kw">def</span> displayBorder(val: bool) -&gt; bool:
+    <span class="ds">Shows or hides a blue border around the inner edge of the drawing area of the current
+window. This behavior is used with the Drawing Compare feature (COMPARE command).</span></code>
+            <code><span class="kw">def</span> drawOrderInherit(parent: PyDb.ObjectId, childids: list[PyDb.ObjectId], cmd: PyEd.DrawOrderCmdType) -&gt; None:
+    <span class="ds">This function is called to set the draw order on a new child array object or objects. It
 should be called after the child array objects are added to the database, but before they
 are regen&#x27;ed, so that they are regen&#x27;ed to the proper location the first time. If cmd
 argument is kDrawOrderBelow or kDrawOrderAbove, then a valid parent ID must be supplied,
@@ -277,25 +281,25 @@ and children objects are placed either just below or just above the parent entit
 visually. If the cmd argument is kDrawOrderTop or kDrawOrderBottom, the parent entity can
 be null and any parent value is ignored because the entity is moving to the very top or
 bottom of draw order. The parent and all child entities must all be in the same space
-(model, paper, or a given block).&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> drawingStatusBarsVisible() -&gt; bool
-    &quot;&quot;&quot;This global method returns a value indicating whether or not the drawing status bars are
+(model, paper, or a given block).</span></code>
+            <code><span class="kw">def</span> drawingStatusBarsVisible() -&gt; bool:
+    <span class="ds">This global method returns a value indicating whether or not the drawing status bars are
 visible in AutoCAD. By default, the drawing status bars are hidden in AutoCAD. Use this
 method to query the display state of the drawing status bars. If the display state is
 FALSE, acedShowDrawingStatusBars() can be used to display the drawing status bars in
-AutoCAD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> dropOpenFile(val: str) -&gt; None</code>
-            <code><span class="kw">def</span> eatCommandThroat() -&gt; int
-    &quot;&quot;&quot;For internal use only.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> editMTextInteractive(mt: PyDb.MText, usenewUI: bool, allowTabs: bool) -&gt; int
-    &quot;&quot;&quot;Invokes the MTEXT user interface.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> enableUsrbrk() -&gt; None
-    &quot;&quot;&quot;This function enables the user break mechanism for the the current document.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> evaluateDiesel(statement: str) -&gt; str</code>
-            <code><span class="kw">def</span> evaluateLisp(statement: str) -&gt; list</code>
-            <code><span class="kw">def</span> exceptionTest() -&gt; str</code>
-            <code><span class="kw">def</span> findFile(fname: str) -&gt; str
-    &quot;&quot;&quot;Deprecated. Searches for the specified file. The result argument must point to a buffer
+AutoCAD.</span></code>
+            <code><span class="kw">def</span> dropOpenFile(val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> eatCommandThroat() -&gt; int:
+    <span class="ds">For internal use only.</span></code>
+            <code><span class="kw">def</span> editMTextInteractive(mt: PyDb.MText, usenewUI: bool, allowTabs: bool) -&gt; int:
+    <span class="ds">Invokes the MTEXT user interface.</span></code>
+            <code><span class="kw">def</span> enableUsrbrk() -&gt; None:
+    <span class="ds">This function enables the user break mechanism for the the current document.</span></code>
+            <code><span class="kw">def</span> evaluateDiesel(statement: str) -&gt; str:</code>
+            <code><span class="kw">def</span> evaluateLisp(statement: str) -&gt; list:</code>
+            <code><span class="kw">def</span> exceptionTest() -&gt; str:</code>
+            <code><span class="kw">def</span> findFile(fname: str) -&gt; str:
+    <span class="ds">Deprecated. Searches for the specified file. The result argument must point to a buffer
 large enough to hold the qualified file name: depending on the directory structure of the
 current environment, this can be quite long. The maximum length of result is platform
 dependent. On platforms that restrict file-name length, it is 78 characters; on platforms
@@ -310,42 +314,42 @@ that contains the current drawing fileThe directories named by the ACAD environm
 variable (if this variable has been specified)The directory that contains the AutoCAD
 program files Depending on the current environment, two or more of these directories may be
 the same. If acedFindFile() finds the file, it returns RTNORM; otherwise, it returns
-RTERROR.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> findTrustedFile(fname: str) -&gt; str
-    &quot;&quot;&quot;Deprecated. Searches the AutoCAD trusted file paths for the specified file. The command
+RTERROR.</span></code>
+            <code><span class="kw">def</span> findTrustedFile(fname: str) -&gt; str:
+    <span class="ds">Deprecated. Searches the AutoCAD trusted file paths for the specified file. The command
 looks for the file in the regular AutoCAD search path. If a match is found, it verifies if
 the file path is part of trustedpaths. If the file is not present in any of the directories
-in the trusted file paths, the function returns NULL&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getAcadDockCmdLine() -&gt; int
-    &quot;&quot;&quot;This function is used to get the AutoCAD&#x27;s Command Line window. For building ObjectARX
+in the trusted file paths, the function returns NULL</span></code>
+            <code><span class="kw">def</span> getAcadDockCmdLine() -&gt; int:
+    <span class="ds">This function is used to get the AutoCAD&#x27;s Command Line window. For building ObjectARX
 applications with a static MFC library, or when not using the same shared MFC DLL as
 AutoCAD, a pointer to a window cannot be used. Instead, use the window handle. To get the
-window handle, use acedGetAcadDockCmdLine()-&gt;m_hWnd;&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getAcadTextCmdLine() -&gt; int
-    &quot;&quot;&quot;This function is used to get the AutoCAD&#x27;s Text Command Line window. For building ObjectARX
+window handle, use acedGetAcadDockCmdLine()-&gt;m_hWnd;</span></code>
+            <code><span class="kw">def</span> getAcadTextCmdLine() -&gt; int:
+    <span class="ds">This function is used to get the AutoCAD&#x27;s Text Command Line window. For building ObjectARX
 applications with a static MFC library, or when not using the same shared MFC DLL as
 AutoCAD, a pointer to a window cannot be used. Instead, use the window handle. To get the
-window handle, use acedGetAcadTextCmdLine()-&gt;m_hWnd;&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getBlockEditMode() -&gt; int
-    &quot;&quot;&quot;This function returns the current BlockEdit mode value. The possible values are defined in
+window handle, use acedGetAcadTextCmdLine()-&gt;m_hWnd;</span></code>
+            <code><span class="kw">def</span> getBlockEditMode() -&gt; int:
+    <span class="ds">This function returns the current BlockEdit mode value. The possible values are defined in
 the BlockEditModeFlags enum. The returned value may be a bitwise combination of the various
-enum values.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCfg(val: str) -&gt; str
-    &quot;&quot;&quot;Deprecated. Retrieves application data from the AppData section of the acad.cfg file.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCommandForDocument(doc: PyAp.Document) -&gt; str
-    &quot;&quot;&quot;Gets the global or local name of the innermost current command for the given document.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCommandPromptString() -&gt; str</code>
-            <code><span class="kw">def</span> getCommands() -&gt; dict</code>
-            <code><span class="kw">def</span> getCurVportPixelToDisplay() -&gt; tuple[float, float]
-    &quot;&quot;&quot;This function sets xFactor and yFactor to the x and y pixel space to display space
+enum values.</span></code>
+            <code><span class="kw">def</span> getCfg(val: str) -&gt; str:
+    <span class="ds">Deprecated. Retrieves application data from the AppData section of the acad.cfg file.</span></code>
+            <code><span class="kw">def</span> getCommandForDocument(doc: PyAp.Document) -&gt; str:
+    <span class="ds">Gets the global or local name of the innermost current command for the given document.</span></code>
+            <code><span class="kw">def</span> getCommandPromptString() -&gt; str:</code>
+            <code><span class="kw">def</span> getCommands() -&gt; dict:</code>
+            <code><span class="kw">def</span> getCurVportPixelToDisplay() -&gt; tuple[float, float]:
+    <span class="ds">This function sets xFactor and yFactor to the x and y pixel space to display space
 conversion factors for the current viewport. These values represent the size of a pixel in
-display coordinates. If there is no current viewport, then both are set to 0.0.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCurVportScreenToDisplay() -&gt; tuple[float, float]
-    &quot;&quot;&quot;This function sets xFactor and yFactor to the x and y screen space to display space
+display coordinates. If there is no current viewport, then both are set to 0.0.</span></code>
+            <code><span class="kw">def</span> getCurVportScreenToDisplay() -&gt; tuple[float, float]:
+    <span class="ds">This function sets xFactor and yFactor to the x and y screen space to display space
 conversion factors for the current viewport. If there is no current viewport, then both are
-set to 0.0.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCurrentSelectionSet() -&gt; list[PyDb.ObjectId]
-    &quot;&quot;&quot;This function fills sset in with the object IDs of all entities in the current selection
+set to 0.0.</span></code>
+            <code><span class="kw">def</span> getCurrentSelectionSet() -&gt; list[PyDb.ObjectId]:
+    <span class="ds">This function fills sset in with the object IDs of all entities in the current selection
 set within AutoCAD. The &#x27;current selection set&#x27; may be one of the following: a pickfirst
 set, a selection set selected by the select command or any other command that does a
 selection (that is, similar to the &#x27;Previous&#x27; selection option), or the most recent set
@@ -362,17 +366,17 @@ AMECONVERT ARRAY ATTEXT AUDIT BHATCH BMPOUT CHANGE CHPROP CONVERT CONVERTPOLY CO
 CUTCLIP DIVIDE DVIEW DXFOUT (partial) ERASE EXPLODE EXTEND EXTRUDE GROUP HATCH HIDE
 INTERFERE INTERSECT LIST MASSPROP MEASURE MIRROR MOVE MVIEW OOPS PEDIT REGION REVOLVE
 ROTATE SCALE SECTION SELECT SLICE SPELL SPLINE STLOUT STRETCH SUBTRACT TRIM UNION VPVIS
-WBLOCK WMFOUT XCLIP&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCurrentView() -&gt; PyDb.ViewTableRecord</code>
-            <code><span class="kw">def</span> getDpiScalingValue() -&gt; float
-    &quot;&quot;&quot;Returns DPI scaling value for Windows system. Returns 1.0 on Mac platform.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getEnv(val: str) -&gt; str
-    &quot;&quot;&quot;Deprecated. Retrieves the value of an environment variable. Looks first in the
+WBLOCK WMFOUT XCLIP</span></code>
+            <code><span class="kw">def</span> getCurrentView() -&gt; PyDb.ViewTableRecord:</code>
+            <code><span class="kw">def</span> getDpiScalingValue() -&gt; float:
+    <span class="ds">Returns DPI scaling value for Windows system. Returns 1.0 on Mac platform.</span></code>
+            <code><span class="kw">def</span> getEnv(val: str) -&gt; str:
+    <span class="ds">Deprecated. Retrieves the value of an environment variable. Looks first in the
 AutoCAD-specific FixedProfile/General section of the registry: HKEY_CURRENT_USER Software
 Autodesk AutoCAD R25.0 &lt;Install ID&gt; FixedProfile GeneralIf an entry is not found in the
-registry, retrieves the value from the Windows system environment table.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getFileD(title: str, defawlt: str, ext: str, flags: int) -&gt; str
-    &quot;&quot;&quot;Prompts the user for a file name with the standard AutoCAD file dialog box.WarningThis
+registry, retrieves the value from the Windows system environment table.</span></code>
+            <code><span class="kw">def</span> getFileD(title: str, defawlt: str, ext: str, flags: int) -&gt; str:
+    <span class="ds">Prompts the user for a file name with the standard AutoCAD file dialog box.WarningThis
 function must never be called in zero-document state. Always check to see if any documents
 are loaded in the editor before calling this function. You can do this with the
 AcApDocManager::curDocument() function, which returns null if no documents are opened in
@@ -406,9 +410,9 @@ is not set, only the default extension (or none) is accepted. If no extension is
 the default extension is automatically used. If the user enters any extension other than
 the default, an &#x27;Invalid filename&#x27; message box is displayed and the user is required to try
 again or cancel.If bit 0 is set (create) and bit 2 is not set, the default extension is
-added if it is not entered as part of the file name.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getFileNavDialog(title: str, defawlt: str, ext: str, dlgname: str, flags: int) -&gt; list
-    &quot;&quot;&quot;The acedGetFileNavDialog() function prompts the user for a file name using the AutoCAD file
+added if it is not entered as part of the file name.</span></code>
+            <code><span class="kw">def</span> getFileNavDialog(title: str, defawlt: str, ext: str, dlgname: str, flags: int) -&gt; list:
+    <span class="ds">The acedGetFileNavDialog() function prompts the user for a file name using the AutoCAD file
 navigation dialog box. The title argument specifies the caption of the entire dialog box;
 default specifies the default file name (which can be null); and ext is the default file
 name extension (if passed as null, ext defaults to &#x27;*&#x27;). The ext argument accepts multiple
@@ -438,19 +442,19 @@ extension (or none) is accepted. If no extension is entered, the default extensi
 automatically used. If the user enters any extension other than the default, an &#x27;Invalid
 filename&#x27; message box is displayed and the user is required to try again or cancel.If bit 0
 is set (create) and bit 2 is not set, the default extension is added if it is not entered
-as part of the file name.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getLastCommandLines(lineCount: int, ignoreNull: bool) -&gt; list[str]</code>
-            <code><span class="kw">def</span> getMousePositionUCS() -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> getMousePositionWCS() -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> getPredefinedHatchPatterns() -&gt; list[str]</code>
-            <code><span class="kw">def</span> getRGB(colorIndex: int) -&gt; tuple[int, ...]
-    &quot;&quot;&quot;This function returns a RGB color value in Win32 COLORREF (0x00bbggrr) format for the color
+as part of the file name.</span></code>
+            <code><span class="kw">def</span> getLastCommandLines(lineCount: int, ignoreNull: bool) -&gt; list[str]:</code>
+            <code><span class="kw">def</span> getMousePositionUCS() -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> getMousePositionWCS() -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> getPredefinedHatchPatterns() -&gt; list[str]:</code>
+            <code><span class="kw">def</span> getRGB(colorIndex: int) -&gt; tuple[int, ...]:
+    <span class="ds">This function returns a RGB color value in Win32 COLORREF (0x00bbggrr) format for the color
 specified by the AutoCAD Color Index (ACI) number. The ACI number must be a value between 0
 and 255. If this function is passed a value less than 0 or greater than 255, then the
-return value will be meaningless.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getSupplementalCursorOffset() -&gt; tuple</code>
-            <code><span class="kw">def</span> getSym(val: str) -&gt; list
-    &quot;&quot;&quot;Retrieves the value of a bound AutoLISP symbol. This function can be used in the ARX
+return value will be meaningless.</span></code>
+            <code><span class="kw">def</span> getSupplementalCursorOffset() -&gt; tuple:</code>
+            <code><span class="kw">def</span> getSym(val: str) -&gt; list:
+    <span class="ds">Retrieves the value of a bound AutoLISP symbol. This function can be used in the ARX
 program environment only when AutoCAD sends the message kInvkSubrMsg to the application. If
 the AutoLISP symbol is bound to a value of a type that can&#x27;t be represented by a list of
 ARX result buffers (such as a subr or exsubr), the acedGetSym() call fails. If the symbol
@@ -459,12 +463,12 @@ to null. The acedGetSym() function returns RTNORM if it succeeds and RTERROR if 
 It returns RTMODELESS, if the active command was registered using the
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). When acedGetSym() fails, it sets the
-system variable ERRNO to a value that indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getSysVars() -&gt; dict</code>
-            <code><span class="kw">def</span> getUserFavoritesDir() -&gt; str
-    &quot;&quot;&quot;This function provides access to the Windows Favorites directory of the current user.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getVar(name: str) -&gt; object
-    &quot;&quot;&quot;Retrieves the current value of the specified AutoCAD system variable. The result argument
+system variable ERRNO to a value that indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> getSysVars() -&gt; dict:</code>
+            <code><span class="kw">def</span> getUserFavoritesDir() -&gt; str:
+    <span class="ds">This function provides access to the Windows Favorites directory of the current user.</span></code>
+            <code><span class="kw">def</span> getVar(name: str) -&gt; object:
+    <span class="ds">Retrieves the current value of the specified AutoCAD system variable. The result argument
 must point to a resbuf structure, because the system variables consist of a variety of
 types. Warning The result argument must point to an allocated resbuf (it can be static,
 automatic, or dynamically allocated). It must not be declared as just a pointer; if the
@@ -475,25 +479,25 @@ ARX application is responsible for releasing this memory. This can be accomplish
 call to the C utility function free(), or by a call to acutRelRb() if the buffer used for
 the result argument was allocated dynamically. This function is the complement of the
 acedSetVar() function. If acedGetVar() succeeds, it returns RTNORM; otherwise, it returns
-an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getWinNum(ptx: int, pty: int) -&gt; int
-    &quot;&quot;&quot;Provide coordinates in AutoCAD drawing window (in client coordinates) and this function
+an error code.</span></code>
+            <code><span class="kw">def</span> getWinNum(ptx: int, pty: int) -&gt; int:
+    <span class="ds">Provide coordinates in AutoCAD drawing window (in client coordinates) and this function
 will return the viewport number the coordinates correspond to. This function usually is
 used with acedCoordFromWorldToPixel() or acedCoordFromPixelToWorld(). Returns the viewport
-number based on Windows client coordinates.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> grDraw(pt1: PyGe.Point2d | PyGe.Point3d, pt2: PyGe.Point2d | PyGe.Point3d, color: int, highlight: int) -&gt; int
-    &quot;&quot;&quot;Draws a vector between two points in the current viewport. AutoCAD clips the vector as
+number based on Windows client coordinates.</span></code>
+            <code><span class="kw">def</span> grDraw(pt1: PyGe.Point2d | PyGe.Point3d, pt2: PyGe.Point2d | PyGe.Point3d, color: int, highlight: int) -&gt; int:
+    <span class="ds">Draws a vector between two points in the current viewport. AutoCAD clips the vector as
 required to fit the screen. Highlighting, controlled by the hl argument, depends on the
 display device. Most display drivers indicate highlighting by a dashed line, but some
 indicate it by using a distinctive color. Unless a critical error occurs, acedGrDraw()
-returns RTNORM.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> grDrawArc(pt1: PyGe.Point3d, pt2: PyGe.Point3d, pt3: PyGe.Point3d, numsegs: int, color: int) -&gt; int</code>
-            <code><span class="kw">def</span> grDrawBox(pts: list[PyGe.Point3d], color: int, highlight: int) -&gt; int</code>
-            <code><span class="kw">def</span> grDrawCircle(cen: PyGe.Point3d, radius: float, numsegs: int, color: int) -&gt; int</code>
-            <code><span class="kw">def</span> grDrawPoly2d(pts: list[PyGe.Point2d], color: int) -&gt; int</code>
-            <code><span class="kw">def</span> grDrawPoly3d(pts: list[PyGe.Point3d], color: int) -&gt; int</code>
-            <code><span class="kw">def</span> grText(box: int, text: str, hl: int) -&gt; int
-    &quot;&quot;&quot;Displays the specified text in the menu, mode, or status area of the graphics screen. If
+returns RTNORM.</span></code>
+            <code><span class="kw">def</span> grDrawArc(pt1: PyGe.Point3d, pt2: PyGe.Point3d, pt3: PyGe.Point3d, numsegs: int, color: int) -&gt; int:</code>
+            <code><span class="kw">def</span> grDrawBox(pts: list[PyGe.Point3d], color: int, highlight: int) -&gt; int:</code>
+            <code><span class="kw">def</span> grDrawCircle(cen: PyGe.Point3d, radius: float, numsegs: int, color: int) -&gt; int:</code>
+            <code><span class="kw">def</span> grDrawPoly2d(pts: list[PyGe.Point2d], color: int) -&gt; int:</code>
+            <code><span class="kw">def</span> grDrawPoly3d(pts: list[PyGe.Point3d], color: int) -&gt; int:</code>
+            <code><span class="kw">def</span> grText(box: int, text: str, hl: int) -&gt; int:
+    <span class="ds">Displays the specified text in the menu, mode, or status area of the graphics screen. If
 box equals the number of a screen menu box and hl is less than 0, acedGrText() displays
 text in that box. The menu boxes are numbered beginning at 0. If the value of box is
 greater than the number of menu boxes minus one, the call to acedGrText() usually has no
@@ -511,21 +515,21 @@ If coordinate tracking is turned on, any value written into this field is overwr
 soon as the pointer sends another set of coordinates. Finally, if box is less than -2 (for
 example: box equals -5), acedGrText() restores all the text areas on the screen to their
 standard values. If it succeeds, acedGrText() returns RTNORM. It returns RTERROR if the box
-number is out of range.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> grVecs(resbuf: list, xform: PyGe.Matrix3d) -&gt; int
-    &quot;&quot;&quot;Draws multiple vectors on the graphics screen. Result-buffer elements in the vlist can be
+number is out of range.</span></code>
+            <code><span class="kw">def</span> grVecs(resbuf: list, xform: PyGe.Matrix3d) -&gt; int:
+    <span class="ds">Draws multiple vectors on the graphics screen. Result-buffer elements in the vlist can be
 as follows: A pair of points (RTPOINT or RT3DPOINT) that specify the endpoints of the
-vector, expressed in the current UCS; these can be three-dimensional points.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> graphScr() -&gt; None
-    &quot;&quot;&quot;On single-screen AutoCAD installations, causes the display to switch from the text screen
+vector, expressed in the current UCS; these can be three-dimensional points.</span></code>
+            <code><span class="kw">def</span> graphScr() -&gt; None:
+    <span class="ds">On single-screen AutoCAD installations, causes the display to switch from the text screen
 to the graphics screen. This is equivalent to using the AutoCAD GRAPHSCR command or to
 pressing the Flip Screen function key (when the text screen is current). The acedTextScr()
 function is the complement of acedGraphScr(). If acedGraphScr() succeeds, it returns
-RTNORM; otherwise, it returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> hasSupplementalCursorImage() -&gt; bool</code>
-            <code><span class="kw">def</span> hatchPalletteDialog(pattern: str, custom: bool) -&gt; str</code>
-            <code><span class="kw">def</span> initDialog(useDialog: bool) -&gt; bool
-    &quot;&quot;&quot;This function sets an internal flag in AutoCAD so that when a command that has a dialog
+RTNORM; otherwise, it returns an error code.</span></code>
+            <code><span class="kw">def</span> hasSupplementalCursorImage() -&gt; bool:</code>
+            <code><span class="kw">def</span> hatchPalletteDialog(pattern: str, custom: bool) -&gt; str:</code>
+            <code><span class="kw">def</span> initDialog(useDialog: bool) -&gt; bool:
+    <span class="ds">This function sets an internal flag in AutoCAD so that when a command that has a dialog
 that is normally not activated by LISP (such as the PLOT command) is run, the dialog will
 be activated rather than using the command line interface. If useDialog is Adesk::kTrue,
 then the next use (and next use only) of the command (such as PLOT) when run from LISP or
@@ -533,9 +537,9 @@ ObjectARX, will display the command&#x27;s dialog rather than its command line p
 useDialog is Adesk::kFalse, then any previous call to this function (or the LISP (initdia)
 function) to tell AutoCAD to display dialogs will be cleared so that the default behavior
 of presenting the command line interface will be restored. Returns the value that the
-internal flag was set to before this function was called.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> invoke(resultBuffer: list) -&gt; list
-    &quot;&quot;&quot;Invokes an external function defined in another ARX application. When acedInvoke() returns
+internal flag was set to before this function was called.</span></code>
+            <code><span class="kw">def</span> invoke(resultBuffer: list) -&gt; list:
+    <span class="ds">Invokes an external function defined in another ARX application. When acedInvoke() returns
 RTNORM, this implies that the external function was called and returned successfully. It
 does not imply that the external function successfully obtained a result. To determine the
 result, your program must inspect the result argument. If the external function failed or
@@ -557,77 +561,77 @@ first result buffer in the args list must contain the name of the external funct
 function was defined as an AutoCAD command, the string must include the C: prefix. The
 remaining result buffers in the args list must match the external function&#x27;s argument list
 in their order, types, and value ranges. If the external function has called acedRetList(),
-result points to a list of values.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isDragging() -&gt; int
-    &quot;&quot;&quot;This function indicates whether dragging is occurring in AutoCAD&#x27;s editor. Returns 0 if no
-dragging is occurring, and a non-zero value otherwise.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isInBackgroundMode() -&gt; bool
-    &quot;&quot;&quot;This function returns true if the AutoCAD session in which it is called is running in
-background mode for plotting.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isInputPending() -&gt; bool
-    &quot;&quot;&quot;This function should be called from a dialog after a user-interactive action has been
+result points to a list of values.</span></code>
+            <code><span class="kw">def</span> isDragging() -&gt; int:
+    <span class="ds">This function indicates whether dragging is occurring in AutoCAD&#x27;s editor. Returns 0 if no
+dragging is occurring, and a non-zero value otherwise.</span></code>
+            <code><span class="kw">def</span> isInBackgroundMode() -&gt; bool:
+    <span class="ds">This function returns true if the AutoCAD session in which it is called is running in
+background mode for plotting.</span></code>
+            <code><span class="kw">def</span> isInputPending() -&gt; bool:
+    <span class="ds">This function should be called from a dialog after a user-interactive action has been
 canceled. If this function returns false, the dialog should be restored. Otherwise, the
-dialog should be terminated in order to allow the queued input to be processed by AutoCAD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isMenuGroupLoaded(mnu: str) -&gt; bool
-    &quot;&quot;&quot;This function checks to see if the menugroup pszGroupName is currently loaded in the
+dialog should be terminated in order to allow the queued input to be processed by AutoCAD.</span></code>
+            <code><span class="kw">def</span> isMenuGroupLoaded(mnu: str) -&gt; bool:
+    <span class="ds">This function checks to see if the menugroup pszGroupName is currently loaded in the
 AutoCAD editor. Returns Adesk::kTrue if the pszGroupName menugroup is currently loaded, or
-Adesk::kFalse if not.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isOsnapOverride() -&gt; bool
-    &quot;&quot;&quot;Informs a custom Osnap routine whether it was called by a running Osnap or an Osnap
+Adesk::kFalse if not.</span></code>
+            <code><span class="kw">def</span> isOsnapOverride() -&gt; bool:
+    <span class="ds">Informs a custom Osnap routine whether it was called by a running Osnap or an Osnap
 override. In other words, this function returns true if a custom Osnap routine was called
-by an Osnap override.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isUpdateDisplayPaused() -&gt; bool
-    &quot;&quot;&quot;Returns true if display updates are paused, or false otherwise. This function should be
+by an Osnap override.</span></code>
+            <code><span class="kw">def</span> isUpdateDisplayPaused() -&gt; bool:
+    <span class="ds">Returns true if display updates are paused, or false otherwise. This function should be
 used before calling acedUpdateDisplayPause(), to record the current update display pause
 state and restore that when finished pausing the display. This prevents other users of
-acedUpdateDisplayPause() from having the display re-enabled prematurely.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> isUsrbrkDisabled() -&gt; bool
-    &quot;&quot;&quot;This function returns true if the user break mechanism is enabled for the current document.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> loadJSScript(scr: str) -&gt; None</code>
-            <code><span class="kw">def</span> loadMainMenu(mnu: str) -&gt; bool</code>
-            <code><span class="kw">def</span> loadPartialMenu(mnu: str) -&gt; bool
-    &quot;&quot;&quot;Adds (loads) a partial menu to the current main menu.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> mSpace() -&gt; None
-    &quot;&quot;&quot;When called in a layout, this function switches the editor to model space. Returns
+acedUpdateDisplayPause() from having the display re-enabled prematurely.</span></code>
+            <code><span class="kw">def</span> isUsrbrkDisabled() -&gt; bool:
+    <span class="ds">This function returns true if the user break mechanism is enabled for the current document.</span></code>
+            <code><span class="kw">def</span> loadJSScript(scr: str) -&gt; None:</code>
+            <code><span class="kw">def</span> loadMainMenu(mnu: str) -&gt; bool:</code>
+            <code><span class="kw">def</span> loadPartialMenu(mnu: str) -&gt; bool:
+    <span class="ds">Adds (loads) a partial menu to the current main menu.</span></code>
+            <code><span class="kw">def</span> mSpace() -&gt; None:
+    <span class="ds">When called in a layout, this function switches the editor to model space. Returns
 Acad::eOk if successful, or if the editor is already in model space. Returns
 Acad::eInvalidInput if TILEMODE is set to 1, or if there is no current drawing. Returns
-Acad::eCannotChangeActiveViewport if no on-screen viewports are available for switching.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> markForDelayXRefRelativePathResolve(id: PyDb.ObjectId) -&gt; None
-    &quot;&quot;&quot;Marks the input Xref definition object ID that helps to delay resolving its referenced file
+Acad::eCannotChangeActiveViewport if no on-screen viewports are available for switching.</span></code>
+            <code><span class="kw">def</span> markForDelayXRefRelativePathResolve(id: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Marks the input Xref definition object ID that helps to delay resolving its referenced file
 path type to relative . This function should be used for unnamed host drawing, in which the
 host drawing&#x27;s file path is still not determined until it is saved, so relative type path
 cannot be saved in Xref definitions with this function. These marked XRef definitions will
-be resolved to relative path when the host drawing is saved.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> menuCmd(cmd: str) -&gt; int</code>
-            <code><span class="kw">def</span> osnap(pt: PyGe.Point3d, mode: str) -&gt; PyGe.Point3d
-    &quot;&quot;&quot;Finds a point by means of object snap. Applies the specified Object Snap modes to find the
+be resolved to relative path when the host drawing is saved.</span></code>
+            <code><span class="kw">def</span> menuCmd(cmd: str) -&gt; int:</code>
+            <code><span class="kw">def</span> osnap(pt: PyGe.Point3d, mode: str) -&gt; PyGe.Point3d:
+    <span class="ds">Finds a point by means of object snap. Applies the specified Object Snap modes to find the
 closest point to a reference point. The APERTURE system variable determines the allowable
 proximity of a selected point to an entity when using Object Snap. If acedOsnap() can find
-a point, it returns RTNORM; otherwise, it returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> pSpace() -&gt; None
-    &quot;&quot;&quot;When called in a layout, this function switches the editor to paper space. Returns
+a point, it returns RTNORM; otherwise, it returns an error code.</span></code>
+            <code><span class="kw">def</span> pSpace() -&gt; None:
+    <span class="ds">When called in a layout, this function switches the editor to paper space. Returns
 Acad::eOk if successful, or if the editor is currently in paper space. Returns
-Acad::eInvalidInput if TILEMODE is set to 1, or if there is no current drawing.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> postCommand(str: str) -&gt; None</code>
-            <code><span class="kw">def</span> postCommandPrompt() -&gt; None
-    &quot;&quot;&quot;This function causes AutoCAD to repost the last command prompt message. This is intended to
+Acad::eInvalidInput if TILEMODE is set to 1, or if there is no current drawing.</span></code>
+            <code><span class="kw">def</span> postCommand(str: str) -&gt; None:</code>
+            <code><span class="kw">def</span> postCommandPrompt() -&gt; None:
+    <span class="ds">This function causes AutoCAD to repost the last command prompt message. This is intended to
 be used from OLE applications that are invoked without going through the normal AutoCAD
 user interface. In such a case this function should be called just prior to exiting from
-the OLE application.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> prompt(val: str) -&gt; int
-    &quot;&quot;&quot;Displays the specified string on the command line of the AutoCAD graphics screen. If the
+the OLE application.</span></code>
+            <code><span class="kw">def</span> prompt(val: str) -&gt; int:
+    <span class="ds">Displays the specified string on the command line of the AutoCAD graphics screen. If the
 length of the string is greater than the prompt line length (typically no more than 80
 characters), the characters may wrap around and be visible on the text screen. On some
 platforms, however, they will be truncated. The acedPrompt() function returns RTNORM if
-successful; otherwise, it returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> putSym(sym: str, resultBuffer: list) -&gt; bool
-    &quot;&quot;&quot;Sets the value of an AutoLISP symbol. Warning This command can be used in the ARX program
+successful; otherwise, it returns an error code.</span></code>
+            <code><span class="kw">def</span> putSym(sym: str, resultBuffer: list) -&gt; bool:
+    <span class="ds">Sets the value of an AutoLISP symbol. Warning This command can be used in the ARX program
 environment only when AutoCAD sends the message kInvkSubrMsg to the application. To set the
 value of the AutoLISP symbol to nil, make the following assignment: value-&gt;restype = RTNIL;
 If sname is not the name of a current symbol, acedPutSym() creates a new AutoLISP symbol
-with this name and assigns it the value.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> redraw(id: PyDb.ObjectId, mode: int) -&gt; int
-    &quot;&quot;&quot;Redraws either the graphics viewport or a single entity, according to the arguments. The
+with this name and assigns it the value.</span></code>
+            <code><span class="kw">def</span> redraw(id: PyDb.ObjectId, mode: int) -&gt; int:
+    <span class="ds">Redraws either the graphics viewport or a single entity, according to the arguments. The
 following table shows the acceptable values for mode and the effect that each has. (If ent
 is not NULL but mode is 0, the call has no effect.) Modes for acedRedraw: Redraw mode
 Action 1 Redraw entity 2 Undraw entity (blank it out) 3 Highlight entity 4 Unhighlight
@@ -640,34 +644,34 @@ mode of 3 followed by a call with a mode of 1 are not allowed. (This is a change
 previous behaviour of this function that was necessary for display performance
 optimization.) If acedRedraw() succeeds, it returns RTNORM; otherwise, it returns an error
 code. When acedRedraw() fails, it sets the system variable ERRNO to a value that indicates
-the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> regen() -&gt; None</code>
-            <code><span class="kw">def</span> reloadMenus(bIncrementalReloading: bool) -&gt; None
-    &quot;&quot;&quot;Updates the User Interface in AutoCAD to reflect any changes made to the currently loaded
-menus.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> removeSupplementalCursorImage() -&gt; bool</code>
-            <code><span class="kw">def</span> restoreCurrentView(vid: PyDb.ObjectId) -&gt; None
-    &quot;&quot;&quot;Restore a named view to the current active viewport. This function restores the view
+the reason for the failure.</span></code>
+            <code><span class="kw">def</span> regen() -&gt; None:</code>
+            <code><span class="kw">def</span> reloadMenus(bIncrementalReloading: bool) -&gt; None:
+    <span class="ds">Updates the User Interface in AutoCAD to reflect any changes made to the currently loaded
+menus.</span></code>
+            <code><span class="kw">def</span> removeSupplementalCursorImage() -&gt; bool:</code>
+            <code><span class="kw">def</span> restoreCurrentView(vid: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Restore a named view to the current active viewport. This function restores the view
 parameters, layers state, and all associated properties to the current active viewport. The
 fucntion is equivalent to the -view restore command. Returns Acad::eOk if it successfully
-restores a named view into the current active viewport.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> restorePreviousUCS() -&gt; None
-    &quot;&quot;&quot;Sets the previous UCS to be the current UCS. This function operates on the document
+restores a named view into the current active viewport.</span></code>
+            <code><span class="kw">def</span> restorePreviousUCS() -&gt; None:
+    <span class="ds">Sets the previous UCS to be the current UCS. This function operates on the document
 currently displayed in the editor. Returns Acad::eOk if successful. Returns
 Acad::eNotApplicable if there is no previous UCS to restore, or if there is no current
-document.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> restoreStatusBar() -&gt; None
-    &quot;&quot;&quot;Restores AutoCAD&#x27;s original status bar.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> sendModelessOperationEnded(ctx: str) -&gt; None
-    &quot;&quot;&quot;Informs AutoCAD when a modeless application has finished some significant operation
-identified by strContext.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> sendModelessOperationStart(ctx: str) -&gt; None
-    &quot;&quot;&quot;Informs AutoCAD when a modeless application is starting some significant operation
-identified by strContext.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setCfg(sym: str, val: str) -&gt; None
-    &quot;&quot;&quot;Writes application data to the AppData section of the acad.cfg file.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setColorDialog(clr: int, bAllowMetaColor: bool, nCurLayerColor, int) -&gt; tuple[bool, int]
-    &quot;&quot;&quot;This function starts the SetColor dialog within the AutoCAD editor. The value passed in via
+document.</span></code>
+            <code><span class="kw">def</span> restoreStatusBar() -&gt; None:
+    <span class="ds">Restores AutoCAD&#x27;s original status bar.</span></code>
+            <code><span class="kw">def</span> sendModelessOperationEnded(ctx: str) -&gt; None:
+    <span class="ds">Informs AutoCAD when a modeless application has finished some significant operation
+identified by strContext.</span></code>
+            <code><span class="kw">def</span> sendModelessOperationStart(ctx: str) -&gt; None:
+    <span class="ds">Informs AutoCAD when a modeless application is starting some significant operation
+identified by strContext.</span></code>
+            <code><span class="kw">def</span> setCfg(sym: str, val: str) -&gt; None:
+    <span class="ds">Writes application data to the AppData section of the acad.cfg file.</span></code>
+            <code><span class="kw">def</span> setColorDialog(clr: int, bAllowMetaColor: bool, nCurLayerColor, int) -&gt; tuple[bool, int]:
+    <span class="ds">This function starts the SetColor dialog within the AutoCAD editor. The value passed in via
 nColor is used as the default color index in the dialog. Upon return nColor contains the
 color index of the color selected by the user. If bAllowMetaColor is Adesk::kTrue, the
 BYLAYER and BYBLOCK meta-colors are allowed in the dialog. nCurLayerColor is used as the
@@ -675,55 +679,55 @@ color index of the color to show for BYLAYER. If the SetColor dialog is invoked 
 function, only the color index tab is available. To enable the user to select additional
 color types, invoke the SetColor dialog with the acedSetColorDialogTrueColor() function.
 Returns Adesk::kTrue if the dialog was successfully terminated via the OK button, or
-Adesk::kFalse if the dialog was canceled.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setColorDialogTrueColor(clr: PyDb.AcCmColor, bAllowMetaColor: bool, nCurLayerColor: PyDb.AcCmColor, tab: int) -&gt; tuple[bool, PyDb.Color]
-    &quot;&quot;&quot;This function starts the Set Color dialog box within the AutoCAD editor. The value passed
+Adesk::kFalse if the dialog was canceled.</span></code>
+            <code><span class="kw">def</span> setColorDialogTrueColor(clr: PyDb.AcCmColor, bAllowMetaColor: bool, nCurLayerColor: PyDb.AcCmColor, tab: int) -&gt; tuple[bool, PyDb.Color]:
+    <span class="ds">This function starts the Set Color dialog box within the AutoCAD editor. The value passed
 in color is the default color in the dialog. This can affect which tab and controls are
 active upon entering the dialog box. When the function returns, color contains the color
 selected by the user or the original value if the dialog box was aborted. If
 bAllowMetaColor is Adesk::kTrue, the BYLAYER and BYBLOCK metacolors are allowed in the
 dialog. curLayerColor is the color to show for BYLAYER. The function returns Adesk::kTrue
 if the dialog box was successfully terminated by the OK button; it returns Adesk::kFalse if
-the dialog box was canceled.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setColorPrompt(prompt: str, bAllowMetaColor: bool) -&gt; PyDb.Color
-    &quot;&quot;&quot;Prompts the user for a color on the command line. Returns true if successful; otherwise,
-returns false.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setCurrentVPort(vp: PyDb.Viewport) -&gt; None
-    &quot;&quot;&quot;This function sets the current viewport from the viewport index vpnumber. Viewport index
+the dialog box was canceled.</span></code>
+            <code><span class="kw">def</span> setColorPrompt(prompt: str, bAllowMetaColor: bool) -&gt; PyDb.Color:
+    <span class="ds">Prompts the user for a color on the command line. Returns true if successful; otherwise,
+returns false.</span></code>
+            <code><span class="kw">def</span> setCurrentVPort(vp: PyDb.Viewport) -&gt; None:
+    <span class="ds">This function sets the current viewport from the viewport index vpnumber. Viewport index
 numbers are the numbers reported by the CVPORT system variable. SysVarWillChange and
 SysVarChanged notification are generated by this function. Returns Acad::eOk if successful.
-Returns Acad::eOutOfRange if vpnumber isn&#x27;t valid for the current environment.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setCurrentView(vrec: PyDb.ViewTableRecord, vp: PyDb.Viewport) -&gt; None
-    &quot;&quot;&quot;This function uses the information from the AcDbViewTableRecord pointed to by pVwRec to set
+Returns Acad::eOutOfRange if vpnumber isn&#x27;t valid for the current environment.</span></code>
+            <code><span class="kw">def</span> setCurrentView(vrec: PyDb.ViewTableRecord, vp: PyDb.Viewport) -&gt; None:
+    <span class="ds">This function uses the information from the AcDbViewTableRecord pointed to by pVwRec to set
 the view in the AcDbViewport pointed to by pVP (if pVP != NULL) or in the current viewport
-(if pVP == NULL).&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setEnv(sym: str, val: str) -&gt; None
-    &quot;&quot;&quot;The acedSetEnv() function sets the value of an environment variable. It stores the data
+(if pVP == NULL).</span></code>
+            <code><span class="kw">def</span> setEnv(sym: str, val: str) -&gt; None:
+    <span class="ds">The acedSetEnv() function sets the value of an environment variable. It stores the data
 only in the AutoCAD-specific FixedProfile/General section of the registry:
 HKEY_CURRENT_USER Software Autodesk AutoCAD R25.0 &lt;Install ID&gt; FixedProfile General If this
 function is called on a Windows system environment variable, that variable will be
 overridden in the AutoCAD section of the registry and will remain overridden until the
-associated registry entry is manually deleted.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setFieldUpdateEnabled(doc: PyAp.Document, enabled: bool) -&gt; None
-    &quot;&quot;&quot;Gets the flag of field update enabled.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setFunHelp(functionName: str, helpfile: str, topic: str, iCmd: int) -&gt; int
-    &quot;&quot;&quot;Defines a Help call that should be made if a transparent Help request is made during a
+associated registry entry is manually deleted.</span></code>
+            <code><span class="kw">def</span> setFieldUpdateEnabled(doc: PyAp.Document, enabled: bool) -&gt; None:
+    <span class="ds">Gets the flag of field update enabled.</span></code>
+            <code><span class="kw">def</span> setFunHelp(functionName: str, helpfile: str, topic: str, iCmd: int) -&gt; int:
+    <span class="ds">Defines a Help call that should be made if a transparent Help request is made during a
 command line prompt for the function named pszFunctionName. This function registers Help
 for functions that are called from the AutoCAD command line so that the appropriate Help
 file and topic are called when help is requested at a user prompt. acedSetFunHelp() may be
-used for ObjectARX commands, as well as ObjectARX and AutoLISP commands that start with C:.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setStatusBarProgressMeter(lable: str, nMinPos: int, nMaxPos: int) -&gt; int
-    &quot;&quot;&quot;This displays an option label and a progress meter on the AutoCAD status bar. Pass NULL or
+used for ObjectARX commands, as well as ObjectARX and AutoLISP commands that start with C:.</span></code>
+            <code><span class="kw">def</span> setStatusBarProgressMeter(lable: str, nMinPos: int, nMaxPos: int) -&gt; int:
+    <span class="ds">This displays an option label and a progress meter on the AutoCAD status bar. Pass NULL or
 an empty string for the label if no label is desired. Returns 0 if it successfully creates
-the label and progress meter; otherwise, returns -1.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setStatusBarProgressMeterPos(pos: int) -&gt; int
-    &quot;&quot;&quot;Call this with a positive value within the range specified to set the current position of
+the label and progress meter; otherwise, returns -1.</span></code>
+            <code><span class="kw">def</span> setStatusBarProgressMeterPos(pos: int) -&gt; int:
+    <span class="ds">Call this with a positive value within the range specified to set the current position of
 the status bar. Pass a negative number to add an amount to the current position (relative).
-Returns 0 if it successfully creates the label and progress meter; otherwise, returns -1.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setSupplementalCursorOffset(x: int, y: int) -&gt; None</code>
-            <code><span class="kw">def</span> setUndoMark(flag: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setVar(name: str, value) -&gt; bool
-    &quot;&quot;&quot;Sets the specified AutoCAD system variable. The val argument must point to a result buffer,
+Returns 0 if it successfully creates the label and progress meter; otherwise, returns -1.</span></code>
+            <code><span class="kw">def</span> setSupplementalCursorOffset(x: int, y: int) -&gt; None:</code>
+            <code><span class="kw">def</span> setUndoMark(flag: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setVar(name: str, value) -&gt; bool:
+    <span class="ds">Sets the specified AutoCAD system variable. The val argument must point to a result buffer,
 because the system variables consist of a variety of types. The result buffer must be
 initialized and must contain a valid result type code and value that correspond to the type
 and values allowed for the specified system variable. AutoCAD system variables that take
@@ -734,28 +738,28 @@ acedSetVar() while such a command is in progress, the new value may not become c
 until the command has completed its execution. This function is the complement of the
 acedGetVar() function. If acedSetVar() succeeds, it returns RTNORM; otherwise, it returns
 an error code. When acedSetVar() fails, it sets the system variable ERRNO to a value that
-indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setXrefResolvedWithUpdateStatus(rec: PyDb.BlockTableRecord) -&gt; None
-    &quot;&quot;&quot;This function forces the Xref Notification feature to treat the specified Xref as having
+indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> setXrefResolvedWithUpdateStatus(rec: PyDb.BlockTableRecord) -&gt; None:
+    <span class="ds">This function forces the Xref Notification feature to treat the specified Xref as having
 been resolved with an updated drawing, just as if it was reloaded through the user
 interface. Returns Acad::eOk if successful; otherwise, eInvalidInput if pBTR was NULL or
-invalid.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> showHTMLModalWindow(hwnd: int, uriOfHtmlPage: str, persistSizeAndPosition: bool) -&gt; bool
-    &quot;&quot;&quot;This function can be used to launch a modal dialog with the specified URI. The window hosts
-a browser window which displays the html page.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> showHTMLModelessWindow(hwnd: int, uriOfHtmlPage: str, persistSizeAndPosition: bool) -&gt; int
-    &quot;&quot;&quot;This function can be used to launch a modeless dialog with the specified URI. The window
-hosts a browser window which displays the html page.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> skipXrefNotification(db: PyDb.Database, name: str) -&gt; None
-    &quot;&quot;&quot;This function directs the Xref Notification feature to ignore the update of the Xref,
+invalid.</span></code>
+            <code><span class="kw">def</span> showHTMLModalWindow(hwnd: int, uriOfHtmlPage: str, persistSizeAndPosition: bool) -&gt; bool:
+    <span class="ds">This function can be used to launch a modal dialog with the specified URI. The window hosts
+a browser window which displays the html page.</span></code>
+            <code><span class="kw">def</span> showHTMLModelessWindow(hwnd: int, uriOfHtmlPage: str, persistSizeAndPosition: bool) -&gt; int:
+    <span class="ds">This function can be used to launch a modeless dialog with the specified URI. The window
+hosts a browser window which displays the html page.</span></code>
+            <code><span class="kw">def</span> skipXrefNotification(db: PyDb.Database, name: str) -&gt; None:
+    <span class="ds">This function directs the Xref Notification feature to ignore the update of the Xref,
 identified by its name, xrefName, for the specified host database, pHostDb. In effect, the
 Xref is treated as if it had been reloaded as of the time this function is called. Returns
 Acad::eOk if the xref notification will be skipped for the specified xref. Returns
 Acad::eNotApplicable if the XREFNOTIFY system variable is 0 (indicating xref notification
 is disabled). Returns Acad::eInvalidInput if the pHostDb parameter is NULL or xrefName is
-the empty string. Returns Acad::eKeyNotFound if the xref cannot be found.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> textBox(resultBuffer: list) -&gt; tuple[PyGe.Point3d, PyGe.Point3d]
-    &quot;&quot;&quot;Finds the coordinates of a box that encloses a text entity. Assumes that the origin is
+the empty string. Returns Acad::eKeyNotFound if the xref cannot be found.</span></code>
+            <code><span class="kw">def</span> textBox(resultBuffer: list) -&gt; tuple[PyGe.Point3d, PyGe.Point3d]:
+    <span class="ds">Finds the coordinates of a box that encloses a text entity. Assumes that the origin is
 (0,0) and the rotation is 0 (or 270 if the text is vertical). If the text is located at a
 different point or is rotated, your program must handle these values explicitly. If the
 text is horizontal and is not rotated, p1 (the bottom-left corner) and p2 (the top-right
@@ -777,20 +781,20 @@ factor (group 41)--Defaults to the default width of the style Obliquing angle (g
 51)--Defaults to the default angle of the style If acedTextBox() succeeds, it returns
 RTNORM; it returns RTERROR if ent does not correctly specify a text entity. If
 acedTextBox() fails, it sets the system variable ERRNO to a value that indicates the reason
-for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> textPage() -&gt; None
-    &quot;&quot;&quot;On single-screen AutoCAD installations, this function causes the display to switch from the
+for the failure.</span></code>
+            <code><span class="kw">def</span> textPage() -&gt; None:
+    <span class="ds">On single-screen AutoCAD installations, this function causes the display to switch from the
 graphics screen to the text screen. This is identical to the acedTextScr() function. If
-acedTextPage() succeeds, it returns RTNORM. Otherwise, it returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> textScr() -&gt; None
-    &quot;&quot;&quot;On single-screen AutoCAD installations, causes the display to switch from the graphics
+acedTextPage() succeeds, it returns RTNORM. Otherwise, it returns an error code.</span></code>
+            <code><span class="kw">def</span> textScr() -&gt; None:
+    <span class="ds">On single-screen AutoCAD installations, causes the display to switch from the graphics
 screen to the text screen. This is equivalent to the AutoCAD TEXTSCR command or to pressing
 the flip screen function key (when the graphics screen is current). Its functionality is
 also identical to that of the acedTextPage() function. The acedGraphScr() function is the
 complement of acedTextScr(). If acedTextScr() succeeds, it returns RTNORM. Otherwise, it
-returns an error code.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> trans(pt: PyGe.Point3d, rbFrom: tuple, rbTo: tuple, disp: bool) -&gt; PyGe.Point3d
-    &quot;&quot;&quot;Translates a point or a displacement from one coordinate system into another. The from and
+returns an error code.</span></code>
+            <code><span class="kw">def</span> trans(pt: PyGe.Point3d, rbFrom: tuple, rbTo: tuple, disp: bool) -&gt; PyGe.Point3d:
+    <span class="ds">Translates a point or a displacement from one coordinate system into another. The from and
 to arguments can specify a coordinate system in any of the following ways: An integer code
 (restype == RTSHORT) that specifies the WCS, current User Coordinate System (UCS), or
 current Drawing Coordinate System (DCS) (of either the current viewport or paper space), as
@@ -806,20 +810,20 @@ viewport when used with code 0 or 1DCS of current model space viewport when used
 be transformed only to or from the model space DCS. Therefore, if the from argument equals
 3, the to argument must equal 2, and conversely. If acedTrans() succeeds, it returns
 RTNORM; otherwise, it returns an error code. When acedTrans() fails, it sets the system
-variable ERRNO to a value that indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> unloadPartialMenu(mnu: str) -&gt; bool
-    &quot;&quot;&quot;Removes (unloads) a partial menu from the current main menu.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> unmarkForDelayXRefRelativePathResolve(id: PyDb.ObjectId) -&gt; None
-    &quot;&quot;&quot;Unmarks the input Xref definition object ID, which is marked in the function
+variable ERRNO to a value that indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> unloadPartialMenu(mnu: str) -&gt; bool:
+    <span class="ds">Removes (unloads) a partial menu from the current main menu.</span></code>
+            <code><span class="kw">def</span> unmarkForDelayXRefRelativePathResolve(id: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Unmarks the input Xref definition object ID, which is marked in the function
 acedMarkForDelayXRefRelativePathResolve(.)If this object ID is not marked before by the
 function acedMarkForDelayXRefRelativePathResolve(), then this function will be a
-no-operation.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> update(vport: int, pt1: PyGe.Point2d, pt2: PyGe.Point2d) -&gt; int
-    &quot;&quot;&quot;Refreshes a rectangular sub-area of the viewport. The corners must be specified in drawing
+no-operation.</span></code>
+            <code><span class="kw">def</span> update(vport: int, pt1: PyGe.Point2d, pt2: PyGe.Point2d) -&gt; int:
+    <span class="ds">Refreshes a rectangular sub-area of the viewport. The corners must be specified in drawing
 coordinates. As long as p1 and p2 are diagonally opposite each other, it does not matter
-which two corners of the area are specified.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> updateDisplay() -&gt; None
-    &quot;&quot;&quot;This function causes AutoCAD to update its display screen. The update is essentially a
+which two corners of the area are specified.</span></code>
+            <code><span class="kw">def</span> updateDisplay() -&gt; None:
+    <span class="ds">This function causes AutoCAD to update its display screen. The update is essentially a
 repaint of the AutoCAD graphics window with what AutoCAD&#x27;s display engine has cached as the
 window&#x27;s image. AutoCAD manages its display area in the most efficient way by keeping track
 of which portions of the screen are affected as you make various calls to AutoCAD. In
@@ -828,16 +832,16 @@ will conglomerate the calls and make them apparent at times that minimize distur
 the screen. When AutoCAD is not active or has no focus, it will not update its display at
 all. If you&#x27;re in a modeless dialog and adding or updating an entity, the display won&#x27;t
 show the changes when they occur. In such cases, you can use this function to force AutoCAD
-to update its display.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> updateDisplayPause(val: bool) -&gt; None
-    &quot;&quot;&quot;This function allows an application to turn off display updates in order to hide automated
+to update its display.</span></code>
+            <code><span class="kw">def</span> updateDisplayPause(val: bool) -&gt; None:
+    <span class="ds">This function allows an application to turn off display updates in order to hide automated
 tasks from the user. All documents are affected by this call. This call should not be
 enabled if any kind of drawing area input is expected from the user. The restrictions on
 what can be done in this paused state are the same as they would be if the display was not
 paused. Callers of this function should first save the return value from
-acedIsUpdateDisplayPaused(), then restore that value when finished pausing the display.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> usrBrk() -&gt; bool
-    &quot;&quot;&quot;Checks whether the user has pressed [Esc] to interrupt execution of the current external
+acedIsUpdateDisplayPaused(), then restore that value when finished pausing the display.</span></code>
+            <code><span class="kw">def</span> usrBrk() -&gt; bool:
+    <span class="ds">Checks whether the user has pressed [Esc] to interrupt execution of the current external
 function. This function enables ARX applications that do long, complex operations to check
 for a user interrupt. The interactive ARX library functions, such as acedEntSel() or those
 in the user input (acedGetXxx()) group, check for [Esc] before they return to the ARX
@@ -850,15 +854,15 @@ ignores a user&#x27;s cancellation request, it must call acedUsrBrk() to clear t
 Otherwise, the [Esc] will still be outstanding and will cancel the next call to an
 acedGetXxx() function or to the acedCommand(), acedCmd(), acedDragGen(), acedEntSel(),
 acedNEntSelP(), acedNEntSel(), or acedSSGet() functions. If the user has pressed [Esc],
-acedUsrBrk() returns 1; otherwise, it returns 0.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> viewportIdFromNumber(val: int) -&gt; PyDb.ObjectId
-    &quot;&quot;&quot;Returns the objectID that corresponds to the viewport number specified by nVpNum. This
+acedUsrBrk() returns 1; otherwise, it returns 0.</span></code>
+            <code><span class="kw">def</span> viewportIdFromNumber(val: int) -&gt; PyDb.ObjectId:
+    <span class="ds">Returns the objectID that corresponds to the viewport number specified by nVpNum. This
 number is the same as that reported by the CVPORT AutoCAD system variable. For example, the
 Paper Space viewport is number 1. In tilemode the returned ID is obtained from a viewport
 table record. In layout mode it is obtained from a viewport entity. Returns null if no
-documents are open, or if the number does not correspond to a valid viewport.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> vpLayer(id: PyDb.ObjectId, layerIds: list[PyDb.ObjectId], operation: PyDb.VpFreezeOps) -&gt; None
-    &quot;&quot;&quot;This function modifies the viewport specified by vpId to freeze, thaw, or reset the layers
+documents are open, or if the number does not correspond to a valid viewport.</span></code>
+            <code><span class="kw">def</span> vpLayer(id: PyDb.ObjectId, layerIds: list[PyDb.ObjectId], operation: PyDb.VpFreezeOps) -&gt; None:
+    <span class="ds">This function modifies the viewport specified by vpId to freeze, thaw, or reset the layers
 specified by the object IDs in layerIds. If operation is AcDb::kFreeze, the specified
 layers will be frozen in the viewport. If operation is AcDb::kThaw, the specified layers
 will be thawed in the viewport. If operation is AcDb::Reset, the specified layers whose
@@ -868,15 +872,15 @@ closed when this function is called. operation may be one of the following: kFre
 kReset. Returns Acad::eOk if successful. Returns Acad::eInvalidInput under any of the
 following circumstances: if vpId is NULL or is not in the current drawingif the object
 specified by vpId is not an instance of either AcDbViewport or a class derived from
-AcDbViewportif operation is not valid&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> vportTableRecords2Vports() -&gt; None
-    &quot;&quot;&quot;For the currenlty active drawing, this function copies the data from the
+AcDbViewportif operation is not valid</span></code>
+            <code><span class="kw">def</span> vportTableRecords2Vports() -&gt; None:
+    <span class="ds">For the currenlty active drawing, this function copies the data from the
 AcDbViewportTableRecords with the name &#x27;*ACTIVE&#x27; over into the corresponding displayed
 viewports creating or removing display viewports if necessary. This function will result in
 a regen in all viewports. Returns Acad::eOk if successful. Returns Acad::eNotApplicable
-when called while tilemode is 0.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> vports() -&gt; list
-    &quot;&quot;&quot;Returns a pointer to a list of viewport descriptors for the current viewport configuration.
+when called while tilemode is 0.</span></code>
+            <code><span class="kw">def</span> vports() -&gt; list:
+    <span class="ds">Returns a pointer to a list of viewport descriptors for the current viewport configuration.
 Warning To avoid a memory leak, before calling acedVports(), set result to null to ensure
 that it does not point to allocated memory. If the AutoCAD TILEMODE system variable is set
 to 1 (on), the returned list describes the viewport configuration created with the AutoCAD
@@ -889,38 +893,38 @@ describes the viewport entities created with the MVIEW command. The viewport ent
 are expressed in paper space coordinates. Viewport number 1 is always paper space when
 TILEMODE is off. The current viewport&#x27;s descriptor is always first in the list. If it
 succeeds, acedVports() returns RTNORM; it returns RTERROR if it can&#x27;t allocate the list.
-Call acutRelRb() to deallocate memory for the contents of result.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> vports2VportTableRecords() -&gt; None
-    &quot;&quot;&quot;For the currently active drawing, this function copies the displayed viewport data over
+Call acutRelRb() to deallocate memory for the contents of result.</span></code>
+            <code><span class="kw">def</span> vports2VportTableRecords() -&gt; None:
+    <span class="ds">For the currently active drawing, this function copies the displayed viewport data over
 into the corresponding AcDbViewportTableRecords (those with the name &#x27;*ACTIVE&#x27;), creating
 or erasing &#x27;*ACTIVE&#x27; AcDbViewportTableRecords as necessary. Returns Acad::eOk if
-successful. Returns Acad::eNotApplicable when called while tilemode is 0.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> xrefAttach(path: str, name: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefAttach(path: str, name: str, btrid: PyDb.ObjectId, refid: PyDb.ObjectId, pt: PyGe.Point3d, sc: PyGe.Scale3d, rot: float, bQuiet: bool, pHostDb: PyDb.Database, passwd: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefAttach(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefBind(XrefBlockname: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefBind(XrefBlockname: str, bInsertBind: bool, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefBind(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefCreateBlockname(XrefPathname: str) -&gt; str</code>
-            <code><span class="kw">def</span> xrefDetach(XrefBlockname: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefDetach(XrefBlockname: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefDetach(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefNotifyCheckFileChanged(id: PyDb.ObjectId) -&gt; bool</code>
-            <code><span class="kw">def</span> xrefOverlay(path: str, name: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefOverlay(path: str, name: str, btrid: PyDb.ObjectId, refid: PyDb.ObjectId, pt: PyGe.Point3d, sc: PyGe.Scale3d, rot: float, bQuiet: bool, pHostDb: PyDb.Database, passwd: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefOverlay(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefReload(symbolIds: list[PyDb.ObjectId]) -&gt; None</code>
-            <code><span class="kw">def</span> xrefReload(symbolIds: list[PyDb.ObjectId], bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefReload(name: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefReload(name: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefReload(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefResolve(db: PyDb.Database, bQuiet: bool) -&gt; None</code>
-            <code><span class="kw">def</span> xrefUnload(XrefBlockname: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefUnload(XrefBlockname: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefUnload(*args) -&gt; None</code>
-            <code><span class="kw">def</span> xrefXBind(symbolIds: list[PyDb.ObjectId]) -&gt; None</code>
-            <code><span class="kw">def</span> xrefXBind(symbolIds: list[PyDb.ObjectId], bQuiet: bool, pHostDb: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefXBind(*args) -&gt; None</code>
+successful. Returns Acad::eNotApplicable when called while tilemode is 0.</span></code>
+            <code><span class="kw">def</span> xrefAttach(path: str, name: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefAttach(path: str, name: str, btrid: PyDb.ObjectId, refid: PyDb.ObjectId, pt: PyGe.Point3d, sc: PyGe.Scale3d, rot: float, bQuiet: bool, pHostDb: PyDb.Database, passwd: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefAttach(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefBind(XrefBlockname: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefBind(XrefBlockname: str, bInsertBind: bool, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefBind(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefCreateBlockname(XrefPathname: str) -&gt; str:</code>
+            <code><span class="kw">def</span> xrefDetach(XrefBlockname: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefDetach(XrefBlockname: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefDetach(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefNotifyCheckFileChanged(id: PyDb.ObjectId) -&gt; bool:</code>
+            <code><span class="kw">def</span> xrefOverlay(path: str, name: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefOverlay(path: str, name: str, btrid: PyDb.ObjectId, refid: PyDb.ObjectId, pt: PyGe.Point3d, sc: PyGe.Scale3d, rot: float, bQuiet: bool, pHostDb: PyDb.Database, passwd: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefOverlay(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefReload(symbolIds: list[PyDb.ObjectId]) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefReload(symbolIds: list[PyDb.ObjectId], bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefReload(name: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefReload(name: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefReload(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefResolve(db: PyDb.Database, bQuiet: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefUnload(XrefBlockname: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefUnload(XrefBlockname: str, bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefUnload(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefXBind(symbolIds: list[PyDb.ObjectId]) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefXBind(symbolIds: list[PyDb.ObjectId], bQuiet: bool, pHostDb: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefXBind(*args) -&gt; None:</code>
         </details>
     </div>
 
@@ -970,12 +974,12 @@ successful. Returns Acad::eNotApplicable when called while tilemode is 0.&quot;&
     <div class="class" id="DragStyle">
         <details>
             <summary>class DragStyle <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self, styleTypeForOriginal: PyEd.DragStyleType, styleTypeForDragged: PyEd.DragStyleType) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> setStyleTypeForDragged(self, styleTypeForDragged: PyEd.DragStyleType) -&gt; PyDb.ErrorStatus</code>
-            <code><span class="kw">def</span> setStyleTypeForOriginal(self, styleTypeForOriginal: PyEd.DragStyleType) -&gt; PyDb.ErrorStatus</code>
-            <code><span class="kw">def</span> styleTypeForDragged(self) -&gt; DragStyleType</code>
-            <code><span class="kw">def</span> styleTypeForOriginal(self) -&gt; DragStyleType</code>
+            <code><span class="kw">def</span> __init__(self, styleTypeForOriginal: PyEd.DragStyleType, styleTypeForDragged: PyEd.DragStyleType) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> setStyleTypeForDragged(self, styleTypeForDragged: PyEd.DragStyleType) -&gt; PyDb.ErrorStatus:</code>
+            <code><span class="kw">def</span> setStyleTypeForOriginal(self, styleTypeForOriginal: PyEd.DragStyleType) -&gt; PyDb.ErrorStatus:</code>
+            <code><span class="kw">def</span> styleTypeForDragged(self) -&gt; DragStyleType:</code>
+            <code><span class="kw">def</span> styleTypeForOriginal(self) -&gt; DragStyleType:</code>
         </details>
     </div>
 
@@ -995,26 +999,26 @@ successful. Returns Acad::eNotApplicable when called while tilemode is 0.&quot;&
     <div class="class" id="DrawJig">
         <details>
             <summary>class DrawJig <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
-            <code><span class="kw">def</span> acquireDist(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
-            <code><span class="kw">def</span> acquirePoint(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, PyGe.Point3d]</code>
-            <code><span class="kw">def</span> acquireString(self) -&gt; tuple[PyEd.DragStatus, str]</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> dispPrompt(self) -&gt; str</code>
-            <code><span class="kw">def</span> drag(self, style: PyEd.DragStyle) -&gt; DragStatus</code>
-            <code><span class="kw">def</span> keywordList(self) -&gt; str</code>
-            <code><span class="kw">def</span> sampler(self) -&gt; DragStatus</code>
-            <code><span class="kw">def</span> setDispPrompt(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setKeywordList(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setSpecialCursorType(self, val: PyEd.CursorType) -&gt; None</code>
-            <code><span class="kw">def</span> setUserInputControls(self, val: PyEd.UserInputControls) -&gt; None</code>
-            <code><span class="kw">def</span> specialCursorType(self) -&gt; CursorType</code>
-            <code><span class="kw">def</span> update(self) -&gt; bool</code>
-            <code><span class="kw">def</span> userInputControls(self) -&gt; UserInputControls</code>
-            <code><span class="kw">def</span> viewportDraw(self, wd: PyGi.ViewportDraw) -&gt; None</code>
-            <code><span class="kw">def</span> worldDraw(self, wd: PyGi.WorldDraw) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]:</code>
+            <code><span class="kw">def</span> acquireDist(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]:</code>
+            <code><span class="kw">def</span> acquirePoint(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, PyGe.Point3d]:</code>
+            <code><span class="kw">def</span> acquireString(self) -&gt; tuple[PyEd.DragStatus, str]:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> dispPrompt(self) -&gt; str:</code>
+            <code><span class="kw">def</span> drag(self, style: PyEd.DragStyle) -&gt; DragStatus:</code>
+            <code><span class="kw">def</span> keywordList(self) -&gt; str:</code>
+            <code><span class="kw">def</span> sampler(self) -&gt; DragStatus:</code>
+            <code><span class="kw">def</span> setDispPrompt(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setKeywordList(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setSpecialCursorType(self, val: PyEd.CursorType) -&gt; None:</code>
+            <code><span class="kw">def</span> setUserInputControls(self, val: PyEd.UserInputControls) -&gt; None:</code>
+            <code><span class="kw">def</span> specialCursorType(self) -&gt; CursorType:</code>
+            <code><span class="kw">def</span> update(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> userInputControls(self) -&gt; UserInputControls:</code>
+            <code><span class="kw">def</span> viewportDraw(self, wd: PyGi.ViewportDraw) -&gt; None:</code>
+            <code><span class="kw">def</span> worldDraw(self, wd: PyGi.WorldDraw) -&gt; bool:</code>
         </details>
     </div>
 
@@ -1032,22 +1036,22 @@ successful. Returns Acad::eNotApplicable when called while tilemode is 0.&quot;&
     <div class="class" id="Editor">
         <details>
             <summary>class Editor <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> activeViewportId() -&gt; PyDb.ObjectId
-    &quot;&quot;&quot;Returns the object ID of the viewport that is currently active in the editor. In tilemode,
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> activeViewportId() -&gt; PyDb.ObjectId:
+    <span class="ds">Returns the object ID of the viewport that is currently active in the editor. In tilemode,
 it returns the ID is of a viewport table record. In layout mode, returns the object ID of a
-viewport entity . Returns a null object ID if no document is open.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> curViewportObjectId() -&gt; PyDb.ObjectId
-    &quot;&quot;&quot;This function returns the objectId of the current AcDbViewport entity (it does not work
+viewport entity . Returns a null object ID if no document is open.</span></code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> curViewportObjectId() -&gt; PyDb.ObjectId:
+    <span class="ds">This function returns the objectId of the current AcDbViewport entity (it does not work
 with AcDbViewportTableRecords). If TILEMODE is 1, then there is no AcDbViewport entity
-current so it will return AcDbObjectId::kNull.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> duplicateSelectionsAllowed(doc: PyAp.Document) -&gt; bool
-    &quot;&quot;&quot;Returns true if pDoc is non-NULL and duplicate selections are allowed for the document to
-which it points. Otherwise, returns false.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> entSel(prompt: str) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]
-    &quot;&quot;&quot;Prompts the user to select an entity by specifying a point. Pauses for user input and
+current so it will return AcDbObjectId::kNull.</span></code>
+            <code><span class="kw">def</span> duplicateSelectionsAllowed(doc: PyAp.Document) -&gt; bool:
+    <span class="ds">Returns true if pDoc is non-NULL and duplicate selections are allowed for the document to
+which it points. Otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> entSel(prompt: str) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]:
+    <span class="ds">Prompts the user to select an entity by specifying a point. Pauses for user input and
 returns both an entity name and the point that is used to select the entity. The
 acedEntSel() function does not return the names of nongraphical objects. Some entity
 operations require knowledge of the point by which the entity was selected. Examples are
@@ -1060,9 +1064,9 @@ polyline vertex. The acedEntSel() function returns RTNORM if it succeeds, RTERRO
 fails, or RTCAN if the user cancels the request (by pressing [Esc]). A prior call to
 acedInitGet() can also enable a return value of RTKWORD (see the description of
 acedInitGet()). When acedEntSel() fails, it sets the system variable ERRNO to a value that
-indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> entSel(prompt: str, eType: PyRx.RxClass) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]
-    &quot;&quot;&quot;Prompts the user to select an entity by specifying a point. Pauses for user input and
+indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> entSel(prompt: str, eType: PyRx.RxClass) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]:
+    <span class="ds">Prompts the user to select an entity by specifying a point. Pauses for user input and
 returns both an entity name and the point that is used to select the entity. The
 acedEntSel() function does not return the names of nongraphical objects. Some entity
 operations require knowledge of the point by which the entity was selected. Examples are
@@ -1075,9 +1079,9 @@ polyline vertex. The acedEntSel() function returns RTNORM if it succeeds, RTERRO
 fails, or RTCAN if the user cancels the request (by pressing [Esc]). A prior call to
 acedInitGet() can also enable a return value of RTKWORD (see the description of
 acedInitGet()). When acedEntSel() fails, it sets the system variable ERRNO to a value that
-indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> entSel(prompt: str, eTypes: list[PyRx.RxClass]) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]
-    &quot;&quot;&quot;Prompts the user to select an entity by specifying a point. Pauses for user input and
+indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> entSel(prompt: str, eTypes: list[PyRx.RxClass]) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]:
+    <span class="ds">Prompts the user to select an entity by specifying a point. Pauses for user input and
 returns both an entity name and the point that is used to select the entity. The
 acedEntSel() function does not return the names of nongraphical objects. Some entity
 operations require knowledge of the point by which the entity was selected. Examples are
@@ -1090,9 +1094,9 @@ polyline vertex. The acedEntSel() function returns RTNORM if it succeeds, RTERRO
 fails, or RTCAN if the user cancels the request (by pressing [Esc]). A prior call to
 acedInitGet() can also enable a return value of RTKWORD (see the description of
 acedInitGet()). When acedEntSel() fails, it sets the system variable ERRNO to a value that
-indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> entSel(*args) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]
-    &quot;&quot;&quot;Prompts the user to select an entity by specifying a point. Pauses for user input and
+indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> entSel(*args) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d]:
+    <span class="ds">Prompts the user to select an entity by specifying a point. Pauses for user input and
 returns both an entity name and the point that is used to select the entity. The
 acedEntSel() function does not return the names of nongraphical objects. Some entity
 operations require knowledge of the point by which the entity was selected. Examples are
@@ -1105,9 +1109,9 @@ polyline vertex. The acedEntSel() function returns RTNORM if it succeeds, RTERRO
 fails, or RTCAN if the user cancels the request (by pressing [Esc]). A prior call to
 acedInitGet() can also enable a return value of RTKWORD (see the description of
 acedInitGet()). When acedEntSel() fails, it sets the system variable ERRNO to a value that
-indicates the reason for the failure.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getAngle(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for an angle, taking into account the current value of the ANGBASE system
+indicates the reason for the failure.</span></code>
+            <code><span class="kw">def</span> getAngle(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for an angle, taking into account the current value of the ANGBASE system
 variable. The AutoCAD user can specify the angle by entering a number in the current
 angular units format. The user can set the angle also by specifying two 2D locations on the
 graphics screen. AutoCAD draws a rubber-band line from the first point to the current
@@ -1137,9 +1141,9 @@ returns RTMODELESS, if the active command was registered using the ACRX_CMD_INTE
 flag and the document has received a modeless interrupt signal from a call to
 AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also enable
 return values of RTNONE or RTKWORD (see the description of acedInitGet()). If the optional
-pt or prompt is not used, pass a null pointer for these arguments.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCorner(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]
-    &quot;&quot;&quot;Gets user input for the corner of a rectangle. The AutoCAD user can specify the corner by
+pt or prompt is not used, pass a null pointer for these arguments.</span></code>
+            <code><span class="kw">def</span> getCorner(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]:
+    <span class="ds">Gets user input for the corner of a rectangle. The AutoCAD user can specify the corner by
 entering a point in the current units format; acedGetCorner() treats pt as a
 three-dimensional point. The user can specify the corner also by specifying a location on
 the graphics screen. AutoCAD draws a dynamically sized rectangle from pt to the current
@@ -1152,9 +1156,9 @@ if it fails, or RTCAN if the user cancels the request (by pressing [Esc]). It re
 RTMODELESS, if the active command was registered using the ACRX_CMD_INTERRUPTIBLE flag and
 the document has received a modeless interrupt signal from a call to
 AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also enable
-return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCurrentSelectionSet() -&gt; list[PyDb.ObjectId]
-    &quot;&quot;&quot;This function fills sset in with the object IDs of all entities in the current selection
+return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getCurrentSelectionSet() -&gt; list[PyDb.ObjectId]:
+    <span class="ds">This function fills sset in with the object IDs of all entities in the current selection
 set within AutoCAD. The &#x27;current selection set&#x27; may be one of the following: a pickfirst
 set, a selection set selected by the select command or any other command that does a
 selection (that is, similar to the &#x27;Previous&#x27; selection option), or the most recent set
@@ -1171,13 +1175,13 @@ AMECONVERT ARRAY ATTEXT AUDIT BHATCH BMPOUT CHANGE CHPROP CONVERT CONVERTPOLY CO
 CUTCLIP DIVIDE DVIEW DXFOUT (partial) ERASE EXPLODE EXTEND EXTRUDE GROUP HATCH HIDE
 INTERFERE INTERSECT LIST MASSPROP MEASURE MIRROR MOVE MVIEW OOPS PEDIT REGION REVOLVE
 ROTATE SCALE SECTION SELECT SLICE SPELL SPLINE STLOUT STRETCH SUBTRACT TRIM UNION VPVIS
-WBLOCK WMFOUT XCLIP&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getCurrentUCS() -&gt; PyGe.Matrix3d
-    &quot;&quot;&quot;This function sets mat to the matrix that maps the World Coordinate System (WCS) to the
+WBLOCK WMFOUT XCLIP</span></code>
+            <code><span class="kw">def</span> getCurrentUCS() -&gt; PyGe.Matrix3d:
+    <span class="ds">This function sets mat to the matrix that maps the World Coordinate System (WCS) to the
 User Coordinate System (UCS) that is current in the current document. Returns Acad::eOk if
-successful.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getDist(prompt: str) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for a linear distance. The AutoCAD user can specify the distance by
+successful.</span></code>
+            <code><span class="kw">def</span> getDist(prompt: str) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for a linear distance. The AutoCAD user can specify the distance by
 entering a number in the current units format. The user can set the distance also by
 specifying two locations on the graphics screen. AutoCAD draws a rubber-band line from the
 first point to the current crosshair position to help the user visualize the distance. If
@@ -1193,9 +1197,9 @@ it succeeds, RTERROR if it fails, or RTCAN if the user cancels the request (by p
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
 enable return values of RTNONE or RTKWORD. If pt or prompt is not used, pass a null pointer
-for these arguments.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getDist(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for a linear distance. The AutoCAD user can specify the distance by
+for these arguments.</span></code>
+            <code><span class="kw">def</span> getDist(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for a linear distance. The AutoCAD user can specify the distance by
 entering a number in the current units format. The user can set the distance also by
 specifying two locations on the graphics screen. AutoCAD draws a rubber-band line from the
 first point to the current crosshair position to help the user visualize the distance. If
@@ -1211,9 +1215,9 @@ it succeeds, RTERROR if it fails, or RTCAN if the user cancels the request (by p
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
 enable return values of RTNONE or RTKWORD. If pt or prompt is not used, pass a null pointer
-for these arguments.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getDist(*args) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for a linear distance. The AutoCAD user can specify the distance by
+for these arguments.</span></code>
+            <code><span class="kw">def</span> getDist(*args) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for a linear distance. The AutoCAD user can specify the distance by
 entering a number in the current units format. The user can set the distance also by
 specifying two locations on the graphics screen. AutoCAD draws a rubber-band line from the
 first point to the current crosshair position to help the user visualize the distance. If
@@ -1229,17 +1233,17 @@ it succeeds, RTERROR if it fails, or RTCAN if the user cancels the request (by p
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
 enable return values of RTNONE or RTKWORD. If pt or prompt is not used, pass a null pointer
-for these arguments.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getDouble(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for a real value. The AutoCAD user can enter any valid real value, but the
+for these arguments.</span></code>
+            <code><span class="kw">def</span> getDouble(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for a real value. The AutoCAD user can enter any valid real value, but the
 user cannot respond to acedGetReal() by entering an AutoLISP expression. The acedGetReal()
 function returns one of the following: RTNORM if it succeeds, RTERROR if it fails, or RTCAN
 if the user cancels the request (by pressing [Esc]). It returns RTMODELESS, if the active
 command was registered using the ACRX_CMD_INTERRUPTIBLE flag and the document has received
 a modeless interrupt signal from a call to AcApDocManager::sendModelessInterrupt(). A prior
-call to acedInitGet() can also enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getInput() -&gt; str
-    &quot;&quot;&quot;Deprecated. Retrieves a keyword entered by the AutoCAD user during a call to one of the
+call to acedInitGet() can also enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getInput() -&gt; str:
+    <span class="ds">Deprecated. Retrieves a keyword entered by the AutoCAD user during a call to one of the
 user-input functions (acedGetxxx(), acedEntSel(), acedNEntSelP(), acedNEntSel(), or
 acedDragGen()). Function acedGetInput() truncates any characters beyond 131 characters in
 the user&#x27;s input and returns at most 132 characters in str (position 132 is reserved for
@@ -1259,24 +1263,24 @@ acedDragGen() indicates that it has received arbitrary input by returning RTSTR 
 RTKWORD.) If acedGetInput() succeeds, it returns RTNORM; otherwise, it returns RTERROR. It
 returns RTMODELESS, if the active command was registered using the ACRX_CMD_INTERRUPTIBLE
 flag and the document has received a modeless interrupt signal from a call to
-AcApDocManager::sendModelessInterrupt().&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getInteger(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, int]
-    &quot;&quot;&quot;Gets user input for an integer. The AutoCAD user can enter any valid 32-bit integer. The
+AcApDocManager::sendModelessInterrupt().</span></code>
+            <code><span class="kw">def</span> getInteger(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, int]:
+    <span class="ds">Gets user input for an integer. The AutoCAD user can enter any valid 32-bit integer. The
 user cannot respond to acedGetInt() by entering an AutoLISP expression. The acedGetInt()
 function returns one of the following: RTNORM if it succeeds, RTERROR if it fails, or RTCAN
 if the user cancels the request (by pressing [ESC]). A prior call to acedInitGet() can also
-enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getKword(keyword: str) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Deprecated. Function acedGetFullKword() is an alternate form of acedGetKword(). Instead of
+enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getKword(keyword: str) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Deprecated. Function acedGetFullKword() is an alternate form of acedGetKword(). Instead of
 truncating any characters beyond the 131, acedGetFullKword() returns a new copy of the
 entire string using acutUpdString() and updates pStr to point to the new copy. Aside from
 the manner in which it returns the input string, this function behaves exactly like
 acedGetKword(). The caller is responsible for freeing the returned string using
 acutDelString(). This function returns the same error codes as acedGetInput(). If there is
 insufficient memory for a copy of the string, this function returns RTERROR. See function
-acedGetKword() for more information.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getPoint(prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]
-    &quot;&quot;&quot;Gets user input for a point. The AutoCAD user can specify the point by entering a
+acedGetKword() for more information.</span></code>
+            <code><span class="kw">def</span> getPoint(prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]:
+    <span class="ds">Gets user input for a point. The AutoCAD user can specify the point by entering a
 coordinate in the current units format; acedGetPoint() treats pt and result as
 three-dimensional points. The user can specify the point also by specifying a location on
 the graphics screen. If the pt argument is not null, AutoCAD draws a rubber-band line from
@@ -1287,9 +1291,9 @@ RTNORM if it succeeds, RTERROR if it fails, or RTCAN if the user cancels the req
 pressing [Esc]). It returns RTMODELESS, if the active command was registered using the
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
-enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getPoint(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]
-    &quot;&quot;&quot;Gets user input for a point. The AutoCAD user can specify the point by entering a
+enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getPoint(basePt: PyGe.Point3d, prompt: str) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]:
+    <span class="ds">Gets user input for a point. The AutoCAD user can specify the point by entering a
 coordinate in the current units format; acedGetPoint() treats pt and result as
 three-dimensional points. The user can specify the point also by specifying a location on
 the graphics screen. If the pt argument is not null, AutoCAD draws a rubber-band line from
@@ -1300,9 +1304,9 @@ RTNORM if it succeeds, RTERROR if it fails, or RTCAN if the user cancels the req
 pressing [Esc]). It returns RTMODELESS, if the active command was registered using the
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
-enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getPoint(*args) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]
-    &quot;&quot;&quot;Gets user input for a point. The AutoCAD user can specify the point by entering a
+enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getPoint(*args) -&gt; tuple[PyEd.PromptStatus, PyGe.Point3d]:
+    <span class="ds">Gets user input for a point. The AutoCAD user can specify the point by entering a
 coordinate in the current units format; acedGetPoint() treats pt and result as
 three-dimensional points. The user can specify the point also by specifying a location on
 the graphics screen. If the pt argument is not null, AutoCAD draws a rubber-band line from
@@ -1313,115 +1317,115 @@ RTNORM if it succeeds, RTERROR if it fails, or RTCAN if the user cancels the req
 pressing [Esc]). It returns RTMODELESS, if the active command was registered using the
 ACRX_CMD_INTERRUPTIBLE flag and the document has received a modeless interrupt signal from
 a call to AcApDocManager::sendModelessInterrupt(). A prior call to acedInitGet() can also
-enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getReal(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, float]
-    &quot;&quot;&quot;Gets user input for a real value. The AutoCAD user can enter any valid real value, but the
+enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getReal(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, float]:
+    <span class="ds">Gets user input for a real value. The AutoCAD user can enter any valid real value, but the
 user cannot respond to acedGetReal() by entering an AutoLISP expression. The acedGetReal()
 function returns one of the following: RTNORM if it succeeds, RTERROR if it fails, or RTCAN
 if the user cancels the request (by pressing [Esc]). It returns RTMODELESS, if the active
 command was registered using the ACRX_CMD_INTERRUPTIBLE flag and the document has received
 a modeless interrupt signal from a call to AcApDocManager::sendModelessInterrupt(). A prior
-call to acedInitGet() can also enable return values of RTNONE or RTKWORD.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getString(prompt: str) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
+call to acedInitGet() can also enable return values of RTNONE or RTKWORD.</span></code>
+            <code><span class="kw">def</span> getString(prompt: str) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
 must terminate it by entering [Return]; if zero, entering either a blank or [Return]
-terminates the string&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getString(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
+terminates the string</span></code>
+            <code><span class="kw">def</span> getString(prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
 must terminate it by entering [Return]; if zero, entering either a blank or [Return]
-terminates the string&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getString(cronly: int, prompt: str) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
+terminates the string</span></code>
+            <code><span class="kw">def</span> getString(cronly: int, prompt: str) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
 must terminate it by entering [Return]; if zero, entering either a blank or [Return]
-terminates the string&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getString(cronly: int, prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
+terminates the string</span></code>
+            <code><span class="kw">def</span> getString(cronly: int, prompt: str, condition: PyEd.PromptCondition) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
 must terminate it by entering [Return]; if zero, entering either a blank or [Return]
-terminates the string&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getString(*args) -&gt; tuple[PyEd.PromptStatus, str]
-    &quot;&quot;&quot;Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
+terminates the string</span></code>
+            <code><span class="kw">def</span> getString(*args) -&gt; tuple[PyEd.PromptStatus, str]:
+    <span class="ds">Gets user input for a string, cronly If nonzero, the string can contain blanks and the user
 must terminate it by entering [Return]; if zero, entering either a blank or [Return]
-terminates the string&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> getViewportNumber(ptx: int, pty: int) -&gt; int
-    &quot;&quot;&quot;Provide coordinates in AutoCAD drawing window (in client coordinates) and this function
+terminates the string</span></code>
+            <code><span class="kw">def</span> getViewportNumber(ptx: int, pty: int) -&gt; int:
+    <span class="ds">Provide coordinates in AutoCAD drawing window (in client coordinates) and this function
 will return the viewport number the coordinates correspond to. This function usually is
 used with acedCoordFromWorldToPixel() or acedCoordFromPixelToWorld(). Returns the viewport
-number based on Windows client coordinates.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> initGet(val: int, keyword: str) -&gt; PromptStatus
-    &quot;&quot;&quot;Initializes the options used by the next call to a user-input function, such as
-acedGetXxx(), acedDragGen(), acedEntSel(), acedNEntSelP(), or acedNEntSel().&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> nEntSelP(prompt: str, selpt: PyGe.Point3d) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> nEntSelPEx(prompt: str, flags: int) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> nEntSelPEx(prompt: str, selpt: PyGe.Point3d, flags: int) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> nEntSelPEx(*args) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> regen() -&gt; None</code>
-            <code><span class="kw">def</span> select(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+number based on Windows client coordinates.</span></code>
+            <code><span class="kw">def</span> initGet(val: int, keyword: str) -&gt; PromptStatus:
+    <span class="ds">Initializes the options used by the next call to a user-input function, such as
+acedGetXxx(), acedDragGen(), acedEntSel(), acedNEntSelP(), or acedNEntSel().</span></code>
+            <code><span class="kw">def</span> nEntSelP(prompt: str, selpt: PyGe.Point3d) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> nEntSelPEx(prompt: str, flags: int) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> nEntSelPEx(prompt: str, selpt: PyGe.Point3d, flags: int) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> nEntSelPEx(*args) -&gt; tuple[PyEd.PromptStatus, PyDb.ObjectId, PyGe.Point3d, PyGe.Matrix3d, int, list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> regen() -&gt; None:</code>
+            <code><span class="kw">def</span> select(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectAll(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectAll(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectFence(points: Collection[PyGe.Point3d], filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectFence(points: Collection[PyGe.Point3d], filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectImplied() -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]</code>
-            <code><span class="kw">def</span> selectLast(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectImplied() -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:</code>
+            <code><span class="kw">def</span> selectLast(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectPrevious(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectPrevious(filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectPrompt(addPromt: str, remPromt: str, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectPrompt(addPromt: str, remPromt: str, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectWindow(pt1: PyGe.Point3d, pt2: PyGe.Point3d, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectWindow(pt1: PyGe.Point3d, pt2: PyGe.Point3d, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> selectWindowPolygon(points: Collection[PyGe.Point3d], filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> selectWindowPolygon(points: Collection[PyGe.Point3d], filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setAllowDuplicateSelection(doc: PyAp.Document, flag: bool) -&gt; None
-    &quot;&quot;&quot;This function allows and disallows duplicate entities in selection sets. If flag is true, a
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> setAllowDuplicateSelection(doc: PyAp.Document, flag: bool) -&gt; None:
+    <span class="ds">This function allows and disallows duplicate entities in selection sets. If flag is true, a
 reference counter is incremented that, when non-zero, enables duplicate selection. If flag
 is false, the counter is decremented. This setting impacts the PICKFIRST selection set, the
 PREVIOUS selection set, and AutoCAD commands that acquire selection sets from the user. An
@@ -1429,258 +1433,258 @@ application that enables duplicate selections is responsible for removing duplic
 in the AcEdSSGetFilter::endSSGet() notification if the current command cannot handle
 duplicate entries. Returns Acad::eOk if successful. Returns Acad::eInvalidContext if flag
 is false and duplicate selection is already disabled. Returns Acad::eInvalidInput if pDoc
-is NULL.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> setCurrentUCS(ucs: PyGe.Matrix3d) -&gt; None
-    &quot;&quot;&quot;This function sets the current UCS from the 3D matrix mat. The first row of the matrix is
+is NULL.</span></code>
+            <code><span class="kw">def</span> setCurrentUCS(ucs: PyGe.Matrix3d) -&gt; None:
+    <span class="ds">This function sets the current UCS from the 3D matrix mat. The first row of the matrix is
 the UCS X-axis (in WCS coordinates), the second row is the UCS Y-axis, and the third row is
 the UCS Z-axis. This function must not be used while acedCommand is active. Always returns
-Acad::eOk.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> ssget(mode: str, arg1: object, arg2: object, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]
-    &quot;&quot;&quot;Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
+Acad::eOk.</span></code>
+            <code><span class="kw">def</span> ssget(mode: str, arg1: object, arg2: object, filter: Collection[tuple[int, Any]]) -&gt; tuple[PyEd.PromptStatus, PyEd.SelectionSet]:
+    <span class="ds">Returns a selection set obtained by specifying one of the AutoCAD selection modes. A
 selection mode is specified either by prompting the AutoCAD user or by filtering the
 drawing database. You must release the allocated selection set after you are finished with
 processing the selection. If you fail to do this the selection set will be kept on the
 stack until AutoCAD terminates. Since AutoCAD can only hold 128 application-based selection
 sets per session, the unreleased selection sets can result in failed object selections
-through ObjectARX.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> traceBoundary(point: PyGe.Point3d, detectIslands: bool) -&gt; list[PyDb.Polyline]
-    &quot;&quot;&quot;Performs a boundary trace on the given seedPoint, and returns a set of AcDbPolyline *
+through ObjectARX.</span></code>
+            <code><span class="kw">def</span> traceBoundary(point: PyGe.Point3d, detectIslands: bool) -&gt; list[PyDb.Polyline]:
+    <span class="ds">Performs a boundary trace on the given seedPoint, and returns a set of AcDbPolyline *
 objects that represent the boundary found. To succeed, the entities that form the boundary
-to be found must be entirely visible on screen in the AutoCAD editor.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> ucsNormalVector() -&gt; PyGe.Vector3d
-    &quot;&quot;&quot;Returns a vector indicating the Z-axis direction of the current UCS. The vector is the
-normal to the X and Y axes.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> ucsXDir() -&gt; PyGe.Vector3d
-    &quot;&quot;&quot;Returns the X-axis direction of the current UCS.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> ucsYDir() -&gt; PyGe.Vector3d
-    &quot;&quot;&quot;Returns the Y-axis direction of the current UCS.&quot;&quot;&quot;</code>
+to be found must be entirely visible on screen in the AutoCAD editor.</span></code>
+            <code><span class="kw">def</span> ucsNormalVector() -&gt; PyGe.Vector3d:
+    <span class="ds">Returns a vector indicating the Z-axis direction of the current UCS. The vector is the
+normal to the X and Y axes.</span></code>
+            <code><span class="kw">def</span> ucsXDir() -&gt; PyGe.Vector3d:
+    <span class="ds">Returns the X-axis direction of the current UCS.</span></code>
+            <code><span class="kw">def</span> ucsYDir() -&gt; PyGe.Vector3d:
+    <span class="ds">Returns the Y-axis direction of the current UCS.</span></code>
         </details>
     </div>
 
     <div class="class" id="EditorReactor">
         <details>
             <summary>class EditorReactor <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> abortAttach(self, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortDeepClone(self, idMap: PyDb.IdMapping) -&gt; None</code>
-            <code><span class="kw">def</span> abortDxfIn(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortDxfOut(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortInsert(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortRestore(self, dbTo: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortSave(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> abortWblock(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> addReactor(self) -&gt; None</code>
-            <code><span class="kw">def</span> beginAttach(self, dbTo: PyDb.Database, val: str, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginCloseAll(self) -&gt; None</code>
-            <code><span class="kw">def</span> beginDeepClone(self, db: PyDb.Database, idMap: PyDb.IdMapping) -&gt; None</code>
-            <code><span class="kw">def</span> beginDeepCloneXlation(self, idMap: PyDb.IdMapping) -&gt; PyDb.ErrorStatus</code>
-            <code><span class="kw">def</span> beginDocClose(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginDoubleClick(self, pt: PyGe.Point3d) -&gt; None</code>
-            <code><span class="kw">def</span> beginDwgOpen(self, fineName: str) -&gt; None</code>
-            <code><span class="kw">def</span> beginDxfIn(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginDxfOut(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginInsert(self, dbTo: PyDb.Database, pBlockName: str, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginInsert(self, dbTo: PyDb.Database, xform: PyGe.Matrix3d, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginInsert(*args) -&gt; None</code>
-            <code><span class="kw">def</span> beginQuit(self) -&gt; None</code>
-            <code><span class="kw">def</span> beginRestore(self, dbTo: PyDb.Database, val: str, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> beginRightClick(self, pt: PyGe.Point3d) -&gt; None</code>
-            <code><span class="kw">def</span> beginSave(self, db: PyDb.Database, fname: str) -&gt; None</code>
-            <code><span class="kw">def</span> beginWblock(self, dbTo: PyDb.Database, dbFrom: PyDb.Database, id: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> beginWblockObjects(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping) -&gt; None</code>
-            <code><span class="kw">def</span> cmdIUnkModified(self, command: str) -&gt; None</code>
-            <code><span class="kw">def</span> comandeered(self, dbTo: PyDb.Database, id: PyDb.ObjectId, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> commandCancelled(self, cmdStr: str) -&gt; None</code>
-            <code><span class="kw">def</span> commandEnded(self, cmdStr: str) -&gt; None</code>
-            <code><span class="kw">def</span> commandFailed(self, cmdStr: str) -&gt; None</code>
-            <code><span class="kw">def</span> commandWillStart(self, cmdStr: str) -&gt; None</code>
-            <code><span class="kw">def</span> databaseConstructed(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> databaseToBeDestroyed(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> docCloseAborted(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> docCloseWillStart(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> docFrameMovedOrResized(self, hwndDocFrame: int, moved: bool) -&gt; None</code>
-            <code><span class="kw">def</span> dwgViewResized(self, hwndDwgView: int) -&gt; None</code>
-            <code><span class="kw">def</span> dxfInComplete(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> dxfOutComplete(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> endAttach(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> endDeepClone(self, idMap: PyDb.IdMapping) -&gt; None</code>
-            <code><span class="kw">def</span> endDwgOpen(self, fineName: str, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> endInsert(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> endRestore(self, dbTo: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> endWblock(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> fullRegenEnded(self, db: PyDb.Database, regenedViewports: list[int]) -&gt; None</code>
-            <code><span class="kw">def</span> fullRegenWillStart(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> initialDwgFileOpenComplete(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> layoutSwitched(self, layoutName: str) -&gt; None</code>
-            <code><span class="kw">def</span> layoutToBeSwitched(self, oldLayoutName: str, newLayoutName: str) -&gt; None</code>
-            <code><span class="kw">def</span> lispCancelled(self) -&gt; None</code>
-            <code><span class="kw">def</span> lispEnded(self) -&gt; None</code>
-            <code><span class="kw">def</span> lispWillStart(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> mainFrameMovedOrResized(self, hwndDocFrame: int, moved: bool) -&gt; None</code>
-            <code><span class="kw">def</span> modelessOperationEnded(self, context: str) -&gt; None</code>
-            <code><span class="kw">def</span> modelessOperationWillStart(self, context: str) -&gt; None</code>
-            <code><span class="kw">def</span> objectsLazyLoaded(self, ids: list[PyDb.ObjectId]) -&gt; None</code>
-            <code><span class="kw">def</span> otherAttach(self, dbTo: PyDb.Database, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> otherInsert(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> otherWblock(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping, dbFrom: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> partialOpenNotice(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> pickfirstModified(self) -&gt; None</code>
-            <code><span class="kw">def</span> preXrefLockFile(self, id: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> quitAborted(self) -&gt; None</code>
-            <code><span class="kw">def</span> quitWillStart(self) -&gt; None</code>
-            <code><span class="kw">def</span> redirected(self, newId: PyDb.ObjectId, oldId: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> removeReactor(self) -&gt; None</code>
-            <code><span class="kw">def</span> saveComplete(self, db: PyDb.Database, fname: str) -&gt; None</code>
-            <code><span class="kw">def</span> sysVarChanged(self, varName: str, success: bool) -&gt; None</code>
-            <code><span class="kw">def</span> sysVarWillChange(self, varName: str) -&gt; None</code>
-            <code><span class="kw">def</span> toolbarBitmapSizeChanged(self, large: bool) -&gt; None</code>
-            <code><span class="kw">def</span> toolbarBitmapSizeWillChange(self, large: bool) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandAuto(self, activity: int, state: bool) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandBack(self, activity: int) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandBegin(self, activity: int) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandControl(self, activity: int, option: int) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandEnd(self, activity: int) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandMark(self, activity: int) -&gt; None</code>
-            <code><span class="kw">def</span> undoSubcommandNumber(self, activity: int, num: int) -&gt; None</code>
-            <code><span class="kw">def</span> veto(self) -&gt; PyDb.ErrorStatus</code>
-            <code><span class="kw">def</span> viewChanged(self) -&gt; None</code>
-            <code><span class="kw">def</span> wblockNotice(self, db: PyDb.Database) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandAttachItem(self, db: PyDb.Database, activity: int, path: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandBindItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandDetachItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandOverlayItem(self, db: PyDb.Database, activity: int, path: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandPathItem(self, activity: int, blockId: PyDb.ObjectId, path: str) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandReloadItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> xrefSubcommandUnloadItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> abortAttach(self, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortDeepClone(self, idMap: PyDb.IdMapping) -&gt; None:</code>
+            <code><span class="kw">def</span> abortDxfIn(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortDxfOut(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortInsert(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortRestore(self, dbTo: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortSave(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> abortWblock(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> addReactor(self) -&gt; None:</code>
+            <code><span class="kw">def</span> beginAttach(self, dbTo: PyDb.Database, val: str, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginCloseAll(self) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDeepClone(self, db: PyDb.Database, idMap: PyDb.IdMapping) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDeepCloneXlation(self, idMap: PyDb.IdMapping) -&gt; PyDb.ErrorStatus:</code>
+            <code><span class="kw">def</span> beginDocClose(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDoubleClick(self, pt: PyGe.Point3d) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDwgOpen(self, fineName: str) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDxfIn(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginDxfOut(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginInsert(self, dbTo: PyDb.Database, pBlockName: str, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginInsert(self, dbTo: PyDb.Database, xform: PyGe.Matrix3d, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginInsert(*args) -&gt; None:</code>
+            <code><span class="kw">def</span> beginQuit(self) -&gt; None:</code>
+            <code><span class="kw">def</span> beginRestore(self, dbTo: PyDb.Database, val: str, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> beginRightClick(self, pt: PyGe.Point3d) -&gt; None:</code>
+            <code><span class="kw">def</span> beginSave(self, db: PyDb.Database, fname: str) -&gt; None:</code>
+            <code><span class="kw">def</span> beginWblock(self, dbTo: PyDb.Database, dbFrom: PyDb.Database, id: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> beginWblockObjects(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping) -&gt; None:</code>
+            <code><span class="kw">def</span> cmdIUnkModified(self, command: str) -&gt; None:</code>
+            <code><span class="kw">def</span> comandeered(self, dbTo: PyDb.Database, id: PyDb.ObjectId, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> commandCancelled(self, cmdStr: str) -&gt; None:</code>
+            <code><span class="kw">def</span> commandEnded(self, cmdStr: str) -&gt; None:</code>
+            <code><span class="kw">def</span> commandFailed(self, cmdStr: str) -&gt; None:</code>
+            <code><span class="kw">def</span> commandWillStart(self, cmdStr: str) -&gt; None:</code>
+            <code><span class="kw">def</span> databaseConstructed(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> databaseToBeDestroyed(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> docCloseAborted(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> docCloseWillStart(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> docFrameMovedOrResized(self, hwndDocFrame: int, moved: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> dwgViewResized(self, hwndDwgView: int) -&gt; None:</code>
+            <code><span class="kw">def</span> dxfInComplete(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> dxfOutComplete(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> endAttach(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> endDeepClone(self, idMap: PyDb.IdMapping) -&gt; None:</code>
+            <code><span class="kw">def</span> endDwgOpen(self, fineName: str, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> endInsert(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> endRestore(self, dbTo: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> endWblock(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> fullRegenEnded(self, db: PyDb.Database, regenedViewports: list[int]) -&gt; None:</code>
+            <code><span class="kw">def</span> fullRegenWillStart(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> initialDwgFileOpenComplete(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> layoutSwitched(self, layoutName: str) -&gt; None:</code>
+            <code><span class="kw">def</span> layoutToBeSwitched(self, oldLayoutName: str, newLayoutName: str) -&gt; None:</code>
+            <code><span class="kw">def</span> lispCancelled(self) -&gt; None:</code>
+            <code><span class="kw">def</span> lispEnded(self) -&gt; None:</code>
+            <code><span class="kw">def</span> lispWillStart(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> mainFrameMovedOrResized(self, hwndDocFrame: int, moved: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> modelessOperationEnded(self, context: str) -&gt; None:</code>
+            <code><span class="kw">def</span> modelessOperationWillStart(self, context: str) -&gt; None:</code>
+            <code><span class="kw">def</span> objectsLazyLoaded(self, ids: list[PyDb.ObjectId]) -&gt; None:</code>
+            <code><span class="kw">def</span> otherAttach(self, dbTo: PyDb.Database, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> otherInsert(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> otherWblock(self, dbTo: PyDb.Database, idMap: PyDb.IdMapping, dbFrom: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> partialOpenNotice(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> pickfirstModified(self) -&gt; None:</code>
+            <code><span class="kw">def</span> preXrefLockFile(self, id: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> quitAborted(self) -&gt; None:</code>
+            <code><span class="kw">def</span> quitWillStart(self) -&gt; None:</code>
+            <code><span class="kw">def</span> redirected(self, newId: PyDb.ObjectId, oldId: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> removeReactor(self) -&gt; None:</code>
+            <code><span class="kw">def</span> saveComplete(self, db: PyDb.Database, fname: str) -&gt; None:</code>
+            <code><span class="kw">def</span> sysVarChanged(self, varName: str, success: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> sysVarWillChange(self, varName: str) -&gt; None:</code>
+            <code><span class="kw">def</span> toolbarBitmapSizeChanged(self, large: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> toolbarBitmapSizeWillChange(self, large: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandAuto(self, activity: int, state: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandBack(self, activity: int) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandBegin(self, activity: int) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandControl(self, activity: int, option: int) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandEnd(self, activity: int) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandMark(self, activity: int) -&gt; None:</code>
+            <code><span class="kw">def</span> undoSubcommandNumber(self, activity: int, num: int) -&gt; None:</code>
+            <code><span class="kw">def</span> veto(self) -&gt; PyDb.ErrorStatus:</code>
+            <code><span class="kw">def</span> viewChanged(self) -&gt; None:</code>
+            <code><span class="kw">def</span> wblockNotice(self, db: PyDb.Database) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandAttachItem(self, db: PyDb.Database, activity: int, path: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandBindItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandDetachItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandOverlayItem(self, db: PyDb.Database, activity: int, path: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandPathItem(self, activity: int, blockId: PyDb.ObjectId, path: str) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandReloadItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> xrefSubcommandUnloadItem(self, db: PyDb.Database, activity: int, blockId: PyDb.ObjectId) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="InputPoint">
         <details>
             <summary>class InputPoint <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> alignmentPaths(self) -&gt; list[PyGe.Curve]</code>
-            <code><span class="kw">def</span> cartesianSnappedPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> computedPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> document(self) -&gt; PyAp.Document</code>
-            <code><span class="kw">def</span> drawContext(self) -&gt; PyGi.ViewportDraw</code>
-            <code><span class="kw">def</span> grippedPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> gsSelectionMark(self) -&gt; list[int]</code>
-            <code><span class="kw">def</span> history(self) -&gt; PointHistory</code>
-            <code><span class="kw">def</span> keyPointEntities(self) -&gt; list[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> keyPointGsSelectionMark(self) -&gt; list[int]</code>
-            <code><span class="kw">def</span> lastPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> nestedKeyPointEntities(self) -&gt; list[list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> nestedPickedEntities(self) -&gt; list[list[PyDb.ObjectId]]</code>
-            <code><span class="kw">def</span> osnapMask(self) -&gt; PyDb.OsnapMask</code>
-            <code><span class="kw">def</span> osnapOverrides(self) -&gt; PyDb.OsnapMask</code>
-            <code><span class="kw">def</span> osnappedPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> pickedEntities(self) -&gt; list[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> pointComputed(self) -&gt; bool</code>
-            <code><span class="kw">def</span> rawPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> tooltipString(self) -&gt; str</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> alignmentPaths(self) -&gt; list[PyGe.Curve]:</code>
+            <code><span class="kw">def</span> cartesianSnappedPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> computedPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> document(self) -&gt; PyAp.Document:</code>
+            <code><span class="kw">def</span> drawContext(self) -&gt; PyGi.ViewportDraw:</code>
+            <code><span class="kw">def</span> grippedPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> gsSelectionMark(self) -&gt; list[int]:</code>
+            <code><span class="kw">def</span> history(self) -&gt; PointHistory:</code>
+            <code><span class="kw">def</span> keyPointEntities(self) -&gt; list[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> keyPointGsSelectionMark(self) -&gt; list[int]:</code>
+            <code><span class="kw">def</span> lastPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> nestedKeyPointEntities(self) -&gt; list[list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> nestedPickedEntities(self) -&gt; list[list[PyDb.ObjectId]]:</code>
+            <code><span class="kw">def</span> osnapMask(self) -&gt; PyDb.OsnapMask:</code>
+            <code><span class="kw">def</span> osnapOverrides(self) -&gt; PyDb.OsnapMask:</code>
+            <code><span class="kw">def</span> osnappedPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> pickedEntities(self) -&gt; list[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> pointComputed(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> rawPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> tooltipString(self) -&gt; str:</code>
         </details>
     </div>
 
     <div class="class" id="InputPointFilter">
         <details>
             <summary>class InputPointFilter <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> processInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointFilterResult) -&gt; PyDb.ErrorStatus</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> processInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointFilterResult) -&gt; PyDb.ErrorStatus:</code>
         </details>
     </div>
 
     <div class="class" id="InputPointFilterResult">
         <details>
             <summary>class InputPointFilterResult <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> displayOsnapGlyph(self) -&gt; bool</code>
-            <code><span class="kw">def</span> newPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> newTooltipString(self) -&gt; str</code>
-            <code><span class="kw">def</span> retry(self) -&gt; bool</code>
-            <code><span class="kw">def</span> setDisplayOsnapGlyph(self, val: bool) -&gt; None</code>
-            <code><span class="kw">def</span> setNewPoint(self, val: PyGe.Point3d) -&gt; None</code>
-            <code><span class="kw">def</span> setNewTooltipString(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setRetry(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> displayOsnapGlyph(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> newPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> newTooltipString(self) -&gt; str:</code>
+            <code><span class="kw">def</span> retry(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> setDisplayOsnapGlyph(self, val: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> setNewPoint(self, val: PyGe.Point3d) -&gt; None:</code>
+            <code><span class="kw">def</span> setNewTooltipString(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setRetry(self, val: bool) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="InputPointManager">
         <details>
             <summary>class InputPointManager <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addPointMonitor(self, monitor: PyEd.InputPointMonitor) -&gt; None</code>
-            <code><span class="kw">def</span> disableSystemCursorGraphics(self) -&gt; bool</code>
-            <code><span class="kw">def</span> enableMultiSubentPathSelection(self) -&gt; None</code>
-            <code><span class="kw">def</span> enableSystemCursorGraphics(self) -&gt; bool</code>
-            <code><span class="kw">def</span> forcedPickCount(self) -&gt; int</code>
-            <code><span class="kw">def</span> hasFilter(self) -&gt; bool</code>
-            <code><span class="kw">def</span> mouseHasMoved(self) -&gt; int</code>
-            <code><span class="kw">def</span> registerPointFilter(self, filter: PyEd.InputPointFilter) -&gt; None</code>
-            <code><span class="kw">def</span> removePointMonitor(self, monitor: PyEd.InputPointMonitor) -&gt; None</code>
-            <code><span class="kw">def</span> revokePointFilter(self) -&gt; None</code>
-            <code><span class="kw">def</span> systemCursorDisableCount(self) -&gt; int</code>
-            <code><span class="kw">def</span> turnOffForcedPick(self) -&gt; bool</code>
-            <code><span class="kw">def</span> turnOffSubentityWindowSelection(self) -&gt; bool</code>
-            <code><span class="kw">def</span> turnOnSubentityWindowSelection(self) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addPointMonitor(self, monitor: PyEd.InputPointMonitor) -&gt; None:</code>
+            <code><span class="kw">def</span> disableSystemCursorGraphics(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> enableMultiSubentPathSelection(self) -&gt; None:</code>
+            <code><span class="kw">def</span> enableSystemCursorGraphics(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> forcedPickCount(self) -&gt; int:</code>
+            <code><span class="kw">def</span> hasFilter(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> mouseHasMoved(self) -&gt; int:</code>
+            <code><span class="kw">def</span> registerPointFilter(self, filter: PyEd.InputPointFilter) -&gt; None:</code>
+            <code><span class="kw">def</span> removePointMonitor(self, monitor: PyEd.InputPointMonitor) -&gt; None:</code>
+            <code><span class="kw">def</span> revokePointFilter(self) -&gt; None:</code>
+            <code><span class="kw">def</span> systemCursorDisableCount(self) -&gt; int:</code>
+            <code><span class="kw">def</span> turnOffForcedPick(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> turnOffSubentityWindowSelection(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> turnOnSubentityWindowSelection(self) -&gt; bool:</code>
         </details>
     </div>
 
     <div class="class" id="InputPointMonitor">
         <details>
             <summary>class InputPointMonitor <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> monitorInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointMonitorResult) -&gt; PyDb.ErrorStatus</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> monitorInputPoint(self, input: PyEd.InputPoint, output: PyEd.InputPointMonitorResult) -&gt; PyDb.ErrorStatus:</code>
         </details>
     </div>
 
     <div class="class" id="InputPointMonitorResult">
         <details>
             <summary>class InputPointMonitorResult <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__() -&gt; None
-    &quot;&quot;&quot;Raises an exception.
-This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> additionalTooltipString(self) -&gt; str</code>
-            <code><span class="kw">def</span> appendToTooltipStr(self) -&gt; bool</code>
-            <code><span class="kw">def</span> setAdditionalTooltipString(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None:
+    <span class="ds">Raises an exception.
+This class cannot be instantiated from Python.</span></code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> additionalTooltipString(self) -&gt; str:</code>
+            <code><span class="kw">def</span> appendToTooltipStr(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> setAdditionalTooltipString(self, val: str) -&gt; None:</code>
         </details>
     </div>
 
     <div class="class" id="Jig">
         <details>
             <summary>class Jig <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self, entity: PyDb.Entity) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
-            <code><span class="kw">def</span> acquireDist(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]</code>
-            <code><span class="kw">def</span> acquirePoint(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, PyGe.Point3d]</code>
-            <code><span class="kw">def</span> acquireString(self) -&gt; tuple[PyEd.DragStatus, str]</code>
-            <code><span class="kw">def</span> append(self) -&gt; PyDb.ObjectId</code>
-            <code><span class="kw">def</span> className() -&gt; str</code>
-            <code><span class="kw">def</span> dispPrompt(self) -&gt; str</code>
-            <code><span class="kw">def</span> drag(self, style: PyEd.DragStyle) -&gt; DragStatus</code>
-            <code><span class="kw">def</span> keywordList(self) -&gt; str</code>
-            <code><span class="kw">def</span> sampler(self) -&gt; DragStatus</code>
-            <code><span class="kw">def</span> setDispPrompt(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setKeywordList(self, val: str) -&gt; None</code>
-            <code><span class="kw">def</span> setSpecialCursorType(self, val: PyEd.CursorType) -&gt; None</code>
-            <code><span class="kw">def</span> setUserInputControls(self, val: PyEd.UserInputControls) -&gt; None</code>
-            <code><span class="kw">def</span> specialCursorType(self) -&gt; CursorType</code>
-            <code><span class="kw">def</span> update(self) -&gt; bool</code>
-            <code><span class="kw">def</span> userInputControls(self) -&gt; UserInputControls</code>
+            <code><span class="kw">def</span> __init__(self, entity: PyDb.Entity) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> acquireAngle(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]:</code>
+            <code><span class="kw">def</span> acquireDist(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, float]:</code>
+            <code><span class="kw">def</span> acquirePoint(self, basePnt: PyGe.Point3d) -&gt; tuple[PyEd.DragStatus, PyGe.Point3d]:</code>
+            <code><span class="kw">def</span> acquireString(self) -&gt; tuple[PyEd.DragStatus, str]:</code>
+            <code><span class="kw">def</span> append(self) -&gt; PyDb.ObjectId:</code>
+            <code><span class="kw">def</span> className() -&gt; str:</code>
+            <code><span class="kw">def</span> dispPrompt(self) -&gt; str:</code>
+            <code><span class="kw">def</span> drag(self, style: PyEd.DragStyle) -&gt; DragStatus:</code>
+            <code><span class="kw">def</span> keywordList(self) -&gt; str:</code>
+            <code><span class="kw">def</span> sampler(self) -&gt; DragStatus:</code>
+            <code><span class="kw">def</span> setDispPrompt(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setKeywordList(self, val: str) -&gt; None:</code>
+            <code><span class="kw">def</span> setSpecialCursorType(self, val: PyEd.CursorType) -&gt; None:</code>
+            <code><span class="kw">def</span> setUserInputControls(self, val: PyEd.UserInputControls) -&gt; None:</code>
+            <code><span class="kw">def</span> specialCursorType(self) -&gt; CursorType:</code>
+            <code><span class="kw">def</span> update(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> userInputControls(self) -&gt; UserInputControls:</code>
         </details>
     </div>
 
@@ -1745,43 +1749,43 @@ This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
     <div class="class" id="SelectionSet">
         <details>
             <summary>class SelectionSet <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __iter__(self) -&gt; Iterator[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> add(self, id: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> adsname(self) -&gt; PyDb.AdsName</code>
-            <code><span class="kw">def</span> clear(self) -&gt; None</code>
-            <code><span class="kw">def</span> hasMember(self, id: PyDb.ObjectId) -&gt; bool</code>
-            <code><span class="kw">def</span> isInitialized(self) -&gt; bool</code>
-            <code><span class="kw">def</span> keepAlive(self, flag: bool) -&gt; None</code>
-            <code><span class="kw">def</span> objectIdArray(self, desc: PyRx.RxClass) -&gt; PyDb.ObjectIdArray</code>
-            <code><span class="kw">def</span> objectIdArray(self, descList: list[PyRx.RxClass]) -&gt; PyDb.ObjectIdArray</code>
-            <code><span class="kw">def</span> objectIdArray(*args) -&gt; PyDb.ObjectIdArray</code>
-            <code><span class="kw">def</span> objectIds(self, desc: PyRx.RxClass) -&gt; list[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> objectIds(self, descList: list[PyRx.RxClass]) -&gt; list[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> objectIds(*args) -&gt; list[PyDb.ObjectId]</code>
-            <code><span class="kw">def</span> remove(self, id: PyDb.ObjectId) -&gt; None</code>
-            <code><span class="kw">def</span> size(self) -&gt; int</code>
-            <code><span class="kw">def</span> ssNameX(self, val: int) -&gt; list</code>
-            <code><span class="kw">def</span> ssSetFirst(self) -&gt; bool</code>
-            <code><span class="kw">def</span> ssXform(self, xform: PyGe.Matrix3d) -&gt; PromptStatus</code>
-            <code><span class="kw">def</span> toList(self) -&gt; list[PyDb.ObjectId]</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __iter__(self) -&gt; Iterator[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> add(self, id: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> adsname(self) -&gt; PyDb.AdsName:</code>
+            <code><span class="kw">def</span> clear(self) -&gt; None:</code>
+            <code><span class="kw">def</span> hasMember(self, id: PyDb.ObjectId) -&gt; bool:</code>
+            <code><span class="kw">def</span> isInitialized(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> keepAlive(self, flag: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> objectIdArray(self, desc: PyRx.RxClass) -&gt; PyDb.ObjectIdArray:</code>
+            <code><span class="kw">def</span> objectIdArray(self, descList: list[PyRx.RxClass]) -&gt; PyDb.ObjectIdArray:</code>
+            <code><span class="kw">def</span> objectIdArray(*args) -&gt; PyDb.ObjectIdArray:</code>
+            <code><span class="kw">def</span> objectIds(self, desc: PyRx.RxClass) -&gt; list[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> objectIds(self, descList: list[PyRx.RxClass]) -&gt; list[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> objectIds(*args) -&gt; list[PyDb.ObjectId]:</code>
+            <code><span class="kw">def</span> remove(self, id: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> size(self) -&gt; int:</code>
+            <code><span class="kw">def</span> ssNameX(self, val: int) -&gt; list:</code>
+            <code><span class="kw">def</span> ssSetFirst(self) -&gt; bool:</code>
+            <code><span class="kw">def</span> ssXform(self, xform: PyGe.Matrix3d) -&gt; PromptStatus:</code>
+            <code><span class="kw">def</span> toList(self) -&gt; list[PyDb.ObjectId]:</code>
         </details>
     </div>
 
     <div class="class" id="UIContext">
         <details>
             <summary>class UIContext <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> OnUpdateMenu(self) -&gt; None</code>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> addDefaultContextMenu(context: PyEd.UIContext, appName: str) -&gt; bool</code>
-            <code><span class="kw">def</span> addObjectContextMenu(val: PyRx.RxClass, context: PyEd.UIContext) -&gt; bool</code>
-            <code><span class="kw">def</span> getMenuContext(self, val: PyRx.RxClass, ids: list[PyDb.ObjectId]) -&gt; object</code>
-            <code><span class="kw">def</span> hitPoint(self) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> onCommand(self, mnuCmd: int) -&gt; None</code>
-            <code><span class="kw">def</span> removeDefaultContextMenu(context: PyEd.UIContext) -&gt; bool</code>
-            <code><span class="kw">def</span> removeObjectContextMenu(val: PyRx.RxClass, context: PyEd.UIContext) -&gt; bool</code>
+            <code><span class="kw">def</span> OnUpdateMenu(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> addDefaultContextMenu(context: PyEd.UIContext, appName: str) -&gt; bool:</code>
+            <code><span class="kw">def</span> addObjectContextMenu(val: PyRx.RxClass, context: PyEd.UIContext) -&gt; bool:</code>
+            <code><span class="kw">def</span> getMenuContext(self, val: PyRx.RxClass, ids: list[PyDb.ObjectId]) -&gt; object:</code>
+            <code><span class="kw">def</span> hitPoint(self) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> onCommand(self, mnuCmd: int) -&gt; None:</code>
+            <code><span class="kw">def</span> removeDefaultContextMenu(context: PyEd.UIContext) -&gt; bool:</code>
+            <code><span class="kw">def</span> removeObjectContextMenu(val: PyRx.RxClass, context: PyEd.UIContext) -&gt; bool:</code>
         </details>
     </div>
 
@@ -1811,21 +1815,21 @@ This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
     <div class="class" id="UserInteraction">
         <details>
             <summary>class UserInteraction <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self, doc: PyAp.Document, isPrompting: bool) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> __init__(self, doc: PyAp.Document, isPrompting: bool) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
         </details>
     </div>
 
     <div class="class" id="Util">
         <details>
             <summary>class Util <span class="tag">Class</span></summary>
-            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
-            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
-            <code><span class="kw">def</span> angle(pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; float</code>
-            <code><span class="kw">def</span> cvUnit(val: float, oldunit: str, newunit: str) -&gt; float</code>
-            <code><span class="kw">def</span> distance(pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; float</code>
-            <code><span class="kw">def</span> polar(pt1: PyGe.Point3d, angle: float, dist: float) -&gt; PyGe.Point3d</code>
-            <code><span class="kw">def</span> wcMatch(string: str, pattern: str, ignoreCase: bool) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None:</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> angle(pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; float:</code>
+            <code><span class="kw">def</span> cvUnit(val: float, oldunit: str, newunit: str) -&gt; float:</code>
+            <code><span class="kw">def</span> distance(pt1: PyGe.Point3d, pt2: PyGe.Point3d) -&gt; float:</code>
+            <code><span class="kw">def</span> polar(pt1: PyGe.Point3d, angle: float, dist: float) -&gt; PyGe.Point3d:</code>
+            <code><span class="kw">def</span> wcMatch(string: str, pattern: str, ignoreCase: bool) -&gt; bool:</code>
         </details>
     </div>
 </body>
