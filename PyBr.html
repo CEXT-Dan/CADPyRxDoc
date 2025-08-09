@@ -38,6 +38,11 @@
             color: #dcdcdc;
             padding: 0.4em 0.6em;
             border-left: 4px solid #007acc;
+            font-size: 1.2em;
+        }
+        .kw {
+            color: #569cd6;
+            font-weight: bold;
         }
         h1 {
             color: #569cd6;
@@ -104,140 +109,242 @@
     <div class="class" id="Brep">
         <details>
             <summary>class Brep <span class="tag">Class</span></summary>
-            <code>def __init__(self, entity: PyDb.Entity) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getSolid(self) -&gt; PyDb.Solid3d</code>
-            <code>def getSurface(self) -&gt; PyGe.Surface</code>
-            <code>def set(self, entity: PyDb.Entity) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, entity: PyDb.Entity) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getSolid(self) -&gt; PyDb.Solid3d</code>
+            <code><span class="kw">def</span> getSurface(self) -&gt; PyGe.Surface</code>
+            <code><span class="kw">def</span> set(self, entity: PyDb.Entity) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Complex">
         <details>
             <summary>class Complex <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
         </details>
     </div>
 
     <div class="class" id="ComplexShellTraverser">
         <details>
             <summary>class ComplexShellTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getComplex(self) -&gt; Complex</code>
-            <code>def getShell(self) -&gt; Shell</code>
-            <code>def setComplex(self, val: PyBr.Complex) -&gt; None</code>
-            <code>def setComplexAndShell(self, val: PyBr.Shell) -&gt; None</code>
-            <code>def setComplexTraverser(self, val: PyBr.BrepComplexTraverser) -&gt; None</code>
-            <code>def setShell(self, val: PyBr.Shell) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getComplex(self) -&gt; Complex</code>
+            <code><span class="kw">def</span> getShell(self) -&gt; Shell</code>
+            <code><span class="kw">def</span> setComplex(self, val: PyBr.Complex) -&gt; None</code>
+            <code><span class="kw">def</span> setComplexAndShell(self, val: PyBr.Shell) -&gt; None</code>
+            <code><span class="kw">def</span> setComplexTraverser(self, val: PyBr.BrepComplexTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setShell(self, val: PyBr.Shell) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="ComplexTraverser">
         <details>
             <summary>class ComplexTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getComplex(self) -&gt; Complex</code>
-            <code>def getComplexs(self) -&gt; list[PyBr.Complex]</code>
-            <code>def setBrep(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def setBrepAndComplex(self, val: PyBr.Complex) -&gt; None</code>
-            <code>def setComplex(self, val: PyBr.Complex) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getComplex(self) -&gt; Complex</code>
+            <code><span class="kw">def</span> getComplexs(self) -&gt; list[PyBr.Complex]</code>
+            <code><span class="kw">def</span> setBrep(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> setBrepAndComplex(self, val: PyBr.Complex) -&gt; None</code>
+            <code><span class="kw">def</span> setComplex(self, val: PyBr.Complex) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Edge">
         <details>
             <summary>class Edge <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getCurve(self) -&gt; PyGe.ExternalCurve3d</code>
-            <code>def getCurveType(self) -&gt; PyGe.EntityId</code>
-            <code>def getOrientToCurve(self) -&gt; bool</code>
-            <code>def getVertex1(self) -&gt; PyBr.Vertex</code>
-            <code>def getVertex2(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getCurve(self) -&gt; PyGe.ExternalCurve3d</code>
+            <code><span class="kw">def</span> getCurveType(self) -&gt; PyGe.EntityId</code>
+            <code><span class="kw">def</span> getOrientToCurve(self) -&gt; bool</code>
+            <code><span class="kw">def</span> getVertex1(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> getVertex2(self) -&gt; PyBr.Vertex</code>
         </details>
     </div>
 
     <div class="class" id="EdgeLoopTraverser">
         <details>
             <summary>class EdgeLoopTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getEdge(self) -&gt; Edge</code>
-            <code>def getLoop(self) -&gt; Loop</code>
-            <code>def setEdge(self, val: PyBr.Edge) -&gt; None</code>
-            <code>def setEdgeAndLoop(self, val: PyBr.LoopEdgeTraverser) -&gt; None</code>
-            <code>def setLoop(self, val: PyBr.Loop) -&gt; None</code>
-            <code>def setVertexAndEdge(self, val: PyBr.VertexEdgeTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getEdge(self) -&gt; Edge</code>
+            <code><span class="kw">def</span> getLoop(self) -&gt; Loop</code>
+            <code><span class="kw">def</span> setEdge(self, val: PyBr.Edge) -&gt; None</code>
+            <code><span class="kw">def</span> setEdgeAndLoop(self, val: PyBr.LoopEdgeTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> setVertexAndEdge(self, val: PyBr.VertexEdgeTraverser) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="EdgeTraverser">
         <details>
             <summary>class EdgeTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getEdge(self) -&gt; Edge</code>
-            <code>def getEdges(self) -&gt; list[PyBr.Edge]</code>
-            <code>def setBrep(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def setBrepAndEdge(self, val: PyBr.Edge) -&gt; None</code>
-            <code>def setEdge(self, val: PyBr.Edge) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getEdge(self) -&gt; Edge</code>
+            <code><span class="kw">def</span> getEdges(self) -&gt; list[PyBr.Edge]</code>
+            <code><span class="kw">def</span> setBrep(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> setBrepAndEdge(self, val: PyBr.Edge) -&gt; None</code>
+            <code><span class="kw">def</span> setEdge(self, val: PyBr.Edge) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Element">
         <details>
             <summary>class Element <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
         </details>
     </div>
 
     <div class="class" id="Element2d">
         <details>
             <summary>class Element2d <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getNormal(self) -&gt; PyGe.Vector3d</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getNormal(self) -&gt; PyGe.Vector3d</code>
         </details>
     </div>
 
     <div class="class" id="Element2dNodeTraverser">
         <details>
             <summary>class Element2dNodeTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getElement(self) -&gt; Element2d</code>
-            <code>def getNode(self) -&gt; Node</code>
-            <code>def getParamPoint(self) -&gt; PyGe.Point2d</code>
-            <code>def getSurfaceNormal(self) -&gt; PyGe.Vector3d</code>
-            <code>def setElement(self, val: PyBr.Element2d) -&gt; None</code>
-            <code>def setElementTraverser(self, val: PyBr.Mesh2dElement2dTraverser) -&gt; None</code>
-            <code>def setNode(self, val: PyBr.Node) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getElement(self) -&gt; Element2d</code>
+            <code><span class="kw">def</span> getNode(self) -&gt; Node</code>
+            <code><span class="kw">def</span> getParamPoint(self) -&gt; PyGe.Point2d</code>
+            <code><span class="kw">def</span> getSurfaceNormal(self) -&gt; PyGe.Vector3d</code>
+            <code><span class="kw">def</span> setElement(self, val: PyBr.Element2d) -&gt; None</code>
+            <code><span class="kw">def</span> setElementTraverser(self, val: PyBr.Mesh2dElement2dTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setNode(self, val: PyBr.Node) -&gt; None</code>
         </details>
     </div>
 
@@ -254,26 +361,38 @@
     <div class="class" id="Entity">
         <details>
             <summary>class Entity <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def brepChanged(self) -&gt; bool</code>
-            <code>def checkEntity(self) -&gt; bool</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBoundBlock(self) -&gt; PyGe.BoundBlock3d</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getLineContainment(self, line: PyGe.LinearEnt3d, numHitsWanted: int) -&gt; list[PyBr.Hit]</code>
-            <code>def getMassProps(self, density: float, tolRequired: float) -&gt; tuple</code>
-            <code>def getPerimeterLength(self, tolRequired: float) -&gt; tuple[float, float]</code>
-            <code>def getPointContainment(self, pt: PyGe.Point3d) -&gt; tuple[PyBr.Entity, PyGe.PointContainment]</code>
-            <code>def getSubentPath(self) -&gt; PyDb.FullSubentPath</code>
-            <code>def getSurfaceArea(self, tolRequired: float) -&gt; tuple[float, float]</code>
-            <code>def getValidationLevel(self) -&gt; ValidationLevel</code>
-            <code>def getVolume(self, tolRequired: float) -&gt; tuple[float, float]</code>
-            <code>def isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
-            <code>def isNull(self) -&gt; bool</code>
-            <code>def setSubentPath(self, val: PyDb.FullSubentPath) -&gt; None</code>
-            <code>def setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> brepChanged(self) -&gt; bool</code>
+            <code><span class="kw">def</span> checkEntity(self) -&gt; bool</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBoundBlock(self) -&gt; PyGe.BoundBlock3d</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getLineContainment(self, line: PyGe.LinearEnt3d, numHitsWanted: int) -&gt; list[PyBr.Hit]</code>
+            <code><span class="kw">def</span> getMassProps(self, density: float, tolRequired: float) -&gt; tuple</code>
+            <code><span class="kw">def</span> getPerimeterLength(self, tolRequired: float) -&gt; tuple[float, float]</code>
+            <code><span class="kw">def</span> getPointContainment(self, pt: PyGe.Point3d) -&gt; tuple[PyBr.Entity, PyGe.PointContainment]</code>
+            <code><span class="kw">def</span> getSubentPath(self) -&gt; PyDb.FullSubentPath</code>
+            <code><span class="kw">def</span> getSurfaceArea(self, tolRequired: float) -&gt; tuple[float, float]</code>
+            <code><span class="kw">def</span> getValidationLevel(self) -&gt; ValidationLevel</code>
+            <code><span class="kw">def</span> getVolume(self, tolRequired: float) -&gt; tuple[float, float]</code>
+            <code><span class="kw">def</span> isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
+            <code><span class="kw">def</span> isNull(self) -&gt; bool</code>
+            <code><span class="kw">def</span> setSubentPath(self, val: PyDb.FullSubentPath) -&gt; None</code>
+            <code><span class="kw">def</span> setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
         </details>
     </div>
 
@@ -307,98 +426,158 @@
     <div class="class" id="Face">
         <details>
             <summary>class Face <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getArea(self) -&gt; float</code>
-            <code>def getAreaWithTol(self, tolRequired: float) -&gt; tuple[float, float]</code>
-            <code>def getOrientToSurface(self) -&gt; bool</code>
-            <code>def getShell(self) -&gt; Shell</code>
-            <code>def getSurface(self) -&gt; PyGe.Surface</code>
-            <code>def getSurfaceType(self) -&gt; PyGe.EntityId</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getArea(self) -&gt; float</code>
+            <code><span class="kw">def</span> getAreaWithTol(self, tolRequired: float) -&gt; tuple[float, float]</code>
+            <code><span class="kw">def</span> getOrientToSurface(self) -&gt; bool</code>
+            <code><span class="kw">def</span> getShell(self) -&gt; Shell</code>
+            <code><span class="kw">def</span> getSurface(self) -&gt; PyGe.Surface</code>
+            <code><span class="kw">def</span> getSurfaceType(self) -&gt; PyGe.EntityId</code>
         </details>
     </div>
 
     <div class="class" id="FaceLoopTraverser">
         <details>
             <summary>class FaceLoopTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getFace(self) -&gt; Face</code>
-            <code>def getLoop(self) -&gt; Loop</code>
-            <code>def setFace(self, val: PyBr.Face) -&gt; None</code>
-            <code>def setFaceAndLoop(self, val: PyBr.Loop) -&gt; None</code>
-            <code>def setFaceTraverser(self, val: PyBr.ShellFaceTraverser) -&gt; None</code>
-            <code>def setLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getFace(self) -&gt; Face</code>
+            <code><span class="kw">def</span> getLoop(self) -&gt; Loop</code>
+            <code><span class="kw">def</span> setFace(self, val: PyBr.Face) -&gt; None</code>
+            <code><span class="kw">def</span> setFaceAndLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> setFaceTraverser(self, val: PyBr.ShellFaceTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setLoop(self, val: PyBr.Loop) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="FaceTraverser">
         <details>
             <summary>class FaceTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getFace(self) -&gt; Face</code>
-            <code>def getFaces(self) -&gt; list[PyBr.Face]</code>
-            <code>def setBrep(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def setBrepAndFace(self, val: PyBr.Face) -&gt; None</code>
-            <code>def setFace(self, val: PyBr.Face) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getFace(self) -&gt; Face</code>
+            <code><span class="kw">def</span> getFaces(self) -&gt; list[PyBr.Face]</code>
+            <code><span class="kw">def</span> setBrep(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> setBrepAndFace(self, val: PyBr.Face) -&gt; None</code>
+            <code><span class="kw">def</span> setFace(self, val: PyBr.Face) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Hit">
         <details>
             <summary>class Hit <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def brepChanged(self) -&gt; bool</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getEntityAssociated(self) -&gt; Entity</code>
-            <code>def getEntityEntered(self) -&gt; Entity</code>
-            <code>def getEntityHit(self) -&gt; Entity</code>
-            <code>def getPoint(self) -&gt; PyGe.Point3d</code>
-            <code>def getValidationLevel(self) -&gt; ValidationLevel</code>
-            <code>def isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
-            <code>def isNull(self) -&gt; bool</code>
-            <code>def setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> brepChanged(self) -&gt; bool</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getEntityAssociated(self) -&gt; Entity</code>
+            <code><span class="kw">def</span> getEntityEntered(self) -&gt; Entity</code>
+            <code><span class="kw">def</span> getEntityHit(self) -&gt; Entity</code>
+            <code><span class="kw">def</span> getPoint(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> getValidationLevel(self) -&gt; ValidationLevel</code>
+            <code><span class="kw">def</span> isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
+            <code><span class="kw">def</span> isNull(self) -&gt; bool</code>
+            <code><span class="kw">def</span> setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Loop">
         <details>
             <summary>class Loop <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getFace(self) -&gt; Face</code>
-            <code>def getType(self) -&gt; LoopType</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getFace(self) -&gt; Face</code>
+            <code><span class="kw">def</span> getType(self) -&gt; LoopType</code>
         </details>
     </div>
 
     <div class="class" id="LoopEdgeTraverser">
         <details>
             <summary>class LoopEdgeTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getEdge(self) -&gt; Edge</code>
-            <code>def getEdgeOrientToLoop(self) -&gt; bool</code>
-            <code>def getLoop(self) -&gt; Loop</code>
-            <code>def getOrientedCurve(self) -&gt; PyGe.Curve3d</code>
-            <code>def getParamCurve(self) -&gt; PyGe.Curve2d</code>
-            <code>def setEdge(self, val: PyBr.Edge) -&gt; None</code>
-            <code>def setLoop(self, val: PyBr.Loop) -&gt; None</code>
-            <code>def setLoopAndEdge(self, val: PyBr.EdgeLoopTraverser) -&gt; None</code>
-            <code>def setLoopTraverser(self, val: PyBr.FaceLoopTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getEdge(self) -&gt; Edge</code>
+            <code><span class="kw">def</span> getEdgeOrientToLoop(self) -&gt; bool</code>
+            <code><span class="kw">def</span> getLoop(self) -&gt; Loop</code>
+            <code><span class="kw">def</span> getOrientedCurve(self) -&gt; PyGe.Curve3d</code>
+            <code><span class="kw">def</span> getParamCurve(self) -&gt; PyGe.Curve2d</code>
+            <code><span class="kw">def</span> setEdge(self, val: PyBr.Edge) -&gt; None</code>
+            <code><span class="kw">def</span> setLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> setLoopAndEdge(self, val: PyBr.EdgeLoopTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setLoopTraverser(self, val: PyBr.FaceLoopTraverser) -&gt; None</code>
         </details>
     </div>
 
@@ -417,95 +596,159 @@
     <div class="class" id="LoopVertexTraverser">
         <details>
             <summary>class LoopVertexTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getLoop(self) -&gt; Loop</code>
-            <code>def getParamPoint(self) -&gt; PyGe.Point2d</code>
-            <code>def getVertex(self) -&gt; PyBr.Vertex</code>
-            <code>def setLoop(self, val: PyBr.Loop) -&gt; None</code>
-            <code>def setLoopAndVertex(self, val: PyBr.VertexLoopTraverser) -&gt; None</code>
-            <code>def setLoopTraverser(self, val: PyBr.FaceLoopTraverser) -&gt; None</code>
-            <code>def setVertex(self, val: PyBr.Vertex) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getLoop(self) -&gt; Loop</code>
+            <code><span class="kw">def</span> getParamPoint(self) -&gt; PyGe.Point2d</code>
+            <code><span class="kw">def</span> getVertex(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> setLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> setLoopAndVertex(self, val: PyBr.VertexLoopTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setLoopTraverser(self, val: PyBr.FaceLoopTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> setVertex(self, val: PyBr.Vertex) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="MassProps">
         <details>
             <summary>class MassProps <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def centroid(self) -&gt; PyGe.Point3d</code>
-            <code>def mass(self) -&gt; float</code>
-            <code>def momInertia(self) -&gt; tuple</code>
-            <code>def prinAxes(self) -&gt; tuple</code>
-            <code>def prinMoments(self) -&gt; tuple</code>
-            <code>def prodInertia(self) -&gt; tuple</code>
-            <code>def radiiGyration(self) -&gt; tuple</code>
-            <code>def volume(self) -&gt; float</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> centroid(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> mass(self) -&gt; float</code>
+            <code><span class="kw">def</span> momInertia(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> prinAxes(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> prinMoments(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> prodInertia(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> radiiGyration(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> volume(self) -&gt; float</code>
         </details>
     </div>
 
     <div class="class" id="Mesh">
         <details>
             <summary>class Mesh <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
         </details>
     </div>
 
     <div class="class" id="Mesh2d">
         <details>
             <summary>class Mesh2d <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
         </details>
     </div>
 
     <div class="class" id="Mesh2dElement2dTraverser">
         <details>
             <summary>class Mesh2dElement2dTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getElement(self) -&gt; Element2d</code>
-            <code>def getMesh(self) -&gt; Mesh2d</code>
-            <code>def setElement(self, val: PyBr.Element2d) -&gt; None</code>
-            <code>def setMesh(self, val: PyBr.Mesh2d) -&gt; None</code>
-            <code>def setMeshAndElement(self, val: PyBr.Element2d) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getElement(self) -&gt; Element2d</code>
+            <code><span class="kw">def</span> getMesh(self) -&gt; Mesh2d</code>
+            <code><span class="kw">def</span> setElement(self, val: PyBr.Element2d) -&gt; None</code>
+            <code><span class="kw">def</span> setMesh(self, val: PyBr.Mesh2d) -&gt; None</code>
+            <code><span class="kw">def</span> setMeshAndElement(self, val: PyBr.Element2d) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="MeshEntity">
         <details>
             <summary>class MeshEntity <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def brepChanged(self) -&gt; bool</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getEntityAssociated(self) -&gt; Entity</code>
-            <code>def getValidationLevel(self) -&gt; ValidationLevel</code>
-            <code>def isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
-            <code>def isNull(self) -&gt; bool</code>
-            <code>def setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> brepChanged(self) -&gt; bool</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getEntityAssociated(self) -&gt; Entity</code>
+            <code><span class="kw">def</span> getValidationLevel(self) -&gt; ValidationLevel</code>
+            <code><span class="kw">def</span> isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
+            <code><span class="kw">def</span> isNull(self) -&gt; bool</code>
+            <code><span class="kw">def</span> setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="Node">
         <details>
             <summary>class Node <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getPoint(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getPoint(self) -&gt; PyGe.Point3d</code>
         </details>
     </div>
 
@@ -525,44 +768,74 @@
     <div class="class" id="Shell">
         <details>
             <summary>class Shell <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getComplex(self) -&gt; Complex</code>
-            <code>def getType(self) -&gt; ShellType</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getComplex(self) -&gt; Complex</code>
+            <code><span class="kw">def</span> getType(self) -&gt; ShellType</code>
         </details>
     </div>
 
     <div class="class" id="ShellFaceTraverser">
         <details>
             <summary>class ShellFaceTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getFace(self) -&gt; Face</code>
-            <code>def getShell(self) -&gt; Shell</code>
-            <code>def setFace(self, val: PyBr.Face) -&gt; None</code>
-            <code>def setShell(self, val: PyBr.Shell) -&gt; None</code>
-            <code>def setShellAndFace(self, val: PyBr.Face) -&gt; None</code>
-            <code>def setShellTraverser(self, val: PyBr.ComplexShellTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getFace(self) -&gt; Face</code>
+            <code><span class="kw">def</span> getShell(self) -&gt; Shell</code>
+            <code><span class="kw">def</span> setFace(self, val: PyBr.Face) -&gt; None</code>
+            <code><span class="kw">def</span> setShell(self, val: PyBr.Shell) -&gt; None</code>
+            <code><span class="kw">def</span> setShellAndFace(self, val: PyBr.Face) -&gt; None</code>
+            <code><span class="kw">def</span> setShellTraverser(self, val: PyBr.ComplexShellTraverser) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="ShellTraverser">
         <details>
             <summary>class ShellTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getShell(self) -&gt; Shell</code>
-            <code>def getShells(self) -&gt; list[PyBr.Shell]</code>
-            <code>def setBrep(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def setBrepAndShell(self, val: PyBr.Shell) -&gt; None</code>
-            <code>def setShell(self, val: PyBr.Shell) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getShell(self) -&gt; Shell</code>
+            <code><span class="kw">def</span> getShells(self) -&gt; list[PyBr.Shell]</code>
+            <code><span class="kw">def</span> setBrep(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> setBrepAndShell(self, val: PyBr.Shell) -&gt; None</code>
+            <code><span class="kw">def</span> setShell(self, val: PyBr.Shell) -&gt; None</code>
         </details>
     </div>
 
@@ -578,18 +851,30 @@
     <div class="class" id="Traverser">
         <details>
             <summary>class Traverser <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def brepChanged(self) -&gt; bool</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def done(self) -&gt; bool</code>
-            <code>def getValidationLevel(self) -&gt; ValidationLevel</code>
-            <code>def isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
-            <code>def isNull(self) -&gt; bool</code>
-            <code>def next(self) -&gt; None</code>
-            <code>def restart(self) -&gt; None</code>
-            <code>def setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> brepChanged(self) -&gt; bool</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> done(self) -&gt; bool</code>
+            <code><span class="kw">def</span> getValidationLevel(self) -&gt; ValidationLevel</code>
+            <code><span class="kw">def</span> isEqualTo(self, otherObject: PyRx.RxObject) -&gt; bool</code>
+            <code><span class="kw">def</span> isNull(self) -&gt; bool</code>
+            <code><span class="kw">def</span> next(self) -&gt; None</code>
+            <code><span class="kw">def</span> restart(self) -&gt; None</code>
+            <code><span class="kw">def</span> setValidationLevel(self, val: PyBr.ValidationLevel) -&gt; None</code>
         </details>
     </div>
 
@@ -604,56 +889,96 @@
     <div class="class" id="Vertex">
         <details>
             <summary>class Vertex <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getPoint(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getPoint(self) -&gt; PyGe.Point3d</code>
         </details>
     </div>
 
     <div class="class" id="VertexEdgeTraverser">
         <details>
             <summary>class VertexEdgeTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getEdge(self) -&gt; Edge</code>
-            <code>def getVertex(self) -&gt; PyBr.Vertex</code>
-            <code>def setEdge(self, val: PyBr.Edge) -&gt; None</code>
-            <code>def setVertex(self, val: PyBr.Vertex) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getEdge(self) -&gt; Edge</code>
+            <code><span class="kw">def</span> getVertex(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> setEdge(self, val: PyBr.Edge) -&gt; None</code>
+            <code><span class="kw">def</span> setVertex(self, val: PyBr.Vertex) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="VertexLoopTraverser">
         <details>
             <summary>class VertexLoopTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getLoop(self) -&gt; Loop</code>
-            <code>def getVertex(self) -&gt; PyBr.Vertex</code>
-            <code>def setLoop(self, val: PyBr.Loop) -&gt; None</code>
-            <code>def setVertex(self, val: PyBr.Vertex) -&gt; None</code>
-            <code>def setVertexAndLoop(self, val: PyBr.LoopVertexTraverser) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getLoop(self) -&gt; Loop</code>
+            <code><span class="kw">def</span> getVertex(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> setLoop(self, val: PyBr.Loop) -&gt; None</code>
+            <code><span class="kw">def</span> setVertex(self, val: PyBr.Vertex) -&gt; None</code>
+            <code><span class="kw">def</span> setVertexAndLoop(self, val: PyBr.LoopVertexTraverser) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="VertexTraverser">
         <details>
             <summary>class VertexTraverser <span class="tag">Class</span></summary>
-            <code>def __init__(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def getBrep(self) -&gt; Brep</code>
-            <code>def getVertex(self) -&gt; PyBr.Vertex</code>
-            <code>def getVertexs(self) -&gt; list[PyBr.Vertex]</code>
-            <code>def setBrep(self, val: PyBr.Brep) -&gt; None</code>
-            <code>def setBrepAndVertex(self, val: PyBr.Vertex) -&gt; None</code>
-            <code>def setVertex(self, val: PyBr.Vertex) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> getBrep(self) -&gt; Brep</code>
+            <code><span class="kw">def</span> getVertex(self) -&gt; PyBr.Vertex</code>
+            <code><span class="kw">def</span> getVertexs(self) -&gt; list[PyBr.Vertex]</code>
+            <code><span class="kw">def</span> setBrep(self, val: PyBr.Brep) -&gt; None</code>
+            <code><span class="kw">def</span> setBrepAndVertex(self, val: PyBr.Vertex) -&gt; None</code>
+            <code><span class="kw">def</span> setVertex(self, val: PyBr.Vertex) -&gt; None</code>
         </details>
     </div>
 </body>

@@ -38,6 +38,11 @@
             color: #dcdcdc;
             padding: 0.4em 0.6em;
             border-left: 4px solid #007acc;
+            font-size: 1.2em;
+        }
+        .kw {
+            color: #569cd6;
+            font-weight: bold;
         }
         h1 {
             color: #569cd6;
@@ -93,11 +98,11 @@
     <div class="class" id="Core">
         <details>
             <summary>class Core <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def processPlotState() -&gt; ProcessPlotState</code>
-            <code>def publishExecute(dsdDataObj: PyPl.DSDData, pConfig: PyPl.PlotConfig, bShowPlotProgress: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> processPlotState() -&gt; ProcessPlotState</code>
+            <code><span class="kw">def</span> publishExecute(dsdDataObj: PyPl.DSDData, pConfig: PyPl.PlotConfig, bShowPlotProgress: bool) -&gt; None</code>
         </details>
     </div>
 
@@ -125,90 +130,114 @@
     <div class="class" id="DSDData">
         <details>
             <summary>class DSDData <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def categoryName(self) -&gt; str</code>
-            <code>def className() -&gt; str</code>
-            <code>def currentPrecision(self) -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def destinationName(self) -&gt; str</code>
-            <code>def get3dDwfOptions(self) -&gt; tuple[bool, bool]</code>
-            <code>def getDSDEntries(self) -&gt; list[PyPl.DSDEntry]</code>
-            <code>def getPrecisionEntries(self) -&gt; list[PyPl.PrecisionEntry]</code>
-            <code>def getUnrecognizedData(self) -&gt; tuple</code>
-            <code>def includeLayerInfo(self) -&gt; bool</code>
-            <code>def initializeLayouts(self) -&gt; bool</code>
-            <code>def isHomogeneous(self) -&gt; bool</code>
-            <code>def isSheetSet(self) -&gt; bool</code>
-            <code>def lineMerge(self) -&gt; bool</code>
-            <code>def logFilePath(self) -&gt; str</code>
-            <code>def majorVersion(self) -&gt; int</code>
-            <code>def minorVersion(self) -&gt; int</code>
-            <code>def noOfCopies(self) -&gt; int</code>
-            <code>def numberOfDSDEntries(self) -&gt; int</code>
-            <code>def password(self) -&gt; str</code>
-            <code>def plotStampOn(self) -&gt; bool</code>
-            <code>def projectPath(self) -&gt; str</code>
-            <code>def promptForDwfName(self) -&gt; bool</code>
-            <code>def promptForPassword(self) -&gt; bool</code>
-            <code>def pwdProtectPublishedDWF(self) -&gt; bool</code>
-            <code>def selectionSetName(self) -&gt; str</code>
-            <code>def set3dDwfOptions(self, groupByXrefHierarchy: bool, publishWithMaterials: bool) -&gt; None</code>
-            <code>def setCategoryName(self, val: str) -&gt; None</code>
-            <code>def setCurrentPrecision(self, val: str) -&gt; None</code>
-            <code>def setDSDEntries(self, entries: list[PyPl.DSDEntry]) -&gt; None</code>
-            <code>def setDestinationName(self, val: str) -&gt; None</code>
-            <code>def setIncludeLayerInfo(self, val: bool) -&gt; None</code>
-            <code>def setInitializeLayouts(self, val: bool) -&gt; None</code>
-            <code>def setIsHomogeneous(self, val: bool) -&gt; None</code>
-            <code>def setIsSheetSet(self, val: bool) -&gt; None</code>
-            <code>def setLineMerge(self, val: bool) -&gt; None</code>
-            <code>def setLogFilePath(self, val: str) -&gt; None</code>
-            <code>def setMajorVersion(self, val: int) -&gt; None</code>
-            <code>def setMinorVersion(self, val: int) -&gt; None</code>
-            <code>def setNoOfCopies(self, val: int) -&gt; None</code>
-            <code>def setPassword(self, val: str) -&gt; None</code>
-            <code>def setPlotStampOn(self, val: bool) -&gt; None</code>
-            <code>def setPrecisionEntries(self, val: list[PyPl.PrecisionEntry]) -&gt; None</code>
-            <code>def setProjectPath(self, path: str) -&gt; None</code>
-            <code>def setPromptForDwfName(self, val: bool) -&gt; None</code>
-            <code>def setPromptForPassword(self, val: bool) -&gt; None</code>
-            <code>def setPwdProtectPublishedDWF(self, val: bool) -&gt; None</code>
-            <code>def setSelectionSetName(self, val: str) -&gt; None</code>
-            <code>def setSheetSetName(self, val: str) -&gt; None</code>
-            <code>def setSheetType(self, val: PyPl.SheetType) -&gt; None</code>
-            <code>def setUnrecognizedData(self, sectionName: str, sectionData: str) -&gt; None</code>
-            <code>def setViewFile(self, val: bool) -&gt; None</code>
-            <code>def sheetSetName(self) -&gt; str</code>
-            <code>def sheetType(self) -&gt; SheetType</code>
-            <code>def viewFile(self) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None
+    &quot;&quot;&quot;This utility class reads and writes DSD files. It holds an array of AcPlDSDEntry objects in
+addition to DSD sheet set information.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> categoryName(self) -&gt; str</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> currentPrecision(self) -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> destinationName(self) -&gt; str</code>
+            <code><span class="kw">def</span> get3dDwfOptions(self) -&gt; tuple[bool, bool]</code>
+            <code><span class="kw">def</span> getDSDEntries(self) -&gt; list[PyPl.DSDEntry]</code>
+            <code><span class="kw">def</span> getPrecisionEntries(self) -&gt; list[PyPl.PrecisionEntry]</code>
+            <code><span class="kw">def</span> getUnrecognizedData(self) -&gt; tuple</code>
+            <code><span class="kw">def</span> includeLayerInfo(self) -&gt; bool</code>
+            <code><span class="kw">def</span> initializeLayouts(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isHomogeneous(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isSheetSet(self) -&gt; bool</code>
+            <code><span class="kw">def</span> lineMerge(self) -&gt; bool</code>
+            <code><span class="kw">def</span> logFilePath(self) -&gt; str</code>
+            <code><span class="kw">def</span> majorVersion(self) -&gt; int</code>
+            <code><span class="kw">def</span> minorVersion(self) -&gt; int</code>
+            <code><span class="kw">def</span> noOfCopies(self) -&gt; int</code>
+            <code><span class="kw">def</span> numberOfDSDEntries(self) -&gt; int</code>
+            <code><span class="kw">def</span> password(self) -&gt; str</code>
+            <code><span class="kw">def</span> plotStampOn(self) -&gt; bool</code>
+            <code><span class="kw">def</span> projectPath(self) -&gt; str</code>
+            <code><span class="kw">def</span> promptForDwfName(self) -&gt; bool</code>
+            <code><span class="kw">def</span> promptForPassword(self) -&gt; bool</code>
+            <code><span class="kw">def</span> pwdProtectPublishedDWF(self) -&gt; bool</code>
+            <code><span class="kw">def</span> selectionSetName(self) -&gt; str</code>
+            <code><span class="kw">def</span> set3dDwfOptions(self, groupByXrefHierarchy: bool, publishWithMaterials: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setCategoryName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setCurrentPrecision(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setDSDEntries(self, entries: list[PyPl.DSDEntry]) -&gt; None</code>
+            <code><span class="kw">def</span> setDestinationName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setIncludeLayerInfo(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setInitializeLayouts(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setIsHomogeneous(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setIsSheetSet(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setLineMerge(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setLogFilePath(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setMajorVersion(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setMinorVersion(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setNoOfCopies(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setPassword(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setPlotStampOn(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setPrecisionEntries(self, val: list[PyPl.PrecisionEntry]) -&gt; None</code>
+            <code><span class="kw">def</span> setProjectPath(self, path: str) -&gt; None</code>
+            <code><span class="kw">def</span> setPromptForDwfName(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setPromptForPassword(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setPwdProtectPublishedDWF(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setSelectionSetName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetSetName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetType(self, val: PyPl.SheetType) -&gt; None</code>
+            <code><span class="kw">def</span> setUnrecognizedData(self, sectionName: str, sectionData: str) -&gt; None</code>
+            <code><span class="kw">def</span> setViewFile(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> sheetSetName(self) -&gt; str</code>
+            <code><span class="kw">def</span> sheetType(self) -&gt; SheetType</code>
+            <code><span class="kw">def</span> viewFile(self) -&gt; bool</code>
         </details>
     </div>
 
     <div class="class" id="DSDEntry">
         <details>
             <summary>class DSDEntry <span class="tag">Class</span></summary>
-            <code>def NPS(self) -&gt; str</code>
-            <code>def NPSSourceDWG(self) -&gt; str</code>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def dwgName(self) -&gt; str</code>
-            <code>def has3dDwfSetup(self) -&gt; bool</code>
-            <code>def layout(self) -&gt; str</code>
-            <code>def orgSheetPath(self) -&gt; str</code>
-            <code>def setDwgName(self, val: str) -&gt; None</code>
-            <code>def setHas3dDwfSetup(self, val: bool) -&gt; None</code>
-            <code>def setLayout(self, val: str) -&gt; None</code>
-            <code>def setNPS(self, val: str) -&gt; None</code>
-            <code>def setNPSSourceDWG(self, val: str) -&gt; None</code>
-            <code>def setSetupType(self, val: PyPl.SetupType) -&gt; None</code>
-            <code>def setTitle(self, val: str) -&gt; None</code>
-            <code>def setTraceSession(self, val: str) -&gt; None</code>
-            <code>def setupType(self) -&gt; SetupType</code>
-            <code>def title(self) -&gt; str</code>
-            <code>def traceSession(self) -&gt; str</code>
+            <code><span class="kw">def</span> NPS(self) -&gt; str</code>
+            <code><span class="kw">def</span> NPSSourceDWG(self) -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None
+    &quot;&quot;&quot;This container class holds information specific to a sheet (in a sheet set). AcPlDSDData
+holds a collection of AcPlDSDEntry objects to configure a publish job.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> dwgName(self) -&gt; str</code>
+            <code><span class="kw">def</span> has3dDwfSetup(self) -&gt; bool</code>
+            <code><span class="kw">def</span> layout(self) -&gt; str</code>
+            <code><span class="kw">def</span> orgSheetPath(self) -&gt; str</code>
+            <code><span class="kw">def</span> setDwgName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setHas3dDwfSetup(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setLayout(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setNPS(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setNPSSourceDWG(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setSetupType(self, val: PyPl.SetupType) -&gt; None</code>
+            <code><span class="kw">def</span> setTitle(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setTraceSession(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setupType(self) -&gt; SetupType</code>
+            <code><span class="kw">def</span> title(self) -&gt; str</code>
+            <code><span class="kw">def</span> traceSession(self) -&gt; str</code>
         </details>
     </div>
 
@@ -235,9 +264,11 @@
     <div class="class" id="PlObject">
         <details>
             <summary>class PlObject <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
         </details>
     </div>
 
@@ -254,148 +285,215 @@
     <div class="class" id="PlotConfig">
         <details>
             <summary>class PlotConfig <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def deviceName(self) -&gt; str</code>
-            <code>def deviceType(self) -&gt; int</code>
-            <code>def fullPath(self) -&gt; str</code>
-            <code>def getCanonicalMediaNameList(self) -&gt; list[str]</code>
-            <code>def getDefaultFileExtension(self) -&gt; str</code>
-            <code>def getDescriptionFields(self) -&gt; tuple[str, ...]</code>
-            <code>def getLocalMediaName(self, canonicalMediaName: str) -&gt; str</code>
-            <code>def getMediaBounds(self, canonicalMediaName: str) -&gt; tuple</code>
-            <code>def isPlotToFile(self) -&gt; bool</code>
-            <code>def maxDeviceDPI(self) -&gt; int</code>
-            <code>def plotToFileCapability(self) -&gt; PlotToFileCapability</code>
-            <code>def refreshMediaNameList(self) -&gt; None</code>
-            <code>def saveToPC3(self, val: str) -&gt; bool</code>
-            <code>def setPlotToFile(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> deviceName(self) -&gt; str</code>
+            <code><span class="kw">def</span> deviceType(self) -&gt; int</code>
+            <code><span class="kw">def</span> fullPath(self) -&gt; str</code>
+            <code><span class="kw">def</span> getCanonicalMediaNameList(self) -&gt; list[str]</code>
+            <code><span class="kw">def</span> getDefaultFileExtension(self) -&gt; str</code>
+            <code><span class="kw">def</span> getDescriptionFields(self) -&gt; tuple[str, ...]</code>
+            <code><span class="kw">def</span> getLocalMediaName(self, canonicalMediaName: str) -&gt; str</code>
+            <code><span class="kw">def</span> getMediaBounds(self, canonicalMediaName: str) -&gt; tuple</code>
+            <code><span class="kw">def</span> isPlotToFile(self) -&gt; bool</code>
+            <code><span class="kw">def</span> maxDeviceDPI(self) -&gt; int</code>
+            <code><span class="kw">def</span> plotToFileCapability(self) -&gt; PlotToFileCapability</code>
+            <code><span class="kw">def</span> refreshMediaNameList(self) -&gt; None</code>
+            <code><span class="kw">def</span> saveToPC3(self, val: str) -&gt; bool</code>
+            <code><span class="kw">def</span> setPlotToFile(self, val: bool) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="PlotConfigInfo">
         <details>
             <summary>class PlotConfigInfo <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def deviceId(self) -&gt; str</code>
-            <code>def deviceName(self) -&gt; str</code>
-            <code>def deviceType(self) -&gt; DeviceType</code>
-            <code>def fullPath(self) -&gt; str</code>
-            <code>def setDeviceId(self, val: type) -&gt; None</code>
-            <code>def setDeviceName(self, val: str) -&gt; None</code>
-            <code>def setDeviceType(self, val: PyPl.DeviceType) -&gt; None</code>
-            <code>def setFullPath(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> deviceId(self) -&gt; str</code>
+            <code><span class="kw">def</span> deviceName(self) -&gt; str</code>
+            <code><span class="kw">def</span> deviceType(self) -&gt; DeviceType</code>
+            <code><span class="kw">def</span> fullPath(self) -&gt; str</code>
+            <code><span class="kw">def</span> setDeviceId(self, val: type) -&gt; None</code>
+            <code><span class="kw">def</span> setDeviceName(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setDeviceType(self, val: PyPl.DeviceType) -&gt; None</code>
+            <code><span class="kw">def</span> setFullPath(self, val: str) -&gt; None</code>
         </details>
     </div>
 
     <div class="class" id="PlotConfigManager">
         <details>
             <summary>class PlotConfigManager <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def getCurrentConfig(self) -&gt; PlotConfig</code>
-            <code>def getDevicesList(self) -&gt; list[PyPl.PlotConfigInfo]</code>
-            <code>def getStdConfigName(self) -&gt; str</code>
-            <code>def getStyleList(self) -&gt; list[str]</code>
-            <code>def refreshList(self, refreshCode: PyPl.RefreshCode) -&gt; None</code>
-            <code>def setCurrentConfig(self, deviceName: str) -&gt; PlotConfig</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> getCurrentConfig(self) -&gt; PlotConfig</code>
+            <code><span class="kw">def</span> getDevicesList(self) -&gt; list[PyPl.PlotConfigInfo]</code>
+            <code><span class="kw">def</span> getStdConfigName(self) -&gt; str</code>
+            <code><span class="kw">def</span> getStyleList(self) -&gt; list[str]</code>
+            <code><span class="kw">def</span> refreshList(self, refreshCode: PyPl.RefreshCode) -&gt; None</code>
+            <code><span class="kw">def</span> setCurrentConfig(self, deviceName: str) -&gt; PlotConfig</code>
         </details>
     </div>
 
     <div class="class" id="PlotEngine">
         <details>
             <summary>class PlotEngine <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def beginDocument(self, plotInfo: PyPl.PlotInfo, docName: str, plotToFile: bool, fileName: str) -&gt; None</code>
-            <code>def beginGenerateGraphics(self) -&gt; None</code>
-            <code>def beginPage(self, pageInfo: PyPl.PlotPageInfo, plotInfo: PyPl.PlotInfo, lastPage: bool) -&gt; None</code>
-            <code>def beginPlot(self, dlgRef: PyPl.PlotProgressDialog) -&gt; None</code>
-            <code>def className() -&gt; str</code>
-            <code>def destroy(self) -&gt; None</code>
-            <code>def endDocument(self) -&gt; None</code>
-            <code>def endGenerateGraphics(self) -&gt; None</code>
-            <code>def endPage(self) -&gt; None</code>
-            <code>def endPlot(self) -&gt; None</code>
-            <code>def isBackgroundPackaging(self) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> beginDocument(self, plotInfo: PyPl.PlotInfo, docName: str, plotToFile: bool, fileName: str) -&gt; None</code>
+            <code><span class="kw">def</span> beginGenerateGraphics(self) -&gt; None</code>
+            <code><span class="kw">def</span> beginPage(self, pageInfo: PyPl.PlotPageInfo, plotInfo: PyPl.PlotInfo, lastPage: bool) -&gt; None</code>
+            <code><span class="kw">def</span> beginPlot(self, dlgRef: PyPl.PlotProgressDialog) -&gt; None</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> destroy(self) -&gt; None</code>
+            <code><span class="kw">def</span> endDocument(self) -&gt; None</code>
+            <code><span class="kw">def</span> endGenerateGraphics(self) -&gt; None</code>
+            <code><span class="kw">def</span> endPage(self) -&gt; None</code>
+            <code><span class="kw">def</span> endPlot(self) -&gt; None</code>
+            <code><span class="kw">def</span> isBackgroundPackaging(self) -&gt; bool</code>
         </details>
     </div>
 
     <div class="class" id="PlotFactory">
         <details>
             <summary>class PlotFactory <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def createPreviewEngine(flags: int) -&gt; PlotEngine</code>
-            <code>def createPublishEngine() -&gt; PlotEngine</code>
-            <code>def processPlotState() -&gt; ProcessPlotState</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> createPreviewEngine(flags: int) -&gt; PlotEngine</code>
+            <code><span class="kw">def</span> createPublishEngine() -&gt; PlotEngine</code>
+            <code><span class="kw">def</span> processPlotState() -&gt; ProcessPlotState</code>
         </details>
     </div>
 
     <div class="class" id="PlotInfo">
         <details>
             <summary>class PlotInfo <span class="tag">Class</span></summary>
-            <code>def OrgFilePath(self) -&gt; str</code>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def copyFrom(self, otherObject: PyRx.RxObject) -&gt; None</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def deviceOverride(self) -&gt; PlotConfig</code>
-            <code>def isCompatibleDocument(self, val: PyPl.PlotInfo) -&gt; bool</code>
-            <code>def isValidated(self) -&gt; bool</code>
-            <code>def layout(self) -&gt; PyDb.ObjectId</code>
-            <code>def mergeStatus(self) -&gt; int</code>
-            <code>def overrideSettings(self) -&gt; PyDb.PlotSettings</code>
-            <code>def setDeviceOverride(self, val: PyPl.PlotConfig) -&gt; None</code>
-            <code>def setLayout(self, id: PyDb.ObjectId) -&gt; None</code>
-            <code>def setOverrideSettings(self, val: PyDb.PlotSettings) -&gt; None</code>
-            <code>def setValidatedConfig(self, val: PyPl.PlotConfig) -&gt; None</code>
-            <code>def setValidatedSettings(self, val: PyDb.PlotSettings) -&gt; None</code>
-            <code>def validatedConfig(self) -&gt; PlotConfig</code>
-            <code>def validatedSettings(self) -&gt; PyDb.PlotSettings</code>
+            <code><span class="kw">def</span> OrgFilePath(self) -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None
+    &quot;&quot;&quot;AcPlPlotInfo is a utility class that provides methods for building information about how
+and what to plot and, ultimately, acts as a vehicle to transport this information to the
+plotting pipeline. Applications must provide the object ID of the layout to be plotted to
+this object before passing it to an AcPlPlotEngine object for processing. Applications can
+provide overrides, in the form of an AcDbPlotSettings object, to be used for plotting the
+layout in place of the settings on the layout itself. Applications can also override the
+output device by providing an AcPlPlotConfig object designating the device to plot to. If a
+device override is applied, it supercedes the device in the layout and the device in the
+AcDbPlotSettings overrides object. AcPlPlotInfo objects must be validated using an
+AcDbPlotInfoValidator before they can be processed by an AcPlPlotEngine. Validated
+AcPlPlotInfo objects have non-null validated settings data and non-null validated
+configurations, which will be used by the AcPlPlotEngine to plot the layout when it is
+processed.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> copyFrom(self, otherObject: PyRx.RxObject) -&gt; None</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> deviceOverride(self) -&gt; PlotConfig</code>
+            <code><span class="kw">def</span> isCompatibleDocument(self, val: PyPl.PlotInfo) -&gt; bool</code>
+            <code><span class="kw">def</span> isValidated(self) -&gt; bool</code>
+            <code><span class="kw">def</span> layout(self) -&gt; PyDb.ObjectId</code>
+            <code><span class="kw">def</span> mergeStatus(self) -&gt; int</code>
+            <code><span class="kw">def</span> overrideSettings(self) -&gt; PyDb.PlotSettings</code>
+            <code><span class="kw">def</span> setDeviceOverride(self, val: PyPl.PlotConfig) -&gt; None</code>
+            <code><span class="kw">def</span> setLayout(self, id: PyDb.ObjectId) -&gt; None</code>
+            <code><span class="kw">def</span> setOverrideSettings(self, val: PyDb.PlotSettings) -&gt; None</code>
+            <code><span class="kw">def</span> setValidatedConfig(self, val: PyPl.PlotConfig) -&gt; None</code>
+            <code><span class="kw">def</span> setValidatedSettings(self, val: PyDb.PlotSettings) -&gt; None</code>
+            <code><span class="kw">def</span> validatedConfig(self) -&gt; PlotConfig</code>
+            <code><span class="kw">def</span> validatedSettings(self) -&gt; PyDb.PlotSettings</code>
         </details>
     </div>
 
     <div class="class" id="PlotInfoValidator">
         <details>
             <summary>class PlotInfoValidator <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def dimensionalWeight(self) -&gt; int</code>
-            <code>def isCustomPossible(self, valByRef: PyPl.PlotInfo) -&gt; CustomSizeResult</code>
-            <code>def matchingPolicy(self) -&gt; MatchingPolicy</code>
-            <code>def mediaBoundsWeight(self, val: int) -&gt; int</code>
-            <code>def mediaGroupWeight(self) -&gt; int</code>
-            <code>def mediaMatchingThreshold(self) -&gt; int</code>
-            <code>def printableBoundsWeight(self) -&gt; int</code>
-            <code>def setDefDimensionalWeight(self) -&gt; None</code>
-            <code>def setDefMediaBoundsWeight(self) -&gt; None</code>
-            <code>def setDefMediaGroupWeight(self, val: int) -&gt; None</code>
-            <code>def setDefMediaMatchingThreshold(self) -&gt; None</code>
-            <code>def setDefPrintableBoundsWeight(self) -&gt; None</code>
-            <code>def setDefSheetDimensionalWeight(self) -&gt; None</code>
-            <code>def setDefSheetMediaGroupWeight(self) -&gt; None</code>
-            <code>def setDimensionalWeight(self, val: int) -&gt; None</code>
-            <code>def setMediaBoundsWeight(self, val: int) -&gt; None</code>
-            <code>def setMediaGroupWeight(self, val: int) -&gt; None</code>
-            <code>def setMediaMatchingPolicy(self, val: PyPl.MatchingPolicy) -&gt; None</code>
-            <code>def setMediaMatchingThreshold(self, val: int) -&gt; None</code>
-            <code>def setPrintableBoundsWeight(self, val: int) -&gt; None</code>
-            <code>def setSheetDimensionalWeight(self, val: int) -&gt; None</code>
-            <code>def setSheetMediaGroupWeight(self, val: int) -&gt; None</code>
-            <code>def sheetDimensionalWeight(self) -&gt; int</code>
-            <code>def sheetMediaGroupWeight(self) -&gt; int</code>
-            <code>def validate(self, valByRef: PyPl.PlotInfo) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None
+    &quot;&quot;&quot;The AcPlPlotInfoValidator class merges plot settings from a layout object, an
+AcDbPlotSettings object (settings overrides), and an output device override into a new plot
+settings object. The validator returns a set of codes indicating any problems found during
+the merge operation. The validator supports paper-matching policies in its validation
+algorithmn. Depending on the setting of the policy, the validator may try to find a
+matching paper size if the canonical paper name provided in the layout or overrides does
+not exist on the device. The validator also has policies to create a custom paper size, if
+possible, in case the matching algorithmn fails.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> dimensionalWeight(self) -&gt; int</code>
+            <code><span class="kw">def</span> isCustomPossible(self, valByRef: PyPl.PlotInfo) -&gt; CustomSizeResult</code>
+            <code><span class="kw">def</span> matchingPolicy(self) -&gt; MatchingPolicy</code>
+            <code><span class="kw">def</span> mediaBoundsWeight(self, val: int) -&gt; int</code>
+            <code><span class="kw">def</span> mediaGroupWeight(self) -&gt; int</code>
+            <code><span class="kw">def</span> mediaMatchingThreshold(self) -&gt; int</code>
+            <code><span class="kw">def</span> printableBoundsWeight(self) -&gt; int</code>
+            <code><span class="kw">def</span> setDefDimensionalWeight(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDefMediaBoundsWeight(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDefMediaGroupWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setDefMediaMatchingThreshold(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDefPrintableBoundsWeight(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDefSheetDimensionalWeight(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDefSheetMediaGroupWeight(self) -&gt; None</code>
+            <code><span class="kw">def</span> setDimensionalWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setMediaBoundsWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setMediaGroupWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setMediaMatchingPolicy(self, val: PyPl.MatchingPolicy) -&gt; None</code>
+            <code><span class="kw">def</span> setMediaMatchingThreshold(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setPrintableBoundsWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetDimensionalWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetMediaGroupWeight(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> sheetDimensionalWeight(self) -&gt; int</code>
+            <code><span class="kw">def</span> sheetMediaGroupWeight(self) -&gt; int</code>
+            <code><span class="kw">def</span> validate(self, valByRef: PyPl.PlotInfo) -&gt; None</code>
         </details>
     </div>
 
@@ -419,54 +517,68 @@
     <div class="class" id="PlotPageInfo">
         <details>
             <summary>class PlotPageInfo <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def entityCount() -&gt; int</code>
-            <code>def gradientCount() -&gt; int</code>
-            <code>def oleObjectCount() -&gt; int</code>
-            <code>def rasterCount() -&gt; int</code>
-            <code>def shadedViewportType() -&gt; int</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None
+    &quot;&quot;&quot;Returns information about the objects contained on a plotted page. Applications can use
+this information as a starting point for estimating the time required to plot the page (or,
+more precisely, to determine whether to warn the user that the page will take a long time
+to plot). An object of this type is returned by the AcPlPlotEngine::startPage() method.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> entityCount() -&gt; int</code>
+            <code><span class="kw">def</span> gradientCount() -&gt; int</code>
+            <code><span class="kw">def</span> oleObjectCount() -&gt; int</code>
+            <code><span class="kw">def</span> rasterCount() -&gt; int</code>
+            <code><span class="kw">def</span> shadedViewportType() -&gt; int</code>
         </details>
     </div>
 
     <div class="class" id="PlotProgressDialog">
         <details>
             <summary>class PlotProgressDialog <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __init__(self, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
-            <code>def __init__(self, hwnd: int, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
-            <code>def __init__(*args) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def destroy(self) -&gt; None</code>
-            <code>def getPlotMsgString(self, index: PyPl.PlotMSGIndex) -&gt; str</code>
-            <code>def getPlotProgressRange(self) -&gt; tuple[int, int]</code>
-            <code>def getSheetProgressRange(self) -&gt; tuple[int, int]</code>
-            <code>def getStatusMsgString(self) -&gt; str</code>
-            <code>def heartbeat(self) -&gt; None</code>
-            <code>def isPlotCancelled(self) -&gt; bool</code>
-            <code>def isSheetCancelled(self) -&gt; bool</code>
-            <code>def isSingleSheetPlot(self) -&gt; bool</code>
-            <code>def isVisible(self) -&gt; bool</code>
-            <code>def onBeginPlot(self) -&gt; bool</code>
-            <code>def onBeginSheet(self) -&gt; bool</code>
-            <code>def onEndPlot(self) -&gt; bool</code>
-            <code>def onEndSheet(self) -&gt; bool</code>
-            <code>def plotCancelStatus(self) -&gt; PlotCancelStatus</code>
-            <code>def plotProgressPos(self) -&gt; int</code>
-            <code>def setIsVisible(self, val: bool) -&gt; bool</code>
-            <code>def setPlotCancelStatus(self, val: PyPl.PlotCancelStatus) -&gt; None</code>
-            <code>def setPlotMsgString(self, index: PyPl.PlotMSGIndex, val: str) -&gt; bool</code>
-            <code>def setPlotProgressPos(self, pos: int) -&gt; None</code>
-            <code>def setPlotProgressRange(self, lower: int, upper: int) -&gt; None</code>
-            <code>def setSheetCancelStatus(self, val: PyPl.SheetCancelStatus) -&gt; None</code>
-            <code>def setSheetProgressPos(self, pos: int) -&gt; None</code>
-            <code>def setSheetProgressRange(self, lower: int, upper: int) -&gt; None</code>
-            <code>def setStatusMsgString(self, val: str) -&gt; bool</code>
-            <code>def sheetCancelStatus(self) -&gt; SheetCancelStatus</code>
-            <code>def sheetProgressPos(self) -&gt; int</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(self, hwnd: int, bPreview: bool, nSheets: int, bShowCancelSheetButton: bool) -&gt; None</code>
+            <code><span class="kw">def</span> __init__(*args) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> destroy(self) -&gt; None</code>
+            <code><span class="kw">def</span> getPlotMsgString(self, index: PyPl.PlotMSGIndex) -&gt; str</code>
+            <code><span class="kw">def</span> getPlotProgressRange(self) -&gt; tuple[int, int]</code>
+            <code><span class="kw">def</span> getSheetProgressRange(self) -&gt; tuple[int, int]</code>
+            <code><span class="kw">def</span> getStatusMsgString(self) -&gt; str</code>
+            <code><span class="kw">def</span> heartbeat(self) -&gt; None</code>
+            <code><span class="kw">def</span> isPlotCancelled(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isSheetCancelled(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isSingleSheetPlot(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isVisible(self) -&gt; bool</code>
+            <code><span class="kw">def</span> onBeginPlot(self) -&gt; bool</code>
+            <code><span class="kw">def</span> onBeginSheet(self) -&gt; bool</code>
+            <code><span class="kw">def</span> onEndPlot(self) -&gt; bool</code>
+            <code><span class="kw">def</span> onEndSheet(self) -&gt; bool</code>
+            <code><span class="kw">def</span> plotCancelStatus(self) -&gt; PlotCancelStatus</code>
+            <code><span class="kw">def</span> plotProgressPos(self) -&gt; int</code>
+            <code><span class="kw">def</span> setIsVisible(self, val: bool) -&gt; bool</code>
+            <code><span class="kw">def</span> setPlotCancelStatus(self, val: PyPl.PlotCancelStatus) -&gt; None</code>
+            <code><span class="kw">def</span> setPlotMsgString(self, index: PyPl.PlotMSGIndex, val: str) -&gt; bool</code>
+            <code><span class="kw">def</span> setPlotProgressPos(self, pos: int) -&gt; None</code>
+            <code><span class="kw">def</span> setPlotProgressRange(self, lower: int, upper: int) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetCancelStatus(self, val: PyPl.SheetCancelStatus) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetProgressPos(self, pos: int) -&gt; None</code>
+            <code><span class="kw">def</span> setSheetProgressRange(self, lower: int, upper: int) -&gt; None</code>
+            <code><span class="kw">def</span> setStatusMsgString(self, val: str) -&gt; bool</code>
+            <code><span class="kw">def</span> sheetCancelStatus(self) -&gt; SheetCancelStatus</code>
+            <code><span class="kw">def</span> sheetProgressPos(self) -&gt; int</code>
         </details>
     </div>
 
@@ -482,26 +594,36 @@
     <div class="class" id="PrecisionEntry">
         <details>
             <summary>class PrecisionEntry <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
-            <code>def colorResolution(self) -&gt; int</code>
-            <code>def desc() -&gt; PyRx.RxClass</code>
-            <code>def description(self) -&gt; str</code>
-            <code>def desiredPrecision(self) -&gt; float</code>
-            <code>def gradientResolution(self) -&gt; int</code>
-            <code>def monoResolution(self) -&gt; int</code>
-            <code>def setColorResolution(self, val: int) -&gt; None</code>
-            <code>def setDescription(self, val: str) -&gt; None</code>
-            <code>def setDesiredPrecision(self, val: float) -&gt; None</code>
-            <code>def setGradientResolution(self, val: int) -&gt; None</code>
-            <code>def setMonoResolution(self, val: type) -&gt; None</code>
-            <code>def setTitle(self, val: str) -&gt; None</code>
-            <code>def setUnitScale(self, val: str) -&gt; None</code>
-            <code>def setUnitType(self, val: str) -&gt; None</code>
-            <code>def title(self) -&gt; str</code>
-            <code>def unitScale(self) -&gt; str</code>
-            <code>def unitType(self) -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> colorResolution(self) -&gt; int</code>
+            <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass
+    &quot;&quot;&quot;Returns a pointer to the AcRxClass object representing the specific class, or most recent
+parent class explicitly registered with ObjectARX of either the pointer type used to invoke
+it or the class qualifier used with it. (Remember that when a static member function is
+invoked via a pointer, the pointer type, not the object type, determines which
+implementation of the function is invoked.) When working with a pointer to an object and
+the proper AcRxClass object for the class of the object pointed to is desired, the
+AcRxObject::isA() function should be used, since it is a virtual non-static method and is
+therefore not pointer type dependent. Caching the value of the pointer returned by this
+method is acceptable, provided the application knows that the AcRxClass object pointed to
+by the returned pointer was created by an ObjectARX application that will not be unloaded.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> description(self) -&gt; str</code>
+            <code><span class="kw">def</span> desiredPrecision(self) -&gt; float</code>
+            <code><span class="kw">def</span> gradientResolution(self) -&gt; int</code>
+            <code><span class="kw">def</span> monoResolution(self) -&gt; int</code>
+            <code><span class="kw">def</span> setColorResolution(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setDescription(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setDesiredPrecision(self, val: float) -&gt; None</code>
+            <code><span class="kw">def</span> setGradientResolution(self, val: int) -&gt; None</code>
+            <code><span class="kw">def</span> setMonoResolution(self, val: type) -&gt; None</code>
+            <code><span class="kw">def</span> setTitle(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setUnitScale(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> setUnitType(self, val: str) -&gt; None</code>
+            <code><span class="kw">def</span> title(self) -&gt; str</code>
+            <code><span class="kw">def</span> unitScale(self) -&gt; str</code>
+            <code><span class="kw">def</span> unitType(self) -&gt; str</code>
         </details>
     </div>
 

@@ -38,6 +38,11 @@
             color: #dcdcdc;
             padding: 0.4em 0.6em;
             border-left: 4px solid #007acc;
+            font-size: 1.2em;
+        }
+        .kw {
+            color: #569cd6;
+            font-weight: bold;
         }
         h1 {
             color: #569cd6;
@@ -72,78 +77,84 @@
     <div class="class" id="Core">
         <details>
             <summary>class Core <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def getBlockImage(blkid: PyDb.ObjectId, sx: int, sy: int, zoomFactor: float, bkrgb: list[int]) -&gt; object</code>
-            <code>def getCurrent3DAcGsView(vpNum: int) -&gt; GsView</code>
-            <code>def getCurrentAcGsView(vpNum: int) -&gt; GsView</code>
-            <code>def getViewParameters(vpNum: int, view: PyGs.View) -&gt; bool</code>
-            <code>def setViewParameters(vpNum: int, view: PyGs.View, bRegen: bool, bRescale: bool, bSync: bool) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> getBlockImage(blkid: PyDb.ObjectId, sx: int, sy: int, zoomFactor: float, bkrgb: list[int]) -&gt; object</code>
+            <code><span class="kw">def</span> getCurrent3DAcGsView(vpNum: int) -&gt; GsView</code>
+            <code><span class="kw">def</span> getCurrentAcGsView(vpNum: int) -&gt; GsView</code>
+            <code><span class="kw">def</span> getViewParameters(vpNum: int, view: PyGs.View) -&gt; bool</code>
+            <code><span class="kw">def</span> setViewParameters(vpNum: int, view: PyGs.View, bRegen: bool, bRescale: bool, bSync: bool) -&gt; bool</code>
         </details>
     </div>
 
     <div class="class" id="GraphicsKernel">
         <details>
             <summary>class GraphicsKernel <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def addRef(self) -&gt; None</code>
-            <code>def className() -&gt; str</code>
-            <code>def delRef(self) -&gt; bool</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> addRef(self) -&gt; None</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> delRef(self) -&gt; bool</code>
         </details>
     </div>
 
     <div class="class" id="GsManager">
         <details>
             <summary>class GsManager <span class="tag">Class</span></summary>
-            <code>def __init__(self) -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__(self) -&gt; None</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
         </details>
     </div>
 
     <div class="class" id="GsView">
         <details>
             <summary>class GsView <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def backClip(self) -&gt; float</code>
-            <code>def className() -&gt; str</code>
-            <code>def fieldHeight(self) -&gt; float</code>
-            <code>def fieldWidth(self) -&gt; float</code>
-            <code>def frontClip(self) -&gt; float</code>
-            <code>def getViewport(self) -&gt; tuple[PyGe.Point2d, PyGe.Point2d]</code>
-            <code>def graphicsKernel(self) -&gt; GraphicsKernel</code>
-            <code>def isBackClipped(self) -&gt; bool</code>
-            <code>def isFrontClipped(self) -&gt; bool</code>
-            <code>def isNullObj(self) -&gt; bool</code>
-            <code>def isPerspective(self) -&gt; bool</code>
-            <code>def isViewportBorderVisible(self) -&gt; bool</code>
-            <code>def objectToDeviceMatrix(self) -&gt; PyGe.Matrix3d</code>
-            <code>def position(self) -&gt; PyGe.Point3d</code>
-            <code>def projectionMatrix(self) -&gt; PyGe.Matrix3d</code>
-            <code>def screenMatrix(self) -&gt; PyGe.Matrix3d</code>
-            <code>def setBackClip(self, val: float) -&gt; None</code>
-            <code>def setEnableBackClip(self, val: bool) -&gt; None</code>
-            <code>def setEnableFrontClip(self, val: bool) -&gt; None</code>
-            <code>def setFrontClip(self, val: float) -&gt; None</code>
-            <code>def setView(self, pos: PyGe.Point3d, target: PyGe.Point3d, upVector: PyGe.Vector3d, fWidth: float, fHeight: float, projection: PyGs.ViewProjection) -&gt; None</code>
-            <code>def setViewport(self, lowerLeft: PyGe.Point2d, upperRight: PyGe.Point2d) -&gt; None</code>
-            <code>def setViewportBorderVisibility(self, val: bool) -&gt; None</code>
-            <code>def target(self) -&gt; PyGe.Point3d</code>
-            <code>def upVector(self) -&gt; PyGe.Vector3d</code>
-            <code>def viewingMatrix(self) -&gt; PyGe.Matrix3d</code>
-            <code>def worldToDeviceMatrix(self) -&gt; PyGe.Matrix3d</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> backClip(self) -&gt; float</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
+            <code><span class="kw">def</span> fieldHeight(self) -&gt; float</code>
+            <code><span class="kw">def</span> fieldWidth(self) -&gt; float</code>
+            <code><span class="kw">def</span> frontClip(self) -&gt; float</code>
+            <code><span class="kw">def</span> getViewport(self) -&gt; tuple[PyGe.Point2d, PyGe.Point2d]</code>
+            <code><span class="kw">def</span> graphicsKernel(self) -&gt; GraphicsKernel</code>
+            <code><span class="kw">def</span> isBackClipped(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isFrontClipped(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isNullObj(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isPerspective(self) -&gt; bool</code>
+            <code><span class="kw">def</span> isViewportBorderVisible(self) -&gt; bool</code>
+            <code><span class="kw">def</span> objectToDeviceMatrix(self) -&gt; PyGe.Matrix3d</code>
+            <code><span class="kw">def</span> position(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> projectionMatrix(self) -&gt; PyGe.Matrix3d</code>
+            <code><span class="kw">def</span> screenMatrix(self) -&gt; PyGe.Matrix3d</code>
+            <code><span class="kw">def</span> setBackClip(self, val: float) -&gt; None</code>
+            <code><span class="kw">def</span> setEnableBackClip(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setEnableFrontClip(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> setFrontClip(self, val: float) -&gt; None</code>
+            <code><span class="kw">def</span> setView(self, pos: PyGe.Point3d, target: PyGe.Point3d, upVector: PyGe.Vector3d, fWidth: float, fHeight: float, projection: PyGs.ViewProjection) -&gt; None</code>
+            <code><span class="kw">def</span> setViewport(self, lowerLeft: PyGe.Point2d, upperRight: PyGe.Point2d) -&gt; None</code>
+            <code><span class="kw">def</span> setViewportBorderVisibility(self, val: bool) -&gt; None</code>
+            <code><span class="kw">def</span> target(self) -&gt; PyGe.Point3d</code>
+            <code><span class="kw">def</span> upVector(self) -&gt; PyGe.Vector3d</code>
+            <code><span class="kw">def</span> viewingMatrix(self) -&gt; PyGe.Matrix3d</code>
+            <code><span class="kw">def</span> worldToDeviceMatrix(self) -&gt; PyGe.Matrix3d</code>
         </details>
     </div>
 
     <div class="class" id="KernelDescriptor">
         <details>
             <summary>class KernelDescriptor <span class="tag">Class</span></summary>
-            <code>def __init__() -&gt; None</code>
-            <code>def __reduce__(self) -&gt; Any</code>
-            <code>def addSupport(self) -&gt; None</code>
-            <code>def className() -&gt; str</code>
+            <code><span class="kw">def</span> __init__() -&gt; None
+    &quot;&quot;&quot;Raises an exception.
+This class cannot be instantiated from Python.&quot;&quot;&quot;</code>
+            <code><span class="kw">def</span> __reduce__(self) -&gt; Any</code>
+            <code><span class="kw">def</span> addSupport(self) -&gt; None</code>
+            <code><span class="kw">def</span> className() -&gt; str</code>
         </details>
     </div>
 
