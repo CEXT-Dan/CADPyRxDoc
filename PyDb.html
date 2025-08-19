@@ -3714,6 +3714,8 @@ gain and greatly reduce memory fragmentation.</span></code>
             <code><span class="kw">def</span> attmode(self) -&gt; int:
     <span class="ds">Returns the current ATTMODE value for the database. See the System Variables section of the
 AutoCAD Command Reference for information on ATTMODE.</span></code>
+            <code><span class="kw">def</span> audit(self, fixErrors: bool, cmdLineEcho: bool) -&gt; None:
+    <span class="ds">This function audits the AcDbDatabase pointed to by pDb.</span></code>
             <code><span class="kw">def</span> aunits(self) -&gt; int:
     <span class="ds">Returns the current AUNITS value for the database. See the System Variables section of the
 AutoCAD Command Reference for information on AUNITS.</span></code>
@@ -19996,73 +19998,166 @@ returned. The SymbolTableRecord name string is used for DXF group code 2.</span>
             <code><span class="kw">def</span> __init__(self, id: PyDb.ObjectId, mode: PyDb.OpenMode) -&gt; None:</code>
             <code><span class="kw">def</span> __init__(*args) -&gt; None:</code>
             <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
-            <code><span class="kw">def</span> alignment(self, rowType: PyDb.RowType) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> alignment(self, row: int, col: int) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> alignment(*args) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> attachmentPoint(self, row: int, col: int, content: int) -&gt; PyGe.Point3d:</code>
-            <code><span class="kw">def</span> backgroundColor(self, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> backgroundColor(self, row: int, col: int) -&gt; Color:</code>
-            <code><span class="kw">def</span> backgroundColor(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> blockRotation(self, row: int, col: int) -&gt; float:</code>
-            <code><span class="kw">def</span> blockScale(self, row: int, col: int) -&gt; float:</code>
-            <code><span class="kw">def</span> blockTableRecordId(self, row: int, col: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> blockTableRecordId(self, row: int, col: int, content: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> blockTableRecordId(*args) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> breakFlowDirection(self) -&gt; TableBreakFlowDirection:</code>
-            <code><span class="kw">def</span> breakHeight(self, val: int) -&gt; float:</code>
-            <code><span class="kw">def</span> breakOffset(self, idx: int) -&gt; PyGe.Vector3d:</code>
-            <code><span class="kw">def</span> breakOption(self) -&gt; TableBreakOption:</code>
-            <code><span class="kw">def</span> breakSpacing(self) -&gt; float:</code>
+            <code><span class="kw">def</span> alignment(self, rowType: PyDb.RowType) -&gt; CellAlignment:
+    <span class="ds">This function returns the alignment of the text or block in the specified cell of the
+table. Possible cell alignment values
+are:AcDb::kTopLeftAcDb::kTopCenterAcDb::kTopRightAcDb::kMiddleLeftAcDb::kMiddleCenterAcDb::kMiddleRightAcDb::kBottomLeftAcDb::kBottomCenterAcDb::kBottomRight</span></code>
+            <code><span class="kw">def</span> alignment(self, row: int, col: int) -&gt; CellAlignment:
+    <span class="ds">This function returns the alignment of the text or block in the specified cell of the
+table. Possible cell alignment values
+are:AcDb::kTopLeftAcDb::kTopCenterAcDb::kTopRightAcDb::kMiddleLeftAcDb::kMiddleCenterAcDb::kMiddleRightAcDb::kBottomLeftAcDb::kBottomCenterAcDb::kBottomRight</span></code>
+            <code><span class="kw">def</span> alignment(*args) -&gt; CellAlignment:
+    <span class="ds">This function returns the alignment of the text or block in the specified cell of the
+table. Possible cell alignment values
+are:AcDb::kTopLeftAcDb::kTopCenterAcDb::kTopRightAcDb::kMiddleLeftAcDb::kMiddleCenterAcDb::kMiddleRightAcDb::kBottomLeftAcDb::kBottomCenterAcDb::kBottomRight</span></code>
+            <code><span class="kw">def</span> attachmentPoint(self, row: int, col: int, content: int) -&gt; PyGe.Point3d:
+    <span class="ds">This function returns the attachment point of the specified cell.</span></code>
+            <code><span class="kw">def</span> backgroundColor(self, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">This function returns the background color of the specified cell in the table.</span></code>
+            <code><span class="kw">def</span> backgroundColor(self, row: int, col: int) -&gt; Color:
+    <span class="ds">This function returns the background color of the specified cell in the table.</span></code>
+            <code><span class="kw">def</span> backgroundColor(*args) -&gt; Color:
+    <span class="ds">This function returns the background color of the specified cell in the table.</span></code>
+            <code><span class="kw">def</span> blockRotation(self, row: int, col: int) -&gt; float:
+    <span class="ds">This function returns the rotation angle of the block reference at the specified cell in
+the table. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> blockScale(self, row: int, col: int) -&gt; float:
+    <span class="ds">This function returns the scale factor of the block reference at the specified cell in the
+table. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> blockTableRecordId(self, row: int, col: int) -&gt; ObjectId:
+    <span class="ds">Returns the id of the block table record if the content at the specified content index is a
+block; returns null id if the content is not a block.</span></code>
+            <code><span class="kw">def</span> blockTableRecordId(self, row: int, col: int, content: int) -&gt; ObjectId:
+    <span class="ds">Returns the id of the block table record if the content at the specified content index is a
+block; returns null id if the content is not a block.</span></code>
+            <code><span class="kw">def</span> blockTableRecordId(*args) -&gt; ObjectId:
+    <span class="ds">Returns the id of the block table record if the content at the specified content index is a
+block; returns null id if the content is not a block.</span></code>
+            <code><span class="kw">def</span> breakFlowDirection(self) -&gt; TableBreakFlowDirection:
+    <span class="ds">This function returns the table break flow direction of the table. The break flow direction
+determines the positioning of the tables when the table break is enabled.</span></code>
+            <code><span class="kw">def</span> breakHeight(self, val: int) -&gt; float:
+    <span class="ds">Returns the break height of the specified table when table breaking is enabled.</span></code>
+            <code><span class="kw">def</span> breakOffset(self, idx: int) -&gt; PyGe.Vector3d:
+    <span class="ds">Returns the break offset of the specified table when table breaking is enabled.</span></code>
+            <code><span class="kw">def</span> breakOption(self) -&gt; TableBreakOption:
+    <span class="ds">This function returns the table break option.</span></code>
+            <code><span class="kw">def</span> breakSpacing(self) -&gt; float:
+    <span class="ds">This function gets the spacing between multiple tables when table breaking is enabled.</span></code>
             <code><span class="kw">def</span> calcTextExtents(val: str, textStyleId: PyDb.ObjectId) -&gt; tuple[float, float]:</code>
-            <code><span class="kw">def</span> canDelete(self, row: int, col: int, brow: bool) -&gt; bool:</code>
-            <code><span class="kw">def</span> canInsert(self, index: int, brow: bool) -&gt; bool:</code>
+            <code><span class="kw">def</span> canDelete(self, row: int, col: int, brow: bool) -&gt; bool:
+    <span class="ds">This function checks if the row or column can be deleted Returns true if the row or column
+can be deleted, false if not.</span></code>
+            <code><span class="kw">def</span> canInsert(self, index: int, brow: bool) -&gt; bool:
+    <span class="ds">This function checks if new rows or columns can be inserted at the specified index. Returns
+true if the row or column can be inserted, false if not.</span></code>
             <code><span class="kw">def</span> cast(otherObject: PyRx.RxObject) -&gt; Table:</code>
-            <code><span class="kw">def</span> cellRange(self) -&gt; CellRange:</code>
-            <code><span class="kw">def</span> cellState(self, row: int, col: int) -&gt; CellState:</code>
-            <code><span class="kw">def</span> cellStrValues(self) -&gt; list[tuple[int, int, str]]:</code>
-            <code><span class="kw">def</span> cellStrValues(self, nOption: PyDb.TableIteratorOption) -&gt; list[tuple[int, int, str]]:</code>
-            <code><span class="kw">def</span> cellStrValues(self, pRange: PyDb.CellRange) -&gt; list[tuple[int, int, str]]:</code>
-            <code><span class="kw">def</span> cellStrValues(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[tuple[int, int, str]]:</code>
-            <code><span class="kw">def</span> cellStrValues(*args) -&gt; list[tuple[int, int, str]]:</code>
-            <code><span class="kw">def</span> cellStyle(self, row: int, col: int) -&gt; str:</code>
-            <code><span class="kw">def</span> cellStyleOverrides(self, row: int, col: int) -&gt; list[int]:</code>
-            <code><span class="kw">def</span> cellType(self, row: int, col: int) -&gt; CellType:</code>
-            <code><span class="kw">def</span> cellValues(self) -&gt; list[tuple[int, int, Any]]:</code>
-            <code><span class="kw">def</span> cellValues(self, nOption: PyDb.TableIteratorOption) -&gt; list[tuple[int, int, Any]]:</code>
-            <code><span class="kw">def</span> cellValues(self, pRange: PyDb.CellRange) -&gt; list[tuple[int, int, Any]]:</code>
-            <code><span class="kw">def</span> cellValues(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[tuple[int, int, Any]]:</code>
-            <code><span class="kw">def</span> cellValues(*args) -&gt; list[tuple[int, int, Any]]:</code>
-            <code><span class="kw">def</span> cells(self) -&gt; list[PyDb.Cell]:</code>
-            <code><span class="kw">def</span> cells(self, nOption: PyDb.TableIteratorOption) -&gt; list[PyDb.Cell]:</code>
-            <code><span class="kw">def</span> cells(self, pRange: PyDb.CellRange) -&gt; list[PyDb.Cell]:</code>
-            <code><span class="kw">def</span> cells(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[PyDb.Cell]:</code>
-            <code><span class="kw">def</span> cells(*args) -&gt; list[PyDb.Cell]:</code>
+            <code><span class="kw">def</span> cellRange(self) -&gt; CellRange:
+    <span class="ds">This function returns the cell range.</span></code>
+            <code><span class="kw">def</span> cellState(self, row: int, col: int) -&gt; CellState:
+    <span class="ds">This function returns the cell state. To determine if a cell&#x27;s content and format are
+editable use the functions isContentEditable() and isFormatEditable() instead of using
+cellState() and checking the returned state. This is because the semantics of an editable
+cell may change as new states are added.</span></code>
+            <code><span class="kw">def</span> cellStrValues(self) -&gt; list[tuple[int, int, str]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellStrValues(self, nOption: PyDb.TableIteratorOption) -&gt; list[tuple[int, int, str]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellStrValues(self, pRange: PyDb.CellRange) -&gt; list[tuple[int, int, str]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellStrValues(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[tuple[int, int, str]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellStrValues(*args) -&gt; list[tuple[int, int, str]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellStyle(self, row: int, col: int) -&gt; str:
+    <span class="ds">This function returns the cell style of cell, row, or column. To specify cell pass a valid
+row and column indices; to specify row pass a valid row index and pass -1 as column index;
+to specify column pass a valid column index and pass -1 as row index.</span></code>
+            <code><span class="kw">def</span> cellStyleOverrides(self, row: int, col: int) -&gt; list[int]:
+    <span class="ds">This function returns the cell overrides for the specified cell.</span></code>
+            <code><span class="kw">def</span> cellType(self, row: int, col: int) -&gt; CellType:
+    <span class="ds">This function returns the cell type of the cell at the specified location in the table.
+Possible values for cell type are: AcDbTable::kTextCellAcDbTable::kBlockCell</span></code>
+            <code><span class="kw">def</span> cellValues(self) -&gt; list[tuple[int, int, Any]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellValues(self, nOption: PyDb.TableIteratorOption) -&gt; list[tuple[int, int, Any]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellValues(self, pRange: PyDb.CellRange) -&gt; list[tuple[int, int, Any]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellValues(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[tuple[int, int, Any]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cellValues(*args) -&gt; list[tuple[int, int, Any]]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cells(self) -&gt; list[PyDb.Cell]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cells(self, nOption: PyDb.TableIteratorOption) -&gt; list[PyDb.Cell]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cells(self, pRange: PyDb.CellRange) -&gt; list[PyDb.Cell]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cells(self, pRange: PyDb.CellRange, nOption: TableIteratorOption) -&gt; list[PyDb.Cell]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
+            <code><span class="kw">def</span> cells(*args) -&gt; list[PyDb.Cell]:
+    <span class="ds">Returns the iterator. The returned pointer should be deleted after using it.</span></code>
             <code><span class="kw">def</span> className() -&gt; str:</code>
-            <code><span class="kw">def</span> clearCellOverrides(self, row: int, col: int) -&gt; None:</code>
+            <code><span class="kw">def</span> clearCellOverrides(self, row: int, col: int) -&gt; None:
+    <span class="ds">Clears all overrides in the cell identified by row and column.</span></code>
             <code><span class="kw">def</span> clearCustomData(self, row: int, col: int, style: str) -&gt; None:</code>
-            <code><span class="kw">def</span> clearSubSelection(self) -&gt; None:</code>
-            <code><span class="kw">def</span> clearTableStyleOverrides(self) -&gt; None:</code>
+            <code><span class="kw">def</span> clearSubSelection(self) -&gt; None:
+    <span class="ds">This function removes the sub-selection set of cells from the table.</span></code>
+            <code><span class="kw">def</span> clearTableStyleOverrides(self) -&gt; None:
+    <span class="ds">This function clears the overrides used in a table and its cells. The options argument can
+be one of the following: Value Description 0 Delete all table and cell overrides 1 Delete
+all table overrides, but retain cell overrides 2 Delete all cell overrides, but retain
+table overrides</span></code>
             <code><span class="kw">def</span> cloneFrom(otherObject: PyRx.RxObject) -&gt; Table:</code>
-            <code><span class="kw">def</span> columnWidth(self, col: int) -&gt; float:</code>
-            <code><span class="kw">def</span> contentColor(self, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> contentColor(self, row: int, col: int) -&gt; Color:</code>
-            <code><span class="kw">def</span> contentColor(self, row: int, col: int, content: int) -&gt; Color:</code>
-            <code><span class="kw">def</span> contentColor(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> contentLayout(self, row: int, col: int) -&gt; CellContentLayout:</code>
-            <code><span class="kw">def</span> contentType(self, row: int, col: int) -&gt; CellContentType:</code>
-            <code><span class="kw">def</span> contentType(self, row: int, col: int, content: int) -&gt; CellContentType:</code>
-            <code><span class="kw">def</span> contentType(*args) -&gt; CellContentType:</code>
-            <code><span class="kw">def</span> createContent(self, row: int, col: int, idx: int) -&gt; int:</code>
-            <code><span class="kw">def</span> dataFormat(self, row: int, col: int) -&gt; str:</code>
-            <code><span class="kw">def</span> dataFormat(self, row: int, col: int, content: int) -&gt; str:</code>
-            <code><span class="kw">def</span> dataFormat(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> deleteCellContent(self, row: int, col: int) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteColumns(self, row: int, nCols: int) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteContent(self, row: int, col: int) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteContent(self, row: int, col: int, content: int) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteContent(self, range: PyDb.CellRange) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteContent(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> deleteRows(self, row: int, nRows: int) -&gt; None:</code>
+            <code><span class="kw">def</span> columnWidth(self, col: int) -&gt; float:
+    <span class="ds">This function returns the column width at the specified column index in the table.</span></code>
+            <code><span class="kw">def</span> contentColor(self, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">Returns the color of the content at the specified content index in radians.</span></code>
+            <code><span class="kw">def</span> contentColor(self, row: int, col: int) -&gt; Color:
+    <span class="ds">Returns the color of the content at the specified content index in radians.</span></code>
+            <code><span class="kw">def</span> contentColor(self, row: int, col: int, content: int) -&gt; Color:
+    <span class="ds">Returns the color of the content at the specified content index in radians.</span></code>
+            <code><span class="kw">def</span> contentColor(*args) -&gt; Color:
+    <span class="ds">Returns the color of the content at the specified content index in radians.</span></code>
+            <code><span class="kw">def</span> contentLayout(self, row: int, col: int) -&gt; CellContentLayout:
+    <span class="ds">This function returns the content layout of a cell.</span></code>
+            <code><span class="kw">def</span> contentType(self, row: int, col: int) -&gt; CellContentType:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> contentType(self, row: int, col: int, content: int) -&gt; CellContentType:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> contentType(*args) -&gt; CellContentType:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> createContent(self, row: int, col: int, idx: int) -&gt; int:
+    <span class="ds">This function is called to create additional contents for a cell; one is created by default
+from the constructor. Returns the index of the created content.</span></code>
+            <code><span class="kw">def</span> dataFormat(self, row: int, col: int) -&gt; str:
+    <span class="ds">Returns the data format of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> dataFormat(self, row: int, col: int, content: int) -&gt; str:
+    <span class="ds">Returns the data format of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> dataFormat(*args) -&gt; str:
+    <span class="ds">Returns the data format of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> deleteCellContent(self, row: int, col: int) -&gt; None:
+    <span class="ds">This function deletes the cell content for the specified cell. Returns Acad::eOk if
+successful. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> deleteColumns(self, row: int, nCols: int) -&gt; None:
+    <span class="ds">This function deletes the specified number of columns from the table at the column index
+col. Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> deleteContent(self, row: int, col: int) -&gt; None:
+    <span class="ds">This function deletes a single content type from a cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> deleteContent(self, row: int, col: int, content: int) -&gt; None:
+    <span class="ds">This function deletes a single content type from a cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> deleteContent(self, range: PyDb.CellRange) -&gt; None:
+    <span class="ds">This function deletes a single content type from a cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> deleteContent(*args) -&gt; None:
+    <span class="ds">This function deletes a single content type from a cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> deleteRows(self, row: int, nRows: int) -&gt; None:
+    <span class="ds">This function deletes the specified number of rows from the table at the row index row.
+Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
             <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass:
     <span class="ds">Returns a pointer to the AcRxClass object representing the specific class, or most recent
 parent class explicitly registered with ObjectARX of either the pointer type used to invoke
@@ -20074,228 +20169,759 @@ AcRxObject::isA() function should be used, since it is a virtual non-static meth
 therefore not pointer type dependent. Caching the value of the pointer returned by this
 method is acceptable, provided the application knows that the AcRxClass object pointed to
 by the returned pointer was created by an ObjectARX application that will not be unloaded.</span></code>
-            <code><span class="kw">def</span> direction(self) -&gt; PyGe.Vector3d:</code>
-            <code><span class="kw">def</span> enableBreak(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> enableMergeAll(self, row: int, col: int, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> fieldId(self, row: int, col: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> fieldId(self, row: int, col: int, content: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> fieldId(*args) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> flowDirection(self) -&gt; TableFlowDirection:</code>
-            <code><span class="kw">def</span> generateLayout(self) -&gt; None:</code>
-            <code><span class="kw">def</span> getBlockAttributeValue(self, row: int, col: int, val: str, id: PyDb.ObjectId) -&gt; str:</code>
-            <code><span class="kw">def</span> getBlockAttributeValue(self, row: int, col: int, content: int, val: str, id: PyDb.ObjectId) -&gt; str:</code>
-            <code><span class="kw">def</span> getBlockAttributeValue(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> getCellExtents(self, row: int, col: int, isOuterCell: bool) -&gt; list[PyGe.Point3d]:</code>
+            <code><span class="kw">def</span> direction(self) -&gt; PyGe.Vector3d:
+    <span class="ds">This function returns the unit horizontal direction vector for the table in WCS
+coordinates.</span></code>
+            <code><span class="kw">def</span> enableBreak(self, val: bool) -&gt; None:
+    <span class="ds">Enables or disables table breaking. Returns Acad::eOk if successful; otherwise, returns an
+AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> enableMergeAll(self, row: int, col: int, val: bool) -&gt; None:
+    <span class="ds">Enables or disables the merge all flag in row or column Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status. To specify row pass a valid row index and pass
+-1 as column index; to specify column pass a valid column index and pass -1 as row index.
+This flag is not applicable for cell.</span></code>
+            <code><span class="kw">def</span> fieldId(self, row: int, col: int) -&gt; ObjectId:
+    <span class="ds">Returns the id of the field if the content at the specified content index is a field;
+returns null id if content is not a field.</span></code>
+            <code><span class="kw">def</span> fieldId(self, row: int, col: int, content: int) -&gt; ObjectId:
+    <span class="ds">Returns the id of the field if the content at the specified content index is a field;
+returns null id if content is not a field.</span></code>
+            <code><span class="kw">def</span> fieldId(*args) -&gt; ObjectId:
+    <span class="ds">Returns the id of the field if the content at the specified content index is a field;
+returns null id if content is not a field.</span></code>
+            <code><span class="kw">def</span> flowDirection(self) -&gt; TableFlowDirection:
+    <span class="ds">This function returns the direction that the table follows from its start to its finish.
+Possible values for AcDb::FlowDirection are AcDb::kTtoB (top to bottom) and AcDb::kBtoT
+(bottom to top).</span></code>
+            <code><span class="kw">def</span> generateLayout(self) -&gt; None:
+    <span class="ds">This function will update the table object according to the current table style. It
+computes table geometry, including grid lines, text content, block content, and background
+fills, from given definition data and table style. The generated table geometry are
+maintained internally by member data mpEntities, which is a list of in-memory AcDbEntity
+pointers. This function does not generate the table block. The table block is created
+automatically from the in-memory entity list when the application posts the table object to
+database and closes the object. This function empowers the table object for full use
+regardless of its database status--resident or non-resident. The generated in-memory table
+geometry will be deleted automatically by table object destructor. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> getBlockAttributeValue(self, row: int, col: int, val: str, id: PyDb.ObjectId) -&gt; str:
+    <span class="ds">Gets the block attribute value if the content at the specified content index is a block
+with attributes.</span></code>
+            <code><span class="kw">def</span> getBlockAttributeValue(self, row: int, col: int, content: int, val: str, id: PyDb.ObjectId) -&gt; str:
+    <span class="ds">Gets the block attribute value if the content at the specified content index is a block
+with attributes.</span></code>
+            <code><span class="kw">def</span> getBlockAttributeValue(*args) -&gt; str:
+    <span class="ds">Gets the block attribute value if the content at the specified content index is a block
+with attributes.</span></code>
+            <code><span class="kw">def</span> getCellExtents(self, row: int, col: int, isOuterCell: bool) -&gt; list[PyGe.Point3d]:
+    <span class="ds">This function returns the cell extents for the specified cell. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput.</span></code>
             <code><span class="kw">def</span> getCellOverride(self, row: int, col: int, content: int) -&gt; CellProperty:</code>
-            <code><span class="kw">def</span> getCustomData(self, row: int, col: int, style: str) -&gt; AcValue:</code>
-            <code><span class="kw">def</span> getDataLink(self, row: int, col: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> getDataLinkRange(self, row: int, col: int) -&gt; CellRange:</code>
-            <code><span class="kw">def</span> getDataType(self, rowType: PyDb.RowType) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getDataType(self, row: int, col: int) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getDataType(self, row: int, col: int, content: int) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getDataType(*args) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getFormula(self, row: int, col: int, content: int) -&gt; str:</code>
+            <code><span class="kw">def</span> getCustomData(self, row: int, col: int, style: str) -&gt; AcValue:
+    <span class="ds">Gets the custom data value set in cell, row, or column. Returns the custom data value set
+in cell, row, or column. To specify cell pass a valid row and column indices; to specify
+row pass a valid row index and pass -1 as column index; to specify column pass a valid
+column index and pass -1 as row index.</span></code>
+            <code><span class="kw">def</span> getDataLink(self, row: int, col: int) -&gt; ObjectId:
+    <span class="ds">This function gets the id of the data link if the specified cell is linked to a data source
+using a data link. This function may be called on any of the cells in a linked range.
+Returns the id of the data link. Returns null id if the cell is not linked using a data
+link.</span></code>
+            <code><span class="kw">def</span> getDataLinkRange(self, row: int, col: int) -&gt; CellRange:
+    <span class="ds">This function returns the data link range if the specified cell is part of a linked range.
+Returns invalid range if the specified cell is not part of a linked range. The specified
+cell can be any cell in a linked range.</span></code>
+            <code><span class="kw">def</span> getDataType(self, rowType: PyDb.RowType) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getDataType(self, row: int, col: int) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getDataType(self, row: int, col: int, content: int) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getDataType(*args) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getFormula(self, row: int, col: int, content: int) -&gt; str:
+    <span class="ds">This function returns the formula if the content at the specified content index has a
+formula; otherwise it returns an empty string.</span></code>
             <code><span class="kw">def</span> getGridOverride(self, row: int, col: int, nGridLineType: PyDb.GridLineType) -&gt; GridProperty:</code>
-            <code><span class="kw">def</span> getGridProperty(self, row: int, col: int, nGridLineType: GridLineType) -&gt; object:</code>
-            <code><span class="kw">def</span> getMergeRange(self, row: int, col: int) -&gt; CellRange:</code>
-            <code><span class="kw">def</span> getSubSelection(self) -&gt; CellRange:</code>
-            <code><span class="kw">def</span> gridColor(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridColor(self, row: int, col, gridlineType: GridLineType) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridColor(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridDoubleLineSpacing(self, row: int, col: int, nGridLineType: GridLineType) -&gt; float:</code>
+            <code><span class="kw">def</span> getGridProperty(self, row: int, col: int, nGridLineType: GridLineType) -&gt; object:
+    <span class="ds">Gets the grid line properties of cell, row, or column. To specify cell, pass a valid row
+and column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Before calling this
+function, the mnPropMask member of the structure AcGridProperty should be initialized to a
+value indicating which properties to get. If it is set to zero it gets all the properties.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getMergeRange(self, row: int, col: int) -&gt; CellRange:
+    <span class="ds">Returns the merge range. The merge range will be invalid if the cell is not part of a merge
+range.</span></code>
+            <code><span class="kw">def</span> getSubSelection(self) -&gt; CellRange:
+    <span class="ds">This function gets the row and column indexes of the cells in the sub-selection set.
+Returns Acad::eOk if successful. Returns Acad::eSubSelectionSetEmpty if there are no
+sub-selection cells.</span></code>
+            <code><span class="kw">def</span> gridColor(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">Gets the grid color of cell, row, or column. To specify cell, pass a valid row and column
+indices. To specify row, pass a valid row index and pass -1 as column index. To specify
+column, pass a valid column index and pass -1 as row index. Returns the grid color of cell,
+row, or column.</span></code>
+            <code><span class="kw">def</span> gridColor(self, row: int, col, gridlineType: GridLineType) -&gt; Color:
+    <span class="ds">Gets the grid color of cell, row, or column. To specify cell, pass a valid row and column
+indices. To specify row, pass a valid row index and pass -1 as column index. To specify
+column, pass a valid column index and pass -1 as row index. Returns the grid color of cell,
+row, or column.</span></code>
+            <code><span class="kw">def</span> gridColor(*args) -&gt; Color:
+    <span class="ds">Gets the grid color of cell, row, or column. To specify cell, pass a valid row and column
+indices. To specify row, pass a valid row index and pass -1 as column index. To specify
+column, pass a valid column index and pass -1 as row index. Returns the grid color of cell,
+row, or column.</span></code>
+            <code><span class="kw">def</span> gridDoubleLineSpacing(self, row: int, col: int, nGridLineType: GridLineType) -&gt; float:
+    <span class="ds">Gets the grid double line spacing from cell, row, or column. To specify cell, pass a valid
+row and column indices. To specify row, pass a valid row index and pass -1 as column index.
+To specify column, pass a valid column index and pass -1 as row index. Returns the grid
+double line spacing of cell, row, or column.</span></code>
             <code><span class="kw">def</span> gridEdgeColor(self, row: int, col: int, content: CellEdgeMask) -&gt; Color:</code>
             <code><span class="kw">def</span> gridEdgeLineWeight(self, row: int, col: int, content: CellEdgeMask) -&gt; LineWeight:</code>
             <code><span class="kw">def</span> gridEdgeVisibility(self, row: int, col: int, content: CellEdgeMask) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> gridLineStyle(self, row: int, col: int, nGridLineType: PyDb.GridLineType) -&gt; GridLineStyle:</code>
-            <code><span class="kw">def</span> gridLineWeight(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLineWeight(self, row: int, col, gridlineType: GridLineType) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLineWeight(*args) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLinetype(self, row: int, col: int, nGridLineType: PyDb.GridLineType) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> gridVisibility(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> gridVisibility(self, row: int, col, gridlineType: GridLineType) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> gridVisibility(*args) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> hasFormula(self, row: int, col: int, content: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> hasSubSelection(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> height(self) -&gt; float:</code>
-            <code><span class="kw">def</span> hitTest(self, wpt: PyGe.Point3d, viewvec: PyGe.Vector3d, wx: float, wy: float) -&gt; tuple[bool, int, int, int, int]:</code>
-            <code><span class="kw">def</span> horzCellMargin(self) -&gt; float:</code>
-            <code><span class="kw">def</span> insertColumns(self, row: int, width: float, nCols: int) -&gt; None:</code>
-            <code><span class="kw">def</span> insertColumnsAndInherit(self, nIndex: int, nInheritFrom: int, nNumCols: int) -&gt; None:</code>
-            <code><span class="kw">def</span> insertRows(self, row: int, height: float, nRows: int) -&gt; None:</code>
-            <code><span class="kw">def</span> insertRowsAndInherit(self, nIndex: int, nInheritFrom: int, nNumRows: int) -&gt; None:</code>
-            <code><span class="kw">def</span> isAutoScale(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isAutoScale(self, row: int, col: int, content: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isAutoScale(*args) -&gt; bool:</code>
-            <code><span class="kw">def</span> isBackgroundColorNone(self, rowType: PyDb.RowType) -&gt; bool:</code>
-            <code><span class="kw">def</span> isBackgroundColorNone(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isBackgroundColorNone(*args) -&gt; bool:</code>
-            <code><span class="kw">def</span> isBreakEnabled(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> isContentEditable(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isEmpty(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isFormatEditable(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isHeaderSuppressed(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> isLinked(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isMergeAllEnabled(self, row: int, col: int) -&gt; bool:</code>
-            <code><span class="kw">def</span> isMergedCell(self, row: int, col: int) -&gt; tuple[bool, int, int, int, int]:</code>
-            <code><span class="kw">def</span> isRegenerateTableSuppressed(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> isTitleSuppressed(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> margin(self, row: int, col: int, nMargin: PyDb.CellMargin) -&gt; float:</code>
-            <code><span class="kw">def</span> mergeCells(self, minRow: int, maxRow: int, minCol: int, maxCol: int) -&gt; None:</code>
-            <code><span class="kw">def</span> minimumColumnWidth(self, col: int) -&gt; float:</code>
-            <code><span class="kw">def</span> minimumRowHeight(self, row: int) -&gt; float:</code>
-            <code><span class="kw">def</span> minimumTableHeight(self) -&gt; float:</code>
-            <code><span class="kw">def</span> minimumTableWidth(self) -&gt; float:</code>
-            <code><span class="kw">def</span> moveContent(self, row: int, col: int, frm: int, to: int) -&gt; None:</code>
-            <code><span class="kw">def</span> numColumns(self) -&gt; int:</code>
-            <code><span class="kw">def</span> numContents(self, row: int, col: int) -&gt; int:</code>
-            <code><span class="kw">def</span> numRows(self) -&gt; int:</code>
-            <code><span class="kw">def</span> recomputeTableBlock(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> removeAllOverrides(self, row: int, col: int) -&gt; None:</code>
-            <code><span class="kw">def</span> removeDataLink(self, row: int, col: int) -&gt; None:</code>
-            <code><span class="kw">def</span> rotation(self, row: int, col: int, content: int) -&gt; float:</code>
-            <code><span class="kw">def</span> rowHeight(self, row: int) -&gt; float:</code>
-            <code><span class="kw">def</span> rowType(self, row: int) -&gt; RowType:</code>
-            <code><span class="kw">def</span> scale(self, row: int, col: int, content: int) -&gt; float:</code>
-            <code><span class="kw">def</span> setAlignment(self, align: PyDb.CellAlignment, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setAlignment(self, nRow: int, nCol: int, align: PyDb.CellAlignment) -&gt; None:</code>
-            <code><span class="kw">def</span> setAlignment(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setAutoScale(self, row: int, col: int, flag: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setAutoScale(self, row: int, col: int, content: int, flag: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setAutoScale(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(self, clr: PyDb.Color, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(self, row: int, col: int, clr: PyDb.Color) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColorNone(self, value: bool, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColorNone(self, nRow: int, nCol: int, value: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColorNone(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockAttributeValue(self, row: int, col: int, id: PyDb.ObjectId, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockAttributeValue(self, row: int, col: int, content: int, id: PyDb.ObjectId, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockAttributeValue(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockRotation(self, row: int, col: int, rotAng: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockScale(self, row: int, col: int, scale: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockTableRecordId(self, row: int, col: int, id: PyDb.ObjectId, autoFit: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockTableRecordId(self, row: int, col: int, content: int, id: PyDb.ObjectId, autoFit: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setBlockTableRecordId(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBreakFlowDirection(self, dir: PyDb.TableBreakFlowDirection) -&gt; None:</code>
-            <code><span class="kw">def</span> setBreakHeight(self, val: int, height: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setBreakOffset(self, idx: int, vec: PyGe.Vector3d) -&gt; None:</code>
-            <code><span class="kw">def</span> setBreakOption(self, val: TableBreakOption) -&gt; None:</code>
-            <code><span class="kw">def</span> setBreakSpacing(self, val: float) -&gt; None:</code>
+            <code><span class="kw">def</span> gridLineStyle(self, row: int, col: int, nGridLineType: PyDb.GridLineType) -&gt; GridLineStyle:
+    <span class="ds">Gets the grid line style of cell, row, or column. Returns the grid line style of cell, row,
+or column. To specify cell, pass a valid row and column indices. To specify row, pass a
+valid row index and pass -1 as column index. To specify column, pass a valid column index
+and pass -1 as row index.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid line
+weight of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(self, row: int, col, gridlineType: GridLineType) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid line
+weight of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(*args) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid line
+weight of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridLinetype(self, row: int, col: int, nGridLineType: PyDb.GridLineType) -&gt; ObjectId:
+    <span class="ds">Gets the grid line type of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid line
+type of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridVisibility(self, gridlineType: GridLineType, rowType: PyDb.RowType) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid
+visibility of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridVisibility(self, row: int, col, gridlineType: GridLineType) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid
+visibility of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> gridVisibility(*args) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. Returns the grid
+visibility of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> hasFormula(self, row: int, col: int, content: int) -&gt; bool:
+    <span class="ds">This function returns true if the content at the specified index is a formula.</span></code>
+            <code><span class="kw">def</span> hasSubSelection(self) -&gt; bool:
+    <span class="ds">Returns true if the table has a sub-selection set. Otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> height(self) -&gt; float:
+    <span class="ds">This function returns the total height for the table.</span></code>
+            <code><span class="kw">def</span> hitTest(self, wpt: PyGe.Point3d, viewvec: PyGe.Vector3d, wx: float, wy: float) -&gt; tuple[bool, int, int, int, int]:
+    <span class="ds">This function performs a hit test for the specified point and viewing direction. The cell
+hit by the ray will be returned in the output arguments resultRowIndex and
+resultColumnIndex. Returns true if a table set is hit; otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> horzCellMargin(self) -&gt; float:
+    <span class="ds">This function returns the horizontal cell margin for the table. This method is deprecated
+and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> insertColumns(self, row: int, width: float, nCols: int) -&gt; None:
+    <span class="ds">This function inserts one or more columns at the specified index. Returns the starting
+index of the inserted columns</span></code>
+            <code><span class="kw">def</span> insertColumnsAndInherit(self, nIndex: int, nInheritFrom: int, nNumCols: int) -&gt; None:
+    <span class="ds">This function inserts the specified number of new columns into the table at the column
+index col. Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> insertRows(self, row: int, height: float, nRows: int) -&gt; None:
+    <span class="ds">This function inserts one or more rows at the specified index. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput .</span></code>
+            <code><span class="kw">def</span> insertRowsAndInherit(self, nIndex: int, nInheritFrom: int, nNumRows: int) -&gt; None:
+    <span class="ds">This function inserts the specified number of new rows into the table at the row index row.
+Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> isAutoScale(self, row: int, col: int) -&gt; bool:
+    <span class="ds">This function returns the status of the mBlockAutoFit flag at the specified cell in the
+table. If this flag is true, the AcDbTable object automatically computes the scale and
+insertion point for the block content in order to fit it into the specified cell. Returns
+true if the block at the specified index is auto-scaled.</span></code>
+            <code><span class="kw">def</span> isAutoScale(self, row: int, col: int, content: int) -&gt; bool:
+    <span class="ds">This function returns the status of the mBlockAutoFit flag at the specified cell in the
+table. If this flag is true, the AcDbTable object automatically computes the scale and
+insertion point for the block content in order to fit it into the specified cell. Returns
+true if the block at the specified index is auto-scaled.</span></code>
+            <code><span class="kw">def</span> isAutoScale(*args) -&gt; bool:
+    <span class="ds">This function returns the status of the mBlockAutoFit flag at the specified cell in the
+table. If this flag is true, the AcDbTable object automatically computes the scale and
+insertion point for the block content in order to fit it into the specified cell. Returns
+true if the block at the specified index is auto-scaled.</span></code>
+            <code><span class="kw">def</span> isBackgroundColorNone(self, rowType: PyDb.RowType) -&gt; bool:
+    <span class="ds">Returns true if the background color for the specified cell in the table is set to no color
+value. Otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> isBackgroundColorNone(self, row: int, col: int) -&gt; bool:
+    <span class="ds">Returns true if the background color for the specified cell in the table is set to no color
+value. Otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> isBackgroundColorNone(*args) -&gt; bool:
+    <span class="ds">Returns true if the background color for the specified cell in the table is set to no color
+value. Otherwise, returns false.</span></code>
+            <code><span class="kw">def</span> isBreakEnabled(self) -&gt; bool:
+    <span class="ds">This function checks if the table break is enabled. Returns true if table break is enabled,
+false otherwise.</span></code>
+            <code><span class="kw">def</span> isContentEditable(self, row: int, col: int) -&gt; bool:
+    <span class="ds">This function checks the cell state to determine if a cell content can be modified. For
+example, content locked and read-only cells cannot be modified. Applications should use
+this function to determine if a cell is editable instead of calling cellState directly and
+checking the state since the semantics of an editable cell may change as new states are
+added. Returns true if the content can be modified and false if not.</span></code>
+            <code><span class="kw">def</span> isEmpty(self, row: int, col: int) -&gt; bool:
+    <span class="ds">This function inserts checks if the content of the specified cell is empty Returns true if
+the cell is empty, false if not.</span></code>
+            <code><span class="kw">def</span> isFormatEditable(self, row: int, col: int) -&gt; bool:
+    <span class="ds">This function checks the cell state to determine if a cell format can be modified.
+Applications should use this function to determine if a cell is editable instead of calling
+cellState directly and checking the state since the semantics of an editable cell may
+change as new states are added. Returns true if the format can be modified and false if
+not.</span></code>
+            <code><span class="kw">def</span> isHeaderSuppressed(self) -&gt; bool:
+    <span class="ds">This function returns true if the header row of the table is suppressed, or false if it is
+not. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> isLinked(self, row: int, col: int) -&gt; bool:
+    <span class="ds">Checks if a cell is linked to a data source. Returns true if the cell is linked and false
+if not</span></code>
+            <code><span class="kw">def</span> isMergeAllEnabled(self, row: int, col: int) -&gt; bool:
+    <span class="ds">Determines whether the merge-all flag is enabled in a row or column Returns true if the
+flag is enabled; false if not.</span></code>
+            <code><span class="kw">def</span> isMergedCell(self, row: int, col: int) -&gt; tuple[bool, int, int, int, int]:
+    <span class="ds">This function returns true if the specified cell is within merged cells. It also returns
+the range of the merged cells if minRow, maxRow, minCol, and maxCol are not null. The
+merged cell region is always a rectangular area.</span></code>
+            <code><span class="kw">def</span> isRegenerateTableSuppressed(self) -&gt; bool:
+    <span class="ds">Returns true if the regenerating of the table block is currently disabled. Otherwise,
+returns false.</span></code>
+            <code><span class="kw">def</span> isTitleSuppressed(self) -&gt; bool:
+    <span class="ds">This function returns true if the title row of the table is suppressed, or false if it is
+not. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> margin(self, row: int, col: int, nMargin: PyDb.CellMargin) -&gt; float:
+    <span class="ds">Returns the margin of cell, row, or column.</span></code>
+            <code><span class="kw">def</span> mergeCells(self, minRow: int, maxRow: int, minCol: int, maxCol: int) -&gt; None:
+    <span class="ds">This function merges a rectangular region of cells. The total number of cells merged is
+((maxRow - minRow) + 1) * ((maxCol - minCol) + 1). Returns Acad::eOk if successful.
+Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> minimumColumnWidth(self, col: int) -&gt; float:
+    <span class="ds">This function returns the minimum column width at the specified column index in the table.</span></code>
+            <code><span class="kw">def</span> minimumRowHeight(self, row: int) -&gt; float:
+    <span class="ds">This function returns the minimum row height for the specified row in the table.</span></code>
+            <code><span class="kw">def</span> minimumTableHeight(self) -&gt; float:
+    <span class="ds">This function returns the minimum total height for the table.</span></code>
+            <code><span class="kw">def</span> minimumTableWidth(self) -&gt; float:
+    <span class="ds">This function returns the minimum total width for the table.</span></code>
+            <code><span class="kw">def</span> moveContent(self, row: int, col: int, frm: int, to: int) -&gt; None:
+    <span class="ds">Moves a content in a cell from one position to another position within the cell Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> numColumns(self) -&gt; int:
+    <span class="ds">This function returns a non-negative integer representing the number of columns in the
+table.</span></code>
+            <code><span class="kw">def</span> numContents(self, row: int, col: int) -&gt; int:
+    <span class="ds">Returns the number of contents in the specified cell.</span></code>
+            <code><span class="kw">def</span> numRows(self) -&gt; int:
+    <span class="ds">This function returns a non-negative integer representing the number of rows in the table.</span></code>
+            <code><span class="kw">def</span> recomputeTableBlock(self, val: bool) -&gt; None:
+    <span class="ds">This function updates the block table record the table object references to match any
+changes made to the table object since the last time the block table record was updated. If
+forceUpdate is true, then the block table record will be updated regardless of whether or
+not the table object has had any changes since the last time the block table record was
+updated. If forceUpdate is false, then the block table record will only be updated if the
+table object has been changed since it was opened, is not currently erased, and is not in
+the middle of an undo operation.</span></code>
+            <code><span class="kw">def</span> removeAllOverrides(self, row: int, col: int) -&gt; None:
+    <span class="ds">Removes all the overrides in cell, row, or column. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> removeDataLink(self, row: int, col: int) -&gt; None:
+    <span class="ds">This function removes all the data links in the table. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> rotation(self, row: int, col: int, content: int) -&gt; float:
+    <span class="ds">Returns the rotation.</span></code>
+            <code><span class="kw">def</span> rowHeight(self, row: int) -&gt; float:
+    <span class="ds">This function returns the row height of the specified row in the table.</span></code>
+            <code><span class="kw">def</span> rowType(self, row: int) -&gt; RowType:
+    <span class="ds">This function returns the row type of the specified row in the table. The row type may be
+AcDb::kTitleRow, AcDb::kHeaderRow, or AcDb::kDataRow. This method is deprecated and may be
+removed in a future release.</span></code>
+            <code><span class="kw">def</span> scale(self, row: int, col: int, content: int) -&gt; float:
+    <span class="ds">This function returns the scale of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> setAlignment(self, align: PyDb.CellAlignment, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the alignment of the text or block in the specified cell of the table.
+Possible cell alignment values are AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight,
+AcDb::kMiddleLeft, AcDb::kMiddleCenter, AcDb::kMiddleRight, AcDb::kBottomLeft,
+AcDb::kBottomCenter, and AcDb::kBottomRight. Returns Acad::eOk if successful. Otherwise,
+returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setAlignment(self, nRow: int, nCol: int, align: PyDb.CellAlignment) -&gt; None:
+    <span class="ds">This function sets the alignment of the text or block in the specified cell of the table.
+Possible cell alignment values are AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight,
+AcDb::kMiddleLeft, AcDb::kMiddleCenter, AcDb::kMiddleRight, AcDb::kBottomLeft,
+AcDb::kBottomCenter, and AcDb::kBottomRight. Returns Acad::eOk if successful. Otherwise,
+returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setAlignment(*args) -&gt; None:
+    <span class="ds">This function sets the alignment of the text or block in the specified cell of the table.
+Possible cell alignment values are AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight,
+AcDb::kMiddleLeft, AcDb::kMiddleCenter, AcDb::kMiddleRight, AcDb::kBottomLeft,
+AcDb::kBottomCenter, and AcDb::kBottomRight. Returns Acad::eOk if successful. Otherwise,
+returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setAutoScale(self, row: int, col: int, flag: bool) -&gt; None:
+    <span class="ds">Sets the auto scale flag for the block at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setAutoScale(self, row: int, col: int, content: int, flag: bool) -&gt; None:
+    <span class="ds">Sets the auto scale flag for the block at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setAutoScale(*args) -&gt; None:
+    <span class="ds">Sets the auto scale flag for the block at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(self, clr: PyDb.Color, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the background color of the specified cell in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(self, row: int, col: int, clr: PyDb.Color) -&gt; None:
+    <span class="ds">This function sets the background color of the specified cell in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(*args) -&gt; None:
+    <span class="ds">This function sets the background color of the specified cell in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColorNone(self, value: bool, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function enables or disables the background color for the specified cell. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColorNone(self, nRow: int, nCol: int, value: bool) -&gt; None:
+    <span class="ds">This function enables or disables the background color for the specified cell. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColorNone(*args) -&gt; None:
+    <span class="ds">This function enables or disables the background color for the specified cell. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBlockAttributeValue(self, row: int, col: int, id: PyDb.ObjectId, val: str) -&gt; None:
+    <span class="ds">Sets the block attribute value if the content at the specified content index is a block
+with attributes. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error
+status.</span></code>
+            <code><span class="kw">def</span> setBlockAttributeValue(self, row: int, col: int, content: int, id: PyDb.ObjectId, val: str) -&gt; None:
+    <span class="ds">Sets the block attribute value if the content at the specified content index is a block
+with attributes. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error
+status.</span></code>
+            <code><span class="kw">def</span> setBlockAttributeValue(*args) -&gt; None:
+    <span class="ds">Sets the block attribute value if the content at the specified content index is a block
+with attributes. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error
+status.</span></code>
+            <code><span class="kw">def</span> setBlockRotation(self, row: int, col: int, rotAng: float) -&gt; None:
+    <span class="ds">This function sets the rotation angle of the block reference at the specified cell in the
+table. Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput. This method
+is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> setBlockScale(self, row: int, col: int, scale: float) -&gt; None:
+    <span class="ds">This function sets the scale factor of the block reference at the specified cell in the
+table. Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput. This method
+is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> setBlockTableRecordId(self, row: int, col: int, id: PyDb.ObjectId, autoFit: bool) -&gt; None:
+    <span class="ds">Sets the id of the block table record for the content at the specified content index.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBlockTableRecordId(self, row: int, col: int, content: int, id: PyDb.ObjectId, autoFit: bool) -&gt; None:
+    <span class="ds">Sets the id of the block table record for the content at the specified content index.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBlockTableRecordId(*args) -&gt; None:
+    <span class="ds">Sets the id of the block table record for the content at the specified content index.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBreakFlowDirection(self, dir: PyDb.TableBreakFlowDirection) -&gt; None:
+    <span class="ds">Sets the table break flow direction of the table. The break flow direction determines the
+positioning of the tables when the table break is enabled. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBreakHeight(self, val: int, height: float) -&gt; None:
+    <span class="ds">Sets the break height of the specified table when table breaking is enabled. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBreakOffset(self, idx: int, vec: PyGe.Vector3d) -&gt; None:
+    <span class="ds">Sets the table break offset of the table. Returns Acad::eOk if successful; otherwise,
+returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setBreakOption(self, val: TableBreakOption) -&gt; None:
+    <span class="ds">Sets the table break option. Returns Acad::eOk if successful; otherwise, returns an AutoCAD
+error status.</span></code>
+            <code><span class="kw">def</span> setBreakSpacing(self, val: float) -&gt; None:
+    <span class="ds">Sets the table break spacing. Returns Acad::eOk if successful; otherwise, returns an
+AutoCAD error status.</span></code>
             <code><span class="kw">def</span> setCellOverride(self, row: int, col: int, content: int, nOverride: PyDb.CellProperty) -&gt; None:</code>
-            <code><span class="kw">def</span> setCellState(self, row: int, col: int, val: PyDb.CellState) -&gt; None:</code>
-            <code><span class="kw">def</span> setCellStyle(self, row: int, col: int, style: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setCellType(self, row: int, col: int, type: CellType) -&gt; None:</code>
-            <code><span class="kw">def</span> setColumnWidth(self, column: int, width: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setColumnWidth(self, width: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setColumnWidth(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setContentColor(self, color: PyDb.Color, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setContentColor(self, nRow: int, nCol: int, color: PyDb.Color) -&gt; None:</code>
-            <code><span class="kw">def</span> setContentColor(self, nRow: int, nCol: int, content: int, color: PyDb.Color) -&gt; None:</code>
-            <code><span class="kw">def</span> setContentColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setContentLayout(self, row: int, col: int, val: PyDb.CellContentLayout) -&gt; None:</code>
-            <code><span class="kw">def</span> setCustomData(self, row: int, col: int, style: str, val: PyDb.AcValue) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataFormat(self, row: int, col: int, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataFormat(self, row: int, col: int, content: int, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataFormat(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataLink(self, row: int, col: int, id: PyDb.ObjectId, update: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, nDataType: ValueDataType, nUnitType: ValueUnitType, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, row: int, col: int, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, row: int, col, nContent: int, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setDirection(self, val: PyGe.Vector3d) -&gt; None:</code>
-            <code><span class="kw">def</span> setFieldId(self, row: int, col: int, id: PyDb.ObjectId) -&gt; None:</code>
-            <code><span class="kw">def</span> setFieldId(self, row: int, col: int, content: int, id: PyDb.ObjectId, nFlag: PyDb.CellOption) -&gt; None:</code>
-            <code><span class="kw">def</span> setFieldId(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setFlowDirection(self, val: PyDb.TableFlowDirection) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormat(self, row: int, col: int, format: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormula(self, row: int, col: int, content: int, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(self, color: PyDb.Color, nBorders: int, nRows: int) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, color: PyDb.Color) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridDoubleLineSpacing(self, row: int, col: int, nGridLineType: GridLineType, spacing: float) -&gt; None:</code>
+            <code><span class="kw">def</span> setCellState(self, row: int, col: int, val: PyDb.CellState) -&gt; None:
+    <span class="ds">Sets the cell state. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error
+status.</span></code>
+            <code><span class="kw">def</span> setCellStyle(self, row: int, col: int, style: str) -&gt; None:
+    <span class="ds">Sets the the cell style of a cell, row, or column. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setCellType(self, row: int, col: int, type: CellType) -&gt; None:
+    <span class="ds">This function sets the cell type to be applied to the cell at the specified location in the
+table. Possible values for cell type are AcDbTable::kTextCell and AcDbTable::kBlockCell.
+Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> setColumnWidth(self, column: int, width: float) -&gt; None:
+    <span class="ds">This function sets the column width at the specified column index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setColumnWidth(self, width: float) -&gt; None:
+    <span class="ds">This function sets the column width at the specified column index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setColumnWidth(*args) -&gt; None:
+    <span class="ds">This function sets the column width at the specified column index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setContentColor(self, color: PyDb.Color, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the color of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setContentColor(self, nRow: int, nCol: int, color: PyDb.Color) -&gt; None:
+    <span class="ds">Sets the color of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setContentColor(self, nRow: int, nCol: int, content: int, color: PyDb.Color) -&gt; None:
+    <span class="ds">Sets the color of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setContentColor(*args) -&gt; None:
+    <span class="ds">Sets the color of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setContentLayout(self, row: int, col: int, val: PyDb.CellContentLayout) -&gt; None:
+    <span class="ds">Sets the content layout of the first content. Returns Acad::eOk if successful; otherwise,
+returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setCustomData(self, row: int, col: int, style: str, val: PyDb.AcValue) -&gt; None:
+    <span class="ds">Sets the custom data value set in cell, row, or column. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataFormat(self, row: int, col: int, val: str) -&gt; None:
+    <span class="ds">Sets the data format of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataFormat(self, row: int, col: int, content: int, val: str) -&gt; None:
+    <span class="ds">Sets the data format of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataFormat(*args) -&gt; None:
+    <span class="ds">Sets the data format of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataLink(self, row: int, col: int, id: PyDb.ObjectId, update: bool) -&gt; None:
+    <span class="ds">Sets the specified data link in a cell. If the specified cell is top-left cell of an
+existing linked range this will overwrite the current data link. If it is any other cell in
+a linked range the function will fail. This function does not automatically update the
+data; call updateDataLink() to update the data. Returns Acad::eOk if successful; otherwise,
+returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataType(self, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataType(self, nDataType: ValueDataType, nUnitType: ValueUnitType, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataType(self, row: int, col: int, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataType(self, row: int, col, nContent: int, nDataType: ValueDataType, nUnitType: ValueUnitType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDataType(*args) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the content at the specified content index. Returns
+Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setDirection(self, val: PyGe.Vector3d) -&gt; None:
+    <span class="ds">This function sets the horizontal direction (X axis, in WCS coordinates) for the table.
+Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setFieldId(self, row: int, col: int, id: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Sets the id of the field at the specified index. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setFieldId(self, row: int, col: int, content: int, id: PyDb.ObjectId, nFlag: PyDb.CellOption) -&gt; None:
+    <span class="ds">Sets the id of the field at the specified index. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setFieldId(*args) -&gt; None:
+    <span class="ds">Sets the id of the field at the specified index. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setFlowDirection(self, val: PyDb.TableFlowDirection) -&gt; None:
+    <span class="ds">This function sets the flow direction for the table. Possible values for
+AcDb::FlowDirection are AcDb::kTtoB (top to bottom) and AcDb::kBtoT (bottom to top).
+Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setFormat(self, row: int, col: int, format: str) -&gt; None:
+    <span class="ds">For internal use only.</span></code>
+            <code><span class="kw">def</span> setFormula(self, row: int, col: int, content: int, val: str) -&gt; None:
+    <span class="ds">Sets the formula at the specified content index. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridColor(self, color: PyDb.Color, nBorders: int, nRows: int) -&gt; None:
+    <span class="ds">This function sets the grid color of the specified edge of the cell. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridColor(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, color: PyDb.Color) -&gt; None:
+    <span class="ds">This function sets the grid color of the specified edge of the cell. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridColor(*args) -&gt; None:
+    <span class="ds">This function sets the grid color of the specified edge of the cell. Returns Acad::eOk if
+successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridDoubleLineSpacing(self, row: int, col: int, nGridLineType: GridLineType, spacing: float) -&gt; None:
+    <span class="ds">Sets the grid double line spacing in a cell, row, or column. To specify cell, pass a valid
+row and column indices. To specify row, pass a valid row index and pass -1 as column index.
+To specify column, pass a valid column index and pass -1 as row index. To set the same
+value in multiple grid line types combine multiple grid line types using the OR and pass
+it. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
             <code><span class="kw">def</span> setGridEdgeColor(self, row: int, col: int, content: CellEdgeMask, clr: PyDb.AcCmColor) -&gt; None:</code>
             <code><span class="kw">def</span> setGridEdgeLineWeight(self, row: int, col: int, content: CellEdgeMask, val: PyDb.LineWeight) -&gt; None:</code>
             <code><span class="kw">def</span> setGridEdgeVisibility(self, row: int, col: int, content: CellEdgeMask, val: PyDb.Visibility) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineStyle(self, row: int, col: int, nGridLineType: PyDb.GridLineType, nLineStyle: PyDb.GridLineStyle) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(self, lwt: LineWeight, nBorders: int, nRows: int) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, nLineWeight: LineWeight) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLinetype(self, row: int, col: int, nGridLineType: PyDb.GridLineType, idLinetype: PyDb.ObjectId) -&gt; None:</code>
+            <code><span class="kw">def</span> setGridLineStyle(self, row: int, col: int, nGridLineType: PyDb.GridLineType, nLineStyle: PyDb.GridLineStyle) -&gt; None:
+    <span class="ds">Sets the grid line style in a cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. To set the same value
+in multiple grid line types combine multiple grid line types using the OR and pass it.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(self, lwt: LineWeight, nBorders: int, nRows: int) -&gt; None:
+    <span class="ds">This function sets the grid lineweight of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, nLineWeight: LineWeight) -&gt; None:
+    <span class="ds">This function sets the grid lineweight of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(*args) -&gt; None:
+    <span class="ds">This function sets the grid lineweight of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLinetype(self, row: int, col: int, nGridLineType: PyDb.GridLineType, idLinetype: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Sets the grid line type in a cell, row, or column. To specify cell, pass a valid row and
+column indices. To specify row, pass a valid row index and pass -1 as column index. To
+specify column, pass a valid column index and pass -1 as row index. To set the same value
+in multiple grid line types combine multiple grid line types using the OR and pass it.
+Returns Acad::eOk if successful; otherwise, returns an AutoCAD error status.</span></code>
             <code><span class="kw">def</span> setGridOverride(self, row: int, col: int, nGridLineType: PyDb.GridLineType, nOverride: PyDb.GridProperty) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(self, visible: PyDb.Visibility, nBorders: int, nRows: int) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, visible: PyDb.Visibility) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setHeight(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setHorzCellMargin(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setMargin(self, row: int, col: int, nMargin: PyDb.CellMargin, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setNormal(self, val: PyGe.Vector3d) -&gt; None:</code>
-            <code><span class="kw">def</span> setPosition(self, val: PyGe.Point3d) -&gt; None:</code>
-            <code><span class="kw">def</span> setRecomputeTableBlock(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> setRegen(self) -&gt; None:</code>
-            <code><span class="kw">def</span> setRotation(self, row: int, col: int, content: int, fang: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setRowHeight(self, row: int, height: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setRowHeight(self, height: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setRowHeight(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setScale(self, row: int, col: int, content: int, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setSize(self, rows: int, cols: int) -&gt; None:</code>
-            <code><span class="kw">def</span> setSubSelection(self, val: PyDb.CellRange) -&gt; None:</code>
-            <code><span class="kw">def</span> setTableRotation(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setTableStyle(self, val: PyDb.ObjectId) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(self, height: float, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(self, row: int, col: int, height: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(self, row: int, col, nContent: int, height: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextRotation(self, row: int, col: int, rot: RotationAngle) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextString(self, row: int, col: int, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextString(self, row: int, col: int, content: int, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextString(self, cell: PyDb.Cell, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextString(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(self, row: int, col: int, id: PyDb.ObjectId) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(self, row: int, col, nContent: int, id: PyDb.ObjectId) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setValue(self, row: int, col: int, val: PyDb.AcValue) -&gt; None:</code>
-            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: PyDb.AcValue) -&gt; None:</code>
-            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: PyDb.AcValue, opt: PyDb.ValueParseOption) -&gt; None:</code>
-            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: str, opt: PyDb.ValueParseOption) -&gt; None:</code>
-            <code><span class="kw">def</span> setValue(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setVertCellMargin(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setWidth(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressHeaderRow(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressInvisibleGrid(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressRegenerateTable(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressTitleRow(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> tableRotation(self) -&gt; float:</code>
-            <code><span class="kw">def</span> tableStyle(self) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> tableStyleOverrides(self) -&gt; list[int]:</code>
-            <code><span class="kw">def</span> textHeight(self, rowType: PyDb.RowType) -&gt; float:</code>
-            <code><span class="kw">def</span> textHeight(self, row: int, col: int) -&gt; float:</code>
-            <code><span class="kw">def</span> textHeight(self, row: int, col: int, content: int) -&gt; float:</code>
-            <code><span class="kw">def</span> textHeight(*args) -&gt; float:</code>
-            <code><span class="kw">def</span> textRotation(self, row: int, col: int) -&gt; RotationAngle:</code>
-            <code><span class="kw">def</span> textString(self, row: int, col: int) -&gt; str:</code>
-            <code><span class="kw">def</span> textString(self, row: int, col: int, content: int) -&gt; str:</code>
-            <code><span class="kw">def</span> textString(self, cell: PyDb.Cell) -&gt; str:</code>
-            <code><span class="kw">def</span> textString(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> textStringFmt(self, row: int, col: int, nOption: ValueFormatOption) -&gt; str:</code>
-            <code><span class="kw">def</span> textStringFmt(self, row: int, col: int, content: int, nOption: ValueFormatOption) -&gt; str:</code>
-            <code><span class="kw">def</span> textStringFmt(self, cell: PyDb.Cell, nOption: ValueFormatOption) -&gt; str:</code>
-            <code><span class="kw">def</span> textStringFmt(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> textStyle(self, rowType: PyDb.RowType) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> textStyle(self, row: int, col: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> textStyle(self, row: int, col: int, content: int) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> textStyle(*args) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> unmergeCells(self, minRow: int, maxRow: int, minCol: int, maxCol: int) -&gt; None:</code>
-            <code><span class="kw">def</span> updateDataLink(self, nDir: UpdateDirection, nOption: UpdateOption) -&gt; None:</code>
-            <code><span class="kw">def</span> updateDataLink(self, row: int, col: int, nDir: UpdateDirection, nOption: UpdateOption) -&gt; None:</code>
-            <code><span class="kw">def</span> updateDataLink(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> value(self, row: int, col: int) -&gt; AcValue:</code>
-            <code><span class="kw">def</span> value(self, row: int, col: int, content: int) -&gt; AcValue:</code>
-            <code><span class="kw">def</span> value(self, row: int, col: int, content: int, opt: PyDb.ValueFormatOption) -&gt; AcValue:</code>
-            <code><span class="kw">def</span> value(*args) -&gt; AcValue:</code>
-            <code><span class="kw">def</span> vertCellMargin(self) -&gt; float:</code>
-            <code><span class="kw">def</span> width(self) -&gt; float:</code>
+            <code><span class="kw">def</span> setGridVisibility(self, visible: PyDb.Visibility, nBorders: int, nRows: int) -&gt; None:
+    <span class="ds">This function sets the grid visibility of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridVisibility(self, nRow: int, nCol: int, nGridLineTypes: GridLineType, visible: PyDb.Visibility) -&gt; None:
+    <span class="ds">This function sets the grid visibility of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridVisibility(*args) -&gt; None:
+    <span class="ds">This function sets the grid visibility of the specified edge of the cell. Returns Acad::eOk
+if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setHeight(self, val: float) -&gt; None:
+    <span class="ds">This function sets the total row height for the table. The individual row heights may be
+increased or decreased proportionally. Returns Acad::eOk if successful. Otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setHorzCellMargin(self, val: float) -&gt; None:
+    <span class="ds">This function sets the horizontal cell margin (space between the cell text and the cell
+border) for the table. In general, the horizontal cell margin should not greater than five
+times the standard data row text height. Returns Acad::eOk if successful. Otherwise,
+returns Acad::eInvalidInput. This method is deprecated and may be removed in a future
+release.</span></code>
+            <code><span class="kw">def</span> setMargin(self, row: int, col: int, nMargin: PyDb.CellMargin, val: float) -&gt; None:
+    <span class="ds">Sets the margin of cell, row, or column. To specify cell pass a valid row and column
+indices; to specify row pass a valid row index and pass -1 as column index; to specify
+column pass a valid column index and pass -1 as row index. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setNormal(self, val: PyGe.Vector3d) -&gt; None:
+    <span class="ds">Overridden method from AcDbBlockReference. See AcDbBlockReference::setNormal.</span></code>
+            <code><span class="kw">def</span> setPosition(self, val: PyGe.Point3d) -&gt; None:
+    <span class="ds">Overridden method from AcDbBlockReference. See AcDbBlockReference::setPosition.</span></code>
+            <code><span class="kw">def</span> setRecomputeTableBlock(self, val: bool) -&gt; None:
+    <span class="ds">This function updates the block table record that the table object references to match any
+changes made to the table object since the last time the block table record was updated. If
+forceUpdate is true, then the block table record will be updated regardless of whether or
+not the table object has had any changes since the last time the block table record was
+updated. If forceUpdate is false, then the block table record will only be updated if the
+table object has been changed since it was opened, is not currently erased, and is not in
+the middle of an undo operation.</span></code>
+            <code><span class="kw">def</span> setRegen(self) -&gt; None:
+    <span class="ds">For internal use only.</span></code>
+            <code><span class="kw">def</span> setRotation(self, row: int, col: int, content: int, fang: float) -&gt; None:
+    <span class="ds">Sets the rotation angle of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status</span></code>
+            <code><span class="kw">def</span> setRowHeight(self, row: int, height: float) -&gt; None:
+    <span class="ds">This function sets the row height for the specified row index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setRowHeight(self, height: float) -&gt; None:
+    <span class="ds">This function sets the row height for the specified row index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setRowHeight(*args) -&gt; None:
+    <span class="ds">This function sets the row height for the specified row index in the table. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setScale(self, row: int, col: int, content: int, val: float) -&gt; None:
+    <span class="ds">Sets the scale of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setSize(self, rows: int, cols: int) -&gt; None:
+    <span class="ds">Resizes the table. Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setSubSelection(self, val: PyDb.CellRange) -&gt; None:
+    <span class="ds">This function sets the row and column indexes of cells to the subselection set. Returns
+Acad::eOk if successful. Returns Acad::eInvalidInput if the input indexes of row and column
+are out of range.</span></code>
+            <code><span class="kw">def</span> setTableRotation(self, val: float) -&gt; None:
+    <span class="ds">Sets the rotation angle of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status</span></code>
+            <code><span class="kw">def</span> setTableStyle(self, val: PyDb.ObjectId) -&gt; None:
+    <span class="ds">This function sets the table to use the AcDbTableStyle with the given object ID. Returns
+Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setTextHeight(self, height: float, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the text height of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextHeight(self, row: int, col: int, height: float) -&gt; None:
+    <span class="ds">Sets the text height of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextHeight(self, row: int, col, nContent: int, height: float) -&gt; None:
+    <span class="ds">Sets the text height of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextHeight(*args) -&gt; None:
+    <span class="ds">Sets the text height of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextRotation(self, row: int, col: int, rot: RotationAngle) -&gt; None:
+    <span class="ds">This function sets the rotation angle of the text in the specified cell. The possible
+values for rotation angle are AcDb::kDegrees000, AcDb::kDegrees090, AcDb::kDegrees180, and
+AcDb::kDegrees270. Returns Acad::eOk if successful. Otherwise, returns Acad::eInvalidInput.
+This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> setTextString(self, row: int, col: int, val: str) -&gt; None:
+    <span class="ds">Sets the text for the first content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextString(self, row: int, col: int, content: int, val: str) -&gt; None:
+    <span class="ds">Sets the text for the first content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextString(self, cell: PyDb.Cell, val: str) -&gt; None:
+    <span class="ds">Sets the text for the first content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextString(*args) -&gt; None:
+    <span class="ds">Sets the text for the first content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the text style of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextStyle(self, row: int, col: int, id: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Sets the text style of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextStyle(self, row: int, col, nContent: int, id: PyDb.ObjectId) -&gt; None:
+    <span class="ds">Sets the text style of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTextStyle(*args) -&gt; None:
+    <span class="ds">Sets the text style of the content at the specified content index. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setValue(self, row: int, col: int, val: PyDb.AcValue) -&gt; None:
+    <span class="ds">Parses the specified text, converts it to a value of appropriate data type and sets it in
+the cell. If nOption is set to AcValue::kParseOptionNone it does default parsing. If it is
+AcValue::kSetDefaultFormat it sets a default format appropriate for the data type, in the
+value. If it is AcValue::kPreserveMTextFormat it uses the MText format code in the passed
+text if it is present. Returns Acad::eOk if successful or Acad::eInvalidInput if the input
+argument is invalid.</span></code>
+            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: PyDb.AcValue) -&gt; None:
+    <span class="ds">Parses the specified text, converts it to a value of appropriate data type and sets it in
+the cell. If nOption is set to AcValue::kParseOptionNone it does default parsing. If it is
+AcValue::kSetDefaultFormat it sets a default format appropriate for the data type, in the
+value. If it is AcValue::kPreserveMTextFormat it uses the MText format code in the passed
+text if it is present. Returns Acad::eOk if successful or Acad::eInvalidInput if the input
+argument is invalid.</span></code>
+            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: PyDb.AcValue, opt: PyDb.ValueParseOption) -&gt; None:
+    <span class="ds">Parses the specified text, converts it to a value of appropriate data type and sets it in
+the cell. If nOption is set to AcValue::kParseOptionNone it does default parsing. If it is
+AcValue::kSetDefaultFormat it sets a default format appropriate for the data type, in the
+value. If it is AcValue::kPreserveMTextFormat it uses the MText format code in the passed
+text if it is present. Returns Acad::eOk if successful or Acad::eInvalidInput if the input
+argument is invalid.</span></code>
+            <code><span class="kw">def</span> setValue(self, row: int, col: int, content: int, val: str, opt: PyDb.ValueParseOption) -&gt; None:
+    <span class="ds">Parses the specified text, converts it to a value of appropriate data type and sets it in
+the cell. If nOption is set to AcValue::kParseOptionNone it does default parsing. If it is
+AcValue::kSetDefaultFormat it sets a default format appropriate for the data type, in the
+value. If it is AcValue::kPreserveMTextFormat it uses the MText format code in the passed
+text if it is present. Returns Acad::eOk if successful or Acad::eInvalidInput if the input
+argument is invalid.</span></code>
+            <code><span class="kw">def</span> setValue(*args) -&gt; None:
+    <span class="ds">Parses the specified text, converts it to a value of appropriate data type and sets it in
+the cell. If nOption is set to AcValue::kParseOptionNone it does default parsing. If it is
+AcValue::kSetDefaultFormat it sets a default format appropriate for the data type, in the
+value. If it is AcValue::kPreserveMTextFormat it uses the MText format code in the passed
+text if it is present. Returns Acad::eOk if successful or Acad::eInvalidInput if the input
+argument is invalid.</span></code>
+            <code><span class="kw">def</span> setVertCellMargin(self, val: float) -&gt; None:
+    <span class="ds">This function sets the vertical cell margin (space between the cell text and the cell
+border) for the table. In general, the vertical cell margin should not greater than five
+times the standard data row text height. Returns Acad::eOk if successful. Otherwise,
+returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setWidth(self, val: float) -&gt; None:
+    <span class="ds">This function sets the total width for the table. The individual column widths may be
+widened or narrowed proportionally. Returns Acad::eOk if successful. Otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> suppressHeaderRow(self, val: bool) -&gt; None:
+    <span class="ds">This function suppresses or enables the header row for the table. This method is deprecated
+and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> suppressInvisibleGrid(self, val: bool) -&gt; None:
+    <span class="ds">For internal use only.</span></code>
+            <code><span class="kw">def</span> suppressRegenerateTable(self, val: bool) -&gt; None:
+    <span class="ds">This method allows the user to temporarily disable the regeneration of the table object
+during changes in one or more of its properties. WarningThis method is provided for VBA
+applications to temporarily disable the regenerating of the table object. It is not
+intended for use in ObjectARX applications. Calling this function with bSuppress set to
+true disables regenerating the table object. The table object is recomputed when this
+function is called with bSuppress set to false. Before saving the table object to the
+drawing file, the user should either call this function with false value or call
+recomputeTableBlock(true). Otherwise, the table object will never be displayed.</span></code>
+            <code><span class="kw">def</span> suppressTitleRow(self, val: bool) -&gt; None:
+    <span class="ds">This function suppresses or enables the title row for the table. This method is deprecated
+and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> tableRotation(self) -&gt; float:
+    <span class="ds">Returns the rotation.</span></code>
+            <code><span class="kw">def</span> tableStyle(self) -&gt; ObjectId:
+    <span class="ds">Returns the object ID of the AcDbTableStyle referenced by the table object.</span></code>
+            <code><span class="kw">def</span> tableStyleOverrides(self) -&gt; list[int]:
+    <span class="ds">This function returns the table style overrides. AcDbTable::TableStyleOverrides defines the
+values for table style overrides. Returns true if successful, false otherwise.</span></code>
+            <code><span class="kw">def</span> textHeight(self, rowType: PyDb.RowType) -&gt; float:
+    <span class="ds">Returns the text height of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textHeight(self, row: int, col: int) -&gt; float:
+    <span class="ds">Returns the text height of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textHeight(self, row: int, col: int, content: int) -&gt; float:
+    <span class="ds">Returns the text height of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textHeight(*args) -&gt; float:
+    <span class="ds">Returns the text height of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textRotation(self, row: int, col: int) -&gt; RotationAngle:
+    <span class="ds">This function returns the rotation angle of the text in the specified cell. The possible
+values for rotation angle are AcDb::kDegrees000, AcDb::kDegrees090, AcDb::kDegrees180, and
+AcDb::kDegrees270. This method is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> textString(self, row: int, col: int) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textString(self, row: int, col: int, content: int) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textString(self, cell: PyDb.Cell) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textString(*args) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textStringFmt(self, row: int, col: int, nOption: ValueFormatOption) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textStringFmt(self, row: int, col: int, content: int, nOption: ValueFormatOption) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textStringFmt(self, cell: PyDb.Cell, nOption: ValueFormatOption) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textStringFmt(*args) -&gt; str:
+    <span class="ds">Gets the formatted text string of the content at the specified content index. Returns text
+of the content.</span></code>
+            <code><span class="kw">def</span> textStyle(self, rowType: PyDb.RowType) -&gt; ObjectId:
+    <span class="ds">Returns the text style of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textStyle(self, row: int, col: int) -&gt; ObjectId:
+    <span class="ds">Returns the text style of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textStyle(self, row: int, col: int, content: int) -&gt; ObjectId:
+    <span class="ds">Returns the text style of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> textStyle(*args) -&gt; ObjectId:
+    <span class="ds">Returns the text style of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> unmergeCells(self, minRow: int, maxRow: int, minCol: int, maxCol: int) -&gt; None:
+    <span class="ds">This function unmerges a rectangular region of cells. The total number of cells unmerged is
+((maxRow - minRow) + 1) * ((maxCol - minCol) + 1)Returns Acad::eOk if successful.
+Otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> updateDataLink(self, nDir: UpdateDirection, nOption: UpdateOption) -&gt; None:
+    <span class="ds">This function updates the data link at the specified cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> updateDataLink(self, row: int, col: int, nDir: UpdateDirection, nOption: UpdateOption) -&gt; None:
+    <span class="ds">This function updates the data link at the specified cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> updateDataLink(*args) -&gt; None:
+    <span class="ds">This function updates the data link at the specified cell Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> value(self, row: int, col: int) -&gt; AcValue:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> value(self, row: int, col: int, content: int) -&gt; AcValue:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> value(self, row: int, col: int, content: int, opt: PyDb.ValueFormatOption) -&gt; AcValue:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> value(*args) -&gt; AcValue:
+    <span class="ds">Returns the content type of the content at the specified content index.</span></code>
+            <code><span class="kw">def</span> vertCellMargin(self) -&gt; float:
+    <span class="ds">This function returns the vertical cell margin for the table. This method is deprecated and
+may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> width(self) -&gt; float:
+    <span class="ds">This function returns the total width for the table.</span></code>
         </details>
     </div>
 

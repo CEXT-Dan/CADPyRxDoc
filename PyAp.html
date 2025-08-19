@@ -100,7 +100,10 @@
             <code><span class="kw">def</span> acadGetIDispatch() -&gt; int:</code>
             <code><span class="kw">def</span> applyHostIcon(wnd: int) -&gt; None:</code>
             <code><span class="kw">def</span> className() -&gt; str:</code>
-            <code><span class="kw">def</span> docManager() -&gt; DocManager:</code>
+            <code><span class="kw">def</span> docManager() -&gt; DocManager:
+    <span class="ds">The AcApDocumentManager object is the container for all the document objects (there is one
+document object for each drawing that is open and being edited). There is only one
+instance, which can be obtained using the macro named acDocManager.</span></code>
             <code><span class="kw">def</span> getAppDataPath(createIfNotFound: bool) -&gt; str:</code>
             <code><span class="kw">def</span> getLoadedModuleNames() -&gt; list[str]:</code>
             <code><span class="kw">def</span> getLoadedModules() -&gt; list[str]:</code>
@@ -426,6 +429,7 @@ prefixed with a &#x27;#&#x27; character. Lock calls can be vetoed, but unlock ca
     <span class="ds">Raises an exception.
 This class cannot be instantiated from Python.</span></code>
             <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
+            <code><span class="kw">def</span> acadDocument(self) -&gt; PyAx.AcadDocument:</code>
             <code><span class="kw">def</span> autoLock(self) -&gt; AutoDocLock:
     <span class="ds">This function is used for locking documents in order to access their resources. Resources
 include all AcDbDatabases objects associated with a document, and AcDbObject objects in
