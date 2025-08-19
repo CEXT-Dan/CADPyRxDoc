@@ -21029,26 +21029,55 @@ to the way text objects and dimension objects are based on styles in AutoCAD. Th
 style controls the initial formatting of a newly created table object and whether the table
 includes a title and header row.</span></code>
             <code><span class="kw">def</span> __reduce__(self) -&gt; Any:</code>
-            <code><span class="kw">def</span> alignment(self, rowType: PyDb.RowType) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> alignment(self, cellStyle: str) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> alignment(*args) -&gt; CellAlignment:</code>
-            <code><span class="kw">def</span> backgroundColor(self, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> backgroundColor(self, cellStyle: str) -&gt; Color:</code>
-            <code><span class="kw">def</span> backgroundColor(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> bitFlags(self) -&gt; int:</code>
+            <code><span class="kw">def</span> alignment(self, rowType: PyDb.RowType) -&gt; CellAlignment:
+    <span class="ds">Returns the cell alignment for the specified cell style.</span></code>
+            <code><span class="kw">def</span> alignment(self, cellStyle: str) -&gt; CellAlignment:
+    <span class="ds">Returns the cell alignment for the specified cell style.</span></code>
+            <code><span class="kw">def</span> alignment(*args) -&gt; CellAlignment:
+    <span class="ds">Returns the cell alignment for the specified cell style.</span></code>
+            <code><span class="kw">def</span> backgroundColor(self, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">This function returns the background color for a given cell style of the table style
+object.</span></code>
+            <code><span class="kw">def</span> backgroundColor(self, cellStyle: str) -&gt; Color:
+    <span class="ds">This function returns the background color for a given cell style of the table style
+object.</span></code>
+            <code><span class="kw">def</span> backgroundColor(*args) -&gt; Color:
+    <span class="ds">This function returns the background color for a given cell style of the table style
+object.</span></code>
+            <code><span class="kw">def</span> bitFlags(self) -&gt; int:
+    <span class="ds">This function returns an unsigned integer representing the operation bit setFlowDirection
+flags set for the AcDbTableStyle object.</span></code>
             <code><span class="kw">def</span> cast(otherObject: PyRx.RxObject) -&gt; TableStyle:</code>
-            <code><span class="kw">def</span> cellClass(self, pszCellStyle: str) -&gt; int:</code>
+            <code><span class="kw">def</span> cellClass(self, pszCellStyle: str) -&gt; int:
+    <span class="ds">Returns the cell classification value for the specified cell style.</span></code>
             <code><span class="kw">def</span> className() -&gt; str:</code>
             <code><span class="kw">def</span> cloneFrom(otherObject: PyRx.RxObject) -&gt; TableStyle:</code>
-            <code><span class="kw">def</span> color(self, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> color(self, cellStyle: str) -&gt; Color:</code>
-            <code><span class="kw">def</span> color(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> copyCellStyle(self, pszSrcCellStyle: str, pszTargetCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> createCellStyle(self) -&gt; str:</code>
-            <code><span class="kw">def</span> createCellStyle(self, pszCellStyle: str) -&gt; str:</code>
-            <code><span class="kw">def</span> createCellStyle(self, pszCellStyle: str, fromCellStyle: str) -&gt; str:</code>
-            <code><span class="kw">def</span> createCellStyle(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> deleteCellStyle(self, pszCellStyle: str) -&gt; None:</code>
+            <code><span class="kw">def</span> color(self, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">Returns the content color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> color(self, cellStyle: str) -&gt; Color:
+    <span class="ds">Returns the content color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> color(*args) -&gt; Color:
+    <span class="ds">Returns the content color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> copyCellStyle(self, pszSrcCellStyle: str, pszTargetCellStyle: str) -&gt; None:
+    <span class="ds">Copies the cell style properties from source to target. The pszTargetCellStyle can be NULL
+or empty, in which case a cell style with a unique name is created the target cell style
+properties are copied to it. Acad::eOk if successful, or AutoCAD error status if the
+function fails.</span></code>
+            <code><span class="kw">def</span> createCellStyle(self) -&gt; str:
+    <span class="ds">Creates a new cellstyle from an existing cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> createCellStyle(self, pszCellStyle: str) -&gt; str:
+    <span class="ds">Creates a new cellstyle from an existing cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> createCellStyle(self, pszCellStyle: str, fromCellStyle: str) -&gt; str:
+    <span class="ds">Creates a new cellstyle from an existing cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> createCellStyle(*args) -&gt; str:
+    <span class="ds">Creates a new cellstyle from an existing cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> deleteCellStyle(self, pszCellStyle: str) -&gt; None:
+    <span class="ds">Deletes the cell style. Returns Acad::eOk if successful, or AutoCAD error status if the
+function fails.</span></code>
             <code><span class="kw">def</span> desc() -&gt; PyRx.RxClass:
     <span class="ds">Returns a pointer to the AcRxClass object representing the specific class, or most recent
 parent class explicitly registered with ObjectARX of either the pointer type used to invoke
@@ -21060,100 +21089,348 @@ AcRxObject::isA() function should be used, since it is a virtual non-static meth
 therefore not pointer type dependent. Caching the value of the pointer returned by this
 method is acceptable, provided the application knows that the AcRxClass object pointed to
 by the returned pointer was created by an ObjectARX application that will not be unloaded.</span></code>
-            <code><span class="kw">def</span> description(self) -&gt; str:</code>
-            <code><span class="kw">def</span> enableMergeAll(self, val: bool, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> flowDirection(self) -&gt; TableFlowDirection:</code>
-            <code><span class="kw">def</span> format(self) -&gt; str:</code>
-            <code><span class="kw">def</span> format(self, rowType: PyDb.RowType) -&gt; str:</code>
-            <code><span class="kw">def</span> format(self, cellStyle: str) -&gt; str:</code>
-            <code><span class="kw">def</span> format(*args) -&gt; str:</code>
-            <code><span class="kw">def</span> getCellStyles(self) -&gt; list[str]:</code>
-            <code><span class="kw">def</span> getDataType(self, rowType: PyDb.RowType) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getDataType(self, cellStyle: str) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getDataType(*args) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:</code>
-            <code><span class="kw">def</span> getGridProperty(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; object:</code>
-            <code><span class="kw">def</span> getName(self) -&gt; str:</code>
-            <code><span class="kw">def</span> getTemplate(self) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> gridColor(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridColor(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridColor(*args) -&gt; Color:</code>
-            <code><span class="kw">def</span> gridDoubleLineSpacing(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; float:</code>
-            <code><span class="kw">def</span> gridLineStyle(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; GridLineStyle:</code>
-            <code><span class="kw">def</span> gridLineWeight(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLineWeight(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLineWeight(*args) -&gt; LineWeight:</code>
-            <code><span class="kw">def</span> gridLinetype(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> gridVisibility(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> gridVisibility(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> gridVisibility(*args) -&gt; Visibility:</code>
-            <code><span class="kw">def</span> horzCellMargin(self) -&gt; float:</code>
-            <code><span class="kw">def</span> isBackgroundColorNone(self, rowType: PyDb.RowType) -&gt; bool:</code>
-            <code><span class="kw">def</span> isCellStyleInUse(self, pszCellStyle: str) -&gt; bool:</code>
-            <code><span class="kw">def</span> isHeaderSuppressed(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> isMergeAllEnabled(self, pszCellStyle: str) -&gt; bool:</code>
-            <code><span class="kw">def</span> isTitleSuppressed(self) -&gt; bool:</code>
-            <code><span class="kw">def</span> margin(self, nMargin: PyDb.CellMargin, pszCellStyle: str) -&gt; float:</code>
-            <code><span class="kw">def</span> numCellStyles(self) -&gt; int:</code>
-            <code><span class="kw">def</span> postTableStyleToDb(self, db: PyDb.Database, styleName: str) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> removeTemplate(self) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> renameCellStyle(self, pszOldName: str, pszNewName: str) -&gt; None:</code>
-            <code><span class="kw">def</span> rotation(self, pszCellStyle: str) -&gt; float:</code>
-            <code><span class="kw">def</span> setAlignment(self, val: PyDb.CellAlignment, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setAlignment(self, val: PyDb.CellAlignment, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setAlignment(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(self, val: PyDb.Color, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(self, val: PyDb.Color, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setBackgroundColorNone(self, val: bool, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setBitFlags(self, flags: int) -&gt; None:</code>
-            <code><span class="kw">def</span> setCellClass(self, val: int, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setColor(self, val: PyDb.Color, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setColor(self, val: PyDb.Color, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setDataType(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setDescription(self, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setFlowDirection(self, val: PyDb.TableFlowDirection) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormat(self, sFormat: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormat(self, sFormat: str, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormat(self, sFormat: str, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setFormat(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(self, clr: PyDb.Color, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(self, clr: PyDb.Color, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridColor(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridDoubleLineSpacing(self, val: float, gridLineTypes: PyDb.GridLineType, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineStyle(self, nLineStyle: PyDb.GridLineStyle, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(self, lineWeight: PyDb.LineWeight, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(self, lineWeight: PyDb.LineWeight, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLineWeight(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridLinetype(self, id: PyDb.ObjectId, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridProperty(self, gridProp: PyDb.GridProperty, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(self, vis: PyDb.Visibility, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(self, vis: PyDb.Visibility, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setGridVisibility(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setHorzCellMargin(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> setMargin(self, nMargins: PyDb.CellMargin, val: float, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setName(self, val: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setRotation(self, val: float, pszCellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTemplate(self, id: PyDb.ObjectId, nOption: PyDb.MergeCellStyleOption) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(self, val: float, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(self, val: float, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextHeight(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, rowType: PyDb.RowType) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, cellStyle: str) -&gt; None:</code>
-            <code><span class="kw">def</span> setTextStyle(*args) -&gt; None:</code>
-            <code><span class="kw">def</span> setVertCellMargin(self, val: float) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressHeaderRow(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> suppressTitleRow(self, val: bool) -&gt; None:</code>
-            <code><span class="kw">def</span> textHeight(self, rowType: PyDb.RowType) -&gt; float:</code>
-            <code><span class="kw">def</span> textHeight(self, cellStyle: str) -&gt; float:</code>
-            <code><span class="kw">def</span> textHeight(*args) -&gt; float:</code>
-            <code><span class="kw">def</span> textStyle(self, rowType: PyDb.RowType) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> textStyle(self, cellStyle: str) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> textStyle(*args) -&gt; ObjectId:</code>
-            <code><span class="kw">def</span> vertCellMargin(self) -&gt; float:</code>
+            <code><span class="kw">def</span> description(self) -&gt; str:
+    <span class="ds">This function returns a pointer to the description of the table style. The pointer points
+to the actual internal string, not a copy, so do not attempt to delete the string.</span></code>
+            <code><span class="kw">def</span> enableMergeAll(self, val: bool, pszCellStyle: str) -&gt; None:
+    <span class="ds">Enables or disables the merge all flag in the specified cell style. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> flowDirection(self) -&gt; TableFlowDirection:
+    <span class="ds">This function returns the flow direction of the table. Possible values for
+AcDb::FlowDirection are kTtoB and kBtoT.</span></code>
+            <code><span class="kw">def</span> format(self) -&gt; str:
+    <span class="ds">Returns the format string of the data row of the table style object. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> format(self, rowType: PyDb.RowType) -&gt; str:
+    <span class="ds">Returns the format string of the data row of the table style object. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> format(self, cellStyle: str) -&gt; str:
+    <span class="ds">Returns the format string of the data row of the table style object. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> format(*args) -&gt; str:
+    <span class="ds">Returns the format string of the data row of the table style object. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> getCellStyles(self) -&gt; list[str]:
+    <span class="ds">Returns the number of cell styles in the table style.</span></code>
+            <code><span class="kw">def</span> getDataType(self, rowType: PyDb.RowType) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type.</span></code>
+            <code><span class="kw">def</span> getDataType(self, cellStyle: str) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type.</span></code>
+            <code><span class="kw">def</span> getDataType(*args) -&gt; tuple[PyDb.ValueDataType, PyDb.ValueUnitType]:
+    <span class="ds">Gets the data type.</span></code>
+            <code><span class="kw">def</span> getGridProperty(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; object:
+    <span class="ds">Gets the grid line properties of the specified cell style. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> getName(self) -&gt; str:
+    <span class="ds">This function returns the name of the table style.</span></code>
+            <code><span class="kw">def</span> getTemplate(self) -&gt; ObjectId:
+    <span class="ds">Returns the ID of the AcDbTableTemplate object in the tablestyle. If the tablestyle does
+not contain a template, then the returned objectId will be set to AcDbObjectId::kNull.</span></code>
+            <code><span class="kw">def</span> gridColor(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; Color:
+    <span class="ds">Returns the grid color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridColor(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; Color:
+    <span class="ds">Returns the grid color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridColor(*args) -&gt; Color:
+    <span class="ds">Returns the grid color of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridDoubleLineSpacing(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; float:
+    <span class="ds">Returns the grid double line spacing of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridLineStyle(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; GridLineStyle:
+    <span class="ds">Returns the grid line style of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridLineWeight(*args) -&gt; LineWeight:
+    <span class="ds">Gets the grid line weight of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridLinetype(self, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; ObjectId:
+    <span class="ds">Returns the grid line type of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridVisibility(self, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridVisibility(self, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of the specified cell style.</span></code>
+            <code><span class="kw">def</span> gridVisibility(*args) -&gt; Visibility:
+    <span class="ds">Gets the grid visibility of the specified cell style.</span></code>
+            <code><span class="kw">def</span> horzCellMargin(self) -&gt; float:
+    <span class="ds">This function returns the horizontal cell margin value used by the table style. This method
+is deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> isBackgroundColorNone(self, rowType: PyDb.RowType) -&gt; bool:
+    <span class="ds">Returns true if the background color for a given row type of the table style object is set
+to no color value. Otherwise, returns false. The possible values of rowType are
+AcDb::kDataRow, AcDb::kTitleRow, and AcDb::kHeaderRow. If no row type is specified, the
+default of kDataRow will be used. This method is deprecated and may be removed in a future
+release</span></code>
+            <code><span class="kw">def</span> isCellStyleInUse(self, pszCellStyle: str) -&gt; bool:
+    <span class="ds">Returns true if the cell style is in use; false otherwise.</span></code>
+            <code><span class="kw">def</span> isHeaderSuppressed(self) -&gt; bool:
+    <span class="ds">This function returns a true/false status for the isHeaderSuppressed flag. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> isMergeAllEnabled(self, pszCellStyle: str) -&gt; bool:
+    <span class="ds">Returns true if the merge all flag is enabled in the specified cell; false if not.</span></code>
+            <code><span class="kw">def</span> isTitleSuppressed(self) -&gt; bool:
+    <span class="ds">This function returns a true/false status for the isTitleSuppressed flag. This method is
+deprecated and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> margin(self, nMargin: PyDb.CellMargin, pszCellStyle: str) -&gt; float:
+    <span class="ds">Returns the cell classification value for the specified cell style</span></code>
+            <code><span class="kw">def</span> numCellStyles(self) -&gt; int:
+    <span class="ds">Returns the number of cell styles in a tablestyle.</span></code>
+            <code><span class="kw">def</span> postTableStyleToDb(self, db: PyDb.Database, styleName: str) -&gt; ObjectId:
+    <span class="ds">Adds a table style to the specified database. Returns Acad::eOk if successful,
+Acad::eAlreadyInDb if the table style already exists in the database, Acad::eDuplicateKey
+if styleName already exists in the style dictionary, or Acad::eInvalidInput if styleName is
+invalid.</span></code>
+            <code><span class="kw">def</span> removeTemplate(self) -&gt; ObjectId:
+    <span class="ds">Removes the template. Returns an object id to the new object.</span></code>
+            <code><span class="kw">def</span> renameCellStyle(self, pszOldName: str, pszNewName: str) -&gt; None:
+    <span class="ds">This function renames a cellstyle. Returns Acad::eOk if successful, or AutoCAD error status
+if the function fails. If the style already exists Acad::eDuplicateKey is returned.</span></code>
+            <code><span class="kw">def</span> rotation(self, pszCellStyle: str) -&gt; float:
+    <span class="ds">Returns a cell&#x27;s rotation value.</span></code>
+            <code><span class="kw">def</span> setAlignment(self, val: PyDb.CellAlignment, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the cell alignment for the specified row types. Different row types can
+be combined using the OR operator. The possible row types are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. If no row type is specified, this function sets the
+alignment for all possible row types. Possible values for cell alignment are
+AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight, AcDb::kMiddleLeft, AcDb::kMiddleCenter,
+AcDb::kMiddleRight, AcDb::kBottomLeft, AcDb::kBottomCenter, and AcDb::kBottomRight. Returns
+Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setAlignment(self, val: PyDb.CellAlignment, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the cell alignment for the specified row types. Different row types can
+be combined using the OR operator. The possible row types are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. If no row type is specified, this function sets the
+alignment for all possible row types. Possible values for cell alignment are
+AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight, AcDb::kMiddleLeft, AcDb::kMiddleCenter,
+AcDb::kMiddleRight, AcDb::kBottomLeft, AcDb::kBottomCenter, and AcDb::kBottomRight. Returns
+Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setAlignment(*args) -&gt; None:
+    <span class="ds">This function sets the cell alignment for the specified row types. Different row types can
+be combined using the OR operator. The possible row types are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. If no row type is specified, this function sets the
+alignment for all possible row types. Possible values for cell alignment are
+AcDb::kTopLeft, AcDb::kTopCenter, AcDb::kTopRight, AcDb::kMiddleLeft, AcDb::kMiddleCenter,
+AcDb::kMiddleRight, AcDb::kBottomLeft, AcDb::kBottomCenter, and AcDb::kBottomRight. Returns
+Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(self, val: PyDb.Color, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the background color for the specified row types. Different row types
+can be OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and
+AcDb::kHeaderRow. If no row type is specified, this function sets the background color for
+the all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(self, val: PyDb.Color, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the background color for the specified row types. Different row types
+can be OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and
+AcDb::kHeaderRow. If no row type is specified, this function sets the background color for
+the all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColor(*args) -&gt; None:
+    <span class="ds">This function sets the background color for the specified row types. Different row types
+can be OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and
+AcDb::kHeaderRow. If no row type is specified, this function sets the background color for
+the all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setBackgroundColorNone(self, val: bool, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function enables or disables the background color for the specified row types.
+Different row types can be OR&#x27;d. The possible row types are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. If no row type is specified, this function enables
+or disables the background color for all possible row types. Returns Acad::eOk if
+successful; otherwise, returns Acad::eInvalidInput. This method is deprecated and may be
+removed in a future release</span></code>
+            <code><span class="kw">def</span> setBitFlags(self, flags: int) -&gt; None:
+    <span class="ds">This function sets the bit flag value for the table style object. The valid flags are a
+combination of values from the TableStyleFlags enumeration. Returns Acad::eOk if
+successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setCellClass(self, val: int, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the class of a cell, by style. Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setColor(self, val: PyDb.Color, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the text color for the specified row types. Different row types can be
+OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and AcDb::kHeaderRow. If
+no row type is specified, this function sets the color for the all possible row types.
+Returns Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setColor(self, val: PyDb.Color, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the text color for the specified row types. Different row types can be
+OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and AcDb::kHeaderRow. If
+no row type is specified, this function sets the color for the all possible row types.
+Returns Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setColor(*args) -&gt; None:
+    <span class="ds">This function sets the text color for the specified row types. Different row types can be
+OR&#x27;d. The possible row types are AcDb::kDataRow, AcDb::kTitleRow, and AcDb::kHeaderRow. If
+no row type is specified, this function sets the color for the all possible row types.
+Returns Acad::eOk if successful; otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the specified row type of the table style object.
+Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the specified row type of the table style object.
+Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setDataType(self, nDataType: PyDb.ValueDataType, nUnitType: PyDb.ValueDataType, cellStyle: str) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the specified row type of the table style object.
+Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setDataType(*args) -&gt; None:
+    <span class="ds">Sets the data type and unit type of the specified row type of the table style object.
+Returns Acad::eOk if successful.</span></code>
+            <code><span class="kw">def</span> setDescription(self, val: str) -&gt; None:
+    <span class="ds">AcDbTableStyle::setDescription</span></code>
+            <code><span class="kw">def</span> setFlowDirection(self, val: PyDb.TableFlowDirection) -&gt; None:
+    <span class="ds">This function sets the flow direction for the table in the table style object. Possible
+values for AcDb::FlowDirection are kTtoB and kBtoT. Returns Acad::eOk if successful;
+otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setFormat(self, sFormat: str) -&gt; None:
+    <span class="ds">Sets the format string of the specified cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> setFormat(self, sFormat: str, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the format string of the specified cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> setFormat(self, sFormat: str, cellStyle: str) -&gt; None:
+    <span class="ds">Sets the format string of the specified cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> setFormat(*args) -&gt; None:
+    <span class="ds">Sets the format string of the specified cell style. Returns Acad::eOk if successful, or
+AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> setGridColor(self, clr: PyDb.Color, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the grid color for the specified grid line types and row types.
+Different border and row types can be combined using the OR operator. The possible values
+of gridLineType are AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft,
+AcDb::kVertInside, and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridColor(self, clr: PyDb.Color, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the grid color for the specified grid line types and row types.
+Different border and row types can be combined using the OR operator. The possible values
+of gridLineType are AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft,
+AcDb::kVertInside, and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridColor(*args) -&gt; None:
+    <span class="ds">This function sets the grid color for the specified grid line types and row types.
+Different border and row types can be combined using the OR operator. The possible values
+of gridLineType are AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft,
+AcDb::kVertInside, and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow,
+AcDb::kTitleRow, and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridDoubleLineSpacing(self, val: float, gridLineTypes: PyDb.GridLineType, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the grid double line spacing in the specified cell style. Returns Acad::eOk if
+successful; otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridLineStyle(self, nLineStyle: PyDb.GridLineStyle, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the grid line style of the specified cell style. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(self, lineWeight: PyDb.LineWeight, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the lineweight for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(self, lineWeight: PyDb.LineWeight, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the lineweight for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLineWeight(*args) -&gt; None:
+    <span class="ds">This function sets the lineweight for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridLinetype(self, id: PyDb.ObjectId, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the grid line type for a cell style. Returns Acad::eOk if successful; otherwise,
+returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridProperty(self, gridProp: PyDb.GridProperty, gridLineType: PyDb.GridLineType, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the grid line properties of the specified cell style. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setGridVisibility(self, vis: PyDb.Visibility, gridLineType: PyDb.GridLineType, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the grid visibility for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridVisibility(self, vis: PyDb.Visibility, gridLineType: PyDb.GridLineType, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the grid visibility for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setGridVisibility(*args) -&gt; None:
+    <span class="ds">This function sets the grid visibility for the specified grid line types and row types.
+Different grid line and row types can be OR&#x27;d. The possible values of gridLineType are
+AcDb::kHorzTop, AcDb::kHorzInside, AcDb::kHorzBottom, AcDb::kVertLeft, AcDb::kVertInside,
+and AcDb::kVertRight. The possible values of rowType are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setHorzCellMargin(self, val: float) -&gt; None:
+    <span class="ds">This function sets the horizontal cell margin value used by the table style. Returns
+Acad::eOk if successful; otherwise, returns Acad::eInvalidInput. This method is deprecated
+and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> setMargin(self, nMargins: PyDb.CellMargin, val: float, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the cell classification value for the specified cell style. Returns Acad::eOk if
+successful, or AutoCAD error status if the function fails.</span></code>
+            <code><span class="kw">def</span> setName(self, val: str) -&gt; None:
+    <span class="ds">This function sets the name of the table style to pszName. Returns Acad::eOk if successful;
+otherwise, returns Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setRotation(self, val: float, pszCellStyle: str) -&gt; None:
+    <span class="ds">Sets the rotation angle of the specified cell style. Returns Acad::eOk if successful;
+otherwise, returns an AutoCAD error status.</span></code>
+            <code><span class="kw">def</span> setTemplate(self, id: PyDb.ObjectId, nOption: PyDb.MergeCellStyleOption) -&gt; None:
+    <span class="ds">Assigns the template to the tablestyle. If NULL is passed then the template is removed from
+the tablestyle. Returns Acad::eOk if successful; otherwise, returns an AutoCAD error
+status.</span></code>
+            <code><span class="kw">def</span> setTextHeight(self, val: float, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">This function sets the text height for the specified row types. Different row types can be
+combined using the OR operator. The possible row types are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. If no row type is specified, this function sets the text height to
+all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setTextHeight(self, val: float, cellStyle: str) -&gt; None:
+    <span class="ds">This function sets the text height for the specified row types. Different row types can be
+combined using the OR operator. The possible row types are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. If no row type is specified, this function sets the text height to
+all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setTextHeight(*args) -&gt; None:
+    <span class="ds">This function sets the text height for the specified row types. Different row types can be
+combined using the OR operator. The possible row types are AcDb::kDataRow, AcDb::kTitleRow,
+and AcDb::kHeaderRow. If no row type is specified, this function sets the text height to
+all possible row types. Returns Acad::eOk if successful; otherwise, returns
+Acad::eInvalidInput.</span></code>
+            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, rowType: PyDb.RowType) -&gt; None:
+    <span class="ds">Sets the text style for a cell style.</span></code>
+            <code><span class="kw">def</span> setTextStyle(self, id: PyDb.ObjectId, cellStyle: str) -&gt; None:
+    <span class="ds">Sets the text style for a cell style.</span></code>
+            <code><span class="kw">def</span> setTextStyle(*args) -&gt; None:
+    <span class="ds">Sets the text style for a cell style.</span></code>
+            <code><span class="kw">def</span> setVertCellMargin(self, val: float) -&gt; None:
+    <span class="ds">This function sets the vertical cell margin value used by the table style. Returns
+Acad::eOk if successful; otherwise, returns Acad::eInvalidInput. This method is deprecated
+and may be removed in a future release.</span></code>
+            <code><span class="kw">def</span> suppressHeaderRow(self, val: bool) -&gt; None:
+    <span class="ds">This function suppresses or enables the header row for the table. Returns Acad::eOk if
+successful; otherwise, returns Acad::eInvalidInput. This method is deprecated and may be
+removed in a future release.</span></code>
+            <code><span class="kw">def</span> suppressTitleRow(self, val: bool) -&gt; None:
+    <span class="ds">This function suppresses or enables the title row for the table. Returns Acad::eOk if
+successful; otherwise, returns Acad::eInvalidInput. This method is deprecated and may be
+removed in a future release.</span></code>
+            <code><span class="kw">def</span> textHeight(self, rowType: PyDb.RowType) -&gt; float:
+    <span class="ds">Gets the text height of the specified cell style Returns the text height of the specified
+cell style.</span></code>
+            <code><span class="kw">def</span> textHeight(self, cellStyle: str) -&gt; float:
+    <span class="ds">Gets the text height of the specified cell style Returns the text height of the specified
+cell style.</span></code>
+            <code><span class="kw">def</span> textHeight(*args) -&gt; float:
+    <span class="ds">Gets the text height of the specified cell style Returns the text height of the specified
+cell style.</span></code>
+            <code><span class="kw">def</span> textStyle(self, rowType: PyDb.RowType) -&gt; ObjectId:
+    <span class="ds">Returns the textstyle id of the specified cell style.</span></code>
+            <code><span class="kw">def</span> textStyle(self, cellStyle: str) -&gt; ObjectId:
+    <span class="ds">Returns the textstyle id of the specified cell style.</span></code>
+            <code><span class="kw">def</span> textStyle(*args) -&gt; ObjectId:
+    <span class="ds">Returns the textstyle id of the specified cell style.</span></code>
+            <code><span class="kw">def</span> vertCellMargin(self) -&gt; float:
+    <span class="ds">This function returns the vertical cell margin value used by the table style. This method
+is deprecated and may be removed in a future release.</span></code>
         </details>
     </div>
 
